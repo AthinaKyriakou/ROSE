@@ -1,3 +1,16 @@
+# Framwork-specific
+*.log
+*.png
+build/
+dist/
+cornac.egg-info/
+tests/__pycache__/
+.DS_Store
+.vscode
+cornac/utils/external/.DS_Store
+cornac/**/.DS_Store
+__pycache__
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

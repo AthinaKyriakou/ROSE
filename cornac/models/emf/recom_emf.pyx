@@ -1,0 +1,424 @@
+import scipy
+import numpy as np
+import pandas as pd
+from tqdm.auto import trange
+
+cimport cython
+from cython.parallel import prange
+from cython cimport floating, integral
+from libcpp cimport bool
+from libc.math cimport fabs
+cimport numpy as cnp
+
+from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.preprocessing import MinMaxScaler
+import multiprocessing
+
+from cornac.models import Recommender
+from cornac.utils import get_rng, fast_dot
+from cornac.utils.init_utils import normal, zeros
+from cornac.exception import ScoreException
+
+
+class EMF(Recommender):
+
+    """Explainable Matrix Factorization.
+    Parameters
+    ----------
+    k: int, optional, default: 10
+        The dimension of the latent factors.
+    knn_num: int, optional, default: 10
+        The number of nearest neighbors to be used for the explanation.
+    knn_threshold: float, optional, default: 0.0
+        The threshold for the edge weight matrix between user-item pairs.
+    positive_rating_threshold: float, optional, default: 0.0
+        The threshold for the positive ratings.
+    max_iter: int, optional, default: 100
+        Maximum number of iterations or the number of epochs for SGD.
+    learning_rate: float, optional, default: 0.001
+        The learning rate.
+    lambda_reg: float, optional, default: 0.01
+        The lambda value used for regularization.
+    explain_reg: float, optional, default: 0.1
+        The lambda value used for regularization of the explanation.
+    use_bias: boolean, optional, default: True
+        When True, user, item, and global biases are used.
+    early_stop: boolean, optional, default: False
+        When True, delta loss will be checked after each iteration to stop learning earlier.
+    num_threads: int, optional, default: 0
+        Number of parallel threads for training. If num_threads=0, all CPU cores will be utilized.
+        If seed is not None, num_threads=1 to remove randomness from parallelization.
+    trainable: boolean, optional, default: True
+        When False, the model will not be re-trained, and input of pre-trained parameters are required.
+    verbose: boolean, optional, default: True
+        When True, running logs are displayed.
+    init_params: dictionary, optional, default: None
+        Initial parameters, e.g., init_params = {'U': user_factors, 'V': item_factors,
+        'Bu': user_biases, 'Bi': item_biases}
+    seed: int, optional, default: None
+        Random seed for weight initialization.
+        If specified, training will take longer because of single-thread (no parallelization).
+    sim_filter_zeros: boolean, optional, default: True
+        When True, the similarity matrix will be computed by filtering out the zero ratings.
+        When False, the similarity matrix will be computed by considering the zero ratings.
+    References
+    ----------
+    B. Abdollahi and O. Nasraoui, “Explainable Matrix Factorization for Collaborative Filtering,” \
+    ACM Press, 2016, pp. 5-6. doi: 10.1145/2872518.2889405.
+
+    Code Reference
+    ----------
+    cornac.models.mf.recom_mf.MF
+    https://github.com/ludovikcoba/recoxplainer/blob/master/recoxplainer/models/emf_model.py
+    """
+
+    def __init__(
+        self,
+        name='EMF',
+        k=10,
+        knn_num=10,
+        knn_threshold=0.0,
+        positive_rating_threshold=0.0,
+        max_iter=20,
+        learning_rate=0.001,
+        lambda_reg=0.01,
+        explain_reg=0.1,
+        use_bias=True,
+        early_stop=False,
+        num_threads=0,
+        trainable=True,
+        verbose=False,
+        init_params=None,
+        seed=None,
+        sim_filter_zeros=True
+    ):
+        # super().__init__(name=name, k=k, max_iter=max_iter, learning_rate=learning_rate, lambda_reg=lambda_reg, use_bias=use_bias,
+        #                  early_stop=early_stop, num_threads=num_threads, trainable=trainable, verbose=verbose, init_params=init_params, seed=seed)
+        super().__init__(name=name, trainable=trainable, verbose=verbose)
+        self.k = k
+        self.max_iter = max_iter
+        self.learning_rate = learning_rate
+        self.lambda_reg = lambda_reg
+        self.use_bias = use_bias
+        self.seed = seed
+        self.early_stop = early_stop
+        self.sim_filter_zeros = sim_filter_zeros
+
+        if seed is not None:
+            self.num_threads = 1
+        elif num_threads > 0 and num_threads < multiprocessing.cpu_count():
+            self.num_threads = num_threads
+        else:
+            self.num_threads = multiprocessing.cpu_count()
+
+        # Init params if provided
+        self.init_params = {} if init_params is None else init_params
+        self.u_factors = self.init_params.get('U', None)
+        self.i_factors = self.init_params.get('V', None)
+        self.u_biases = self.init_params.get('Bu', None)
+        self.i_biases = self.init_params.get('Bi', None)
+        self.global_mean = 0.0
+
+        self.knn_num = knn_num
+        self.knn_threshold = knn_threshold
+        self.positive_rating_threshold = positive_rating_threshold
+        self.explain_reg = explain_reg
+        self.edge_weight_matrix = None
+        self.sim_users = {}
+
+    def _init(self):
+        rng = get_rng(self.seed)
+        n_users, n_items = self.train_set.num_users, self.train_set.num_items
+
+        if self.u_factors is None:
+            self.u_factors = normal(
+                [n_users, self.k], std=0.01, random_state=rng)
+        if self.i_factors is None:
+            self.i_factors = normal(
+                [n_items, self.k], std=0.01, random_state=rng)
+
+        self.u_biases = zeros(
+            n_users) if self.u_biases is None else self.u_biases
+        self.i_biases = zeros(
+            n_items) if self.i_biases is None else self.i_biases
+        self.global_mean = self.train_set.global_mean if self.use_bias else 0.0
+
+    def fit(self, train_set, val_set=None):
+        """Fit the model to observations.
+
+        Parameters
+        ----------
+        train_set: :obj:`cornac.data.Dataset`, required
+            User-Item preference data as well as additional modalities.
+
+        val_set: :obj:`cornac.data.Dataset`, optional, default: None
+            User-Item preference data for model selection purposes (e.g., early stopping).
+
+        Returns
+        -------
+        self : object
+        """
+        Recommender.fit(self, train_set, val_set)
+
+        self._init()
+
+        if self.trainable:
+            (rid, cid, val) = train_set.uir_tuple
+            self._fit_sgd(rid, cid, val.astype(np.float32),
+                          self.u_factors, self.i_factors,
+                          self.u_biases, self.i_biases)
+
+        return self
+
+    @cython.boundscheck(False)
+    @cython.wraparound(False)
+    def _fit_sgd(self, integral[:] rid, integral[:] cid, floating[:] val,
+                 floating[:, :] U, floating[:, :] V, floating[:] Bu, floating[:] Bi):
+        """Fit the model parameters (U, V, Bu, Bi) with SGD
+        """
+        cdef:
+            long num_users = self.train_set.num_users
+            long num_items = self.train_set.num_items
+            long num_ratings = val.shape[0]
+            int num_factors = self.k
+            int max_iter = self.max_iter
+            int num_threads = self.num_threads
+
+            floating reg = self.lambda_reg
+            floating expl_reg = self.explain_reg
+            floating mu = self.global_mean
+
+            bool use_bias = self.use_bias
+            bool early_stop = self.early_stop
+            bool verbose = self.verbose
+
+            floating lr = self.learning_rate
+            floating loss = 0
+            floating last_loss = 0
+            floating r, r_pred, error, u_f, i_f, delta_loss, temp
+            integral u, i, f, j
+
+            floating * user
+            floating * item
+
+        self.compute_edge_weight_matrix()
+        cdef double[:, :] edge_weight_matrix = self.edge_weight_matrix
+
+        progress = trange(max_iter, disable=not self.verbose)
+        for epoch in progress:
+            last_loss = loss
+            loss = 0
+
+            for j in prange(num_ratings, nogil=True, schedule='static', num_threads=num_threads):
+                u, i, r = rid[j], cid[j], val[j]
+                user, item = &U[u, 0], &V[i, 0]
+
+                # predict rating
+                r_pred = mu + Bu[u] + Bi[i]
+                for f in range(num_factors):
+                    r_pred += user[f] * item[f]
+
+                # error = (r - r_pred)
+                loss += (r - r_pred) * (r - r_pred)
+
+                # update factors
+                for f in range(num_factors):
+                    u_f, i_f = user[f], item[f]
+                    # user[f] += lr * ((r - r_pred) * i_f - reg * u_f)
+                    user[f] += lr * ((2.0 * (r - r_pred) * i_f - reg * u_f) - (1.0 * expl_reg * (i_f - u_f) * edge_weight_matrix[u, i]))
+                    # item[f] += lr * ((r - r_pred) * u_f - reg * i_f)
+                    item[f] += ((2.0 * (r - r_pred) * u_f - reg * i_f) - (1.0 * expl_reg * (u_f - i_f) * edge_weight_matrix[u, i]))
+
+                # user += lr * ((2.0 * (r - r_pred) * item - reg * user) - (1.0 * expl_reg * (item - user) * edge_weight_matrix[u, i]))
+                # item += lr * ((2.0 * (r - r_pred) * user - reg * item) - (1.0 * expl_reg * (user - item) * edge_weight_matrix[u, i]))
+
+                # update biases
+                if use_bias:
+                    Bu[u] += lr * ((2.0 * (r - r_pred) - reg * Bu[u]) - expl_reg * (Bu[u] - Bi[i]) * edge_weight_matrix[u, i])
+                    Bi[i] += lr * ((2.0 * (r - r_pred) - reg * Bi[i]) - expl_reg * (Bi[i] - Bu[u]) * edge_weight_matrix[u, i])
+
+            loss = 0.5 * loss
+            progress.update(1)
+            progress.set_postfix({"loss": "%.2f" % loss})
+
+            delta_loss = loss - last_loss
+            if early_stop and fabs(delta_loss) < 1e-5:
+                if verbose:
+                    print('Early stopping, delta_loss = %.4f' % delta_loss)
+                break
+        progress.close()
+
+        if verbose:
+            print('Optimization finished!')
+
+    @cython.boundscheck(False)
+    @cython.wraparound(False)
+    def _c_get_similarities_filter_zeros(self, ui_matrix):
+        """
+        Compute the similarities between users
+        """
+        cdef:
+            long num_users = self.train_set.num_users
+            int i, j, k
+            int num_threads = self.num_threads
+            int * a
+            int * b
+            double[:, :] similarities = np.zeros((num_users, num_users))
+            double[:, :] sim = np.zeros((num_users, num_users))
+            double[:, :] lena = np.zeros((num_users, num_users))
+            double[:, :] lenb = np.zeros((num_users, num_users))
+            int len_matrix = ui_matrix.shape[1]
+            int[:, :] matrix = ui_matrix
+
+        for i in prange(num_users, nogil=True, schedule='static', num_threads=num_threads):
+            for j in range(num_users):
+                if i == j:
+                    continue
+                a = &matrix[i, 0]
+                b = &matrix[j, 0]
+                for k in range(len_matrix):
+                    if a[k] == 0 or b[k] == 0:
+                        continue
+                    sim[i][j] += a[k] * b[k]
+                    lena[i][j] += a[k] * a[k]
+                    lenb[i][j] += b[k] * b[k]
+
+        for i in prange(num_users, nogil=True, schedule='static', num_threads=num_threads):
+            for j in range(num_users):
+                if i == j:
+                    similarities[i][j] = -2
+                    continue
+                if lena[i][j] == 0 or lenb[i][j] == 0 or sim[i][j] == 0:
+                    similarities[i][j] = 0
+                    continue
+                similarities[i][j] = 1.0 * sim[i][j]
+                similarities[i][j] /= (1.0 * lena[i][j]) ** 0.5
+                similarities[i][j] /= (1.0 * lenb[i][j]) ** 0.5
+                
+        return np.asarray(similarities)
+
+
+    def compute_edge_weight_matrix(self):
+        """Compute the edge weight matrix between user-item pairs of the model.
+        """
+        ds = self.train_set.matrix  # this is the user-item interaction matrix in CSR sparse format
+        if self.sim_filter_zeros:
+            sim_matrix = self._c_get_similarities_filter_zeros(ds.toarray().astype(np.int32))
+        else:
+            sim_matrix = cosine_similarity(ds)
+
+        self.edge_weight_matrix = np.zeros((self.train_set.num_users, self.train_set.num_items))
+
+        num_users = self.train_set.num_users
+        num_items = self.train_set.num_items
+
+        for i in range(num_users):
+            sim_matrix[i][i] = -2
+            self.sim_users[i] = np.argsort(sim_matrix[i])[::-1][:self.knn_num]
+
+        filted_positive_rating_df = pd.DataFrame(
+            np.array(self.train_set.uir_tuple).T, columns=['user', 'item', 'rating'])
+        filted_positive_rating_df['user'] = filted_positive_rating_df['user'].astype(
+            int)
+        filted_positive_rating_df['item'] = filted_positive_rating_df['item'].astype(
+            int)
+        filted_positive_rating_df = filted_positive_rating_df[
+            filted_positive_rating_df['rating'] >= self.positive_rating_threshold]
+        for i in range(num_users):
+            sim_users_i = self.sim_users[i]
+            rated_items_by_sim_users = filted_positive_rating_df[filted_positive_rating_df['user'].isin(
+                sim_users_i)]
+            sim_ratings_items = rated_items_by_sim_users.groupby('item')
+            sim_ratings_sum = sim_ratings_items['rating'].sum()
+
+            self.edge_weight_matrix[i][sim_ratings_sum.index] = sim_ratings_sum.values
+
+        self.edge_weight_matrix = MinMaxScaler().fit_transform(self.edge_weight_matrix)
+        self.edge_weight_matrix[self.edge_weight_matrix <=
+                                self.knn_threshold] = 0
+        return self.edge_weight_matrix
+
+    def score(self, user_idx, item_idx=None):
+        """Predict the scores/ratings of a user for an item.
+
+        Parameters
+        ----------
+        user_idx: int, required
+            The index of the user for whom to perform score prediction.
+
+        item_idx: int, optional, default: None
+            The index of the item for which to perform score prediction.
+            If None, scores for all known items will be returned.
+
+        Returns
+        -------
+        res : A scalar or a Numpy array
+            Relative scores that the user gives to the item or to all known items
+
+        """
+        unk_user = self.is_unknown_user(user_idx)
+
+        if item_idx is None:
+            known_item_scores = np.add(self.i_biases, self.global_mean)
+            if not unk_user:
+                known_item_scores = np.add(
+                    known_item_scores, self.u_biases[user_idx])
+                fast_dot(self.u_factors[user_idx],
+                         self.i_factors, known_item_scores)
+            return known_item_scores
+        else:
+            unk_item = self.is_unknown_item(item_idx)
+            if self.use_bias:
+                item_score = self.global_mean
+                if not unk_user:
+                    item_score += self.u_biases[user_idx]
+                if not unk_item:
+                    item_score += self.i_biases[item_idx]
+                if not unk_user and not unk_item:
+                    item_score += np.dot(self.u_factors[user_idx],
+                                         self.i_factors[item_idx])
+            else:
+                if unk_user or unk_item:
+                    raise ScoreException(
+                        "Can't make score prediction for (user_id=%d, item_id=%d)" % (user_idx, item_idx))
+                item_score = np.dot(
+                    self.u_factors[user_idx], self.i_factors[item_idx])
+            return item_score
+
+    def user_embedding(self):
+        return self.u_factors
+
+    def item_embedding(self):
+        return self.i_factors
+
+    def recommend(self, user_ids, n=10, filter_history=True):
+        """
+        Provide recommendations for a list of users
+        user_ids: list of users
+        n: number of recommendations
+        filter history: do not recommend items from users history
+        Return: dataframe of users, items with the top n predictions
+        """
+        recommendation = []
+        uir_df = pd.DataFrame(np.array(self.train_set.uir_tuple).T, columns=['user', 'item', 'rating'])
+        uir_df['user'] = uir_df['user'].astype(int)
+        uir_df['item'] = uir_df['item'].astype(int)
+        item_idx2id= {v:k for k,v in self.train_set.iid_map.items()}
+
+        for uid in user_ids:            
+            if uid not in self.train_set.uid_map:
+                continue
+            user_idx = self.train_set.uid_map[uid]
+            item_rank, item_score = self.rank(user_idx)
+            recommendation_one_user = []
+            if filter_history:
+                user_rated_items = uir_df[uir_df['user'] == user_idx]['item']
+                # remove user rated items from item_rank
+                recommendation_one_user = [[uid, item_idx2id[item_idx], item_score[item_idx]] for item_idx in item_rank if item_idx not in user_rated_items][:n]
+            else:
+                recommendation_one_user = [[uid, item_idx2id[item_idx], item_score[item_idx]] for item_idx in item_rank[:n]]
+            recommendation.extend(recommendation_one_user)
+        
+        return pd.DataFrame(recommendation, columns=['user_id', 'item_id', 'prediction'])
+
+

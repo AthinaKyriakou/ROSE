@@ -287,6 +287,56 @@ extensions = [
         extra_compile_args=compile_args,
         extra_link_args=link_args,
     ),
+    Extension(
+        name="cornac.metrics_explainer.mep.metric_mep",
+        sources=["cornac/metrics_explainer/mep/metric_mep.pyx"],
+        include_dirs=[np.get_include()],
+        language="c++",
+        extra_compile_args=compile_args,
+        extra_link_args=link_args,
+    ),
+    Extension(
+        name="cornac.metrics_explainer.endcg.metric_endcg",
+        sources=["cornac/metrics_explainer/endcg/metric_endcg.pyx"],
+        include_dirs=[np.get_include()],
+        language="c++",
+        extra_compile_args=compile_args,
+        extra_link_args=link_args,
+    ),
+    Extension(
+        name="cornac.metrics_explainer.fdiv.feature_diversity",
+        sources=["cornac/metrics_explainer/fdiv/feature_diversity.pyx"],
+        include_dirs=[np.get_include()],
+        language="c++",
+        extra_compile_args=compile_args,
+        extra_link_args=link_args,
+    ),
+    Extension(
+        name="cornac.metrics_explainer.fpr.feature_precision_recall",
+        sources=["cornac/metrics_explainer/fpr/feature_precision_recall.pyx"],
+        include_dirs=[np.get_include()],
+        language="c++",
+        extra_compile_args=compile_args,
+        extra_link_args=link_args,
+    ),
+    Extension(
+        name="cornac.metrics_explainer.fa.feature_agreement",
+        sources=["cornac/metrics_explainer/fa/feature_agreement.pyx"],
+        include_dirs=[np.get_include()],
+        language="c++",
+        extra_compile_args=compile_args,
+        extra_link_args=link_args,
+    ),
+     Extension(
+        name="cornac.metrics_explainer.ra.rank_agreement",
+        sources=["cornac/metrics_explainer/ra/rank_agreement.pyx"],
+        include_dirs=[np.get_include()],
+        language="c++",
+        extra_compile_args=compile_args,
+        extra_link_args=link_args,
+    ),
+
+
 ]
 
 if sys.platform.startswith("linux"):  # Linux supported only

@@ -4,7 +4,7 @@
 We highly recommend using a Python virtual environment to install the packages as some of them (particularly Cython and Sklearn) are only compatible in certain versions. Create a virtual environment within the project's repository (i.e., in /ROSE/). Within the project's repository and with the virtual environment activated run in a terminal:
 ``` sh
 bash setup.sh
-pip install -r requirement.txt
+pip install -r requirements.txt
 python setup.py install
 python setup.py  build_ext --inplace
 ```

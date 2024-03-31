@@ -1,7 +1,6 @@
 # Bash script for the needed installations
 
 pip install Cython==0.29.36 numpy==1.23.5 scipy mlxtend
-python setup.py instal
 
 pip install -r requirements.txt
 

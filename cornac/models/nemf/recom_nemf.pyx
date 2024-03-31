@@ -342,12 +342,14 @@ class NEMF(Recommender):
             int)
         filted_positive_rating_df['item'] = filted_positive_rating_df['item'].astype(
             int)
-        filted_positive_rating_df = filted_positive_rating_df[
-            filted_positive_rating_df['rating'] >= self.positive_rating_threshold]
+        # filted_positive_rating_df = filted_positive_rating_df[
+        #     filted_positive_rating_df['rating'] >= self.positive_rating_threshold]
+        filted_positive_rating_df = filted_positive_rating_df.loc[filted_positive_rating_df['rating'] >= self.positive_rating_threshold]
         for i in range(num_users):
             sim_users_i = self.sim_users[i]
-            rated_items_by_sim_users = filted_positive_rating_df[filted_positive_rating_df['user'].isin(
-                sim_users_i)]
+            # rated_items_by_sim_users = filted_positive_rating_df[filted_positive_rating_df['user'].isin(
+            #     sim_users_i)]
+            rated_items_by_sim_users = filted_positive_rating_df.loc[filted_positive_rating_df['user'].isin(sim_users_i)]
             sim_ratings_items = rated_items_by_sim_users.groupby('item')
             sim_ratings_sum = sim_ratings_items['rating'].sum()
 
@@ -454,7 +456,7 @@ class NEMF(Recommender):
             item_rank, item_score = self.rank(user_idx)
             recommendation_one_user = []
             if filter_history:
-                user_rated_items = uir_df[uir_df['user'] == user_idx]['item']
+                user_rated_items = uir_df.loc[uir_df['user'] == user_idx]['item']
                 # remove user rated items from item_rank
                 recommendation_one_user = [[uid, item_idx2id[item_idx], item_score[item_idx]] for item_idx in item_rank if item_idx not in user_rated_items][:n]
             else:

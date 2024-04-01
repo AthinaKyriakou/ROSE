@@ -1,0 +1,6 @@
+PSPN:
+  valid_explainers: ["limers", "EFMExplainer", "MTERExplainer"]
+FA:
+  valid_explainers: []
+FDIV:
+  valid_explainers: []

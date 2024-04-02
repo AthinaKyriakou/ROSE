@@ -94,12 +94,21 @@ class PGF(Metrics):
             explanations = self.explanations[self.explanations[:, 0] == user_id][:, 2]
             # get the item id before "=>"
             item_ids = []
+            type_iid_map_key = type(list(self.dataset.iid_map.keys())[0])        
             for explanation in explanations:
                 for item in explanation:
                     if len(item) == 0:
                         continue
                     item_id = item.split('=>')[0]
-                    item_ids.append(item_id)
+                    # make item_id is the same type as in dataset.iid_map
+                    if isinstance(item_id, type_iid_map_key):
+                        item_ids.append(item_id)
+                    else:
+                        try:
+                            item_id = type_iid_map_key(item_id)
+                            item_ids.append(item_id)
+                        except ValueError:
+                            continue
             item_idxs = [self.dataset.iid_map[item_id] for item_id in item_ids]
             return item_idxs
         elif self.explainer.name == 'ALS':

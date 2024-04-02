@@ -23,6 +23,9 @@ from .reader import Reader
 from .dataset import Dataset
 from .dataset import BasketDataset
 from .dataset import SequentialDataset
+from .lexicon import SentimentAnalysis
+from .lexicon import LexiconsStatistics
+
 
 __all__ = [
     "FeatureModality",
@@ -35,4 +38,6 @@ __all__ = [
     "SequentialDataset",
     "Dataset",
     "Reader",
+    "SentimentAnalysis",
+    "LexiconsStatistics",
 ]

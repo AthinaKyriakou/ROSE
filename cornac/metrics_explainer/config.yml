@@ -2,5 +2,15 @@ PSPN:
   valid_explainers: ["limers", "EFMExplainer", "MTERExplainer"]
 FA:
   valid_explainers: []
-FDIV:
+RA:
   valid_explainers: []
+FDIV:
+  valid_explainers: ["limers", "EFMExplainer", "MTERExplainer", "ALSExplainer", "PHI4MFExplainer", "EMFExplainer"]
+FPR:
+  valid_explainers: ["limers", "EFMExplainer", "MTERExplainer"]
+PGF:
+  valid_explainers: ["ALSExplainer", "PHI4MFExplainer", "EMFExplainer"]
+MEP:
+  valid_explainers: ["PHI4MFExplainer", "EMFExplainer"]
+EnDCG:
+  valid_explainers: ["PHI4MFExplainer", "EMFExplainer"]

@@ -48,16 +48,12 @@ class TestEFMExplainer(unittest.TestCase):
         user_id = np.random.choice(list(cls.dataset.user_ids))
         item_id = np.random.choice(list(cls.dataset.item_ids))
         
-        num_futures = 3
+        num_features = 3
         index  = False
         # Get explanations
-        explanation = cls.explainer.explain_one_recommendation_to_user(user_id=user_id, item_id=item_id, num_features=num_futures, index=index)
-        
-        # Make sure the output is corresponding to the input user_id and item_id
-        assert explanation["user_id"][0] == user_id
-        assert explanation["item_id"][0] == item_id
+        explanation = cls.explainer.explain_one_recommendation_to_user(user_id=user_id, item_id=item_id, num_features=num_features)
         # Make sure the number of explanations is equal to the number of most cared aspects
-        assert len(explanation["explanations"][0]) == num_futures, "The length of explanation['explanations'] should be the specified number of futures"
+        assert len(explanation) == num_features, "The length of explanation should be the specified number of futures"
         print("TestEFM test_explain_one_recommendation_to_user complete")
     
     @classmethod    
@@ -76,16 +72,16 @@ class TestEFMExplainer(unittest.TestCase):
         # Get recommendations for the selected users
         recommendations = cls.rec_model.recommend(user_ids=users, n=rec_k)
         
-        num_futures = 3
+        num_features = 3
         # Call the method being tested: generate explanations for all u-i pairs in the recommendations
         explanations = cls.explainer.explain_recommendations(
-            recommendations, num_futures
+            recommendations, num_features=num_features
         )
         # check the explanations not None, in right fornmat, and expected length
         assert explanations is not None
         assert len(explanations) == len_users * rec_k
         assert isinstance(explanations, pd.DataFrame)
-        assert set(explanations.columns) == {'user_id', 'item_id', 'explanations'}
+        assert 'explanations' in set(explanations.columns)
         print("TestEFM test_explain_recommendations complete")
 
 if __name__ == '__main__':

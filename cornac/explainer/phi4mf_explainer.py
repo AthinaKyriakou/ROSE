@@ -62,7 +62,7 @@ class PHI4MFExplainer(Explainer):
         self.rules = rules[["consequents", "antecedents", "confidence"]]
         return rules
         
-    def explain_one_recommendation_to_user(self, user_id, item_id, num_features=10):
+    def explain_one_recommendation_to_user(self, user_id, item_id, **kwargs):
         """
         provide explanation for one user and one item
         user_id: one user
@@ -70,6 +70,7 @@ class PHI4MFExplainer(Explainer):
         num_features: number of features to be returned
         return: explanations as a list of association rules
         """
+        num_features = kwargs.get('num_features', 10)
         uir_df = pd.DataFrame(np.array(self.dataset.uir_tuple).T, columns=['user', 'item', 'rating'])
         uir_df['user'] = uir_df['user'].astype(int)
         uir_df['item'] = uir_df['item'].astype(int)

@@ -20,22 +20,8 @@ class MTERExplainer(Explainer):
         if self.model.name not in ['MTER']:
             raise AttributeError("The explainer does not support this recommender.")
         
-    def explain_recommendations(self, recommendations, num_features = 3, num_top_opinions = 3, index = False):
-        """"
-        recommendations: dataframe, columns name as [user_id, item_id]
-        """
-        explanations = pd.DataFrame(columns=["user_id", "item_id", "explanations"])
-        self.recommendations = recommendations 
-
-        with tqdm(total=self.recommendations.shape[0], desc="Computing explanations: ", position=0, leave=True) as pbar:
-
-            for _, row in self.recommendations.iterrows():
-                explanations = pd.concat([explanations,self.explain_one_recommendation_to_user(row.user_id, row.item_id, num_features, num_top_opinions, index)])
-                pbar.update()
-
-        return explanations 
         
-    def explain_one_recommendation_to_user(self, user_id, item_id, num_features = 3, num_top_opinions = 3, index=False):
+    def explain_one_recommendation_to_user(self, user_id, item_id, **kwargs):
         """
         get aspect performs best and user's opinion word of that aspect.
         :param user_id:
@@ -46,14 +32,14 @@ class MTERExplainer(Explainer):
         ====
         :return: a distionary of {aspect: [{opinion: score}, {opinion: score}, ...}], aspect: [{opinion: score}, {opinion: score}, ...]}
         """
-        self.num_top_aspects = num_features
-        self.num_top_opinions = num_top_opinions
-        
-        # if index is not True, then user_id and item_id are real id in dataset, then map it to index
-        if not index:
-            user_id = self.dataset.uid_map[user_id]
-            item_id = self.dataset.iid_map[item_id]
-        
+        # num_features=3, num_top_opinions=3
+        self.num_top_aspects = kwargs.get("num_features", 3)
+        self.num_top_opinions = kwargs.get("num_top_opinions", 3)
+
+        user_id = self.dataset.uid_map[user_id]
+        item_id = self.dataset.iid_map[item_id]
+
+
         id_aspect_map = {v:k for k, v in self.dataset.sentiment.aspect_id_map.items()}
         id_opinion_map = {v:k for k, v  in self.dataset.sentiment.opinion_id_map.items()}
         item_id_list = np.array([k for k in self.dataset.sentiment.item_sentiment.keys()])
@@ -108,16 +94,4 @@ class MTERExplainer(Explainer):
             
             explanations[top_aspect]=top_opinions_scores
             
-        if not index:
-            # map back to real id
-            user_idx2id = {v: k for k, v in self.dataset.uid_map.items()}
-            item_idx2id = {v: k for k, v in self.dataset.iid_map.items()}
-            user_id = user_idx2id[user_id]
-            item_id = item_idx2id[item_id]
-            
-        explanations_pd = pd.DataFrame({
-            "user_id": [user_id],
-            "item_id": [item_id],
-            "explanations": [explanations]
-        })
-        return explanations_pd
+        return explanations

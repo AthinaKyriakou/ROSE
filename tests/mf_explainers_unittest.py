@@ -74,7 +74,7 @@ class Test_MF_explainers(unittest.TestCase):
 
         user_id = recommendations['user_id'].values[0]
         item_id = recommendations['item_id'].values[0]
-        explanation = emf_exp.explain_one_recommendation_to_user(user_id, item_id, num_features=10)
+        explanation = emf_exp.explain_one_recommendation_to_user(user_id, item_id)
         assert explanation is not None
         assert isinstance(explanation, dict)
             
@@ -100,7 +100,7 @@ class Test_MF_explainers(unittest.TestCase):
 
         user_id = recommendations['user_id'].values[0]
         item_id = recommendations['item_id'].values[0]
-        explanation = emf_exp.explain_one_recommendation_to_user(user_id, item_id, num_features=10)
+        explanation = emf_exp.explain_one_recommendation_to_user(user_id, item_id)
         assert explanation is not None
         assert isinstance(explanation, dict)
         
@@ -205,16 +205,16 @@ class Test_MF_explainers(unittest.TestCase):
         
         with self.assertRaises(AttributeError):
             exp = EMFExplainer(als, rs.train_set)
-            exp.explain_recommendations(als_rec, 10)
+            exp.explain_recommendations(als_rec, num_features=10)
         with self.assertRaises(AttributeError):
             exp = PHI4MFExplainer(als, rs.train_set)
-            exp.explain_recommendations(als_rec, 10)
+            exp.explain_recommendations(als_rec, num_features=10)
         with self.assertRaises(AttributeError):
             exp = ALSExplainer(mf, rs.train_set)
-            exp.explain_recommendations(mf_rec, 10)
+            exp.explain_recommendations(mf_rec, num_features=10)
         with self.assertRaises(AttributeError):
             exp = EMFExplainer(mf, rs.train_set)
-            exp.explain_recommendations(mf_rec, 10)
+            exp.explain_recommendations(mf_rec, num_features=10)
             
         
 if __name__ == '__main__':

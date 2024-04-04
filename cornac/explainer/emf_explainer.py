@@ -3,7 +3,7 @@ import numpy as np
 from .explainer import Explainer
 
 class EMFExplainer(Explainer):
-    """Alternating Least Squares of Matrix Factorization.
+    """Explainer from Explainable Matrix Factorization for Collaborative Filtering
 
     Parameters
     ----------
@@ -25,7 +25,7 @@ class EMFExplainer(Explainer):
     def __init__(self, rec_model, dataset, name='EMF'):
         super().__init__(name=name, rec_model=rec_model, dataset=dataset) 
 
-    def explain_one_recommendation_to_user(self, user_id, item_id, num_features=10):
+    def explain_one_recommendation_to_user(self, user_id, item_id, **kwargs):
         """
         provide explanation for one user and one item
         user_id: one user

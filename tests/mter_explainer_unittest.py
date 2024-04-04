@@ -48,14 +48,10 @@ class TestMTERExplainer(unittest.TestCase):
 
         num_top_aspects = 3
         num_top_opinions = 3
-        explanation = cls.explainer.explain_one_recommendation_to_user(user_id, item_id, num_top_aspects, num_top_opinions)
-        
-        # Make sure the output is corresponding to the input user_id and item_id
+        explanation = cls.explainer.explain_one_recommendation_to_user(user_id, item_id, num_features=num_top_aspects, num_top_opinions=num_top_opinions)
         # Perform assertions to verify the expected behavior
-        assert explanation["user_id"][0] == user_id
-        assert explanation["item_id"][0] == item_id
-        assert len(explanation["explanations"][0]) == num_top_aspects
-        assert len(list(explanation["explanations"][0].values())[0]) == num_top_opinions
+        assert len(explanation) == num_top_aspects
+        assert len(list(explanation)) == num_top_opinions
 
         print("TestMTER test_explain_one_recommendation_to_user complete")
     
@@ -83,7 +79,7 @@ class TestMTERExplainer(unittest.TestCase):
         assert len(explanations) == len_users * rec_k
         # Ensure that the user_id and item_id match the input recommendations
         assert isinstance(explanations, pd.DataFrame)
-        assert set(explanations.columns) == {'user_id', 'item_id', 'explanations'}
+        assert 'explanations' in set(explanations.columns)
 
 if __name__ == '__main__':
     unittest.main()

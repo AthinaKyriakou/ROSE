@@ -24,7 +24,7 @@ class ALSExplainer(Explainer):
     def __init__(self, rec_model, dataset, name="ALS"):
         super().__init__(name=name, rec_model=rec_model, dataset=dataset) 
 
-    def explain_one_recommendation_to_user(self, user_id, item_id, num_features=10):
+    def explain_one_recommendation_to_user(self, user_id, item_id, **kwargs):
         """
         provide explanation for one user and one item
         user_id: one user
@@ -32,7 +32,7 @@ class ALSExplainer(Explainer):
         num_features: number of features to be returned
         return: explanations as a dictionary containing items and their contributions
         """
-        self.number_of_contributions = num_features
+        self.number_of_contributions = kwargs.get('num_features', 10)
         uir_df = pd.DataFrame(np.array(self.dataset.uir_tuple).T, columns=['user', 'item', 'rating'])
         if user_id not in self.dataset.uid_map:
             return []

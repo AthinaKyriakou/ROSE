@@ -202,31 +202,6 @@ class FMRec(Recommender):
             all_predictions.extend(preds.round(3))
 
         return all_predictions[0] if item_id != None else np.array(all_predictions)
-
-    def recommend(self, user_ids, n=10, filter_history=True, verbose=False):
-        """
-        Provide recommendations for a list of users
-        user_ids: list of users
-        n: number of recommendations
-        filter_history: do not recommend items from users history
-
-        Return:
-        dataframe of users, items with the top n predictions
-        """
-        recommendation = []
-        item_idx2id = {v:k for k, v in self.train_set.iid_map.items()}
-        for uid in user_ids:
-            if verbose:
-                logger.info("recommending for user: {}".format(uid))
-            uidx = self.train_set.uid_map[uid] #convert uid to uidx
-            item_rank, item_scores = self.rank(uidx)
-            if filter_history == True:
-                user_rated_items = self.train_set.training_df[self.train_set.training_df['user_id'] == str(uidx)]['item_id']
-                recommendation_list = [[uid, item_idx2id[item_idx], item_scores[item_idx]] for item_idx in item_rank if str(item_idx) not in user_rated_items][:n]
-            else:
-                recommendation_list = [[uid, item_idx2id[item_idx], item_scores[item_idx]] for item_idx in item_rank[:n]]
-            recommendation.extend(recommendation_list)
-        return pd.DataFrame(recommendation, columns=['user_id', 'item_id', 'prediction'])
     
     def score_neighbourhood(self, neighborhood_df):
         """make prediction on a list of items for each user. dataframe of [user_idx, item_idx] are
@@ -262,6 +237,7 @@ class FMRec(Recommender):
             uir_tuples = dataset.uir_tuple
             Dataset.__init__(self, num_users=dataset.total_users, num_items=dataset.total_items,
                     uid_map=dataset.uid_map, iid_map=dataset.iid_map, uir_tuple=uir_tuples)
+            ### TODO: check error when running fm_unittest -- "AttributeError: 'Dataset' object has no attribute 'total_users'" --yingying
             
             training_df, y_train, train_item_features, train_user_features = _prepare_data(dataset)
             self.training_df = training_df

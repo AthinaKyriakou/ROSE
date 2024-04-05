@@ -144,7 +144,7 @@ class EnDCG(Metrics):
         """
         if self.recommendations is None or self.N != N:
             print('Computing recommendations for all users...')
-            r4au = self.model.recommend(list(self.dataset.user_ids), N)
+            r4au = self.model.recommend_to_multiple_users(list(self.dataset.user_ids), N)
             userid2idx = self.dataset.uid_map
             itemid2idx = self.dataset.iid_map
             self.recommendations = [(userid2idx[r4au['user_id'].values[i]], itemid2idx[r4au['item_id'].values[i]]) for i in range(len(r4au))]

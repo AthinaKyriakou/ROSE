@@ -68,7 +68,7 @@ class TestMTERExplainer(unittest.TestCase):
         len_users = len(users)
         rec_k = 10
         # Get recommendations for the selected users
-        recommendations = cls.rec_model.recommend(user_ids=users, n=rec_k)
+        recommendations = cls.rec_model.recommend_to_multiple_users(user_ids=users, k=rec_k)
         
         num_top_aspects = 3
         num_top_opinions = 3

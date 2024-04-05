@@ -35,7 +35,7 @@ class Test_MF_explainers(unittest.TestCase):
         users = [k for k in rs.train_set.uid_map.keys()][:5]
         len_users = len(users)
         rec_k = 10
-        recommendations = als.recommend(user_ids=users, n=rec_k)
+        recommendations = als.recommend_to_multiple_users(user_ids=users, k=rec_k)
         
         als_exp = ALSExplainer(als, rs.train_set)
         assert als_exp is not None
@@ -63,7 +63,7 @@ class Test_MF_explainers(unittest.TestCase):
         len_users = len(users)
         rec_k = 10
 
-        recommendations = emf.recommend(user_ids=users, n=rec_k)
+        recommendations = emf.recommend_to_multiple_users(user_ids=users, k=rec_k)
         emf_exp = EMFExplainer(emf, rs.train_set)
         assert emf_exp is not None
 
@@ -89,7 +89,7 @@ class Test_MF_explainers(unittest.TestCase):
         len_users = len(users)
         rec_k = 10
 
-        recommendations = nemf.recommend(user_ids=users, n=rec_k)
+        recommendations = nemf.recommend_to_multiple_users(user_ids=users, k=rec_k)
         emf_exp = EMFExplainer(nemf, rs.train_set)
         assert emf_exp is not None
 
@@ -115,7 +115,7 @@ class Test_MF_explainers(unittest.TestCase):
         len_users = len(users)
         rec_k = 10
 
-        recommendations = mf.recommend(user_ids=users, n=rec_k)
+        recommendations = mf.recommend_to_multiple_users(user_ids=users, k=rec_k)
         phi_exp = PHI4MFExplainer(mf, rs.train_set)
         assert phi_exp is not None
 
@@ -141,7 +141,7 @@ class Test_MF_explainers(unittest.TestCase):
         len_users = len(users)
         rec_k = 10
 
-        recommendations = emf.recommend(user_ids=users, n=rec_k)
+        recommendations = emf.recommend_to_multiple_users(user_ids=users, k=rec_k)
         phi_exp = PHI4MFExplainer(emf, rs.train_set)
         assert phi_exp is not None
 
@@ -167,7 +167,7 @@ class Test_MF_explainers(unittest.TestCase):
         len_users = len(users)
         rec_k = 10
 
-        recommendations = nemf.recommend(user_ids=users, n=rec_k)
+        recommendations = nemf.recommend_to_multiple_users(user_ids=users, k=rec_k)
         phi_exp = PHI4MFExplainer(nemf, rs.train_set)
         assert phi_exp is not None
 
@@ -198,10 +198,10 @@ class Test_MF_explainers(unittest.TestCase):
         
         als.fit(rs.train_set)
         users = [k for k in rs.train_set.uid_map.keys()][:5]
-        als_rec = als.recommend(user_ids=users, n=10)
+        als_rec = als.recommend_to_multiple_users(user_ids=users, k=10)
         
         mf.fit(rs.train_set)
-        mf_rec = mf.recommend(user_ids=users, n=10)
+        mf_rec = mf.recommend_to_multiple_users(user_ids=users, k=10)
         
         with self.assertRaises(AttributeError):
             exp = EMFExplainer(als, rs.train_set)

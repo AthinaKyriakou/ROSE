@@ -42,7 +42,7 @@ class TestDIV(unittest.TestCase):
         efm_exp = EFMExplainer(efm, rs.train_set)
 
         users = [k for k in rs.train_set.uid_map.keys()] 
-        rec_df = efm.recommend(users, n=10)
+        rec_df = efm.recommend_to_multiple_users(users, k=10)
         exp = efm_exp.explain_recommendations(recommendations=rec_df, num_features=10)[['user_id', 'item_id', 'explanations']].values
         div = DIV()
         value, distribution = div.compute(exp)
@@ -62,7 +62,7 @@ class TestDIV(unittest.TestCase):
         als.fit(rs.train_set)
         als_exp = ALSExplainer(als, rs.train_set)
         users = [k for k in rs.train_set.uid_map.keys()]
-        rec_df = als.recommend(users, n=10)
+        rec_df = als.recommend_to_multiple_users(users, k=10)
         exp = als_exp.explain_recommendations(recommendations=rec_df, num_features=10)[['user_id', 'item_id', 'explanations']]
         exp['explanations'].apply(lambda x: [v for v in x.keys()])
         exp = exp[['user_id', 'item_id', 'explanations']].values

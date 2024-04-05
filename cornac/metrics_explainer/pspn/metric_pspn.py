@@ -122,7 +122,7 @@ class PSPNFNS(Metrics):
             else:
                 self.model.train_set.user_features = self.user_features_original[self.user_features_original['feature'].isin(exp)] 
 
-        rank_scores = self.model.recommend([user], self.rec_k)['item_id'].to_list()
+        rank_scores = self.model.recommend_to_multiple_users([user], self.rec_k)['item_id'].to_list()
         
         if not self.model.train_set.item_features.empty:
             self.model.train_set.item_features = self.item_features_original
@@ -147,7 +147,7 @@ class PSPNFNS(Metrics):
                 self.model.V = np.delete(self.model.V, indices, axis=0)
             else:
                 self.model.V = self.model.V[indices]
-            rank_scores = self.model.recommend([user], self.rec_k)['item_id'].to_list()
+            rank_scores = self.model.recommend_to_multiple_users([user], self.rec_k)['item_id'].to_list()
             self.model.V = model_copy.V
             return rank_scores
         elif self.model.name == 'MTER':
@@ -155,7 +155,7 @@ class PSPNFNS(Metrics):
                 self.model.A = np.delete(self.model.A, indices, axis=0)
             else:
                 self.model.A = self.model.A[indices]
-            rank_scores = self.model.recommend([user], self.rec_k)['item_id'].to_list()
+            rank_scores = self.model.recommend_to_multiple_users([user], self.rec_k)['item_id'].to_list()
             self.model.A = model_copy.A
             return rank_scores
         else:

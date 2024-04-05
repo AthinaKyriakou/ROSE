@@ -70,7 +70,7 @@ class TestEFMExplainer(unittest.TestCase):
         len_users = len(users)
         rec_k = 10
         # Get recommendations for the selected users
-        recommendations = cls.rec_model.recommend(user_ids=users, n=rec_k)
+        recommendations = cls.rec_model.recommend_to_multiple_users(user_ids=users, k=rec_k)
         
         num_features = 3
         # Call the method being tested: generate explanations for all u-i pairs in the recommendations

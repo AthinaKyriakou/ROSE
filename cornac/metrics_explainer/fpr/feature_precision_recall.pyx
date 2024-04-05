@@ -167,6 +167,6 @@ class FPR(Metrics):
         """create recommendations for all users available in the dataset"""
         print("Started creating recommendations...")
         users = [k for k in self.dataset.uid_map.keys()] 
-        rec_df = self.model.recommend(users, self.rec_k) ##to be updated
+        rec_df = self.model.recommend_to_multiple_users(users, self.rec_k) ##to be updated
         print("Finished creating recommendations...")
         return rec_df[['user_id', 'item_id']]

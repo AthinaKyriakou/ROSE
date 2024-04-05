@@ -22,7 +22,7 @@ class TestPSPNModel(unittest.TestCase):
         fm = FMRec().fit(rs.train_set)
         limers = LimeRSExplainer(rec_model=fm, dataset=rs.train_set)
         lst_users = [key for key in fm.train_set.uid_map.keys()]
-        recommendations = fm.recommend(lst_users)
+        recommendations = fm.recommend_to_multiple_users(lst_users, k=10)
         explanations = limers.explain_recommendations(recommendations)[['user_id', 'item_id', 'explanations']]
         explanations = explanations[explanations['explanations'] != {}]
         explanations = explanations[['user_id', 'item_id', 'explanations']].values
@@ -41,7 +41,7 @@ class TestPSPNModel(unittest.TestCase):
         efm = EFM(max_iter=200, verbose=False, seed=6).fit(rs.train_set)
         efm_exp = EFMExplainer(rec_model=efm, dataset=rs.train_set)
         lst_users = [key for key in rs.train_set.uid_map.keys()]
-        recommendations = efm.recommend(lst_users)
+        recommendations = efm.recommend_to_multiple_users(lst_users, k=10)
         explanations = efm_exp.explain_recommendations(recommendations)[['user_id', 'item_id', 'explanations']].values
         pspn = PSPNFNS()
         (ps,pn,fns), _ = pspn.compute(efm, efm_exp, explanations)
@@ -58,7 +58,7 @@ class TestPSPNModel(unittest.TestCase):
         emf = EMF().fit(rs.train_set)
         emf_exp = EMFExplainer(rec_model=emf, dataset=rs.train_set)
         lst_users = [key for key in rs.train_set.uid_map.keys()]
-        recommendations = emf.recommend(lst_users)
+        recommendations = emf.recommend_to_multiple_users(lst_users, k=10)
         explanations = emf_exp.explain_recommendations(recommendations)[['user_id', 'item_id', 'explanations']].values      
         pspn = PSPNFNS()
         with self.assertRaises(ValueError):

@@ -22,6 +22,7 @@ from datetime import datetime
 from glob import glob
 
 import numpy as np
+import pandas as pd
 
 from ..exception import ScoreException
 from ..utils.common import clip
@@ -562,6 +563,55 @@ class Recommender:
 
         recommendations = [self.item_ids[i] for i in item_rank]
         return recommendations
+    
+    def recommend_to_multiple_users(self, user_ids, k=-1, remove_seen=False, train_set=None):
+        """Generate top-K item recommendations for the given user lists.
+
+        Parameters
+        ----------
+        user_ids: array, required
+            The original ID list of the users.
+
+        k: int, optional, default=-1
+            Cut-off length for recommendations, k=-1 will return ranked list of all items.
+
+        remove_seen: bool, optional, default: False
+            Remove seen/known items during training and validation from output recommendations.
+
+        train_set: :obj:`cornac.data.Dataset`, optional, default: None
+            Training dataset needs to be provided in order to remove seen items.
+
+        Returns
+        -------
+        recommendations: a list of pandas.DataFrame [user_id, item_id, prediction]
+            Recommended items in the form of their original IDs.
+        """
+        recommendations = []
+        for user_id in user_ids:
+            user_idx = self.train_set.uid_map[user_id]
+            if user_idx == -1:
+                raise ValueError(f"{user_id} is unknown to the model.")
+
+            if k < -1 or k > self.total_items:
+                raise ValueError(f"k={k} is invalid, there are {self.total_users} users in total.")
+
+            item_indices = np.arange(self.total_items)
+            if remove_seen:
+                seen_mask = np.zeros(len(item_indices), dtype="bool")
+                if train_set is None:
+                    raise ValueError("train_set must be provided to remove seen items.")
+                if user_idx < train_set.csr_matrix.shape[0]:
+                    seen_mask[train_set.csr_matrix.getrow(user_idx).indices] = True
+                    item_indices = item_indices[~seen_mask]
+
+            item_rank, item_scores = self.rank(user_idx, item_indices)
+            if k != -1:
+                item_rank = item_rank[:k]
+
+            recommendation_list_for_one_user = [[user_id, self.item_ids[item_idx], item_scores[item_idx]] for item_idx in item_rank]
+            recommendations.extend(recommendation_list_for_one_user)
+        return pd.DataFrame(recommendations, columns=['user_id', 'item_id', 'prediction'])
+
 
     def monitor_value(self, train_set, val_set):
         """Calculating monitored value used for early stopping on validation set (`val_set`).

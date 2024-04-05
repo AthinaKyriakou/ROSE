@@ -26,7 +26,7 @@ class Test_MF_recommenders(unittest.TestCase):
         users = [k for k in rs.train_set.uid_map.keys()][:5]
         len_users = len(users)
         rec_k = 10
-        recommendations = mf.recommend(user_ids=users, n=rec_k)
+        recommendations = mf.recommend_to_multiple_users(user_ids=users, k=rec_k)
         assert len(recommendations) == len_users * rec_k
         assert isinstance(recommendations, pd.DataFrame)
         assert set(recommendations.columns) == {'user_id', 'item_id', 'prediction'}
@@ -46,7 +46,7 @@ class Test_MF_recommenders(unittest.TestCase):
         users = [k for k in rs.train_set.uid_map.keys()][:5]
         len_users = len(users)
         rec_k = 10
-        recommendations = emf.recommend(user_ids=users, n=rec_k)
+        recommendations = emf.recommend_to_multiple_users(user_ids=users, k=rec_k)
         assert len(recommendations) == len_users * rec_k
         assert isinstance(recommendations, pd.DataFrame)
         assert set(recommendations.columns) == {'user_id', 'item_id', 'prediction'}
@@ -68,7 +68,7 @@ class Test_MF_recommenders(unittest.TestCase):
         users = [k for k in rs.train_set.uid_map.keys()][:5]
         len_users = len(users)
         rec_k = 10
-        recommendations = nemf.recommend(user_ids=users, n=rec_k)
+        recommendations = nemf.recommend_to_multiple_users(user_ids=users, k=rec_k)
         assert len(recommendations) == len_users * rec_k
         assert isinstance(recommendations, pd.DataFrame)
         assert set(recommendations.columns) == {'user_id', 'item_id', 'prediction'}
@@ -86,7 +86,7 @@ class Test_MF_recommenders(unittest.TestCase):
         users = [k for k in rs.train_set.uid_map.keys()][:5]
         len_users = len(users)
         rec_k = 10
-        recommendations = als.recommend(user_ids=users, n=rec_k)
+        recommendations = als.recommend_to_multiple_users(user_ids=users, k=rec_k)
         assert len(recommendations) == len_users * rec_k
         assert isinstance(recommendations, pd.DataFrame)
         assert set(recommendations.columns) == {'user_id', 'item_id', 'prediction'}

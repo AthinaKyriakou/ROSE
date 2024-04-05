@@ -391,34 +391,3 @@ class EMF(Recommender):
     def item_embedding(self):
         return self.i_factors
 
-    def recommend(self, user_ids, n=10, filter_history=True):
-        """
-        Provide recommendations for a list of users
-        user_ids: list of users
-        n: number of recommendations
-        filter history: do not recommend items from users history
-        Return: dataframe of users, items with the top n predictions
-        """
-        recommendation = []
-        uir_df = pd.DataFrame(np.array(self.train_set.uir_tuple).T, columns=['user', 'item', 'rating'])
-        uir_df['user'] = uir_df['user'].astype(int)
-        uir_df['item'] = uir_df['item'].astype(int)
-        item_idx2id= {v:k for k,v in self.train_set.iid_map.items()}
-
-        for uid in user_ids:            
-            if uid not in self.train_set.uid_map:
-                continue
-            user_idx = self.train_set.uid_map[uid]
-            item_rank, item_score = self.rank(user_idx)
-            recommendation_one_user = []
-            if filter_history:
-                user_rated_items = uir_df[uir_df['user'] == user_idx]['item']
-                # remove user rated items from item_rank
-                recommendation_one_user = [[uid, item_idx2id[item_idx], item_score[item_idx]] for item_idx in item_rank if item_idx not in user_rated_items][:n]
-            else:
-                recommendation_one_user = [[uid, item_idx2id[item_idx], item_score[item_idx]] for item_idx in item_rank[:n]]
-            recommendation.extend(recommendation_one_user)
-        
-        return pd.DataFrame(recommendation, columns=['user_id', 'item_id', 'prediction'])
-
-

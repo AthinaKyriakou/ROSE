@@ -46,7 +46,7 @@ class Explainers_Experiment:
     """
     Create experiment to evaluate explainers and output evaluation results
     """
-    def __init__(self, eval_method, models, metrics, distribution=True, rec_k = 10, feature_k = 10, eval_train=True, verbose=True, num_threads=0, save_dir=None, **kwargs):
+    def __init__(self, eval_method, models, metrics, distribution=True, rec_k = 10, feature_k = 10, eval_train=True, verbose=True, num_threads=0, save_dir="./experiment_plots", **kwargs):
         """"
         Args:
             eval_method: evaluation method (e.g. ratiosplit) 
@@ -214,7 +214,7 @@ class Explainers_Experiment:
             recommendation dataframe [user_id, item_id] 
         """
         users = [k for k in self.dataset.uid_map.keys()] 
-        rec_df = current_rec.recommend(users, n=self.rec_k)
+        rec_df = current_rec.recommend_to_multiple_users(users, k=self.rec_k)
         rec_df = rec_df[['user_id', 'item_id']]
         return rec_df
 

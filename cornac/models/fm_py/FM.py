@@ -154,12 +154,20 @@ class FMRec(Recommender):
         #TODO: modify item_features to wide format. OR add a function in Dataset to perform this transformation??
 
         self.train_set = self.LimeRSDataset(train_set)
+        self.num_users = self.train_set.num_users
+        self.num_items = self.train_set.num_items
+        self.uid_map = self.train_set.uid_map
+        self.iid_map = self.train_set.iid_map
+        self.min_rating = self.train_set.min_rating
+        self.max_rating = self.train_set.max_rating
+        self.global_mean = self.train_set.global_mean
         df = self.train_set.merge_uir_with_features(self.train_set.training_df, self.uses_features)
         training_data, training_columns = self.train_set.convert_to_pyfm_format(df)  
         self.one_hot_columns = training_columns
 
         self.fm.fit(training_data, self.train_set.y_train) #training_data is a sparse matrix; y_train is an array
         self.val_set = None if val_set is None else self.LimeRSDataset(val_set)
+        self.is_fitted = True
         return self
 
     def score(self, user_id, item_id=None):
@@ -235,7 +243,7 @@ class FMRec(Recommender):
 
             """
             uir_tuples = dataset.uir_tuple
-            Dataset.__init__(self, num_users=dataset.total_users, num_items=dataset.total_items,
+            Dataset.__init__(self, num_users=dataset.num_users, num_items=dataset.num_items,
                     uid_map=dataset.uid_map, iid_map=dataset.iid_map, uir_tuple=uir_tuples)
             ### TODO: check error when running fm_unittest -- "AttributeError: 'Dataset' object has no attribute 'total_users'" --yingying
             

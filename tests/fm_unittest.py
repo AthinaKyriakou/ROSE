@@ -31,7 +31,7 @@ class TestFMModel_user_item_features(unittest.TestCase):
             correct count of recommendations are provided to user;
             check the same user ids are used in the recommendations as input"""
         user = self.model.train_set.pick_top_users(2)
-        recommendations = self.model.recommend(user,n=10)
+        recommendations = self.model.recommend_to_multiple_users(user,k=10)
         result = recommendations['user_id'].unique()
         self.assertEqual(20, len(recommendations))
         self.assertEqual(recommendations['prediction'].dtype, 'float64')
@@ -80,7 +80,7 @@ class TestFMModel_item_features(unittest.TestCase):
             correct count of recommendations are provided to user;
             check the same user ids are used in the recommendations as input"""
         user = self.model.train_set.pick_top_users(2)
-        recommendations = self.model.recommend(user,n=10)
+        recommendations = self.model.recommend_to_multiple_users(user,k=10)
         result = recommendations['user_id'].unique()
         self.assertEqual(20, len(recommendations))
         self.assertEqual(recommendations['prediction'].dtype, 'float64')
@@ -122,7 +122,7 @@ class TestFMModel_item_features(unittest.TestCase):
         """Check recommendations can be given to unknown user
            check predictions are valid"""
         user = self.model.train_set.pick_top_users(1) #use unmapped user_id as 'unknown user'
-        recommendations = self.model.recommend(user, n=10)
+        recommendations = self.model.recommend_to_multiple_users(user, k=10)
         self.assertEqual(recommendations['prediction'].dtype, 'float64')
         self.assertEqual(recommendations['prediction'].notna().all(), True)
 
@@ -160,7 +160,7 @@ class TestFMModel_user_features(unittest.TestCase):
             correct count of recommendations are provided to user;
             check the same user ids are used in the recommendations as input"""
         user = self.model.train_set.pick_top_users(2)
-        recommendations = self.model.recommend(user,n=10)
+        recommendations = self.model.recommend_to_multiple_users(user,k=10)
         result = recommendations['user_id'].unique()
         self.assertEqual(20, len(recommendations))
         self.assertEqual(recommendations['prediction'].dtype, 'float64')

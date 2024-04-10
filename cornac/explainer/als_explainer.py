@@ -29,10 +29,10 @@ class ALSExplainer(Explainer):
         provide explanation for one user and one item
         user_id: one user
         item_id: one item
-        num_features: number of features to be returned
+        feature_k: default 10, number of features in explanations created by explainer
         return: explanations as a dictionary containing items and their contributions
         """
-        self.number_of_contributions = kwargs.get('num_features', 10)
+        self.number_of_contributions = kwargs.get('feature_k', 10)
         uir_df = pd.DataFrame(np.array(self.dataset.uir_tuple).T, columns=['user', 'item', 'rating'])
         if user_id not in self.dataset.uid_map:
             return []

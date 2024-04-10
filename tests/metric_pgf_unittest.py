@@ -42,7 +42,7 @@ class TestPGF(unittest.TestCase):
         emf_exp = EMFExplainer(emf, rs.train_set)
         users = [k for k in rs.train_set.uid_map.keys()] 
         rec_df = emf.recommend_to_multiple_users(users, k=10)
-        exp = emf_exp.explain_recommendations(recommendations=rec_df, num_features=10)[['user_id', 'item_id', 'explanations']].values
+        exp = emf_exp.explain_recommendations(recommendations=rec_df, feature_k=10)[['user_id', 'item_id', 'explanations']].values
         
         pgf = PGF(phi=10)
         value, distribution = pgf.compute(emf, emf_exp, exp)
@@ -60,7 +60,7 @@ class TestPGF(unittest.TestCase):
         als_exp = ALSExplainer(als, rs.train_set)
         users = [k for k in rs.train_set.uid_map.keys()]
         rec_df = als.recommend_to_multiple_users(users, k=10)
-        exp = als_exp.explain_recommendations(recommendations=rec_df, num_features=10)[['user_id', 'item_id', 'explanations']]
+        exp = als_exp.explain_recommendations(recommendations=rec_df, feature_k=10)[['user_id', 'item_id', 'explanations']]
         exp['explanations'] = exp['explanations'].apply(lambda x: [v for v in x.keys()])
         exp = exp[['user_id', 'item_id', 'explanations']].values
         
@@ -81,7 +81,7 @@ class TestPGF(unittest.TestCase):
         phi_exp = PHI4MFExplainer(emf, rs.train_set)
         users = [k for k in rs.train_set.uid_map.keys()] 
         rec_df = emf.recommend_to_multiple_users(users, k=10)
-        exp = phi_exp.explain_recommendations(recommendations=rec_df, num_features=10)[['user_id', 'item_id', 'explanations']].values
+        exp = phi_exp.explain_recommendations(recommendations=rec_df, feature_k=10)[['user_id', 'item_id', 'explanations']].values
         
         pgf = PGF(phi=10)
         value, distribution = pgf.compute(emf, phi_exp, exp)

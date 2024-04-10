@@ -67,10 +67,10 @@ class PHI4MFExplainer(Explainer):
         provide explanation for one user and one item
         user_id: one user
         item_id: one item
-        num_features: number of features to be returned
+        feature_k: default 10, number of features in explanations created by explainer
         return: explanations as a list of association rules
         """
-        num_features = kwargs.get('num_features', 10)
+        num_features = kwargs.get('feature_k', 10)
         uir_df = pd.DataFrame(np.array(self.dataset.uir_tuple).T, columns=['user', 'item', 'rating'])
         uir_df['user'] = uir_df['user'].astype(int)
         uir_df['item'] = uir_df['item'].astype(int)

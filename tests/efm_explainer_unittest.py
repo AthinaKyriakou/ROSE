@@ -48,12 +48,12 @@ class TestEFMExplainer(unittest.TestCase):
         user_id = np.random.choice(list(cls.dataset.user_ids))
         item_id = np.random.choice(list(cls.dataset.item_ids))
         
-        num_features = 3
+        feature_k = 3
         index  = False
         # Get explanations
-        explanation = cls.explainer.explain_one_recommendation_to_user(user_id=user_id, item_id=item_id, num_features=num_features)
+        explanation = cls.explainer.explain_one_recommendation_to_user(user_id=user_id, item_id=item_id, feature_k=feature_k)
         # Make sure the number of explanations is equal to the number of most cared aspects
-        assert len(explanation) == num_features, "The length of explanation should be the specified number of futures"
+        assert len(explanation) == feature_k, "The length of explanation should be the specified number of futures"
         print("TestEFM test_explain_one_recommendation_to_user complete")
     
     @classmethod    
@@ -72,10 +72,10 @@ class TestEFMExplainer(unittest.TestCase):
         # Get recommendations for the selected users
         recommendations = cls.rec_model.recommend_to_multiple_users(user_ids=users, k=rec_k)
         
-        num_features = 3
+        feature_k = 3
         # Call the method being tested: generate explanations for all u-i pairs in the recommendations
         explanations = cls.explainer.explain_recommendations(
-            recommendations, num_features=num_features
+            recommendations, feature_k=feature_k
         )
         # check the explanations not None, in right fornmat, and expected length
         assert explanations is not None

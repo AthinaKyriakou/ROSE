@@ -22,12 +22,13 @@ class EFMExplainer(Explainer):
     def explain_one_recommendation_to_user(self, user_id, item_id, **kwargs):
         """
         get aspect with the highest score of the item, and at the same time, being the user's most cared aspect.
-        :param user_id:
-        :param item_id: 
+        user_id: one user
+        item_id: one item
+        feature_k: default 10, number of features in explanations created by explainer
         :return: a distionary of {"user_id": user_id, "item_id": item_id, "explanations": [{"aspect": aspect, "score": score}, {}, {} ...]}
         """
         # num_features from kwargs
-        self.num_most_cared_aspects = kwargs.get("num_features", 3)
+        self.num_most_cared_aspects = kwargs.get("feature_k", 3)
         user_id = self.dataset.uid_map[user_id]
         item_id = self.dataset.iid_map[item_id]
 

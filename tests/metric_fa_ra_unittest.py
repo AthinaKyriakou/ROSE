@@ -39,14 +39,14 @@ class TestFARA(unittest.TestCase):
         items = [k for k in rs.train_set.iid_map.keys()] 
         # artifically create user-item pairs
         num_pairs = 10
-        num_features = 10
+        feature_k = 10
         user_item = pd.DataFrame({'user_id': users[:num_pairs], 'item_id': items[:num_pairs]})
 
-        exp_1 = efm_exp.explain_recommendations(recommendations=user_item, num_features=num_features)
+        exp_1 = efm_exp.explain_recommendations(recommendations=user_item, feature_k=feature_k)
         exp_1['explanations'].apply(lambda x: [v for v in x.keys()])
         exp_1 = exp_1[['user_id', 'item_id', 'explanations']].values
         
-        exp_2 = mter_exp.explain_recommendations(recommendations=user_item, num_features=num_features)
+        exp_2 = mter_exp.explain_recommendations(recommendations=user_item, feature_k=feature_k)
         exp_2['explanations'].apply(lambda x: [v for v in x.keys()])
         exp_2 = exp_2[['user_id', 'item_id', 'explanations']].values
         

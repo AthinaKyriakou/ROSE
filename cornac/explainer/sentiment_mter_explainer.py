@@ -24,16 +24,17 @@ class MTERExplainer(Explainer):
     def explain_one_recommendation_to_user(self, user_id, item_id, **kwargs):
         """
         get aspect performs best and user's opinion word of that aspect.
-        :param user_id:
-        :param item_id: 
+        user_id: one user
+        item_id: one item
+        feature_k: default 10, number of features in explanations created by explainer
         ==== does this necessary
         :num_top_aspects: number of aspects used as explanation
         :num_top_opinions: number of opinions used to explain each aspect
         ====
         :return: a distionary of {aspect: [{opinion: score}, {opinion: score}, ...}], aspect: [{opinion: score}, {opinion: score}, ...]}
         """
-        # num_features=3, num_top_opinions=3
-        self.num_top_aspects = kwargs.get("num_features", 3)
+        # feature_k=3, num_top_opinions=3
+        self.num_top_aspects = kwargs.get("feature_k", 3)
         self.num_top_opinions = kwargs.get("num_top_opinions", 3)
 
         user_id = self.dataset.uid_map[user_id]

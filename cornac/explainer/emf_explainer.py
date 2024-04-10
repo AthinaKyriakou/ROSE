@@ -30,7 +30,6 @@ class EMFExplainer(Explainer):
         provide explanation for one user and one item
         user_id: one user
         item_id: one item
-        num_features: number of features to be returned
         return: a dictionary containing mapping from rating score to count
         """
         if self.model is None:

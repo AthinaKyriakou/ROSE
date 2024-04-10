@@ -44,16 +44,16 @@ class LimeRSExplainer(Explainer):
             kernel_width: used to fit kernel function
             verbose: (LIME base) if true, print local prediction values from linear model.
             class_names: (LIME base) list of class names (only used for classification)
-            feature_selection: (LIME base) how to select num_features. options are:
+            feature_selection: (LIME base) how to select feature_k. options are:
                 'forward_selection': iteratively add features to the model.
-                    This is costly when num_features is high
+                    This is costly when feature_k is high
                 'highest_weights': selects the features that have the highest
                     product of absolute weight * original data point when
                     learning with all the features
                 'lasso_path': chooses features based on the lasso
                     regularization path
-                'none': uses all features, ignores num_features
-                'auto': uses forward_selection if num_features <= 6, and
+                'none': uses all features, ignores feature_k
+                'auto': uses forward_selection if feature_k <= 6, and
                     'highest_weights' otherwise.
             random_state: (LIME base) an integer or numpy.RandomState that will be used to
                 generate random numbers. If None, the random state will be
@@ -85,7 +85,7 @@ class LimeRSExplainer(Explainer):
     def explain_recommendations(
             self, 
             recommendations, 
-            num_features=10,
+            feature_k=10,
             feature_type = "features",
             verbose = True
         ):
@@ -94,7 +94,7 @@ class LimeRSExplainer(Explainer):
         Args:
             recommendations: df of [user_id, item_id]
             num_samples: number of datapoint to be sampled
-            num_features: number of features used in the explanation
+            feature_k: number of features used in the explanation
             feature_type: default "features"
         """
         if self.feature_map == None:
@@ -116,7 +116,7 @@ class LimeRSExplainer(Explainer):
                     explanations = pd.concat(
                         [explanations, 
                         self.explain_one_recommendation_to_user(row.user_id, row.item_id, 
-                                                                                num_features, feature_type, verbose)])
+                                                                                feature_k, feature_type, verbose)])
                     if i % interval == 0:
                         pbar.update(interval)
         else:
@@ -124,7 +124,7 @@ class LimeRSExplainer(Explainer):
                 explanations = pd.concat(
                     [explanations, 
                     self.explain_one_recommendation_to_user(row.user_id, row.item_id, 
-                                                                            num_features, feature_type, verbose)])
+                                                                            feature_k, feature_type, verbose)])
 
         return explanations
     
@@ -132,7 +132,7 @@ class LimeRSExplainer(Explainer):
             self,
             user_id,
             item_id,
-            num_features = 10,
+            feature_k = 10,
             feature_type="features",
             verbose = True
     ):
@@ -142,7 +142,7 @@ class LimeRSExplainer(Explainer):
         Args:
             user_id: id of user to be explained
             item_id: id of item to be explained
-            num_features: num of features to be included in the output
+            feature_k: num of features to be included in the output
             feature_type: "features" as default
 
         Return: Dataframe of explanations [user_id, item_id, explanations, local_prediction] for each instance
@@ -180,7 +180,7 @@ class LimeRSExplainer(Explainer):
         #     logger.info("explaining-> (user: {}, item: {})".format(user_id, item_id))
             
         exp = self.explain_instance(
-                user_idx, item_idx, num_features=num_features, 
+                user_idx, item_idx, feature_k=feature_k, 
                 neighborhood_entity="item", labels=[0], )
         
         
@@ -235,7 +235,7 @@ class LimeRSExplainer(Explainer):
         user_idx,
         item_idx,
         neighborhood_entity,
-        num_features,
+        feature_k,
         labels=(1,),
         distance_metric="cosine",
         model_regressor=None,
@@ -247,7 +247,7 @@ class LimeRSExplainer(Explainer):
             instance: an instance (user_id, item_id) to be explained 
             neighborhood_entity: rule for selecting samples. Option: "user", "item", or ??
             labels: only the first is used for regression task
-            num_features: number of explained features to be displayed
+            feature_k: number of explained features to be displayed
             num_samples: number of samples selected in the neighbourhood
             distance_metric: default "cosine", used to calculate pairwise similarity
             model_regressor: (LIME base) sklearn regressor to use in explanation.
@@ -322,7 +322,7 @@ class LimeRSExplainer(Explainer):
         for label in labels:  
             (ret_exp.intercept[label],  ret_exp.local_exp[label], 
              ret_exp.score,ret_exp.local_pred,) = self.base.explain_instance_with_data(  
-                data,  yss,  distances,  label,  num_features,  
+                data,  yss,  distances,  label,  feature_k,  
                 model_regressor=model_regressor, 
                 feature_selection=self.feature_selection,  
             )

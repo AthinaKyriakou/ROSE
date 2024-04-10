@@ -40,7 +40,7 @@ class Test_MF_explainers(unittest.TestCase):
         als_exp = ALSExplainer(als, rs.train_set)
         assert als_exp is not None
         
-        explanations = als_exp.explain_recommendations(recommendations=recommendations, num_features=10)
+        explanations = als_exp.explain_recommendations(recommendations=recommendations, feature_k=10)
         assert explanations is not None
         assert len(explanations) == len_users * rec_k
         assert isinstance(explanations, pd.DataFrame)
@@ -48,7 +48,7 @@ class Test_MF_explainers(unittest.TestCase):
         
         user_id = recommendations['user_id'].values[0]
         item_id = recommendations['item_id'].values[0]
-        explanation = als_exp.explain_one_recommendation_to_user(user_id, item_id, num_features=10)
+        explanation = als_exp.explain_one_recommendation_to_user(user_id, item_id, feature_k=10)
         assert explanation is not None
         assert isinstance(explanation, dict)
         
@@ -67,7 +67,7 @@ class Test_MF_explainers(unittest.TestCase):
         emf_exp = EMFExplainer(emf, rs.train_set)
         assert emf_exp is not None
 
-        explanations = emf_exp.explain_recommendations(recommendations=recommendations, num_features=10)
+        explanations = emf_exp.explain_recommendations(recommendations=recommendations, feature_k=10)
         assert explanations is not None
         assert len(explanations) == len_users * rec_k
         assert isinstance(explanations, pd.DataFrame)
@@ -93,7 +93,7 @@ class Test_MF_explainers(unittest.TestCase):
         emf_exp = EMFExplainer(nemf, rs.train_set)
         assert emf_exp is not None
 
-        explanations = emf_exp.explain_recommendations(recommendations=recommendations, num_features=10)
+        explanations = emf_exp.explain_recommendations(recommendations=recommendations, feature_k=10)
         assert explanations is not None
         assert len(explanations) == len_users * rec_k
         assert isinstance(explanations, pd.DataFrame)
@@ -119,14 +119,14 @@ class Test_MF_explainers(unittest.TestCase):
         phi_exp = PHI4MFExplainer(mf, rs.train_set)
         assert phi_exp is not None
 
-        explanations = phi_exp.explain_recommendations(recommendations=recommendations, num_features=10)
+        explanations = phi_exp.explain_recommendations(recommendations=recommendations, feature_k=10)
         assert explanations is not None
         assert len(explanations) == len_users * rec_k
         assert isinstance(explanations, pd.DataFrame)
 
         user_id = recommendations['user_id'].values[0]
         item_id = recommendations['item_id'].values[0]
-        explanation = phi_exp.explain_one_recommendation_to_user(user_id, item_id, num_features=10)
+        explanation = phi_exp.explain_one_recommendation_to_user(user_id, item_id, feature_k=10)
         assert explanation is not None
         assert isinstance(explanation, list)
         
@@ -145,14 +145,14 @@ class Test_MF_explainers(unittest.TestCase):
         phi_exp = PHI4MFExplainer(emf, rs.train_set)
         assert phi_exp is not None
 
-        explanations = phi_exp.explain_recommendations(recommendations=recommendations, num_features=10)
+        explanations = phi_exp.explain_recommendations(recommendations=recommendations, feature_k=10)
         assert explanations is not None
         assert len(explanations) == len_users * rec_k
         assert isinstance(explanations, pd.DataFrame)
 
         user_id = recommendations['user_id'].values[0]
         item_id = recommendations['item_id'].values[0]
-        explanation = phi_exp.explain_one_recommendation_to_user(user_id, item_id, num_features=10)
+        explanation = phi_exp.explain_one_recommendation_to_user(user_id, item_id, feature_k=10)
         assert explanation is not None
         assert isinstance(explanation, list)
         
@@ -171,14 +171,14 @@ class Test_MF_explainers(unittest.TestCase):
         phi_exp = PHI4MFExplainer(nemf, rs.train_set)
         assert phi_exp is not None
 
-        explanations = phi_exp.explain_recommendations(recommendations=recommendations, num_features=10)
+        explanations = phi_exp.explain_recommendations(recommendations=recommendations, feature_k=10)
         assert explanations is not None
         assert len(explanations) == len_users * rec_k
         assert isinstance(explanations, pd.DataFrame)
 
         user_id = recommendations['user_id'].values[0]
         item_id = recommendations['item_id'].values[0]
-        explanation = phi_exp.explain_one_recommendation_to_user(user_id, item_id, num_features=10)
+        explanation = phi_exp.explain_one_recommendation_to_user(user_id, item_id, feature_k=10)
         assert explanation is not None
         assert isinstance(explanation, list)
         
@@ -205,16 +205,16 @@ class Test_MF_explainers(unittest.TestCase):
         
         with self.assertRaises(AttributeError):
             exp = EMFExplainer(als, rs.train_set)
-            exp.explain_recommendations(als_rec, num_features=10)
+            exp.explain_recommendations(als_rec, feature_k=10)
         with self.assertRaises(AttributeError):
             exp = PHI4MFExplainer(als, rs.train_set)
-            exp.explain_recommendations(als_rec, num_features=10)
+            exp.explain_recommendations(als_rec, feature_k=10)
         with self.assertRaises(AttributeError):
             exp = ALSExplainer(mf, rs.train_set)
-            exp.explain_recommendations(mf_rec, num_features=10)
+            exp.explain_recommendations(mf_rec, feature_k=10)
         with self.assertRaises(AttributeError):
             exp = EMFExplainer(mf, rs.train_set)
-            exp.explain_recommendations(mf_rec, num_features=10)
+            exp.explain_recommendations(mf_rec, feature_k=10)
             
         
 if __name__ == '__main__':

@@ -48,7 +48,7 @@ class TestMTERExplainer(unittest.TestCase):
 
         num_top_aspects = 3
         num_top_opinions = 3
-        explanation = cls.explainer.explain_one_recommendation_to_user(user_id, item_id, num_features=num_top_aspects, num_top_opinions=num_top_opinions)
+        explanation = cls.explainer.explain_one_recommendation_to_user(user_id, item_id, feature_k=num_top_aspects, num_top_opinions=num_top_opinions)
         # Perform assertions to verify the expected behavior
         assert len(explanation) == num_top_aspects
         assert len(list(explanation)) == num_top_opinions
@@ -72,7 +72,7 @@ class TestMTERExplainer(unittest.TestCase):
         
         num_top_aspects = 3
         num_top_opinions = 3
-        explanations = cls.explainer.explain_recommendations(recommendations, num_features = num_top_aspects, num_top_opinions=num_top_opinions)
+        explanations = cls.explainer.explain_recommendations(recommendations, feature_k = num_top_aspects, num_top_opinions=num_top_opinions)
 
         # check the explanations not None, in right fornmat, and expected length
         assert explanations is not None

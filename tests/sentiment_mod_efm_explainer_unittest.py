@@ -43,7 +43,7 @@ class TestEFMExplainer(unittest.TestCase):
         item_id = 2 
         index  = True
         # Call the method being tested
-        explanation = cls.explainer.explain_one_recommendation_to_user(user_id=user_id, item_id=item_id, num_features=3, index=index)
+        explanation = cls.explainer.explain_one_recommendation_to_user(user_id=user_id, item_id=item_id, feature_k=3, index=index)
         
         # Perform assertions to verify the expected behavior
         assert explanation["user_id"][0] == user_id
@@ -61,11 +61,11 @@ class TestEFMExplainer(unittest.TestCase):
             "user_id": [1, 2, 3],
             "item_id": [100, 200, 300]
         })
-        num_features = 3
+        feature_k = 3
         index = True
 
         explanations = cls.explainer.explain_recommendations(
-            recommendations, num_features, index
+            recommendations, feature_k, index
         )
 
         # Perform assertions to validate the output

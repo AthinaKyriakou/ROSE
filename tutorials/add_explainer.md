@@ -60,13 +60,6 @@ Update `./cornac/explainer/__init__.py` by adding the following line:
 from .phi4mf_explainer import PHI4MFExplainer
 ```
 
-### 3. Indicating dependencies
-If any external library (e.g., TensorFlow, PyTorch)  is required for your explainer, you can add it into `requirements.txt` and indicate which versions are required. Here is a sample of a `requirements.txt` file:
-
-```
-tensorflow>=1.10.0
-```
-
 
 ## Summary
 
@@ -80,7 +73,7 @@ In short, add a new explainer to ROSE involves,
      - [x] ./cornac/models/\_\_init__.py
      
 
-  
+
 ## Using Cython and C/C++ (optional)
 
 If you are interested in using [Cython](https://cython.org/) to implement the algorithmic part of your model,  you will need to declare your Cython extension inside  `./setup.py`.

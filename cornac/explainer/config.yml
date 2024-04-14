@@ -1,0 +1,15 @@
+LIMERS:
+  valid_recommenders: [fm_regressor]
+EFM_Exp:
+  valid_recommenders: [EFM]
+MTER_Exp:
+  valid_recommenders: [MTER]
+MEFM:
+  valid_recommenders: [EFM]
+ALS:
+  valid_recommenders: [ALS]
+PHI4MF:
+  valid_recommenders: [MF, EMF, NEMF]
+EMF:
+  valid_recommenders: [EMF, NEMF]
+

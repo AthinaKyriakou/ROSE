@@ -1,0 +1,2 @@
+recursive-include cornac/metrics_explainer *
+recursive-include cornac/explainer *

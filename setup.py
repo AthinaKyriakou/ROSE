@@ -413,6 +413,7 @@ setup(
     extras_require={"tests": ["pytest", "pytest-pep8", "pytest-xdist", "pytest-cov", "Flask"]},
     cmdclass=cmdclass,
     packages=find_packages(),
+    include_package_data=True,
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Science/Research",

@@ -34,6 +34,9 @@ class Explainer:
         provide explanation for one user and one item
         user_id: one user
         item_id: one item
+        returns:
+        -------
+        explanation for this recommendation
         """
         pass
 

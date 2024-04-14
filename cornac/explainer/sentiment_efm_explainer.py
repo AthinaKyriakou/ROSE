@@ -7,11 +7,11 @@ from tqdm.auto import tqdm
 class EFMExplainer(Explainer):
     def __init__(self, rec_model, dataset, name="EFM_Exp",):
         super().__init__(name, rec_model, dataset)
-        self.U1 = self.model.U1
-        self.U2 = self.model.U2
-        self.H1 = self.model.H1
-        self.H2 = self.model.H2
-        self.V = self.model.V
+        # self.U1 = self.model.U1
+        # self.U2 = self.model.U2
+        # self.H1 = self.model.H1
+        # self.H2 = self.model.H2
+        # self.V = self.model.V
         
         if self.model is None:
             raise NotImplementedError("The model is None.")

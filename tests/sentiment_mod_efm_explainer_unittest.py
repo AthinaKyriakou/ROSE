@@ -6,71 +6,91 @@ import pandas as pd
 from cornac.utils import cache
 from cornac.eval_methods import RatioSplit
 from cornac.data import Reader, SentimentModality
+from cornac.datasets.goodreads import prepare_data
 from cornac.models import EFM
 from config import cfg
 SEED = 42
 VERBOSE = False
 
-class TestEFMExplainer(unittest.TestCase):
+class TestModEFMExplainer(unittest.TestCase):
     
     @classmethod
     def setUp(cls):
-        # Create a mock recommendation model and dataset for testing
-        sentiment = Reader().read(**cfg.goodreads_sentiment)
-        # Load rating and sentiment information
-        rating = Reader(min_item_freq=20).read(**cfg.goodreads_rating)
-        sentiment_modality = SentimentModality(data=sentiment)
-
-        rs = RatioSplit(
-            data=rating,
-            test_size=0.2,
-            exclude_unknowns=True,
-            sentiment=sentiment_modality,
-            verbose=VERBOSE,
-            seed=SEED,
-        )
+        """
+            Prepare data, recommendation model, and explainer for testing
+            Purpose: make sure the dataset, recommendation model, and explainer are not None
+        """
+        
+        # Prepare the dataset
+        rs = prepare_data(data_name="goodreads", test_size=0, verbose=VERBOSE, sample_size=0.1, dense=True)
+        # init the recommendation model
         efm = EFM()
         cls.rec_model = efm.fit(rs.train_set)
         cls.dataset = efm.train_set  
         
-        # Create an instance of the EFMExplainer class
+        # Init the explainer
         cls.explainer = Mod_EFMExplainer(cls.rec_model, cls.dataset)
+        # Make sure the recommender and explainer is not None
+        assert cls.rec_model is not None
+        assert cls.explainer is not None
         print("TestModEFM Setup complete")
     
     @classmethod
     def test_explain_one_recommendation_to_user(cls):
-        user_id = 1  
-        item_id = 2 
-        index  = True
-        # Call the method being tested
-        explanation = cls.explainer.explain_one_recommendation_to_user(user_id=user_id, item_id=item_id, feature_k=3, index=index)
+        """
+            Test the function 'explain_one_recommendation_to_user'
+                Input: one u-i pair
+                Expected Output: a dataframe with columns: user_id, item_id, explanations
+            Purpose: make sure the output is a dataframe with expected columns
+        """
+        # randomly pick a user_id and item_id
+        user_id = np.random.choice(list(cls.dataset.user_ids))
+        item_id = np.random.choice(list(cls.dataset.item_ids))
         
-        # Perform assertions to verify the expected behavior
-        assert explanation["user_id"][0] == user_id
-        assert explanation["item_id"][0] == item_id
-
-        assert isinstance(explanation["aspect"][0], str) # "aspect should be of type str"
-        assert isinstance(explanation["aspect_score"][0], float) # "aspect_score should be of type float"
-        assert isinstance(explanation["max_aspect_name"][0], str) # "aspect should be of type str"
-        assert isinstance(explanation["max_aspect_score"][0], float) # "aspect_score should be of type float"
+        feature_k = 3
+        threshold = 3.0
+        
+        # Get explanations
+        explanation = cls.explainer.explain_one_recommendation_to_user(user_id=user_id, item_id=item_id, feature_k=feature_k, threshold=threshold)
+        # Make sure the number of explanations is equal to the number of most cared aspects
+        # make sure the score in explanations is higher than the threshold
+        print(f"exfplana: {explanation}")
+        if len(explanation)>0:
+            for _, value in explanation.items():
+                assert int(value) >= threshold
+        assert len(explanation) <= feature_k, "The length of explanation should be less than desired number of futures" # can be zero, the Mod_EFMExp may return empty explanation if all scores are less than threshold
         print("TestModEFM test_explain_one_recommendation_to_user complete")
     
     @classmethod    
     def test_explain_recommendations(cls):
-        recommendations = pd.DataFrame({
-            "user_id": [1, 2, 3],
-            "item_id": [100, 200, 300]
-        })
+        """
+            Test the function 'explain_recommendations'
+                Input: multiple u-i pairs in dataframe format
+                Expected Output: a dataframe with columns: user_id, item_id, explanations
+            Purpose: make sure the output is a dataframe with expected columns
+        """
+        
+        # select 5 users
+        users = [k for k in cls.dataset.uid_map.keys()][:5]
+        len_users = len(users)
+        rec_k = 10
+        # Get recommendations for the selected users
+        recommendations = cls.rec_model.recommend_to_multiple_users(user_ids=users, k=rec_k)
+        
         feature_k = 3
-        index = True
-
+        threshold = 0.0
+        # Call the method being tested: generate explanations for all u-i pairs in the recommendations
         explanations = cls.explainer.explain_recommendations(
-            recommendations, feature_k, index
+            recommendations, feature_k=feature_k, threshold = threshold
         )
-
-        # Perform assertions to validate the output
-        assert len(explanations) == recommendations.shape[0]
-        assert all(col in explanations.columns for col in ["user_id", "item_id", "aspect", "aspect_score"])  
+        # check the explanations not None, in right fornmat, and expected length
+        assert explanations is not None
+        assert len(explanations) <= len_users * rec_k
+        assert 'explanations' in set(explanations.columns)
+        for index, row in explanations.iterrows():
+            if len(row['explanations'])>0:
+                for _, value in row['explanations'].items():
+                    assert int(value) >= threshold
         print("TestModEFM test_explain_recommendations complete")
 
 if __name__ == '__main__':

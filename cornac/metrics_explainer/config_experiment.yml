@@ -10,7 +10,7 @@ PrecisionRecall:
   valid_explainers: [limers, EFM_Exp, MTER_Exp]
 PGF:
   valid_explainers: [ALS, PHI4MF, EMF]
-MEP:
-  valid_explainers: [PHI4MF, EFM_Exp]
-EnDCG:
-  valid_explainers: [PHI4MF, EFM_Exp]
+MEP: # can be used to MF models withedge_weight_matrix
+  valid_explainers: [PHI4MF, EMF]
+EnDCG: # can be used to MF models withedge_weight_matrix
+  valid_explainers: [PHI4MF, EMF]

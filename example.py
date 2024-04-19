@@ -5,7 +5,7 @@ from cornac.eval_methods import RatioSplit
 from cornac.models import EMF, NEMF, ALS
 from cornac.explainer import Exp_EMF, Exp_ALS
 from cornac.datasets.goodreads import prepare_data
-from cornac.metrics_explainer import Explainers_Experiment, MEP, EnDCG, PGF
+from cornac.metrics_explainer import Explainers_Experiment
 
 VERBOSE = False
 SEED = 42
@@ -27,9 +27,9 @@ nemf_emf = (nemf, Exp_EMF(nemf, ac.train_set))
 als_als = (als, Exp_ALS(als, ac.train_set))
 
 # metrics
-mep = MEP()
-endcg = EnDCG()
-pgf = PGF(phi=10)
+mep = Metric_Exp_MEP()
+endcg = Metric_Exp_EnDCG()
+pgf = Metric_Exp_PGF(phi=10)
 
 # experiment
 experiment = Explainers_Experiment(eval_method=ac, 

@@ -19,7 +19,7 @@ from cornac.models import MF, EMF, NEMF, ALS, MTER, FMRec, NMF, EFM
 from cornac.explainer import Exp_EMF, Exp_EFM, Exp_ALS, Exp_PHI4MF, Exp_MTER, Exp_EFM_Mod, Exp_LIMERS
 from cornac.datasets.goodreads import prepare_data
 # from cornac.utils.libffm_mod import LibffmModConverter
-from cornac.metrics_explainer import MEP, EnDCG, PGF, DIV, FPR, FA, RA, Metric_Exp_PSPNFNS
+from cornac.metrics_explainer import Metric_Exp_MEP, Metric_Exp_EnDCG, Metric_Exp_PGF, Metric_Exp_DIV, Metric_Exp_FPR, Metric_Exp_FA, Metric_Exp_RA, Metric_Exp_PSPNFNS
 from cornac.data import Reader, SentimentModality
 
 # TODO: Add hyperparam tuning
@@ -75,7 +75,7 @@ datasets = {
 # define metrics to evaluate the models
 metrics = [MAE(), RMSE(), NDCG(k=10), AUC(), FMeasure(k=10)]
 # fpr_ground_truth = FPR(fpath=ground_truth_path)
-expl_metrics = [MEP(), EnDCG(), PGF(phi=10), FA(), RA(), DIV()]  # fpr_ground_truth
+expl_metrics = [Metric_Exp_MEP(), Metric_Exp_EnDCG(), Metric_Exp_PGF(phi=10), Metric_Exp_FA(), Metric_Exp_RA(), Metric_Exp_DIV()]  # fpr_ground_truth
 
 # loop for MF-explanation methods
 for d_name, data in datasets.items():

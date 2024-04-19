@@ -4,8 +4,9 @@ import pandas as pd
 from config import cfg
 
 from cornac.models import EFM, MTER
-from cornac.explainer import EFMExplainer, MTERExplainer
-from cornac.metrics_explainer import FA, RA
+from cornac.explainer import Exp_EFM, Exp_MTER
+from cornac.metrics_explainer import Metric_Exp_FA as FA
+from cornac.metrics_explainer import Metric_Exp_RA as RA
 from cornac.datasets.goodreads import prepare_data
 
 class TestFARA(unittest.TestCase):
@@ -29,11 +30,11 @@ class TestFARA(unittest.TestCase):
 
         efm = EFM()
         efm = efm.fit(rs.train_set)
-        efm_exp = EFMExplainer(efm, rs.train_set)
+        efm_exp = Exp_EFM(efm, rs.train_set)
         
         mter = MTER(max_iter=200)
         mter = mter.fit(rs.train_set)
-        mter_exp = MTERExplainer(mter, rs.train_set)
+        mter_exp = Exp_MTER(mter, rs.train_set)
         
         users = [k for k in rs.train_set.uid_map.keys()] 
         items = [k for k in rs.train_set.iid_map.keys()] 

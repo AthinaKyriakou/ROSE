@@ -4,8 +4,8 @@ import pandas as pd
 from config import cfg
 
 from cornac.models import EFM, FMRec 
-from cornac.explainer import EFMExplainer, LimeRSExplainer
-from cornac.metrics_explainer import FPR
+from cornac.explainer import Exp_EFM, Exp_LIMERS
+from cornac.metrics_explainer import Metric_Exp_FPR as FPR
 from cornac.datasets.goodreads import prepare_data
 
 class TestFPR(unittest.TestCase):
@@ -39,7 +39,7 @@ class TestFPR(unittest.TestCase):
         efm = EFM()
         efm = efm.fit(rs.train_set)
         # Init the explainer
-        efm_exp = EFMExplainer(efm, rs.train_set)
+        efm_exp = Exp_EFM(efm, rs.train_set)
 
         fpr = FPR()
         # For MTER, we need to pass in the path of the sentiment data,
@@ -59,7 +59,7 @@ class TestFPR(unittest.TestCase):
         """
         rs = prepare_data(data_name="goodreads_limers", test_size=0, verbose=False, sample_size=1, dense=True)
         fm = FMRec(verbose=False).fit(rs.train_set)
-        limers = LimeRSExplainer(fm, rs.train_set)
+        limers = Exp_LIMERS(fm, rs.train_set)
         
         fpr = FPR()
         [fp, fr, ff1], [fp_list, fr_list, ff1_list] = fpr.compute(fm, limers)

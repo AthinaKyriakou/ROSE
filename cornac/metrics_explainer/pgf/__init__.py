@@ -1,1 +1,1 @@
-from .metric_pgf import PGF
+from .metric_exp_pgf import Metric_Exp_PGF

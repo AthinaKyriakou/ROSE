@@ -4,7 +4,8 @@ import pandas as pd
 from config import cfg
 
 from cornac.models import EMF, NEMF, MF
-from cornac.metrics_explainer import MEP, EnDCG
+from cornac.metrics_explainer import Metric_Exp_MEP as MEP
+from cornac.metrics_explainer import Metric_Exp_EnDCG as EnDCG
 from cornac.datasets.goodreads import prepare_data
 
 class TestMEP_EnDCG(unittest.TestCase):

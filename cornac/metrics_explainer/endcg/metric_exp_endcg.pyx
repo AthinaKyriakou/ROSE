@@ -4,12 +4,13 @@ cimport numpy as np
 cimport cython
 from cython.parallel import prange
 import multiprocessing
-import tqdm
+from tqdm import trange
 
-from ..metrics import Metrics
+from ..metric_exp import Metric_Exp
 
-class MEP(Metrics):
-    """ Mean Explainability Precision
+class Metric_Exp_EnDCG(Metric_Exp):
+    """ Explainable normalised Discounted Cumulative Gain
+    
     Parameters
     ----------
     rec_k: int, optional, default: 10
@@ -19,33 +20,48 @@ class MEP(Metrics):
     num_threads: int, optional, default: 0
         Number of parallel threads for training. If num_threads=0, all CPU cores will be utilized.
         If seed is not None, num_threads=1 to remove randomness from parallelization.
-    name: str, optional, default: 'MEP'
+    name: str, optional, default: 'Metric_Exp_EnDCG'
+    
+    References
+    ----------
+    [1] L. Coba, P. Symeonidis, and M. Zanker, “Personalised novel and explainable matrix factorisation,” Data & Knowledge Engineering, vol. 122, pp. 142-158, Jul. 2019, doi: 10.1016/j.datak.2019.06.003.
     """
     def __init__(self,
              rec_k=10,
              feature_k=10,
              num_threads=0,
-             name='MEP'):
+             name='Metric_Exp_EnDCG'):
+
         super().__init__(name=name, rec_k=rec_k, feature_k=feature_k)
-    
-        self.N = rec_k
+
         if num_threads > 0 and num_threads < multiprocessing.cpu_count():
             self.num_threads = num_threads
         else:
             self.num_threads = multiprocessing.cpu_count()
+ 
+        self.N = rec_k
 
+        
 
     def compute(self,
             recommender,
             recommendations=None):
         """
         Main function to compute the expected average EnDCG for all users.
+        
         Parameters
         ----------
-        recommender: instance of a recommender model
+        recommender: object, cornac.models.Recommender
             Trained recommender model.
         recommendations: pd.DataFrame, optional, default: None
             Recommendations for all users. If None, the recommendations will be computed on the fly.
+            
+        Returns
+        -------
+        EnDCG: float
+            Expected average EnDCG for all users.
+        E_DCG_u: np.array
+            Expected DCG for each user.
         """
         self.model = recommender      
         #if dataset is None and hasattr(model, 'train_set'):
@@ -71,52 +87,73 @@ class MEP(Metrics):
             # print('Please train model first!')
             # return
             raise AttributeError("The model is not trained yet.")
-
-
             
         self.E = self.model.edge_weight_matrix
         self.U = self.dataset.num_users
         self.recommendations = recommendations
-        self.MEP_u = None
+        self.E_DCG_u = None
         self.N = self.rec_k
         
-        self._check_recommendations(N=self.N)
-        MEP_value = self._c_compute_MEP()
-        return MEP_value, self.MEP_u
- 
+        self._check_recommendations(self.N)
+        EnDCG = self._c_compute_E_nDCG()
+        return EnDCG, self.E_DCG_u
 
+        
     @cython.boundscheck(False)
     @cython.wraparound(False)
-    def _c_compute_MEP(self):
+    def _c_compute_E_nDCG(self):
         """
-        Use Cython to compute MEP.        
-        Only called by compute.
+        Use cython to compute the expected average EnDCG for all users.
+        Only called by compute_E_nDCG().
         """
-        cdef int u, i, j, count = 0
-        cdef double MEP = 0
+        log2list = np.log2(np.arange(1, self.N + 2))
+        log2list[0] = 1
+
+        cdef double [:] log2list_c = log2list
+        cdef int u, i, j, k
+        cdef int count = 0
+        cdef int last = -1
         cdef int [:, :] recommendations = np.array(self.recommendations, dtype=np.int32)
-        cdef double [:, :] E = self.E
+        cdef double [:, :] E = self.E        
+        cdef double E_nDCG = 0.0
         cdef int num_threads = self.num_threads
         cdef int len_rec = len(recommendations)
-        cdef int[:] MEP_u = np.zeros(self.U, dtype=np.int32)
+        cdef double E_IDCG = self._compute_E_IDCG()
+        cdef int U = self.U
+        cdef int N = self.N
+        cdef double [:] E_DCG_u = np.zeros(U, dtype=np.float64)
 
-        for j in prange(len_rec, nogil=True, num_threads=num_threads):
-            u = recommendations[j][0]
-            i = recommendations[j][1]
-            if E[u, i] > 0:
-                count += 1
-                MEP_u[u] += 1
-        
-        MEP = 1.0 * count / len_rec
-        self.MEP_u = MEP_u
-        return MEP
+
+        for j in prange(U, nogil=True, num_threads=num_threads):
+            u = recommendations[j*N, 0]
+            for k in range(N):
+                i = recommendations[j*N + k, 1]
+                E_DCG_u[u] += E[u, i] / log2list_c[k]
+            E_DCG_u[u] /= E_IDCG
+            E_nDCG += E_DCG_u[u]
             
+        self.E_DCG_u = np.array(E_DCG_u)
+        return E_nDCG / U
+    
+
+    def _compute_E_IDCG(self):
+        """
+        Compute the expected IDCG with E_max.
+        Only called by _c_compute_E_nDCG().
+        """
+        E_max = np.max(self.E)
+        E_IDCG = E_max
+        for i in range(1, self.N):
+            E_IDCG += E_max / np.log2(i + 1)
+        return E_IDCG
+
+
     def _check_recommendations(self, N=0):
         """
         Cold start for recommendations. If the recommendations aren't provided, we need to generate them. 
         But it's really slow. 
         If recommendations are provided in users' ids not index, map the ids to index.
-        Only called by compute.
+        Only called by compute_E_nDCG().
         """
         if self.recommendations is None or self.N != N:
             print('Computing recommendations for all users...')
@@ -125,7 +162,7 @@ class MEP(Metrics):
             itemid2idx = self.dataset.iid_map
             self.recommendations = [(userid2idx[r4au['user_id'].values[i]], itemid2idx[r4au['item_id'].values[i]]) for i in range(len(r4au))]
             self.N = N
-            print('Done!')       
+            print('Done!')
         elif self.recommendations['user_id'].values[0] in self.dataset.uid_map.keys():
             userid2idx = self.dataset.uid_map
             itemid2idx = self.dataset.iid_map

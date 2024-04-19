@@ -16,10 +16,10 @@ from cornac import Experiment
 
 from cornac.metrics_explainer import Explainers_Experiment
 from cornac.models import MF, EMF, NEMF, ALS, MTER, FMRec, NMF, EFM
-from cornac.explainer import EMFExplainer, EFMExplainer, ALSExplainer, PHI4MFExplainer, MTERExplainer, Mod_EFMExplainer, LimeRSExplainer
+from cornac.explainer import Exp_EMF, Exp_EFM, Exp_ALS, Exp_PHI4MF, Exp_MTER, Exp_EFM_Mod, Exp_LIMERS
 from cornac.datasets.goodreads import prepare_data
 # from cornac.utils.libffm_mod import LibffmModConverter
-from cornac.metrics_explainer import MEP, EnDCG, PGF, DIV, FPR, FA, RA, PSPNFNS
+from cornac.metrics_explainer import MEP, EnDCG, PGF, DIV, FPR, FA, RA, Metric_Exp_PSPNFNS
 from cornac.data import Reader, SentimentModality
 
 # TODO: Add hyperparam tuning
@@ -94,38 +94,38 @@ for d_name, data in datasets.items():
     print("RecSys evaluation done")
     
     # Match Recommenders with Explainers
-    emf_emf = (emf, EMFExplainer(emf, data.train_set))
+    emf_emf = (emf, Exp_EMF(emf, data.train_set))
     Explainers_Experiment(eval_method=data, models=[emf_emf], 
                           metrics=expl_metrics, rec_k=10, feature_k=10, eval_train=True, distribution=True, save_dir="output/" + d_name + "/explanation_eval/").run()
     print("EMF_EMF done")
     del emf, emf_emf
 
-    nemf_emf = (nemf, EMFExplainer(nemf, data.train_set))
+    nemf_emf = (nemf, Exp_EMF(nemf, data.train_set))
     Explainers_Experiment(eval_method=data, models=[nemf_emf], 
                           metrics=expl_metrics, rec_k=10, feature_k=10, eval_train=True, distribution=True, save_dir="output/" + d_name + "/explanation_eval/").run()
     print("NEMF_EMF done")
     del nemf, nemf_emf
 
     print("starting ALS explainer")
-    als_als = (als, ALSExplainer(als, data.train_set))
+    als_als = (als, Exp_ALS(als, data.train_set))
     Explainers_Experiment(eval_method=data, models=[als_als], 
                           metrics=expl_metrics, rec_k=10, feature_k=10, eval_train=True, distribution=True, save_dir="output/" + d_name + "/explanation_eval/").run()
     print("ALS_ALS done")
     del als, als_als
 
-    mf_phi = (mf, PHI4MFExplainer(mf, data.train_set))
+    mf_phi = (mf, Exp_PHI4MF(mf, data.train_set))
     Explainers_Experiment(eval_method=data, models=[mf_phi], 
                           metrics=expl_metrics, rec_k=10, feature_k=10, eval_train=True, distribution=True, save_dir="output/" + d_name + "/explanation_eval/").run()
     print("MF_PHI done")
     del mf, mf_phi
 
-    emf_phi = (emf_p, PHI4MFExplainer(emf_p, data.train_set))
+    emf_phi = (emf_p, Exp_PHI4MF(emf_p, data.train_set))
     Explainers_Experiment(eval_method=data, models=[emf_phi], 
                           metrics=expl_metrics, rec_k=10, feature_k=10, eval_train=True, distribution=True, save_dir="output/" + d_name + "/explanation_eval/").run()
     print("EMF_PHI done")
     del emf_p, emf_phi
 
-    nemf_phi = (nemf_p, PHI4MFExplainer(nemf_p, data.train_set))
+    nemf_phi = (nemf_p, Exp_PHI4MF(nemf_p, data.train_set))
     Explainers_Experiment(eval_method=data, models=[nemf_phi], 
                           metrics=expl_metrics, rec_k=10, feature_k=10, eval_train=True, distribution=True, save_dir="output/" + d_name + "/explanation_eval/").run()
     print("NEMF_PHI done")
@@ -143,7 +143,7 @@ for d_name, data in datasets.items():
 
 # stuff that needs to be evaluated separately due to data incompatabilty (until I figure out sth else)
 fm = FMRec(num_iter=200)
-fm_LimeRS = LimeRSExplainer(fm, gr_limers.train_set)
+fm_LimeRS = Exp_LIMERS(fm, gr_limers.train_set)
 print("FM_LIMERS fit done")
 Experiment(eval_method=gr_limers, models=[fm], metrics=metrics, save_dir="output/goodreads_limers/recsys_eval/").run()
 print("RecSys evaluation done")
@@ -163,12 +163,12 @@ for d_name,data in datasets.items():
     print('\n')
     efm = EFM(num_explicit_factors = 40, num_latent_factors = 60, num_most_cared_aspects = 15, rating_scale = 5.0, alpha = 0.85, lambda_x = 1, lambda_y = 1, lambda_u = 0.01, lambda_h = 0.01, lambda_v = 0.01, max_iter = 100, verbose = VERBOSE, seed = SEED)
     efm.fit(data.train_set)
-    efm_exp = EFMExplainer(efm, efm.train_set)
+    efm_exp = Exp_EFM(efm, efm.train_set)
     print("efm_exp done")
     # modified EFM Explainer
     efm_mod = EFM(num_explicit_factors = 40, num_latent_factors = 60, num_most_cared_aspects = 15, rating_scale = 5.0, alpha = 0.85, lambda_x = 1, lambda_y = 1, lambda_u = 0.01, lambda_h = 0.01, lambda_v = 0.01, max_iter = 100, verbose = VERBOSE, seed = SEED)
     efm_mod.fit(data.train_set)
-    mod_efm_exp = Mod_EFMExplainer(efm_mod, efm_mod.train_set)
+    mod_efm_exp = Exp_EFM_Mod(efm_mod, efm_mod.train_set)
     print("mod_efm_exp done")
     # Experiment(eval_method=data, models=[efm, efm_mod], metrics=metrics, save_dir="output/" + d_name +  "/recsys_eval/").run()
     print('start evaluating explainers')

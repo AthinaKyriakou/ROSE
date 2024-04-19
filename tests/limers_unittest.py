@@ -9,7 +9,7 @@ from cornac.eval_methods.ratio_split import RatioSplit
 from cornac.data.modality import FeatureModality
 from cornac.datasets.goodreads import prepare_data
 from cornac.models.fm_py import FMRec
-from cornac.explainer.limers import LimeRSExplainer
+from cornac.explainer.exp_limers import Exp_LIMERS
 from config import cfg
 
 class TestLIMERS_user_item_features(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestLIMERS_user_item_features(unittest.TestCase):
         """test using fm model, limers can generate one explanation; check length, and check the user and item returned in the explanation match the input"""
         user = self.FMmodel.train_set.pick_top_users(1)[0]
         item = self.FMmodel.train_set.pick_top_items(1)[0]
-        explainer = LimeRSExplainer(rec_model=self.FMmodel, dataset=self.FMmodel.train_set)
+        explainer = Exp_LIMERS(rec_model=self.FMmodel, dataset=self.FMmodel.train_set)
         explanations = explainer.explain_one_recommendation_to_user(user, item)
         self.assertEqual(len(explanations),1)
         self.assertEqual(explanations.iloc[0,0], user)
@@ -42,7 +42,7 @@ class TestLIMERS_user_item_features(unittest.TestCase):
         user = self.FMmodel.train_set.pick_top_users(1)[0]
         item = self.FMmodel.train_set.pick_top_items(10)
         rec = pd.DataFrame({"user_id": [user for _ in item], "item_id": item})
-        explainer = LimeRSExplainer(rec_model=self.FMmodel, dataset=self.FMmodel.train_set)
+        explainer = Exp_LIMERS(rec_model=self.FMmodel, dataset=self.FMmodel.train_set)
         explanations = explainer.explain_recommendations(rec)
         self.assertEqual(len(explanations),10)
 
@@ -65,7 +65,7 @@ class TestLIMERS_item_features(unittest.TestCase):
         """test using fm model, limers can generate one explanation; check length, and check the user and item returned in the explanation match the input"""
         user = self.FMmodel.train_set.pick_top_users(1)[0]
         item = self.FMmodel.train_set.pick_top_items(1)[0]
-        explainer = LimeRSExplainer(rec_model=self.FMmodel, dataset=self.FMmodel.train_set)
+        explainer = Exp_LIMERS(rec_model=self.FMmodel, dataset=self.FMmodel.train_set)
         explanations = explainer.explain_one_recommendation_to_user(user, item)
         self.assertEqual(len(explanations),1)
         self.assertEqual(explanations.iloc[0,0], user)
@@ -76,7 +76,7 @@ class TestLIMERS_item_features(unittest.TestCase):
         user = self.FMmodel.train_set.pick_top_users(1)[0]
         item = self.FMmodel.train_set.pick_top_items(10)
         rec = pd.DataFrame({"user_id": [user for _ in item], "item_id": item})
-        explainer = LimeRSExplainer(rec_model=self.FMmodel, dataset=self.FMmodel.train_set)
+        explainer = Exp_LIMERS(rec_model=self.FMmodel, dataset=self.FMmodel.train_set)
         explanations = explainer.explain_recommendations(rec)
         self.assertEqual(len(explanations),10)
 
@@ -99,7 +99,7 @@ class TestLIMERS_user_features(unittest.TestCase):
         """test using fm model, limers can generate one explanation; check length, and check the user and item returned in the explanation match the input"""
         user = self.FMmodel.train_set.pick_top_users(1)[0]
         item = self.FMmodel.train_set.pick_top_items(1)[0]
-        explainer = LimeRSExplainer(self.FMmodel, self.FMmodel.train_set)
+        explainer = Exp_LIMERS(self.FMmodel, self.FMmodel.train_set)
         explanations = explainer.explain_one_recommendation_to_user(user, item)
         self.assertEqual(len(explanations),1)
         self.assertEqual(explanations.iloc[0,0], user)
@@ -110,7 +110,7 @@ class TestLIMERS_user_features(unittest.TestCase):
         user = self.FMmodel.train_set.pick_top_users(1)[0]
         item = self.FMmodel.train_set.pick_top_items(10)
         rec = pd.DataFrame({"user_id": [user for _ in item], "item_id": item})
-        explainer = LimeRSExplainer(self.FMmodel, self.FMmodel.train_set)
+        explainer = Exp_LIMERS(self.FMmodel, self.FMmodel.train_set)
         explanations = explainer.explain_recommendations(rec)
         self.assertEqual(len(explanations),10)
 

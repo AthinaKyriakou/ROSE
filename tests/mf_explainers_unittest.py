@@ -4,7 +4,7 @@ import pandas as pd
 from config import cfg
 
 from cornac.models import MF, EMF, NEMF, ALS
-from cornac.explainer import EMFExplainer, ALSExplainer, PHI4MFExplainer
+from cornac.explainer import Exp_EMF, Exp_ALS, Exp_PHI4MF
 from cornac.datasets.goodreads import prepare_data
 
 class Test_MF_explainers(unittest.TestCase):
@@ -37,7 +37,7 @@ class Test_MF_explainers(unittest.TestCase):
         rec_k = 10
         recommendations = als.recommend_to_multiple_users(user_ids=users, k=rec_k)
         
-        als_exp = ALSExplainer(als, rs.train_set)
+        als_exp = Exp_ALS(als, rs.train_set)
         assert als_exp is not None
         
         explanations = als_exp.explain_recommendations(recommendations=recommendations, feature_k=10)
@@ -64,7 +64,7 @@ class Test_MF_explainers(unittest.TestCase):
         rec_k = 10
 
         recommendations = emf.recommend_to_multiple_users(user_ids=users, k=rec_k)
-        emf_exp = EMFExplainer(emf, rs.train_set)
+        emf_exp = Exp_EMF(emf, rs.train_set)
         assert emf_exp is not None
 
         explanations = emf_exp.explain_recommendations(recommendations=recommendations, feature_k=10)
@@ -90,7 +90,7 @@ class Test_MF_explainers(unittest.TestCase):
         rec_k = 10
 
         recommendations = nemf.recommend_to_multiple_users(user_ids=users, k=rec_k)
-        emf_exp = EMFExplainer(nemf, rs.train_set)
+        emf_exp = Exp_EMF(nemf, rs.train_set)
         assert emf_exp is not None
 
         explanations = emf_exp.explain_recommendations(recommendations=recommendations, feature_k=10)
@@ -116,7 +116,7 @@ class Test_MF_explainers(unittest.TestCase):
         rec_k = 10
 
         recommendations = mf.recommend_to_multiple_users(user_ids=users, k=rec_k)
-        phi_exp = PHI4MFExplainer(mf, rs.train_set)
+        phi_exp = Exp_PHI4MF(mf, rs.train_set)
         assert phi_exp is not None
 
         explanations = phi_exp.explain_recommendations(recommendations=recommendations, feature_k=10)
@@ -142,7 +142,7 @@ class Test_MF_explainers(unittest.TestCase):
         rec_k = 10
 
         recommendations = emf.recommend_to_multiple_users(user_ids=users, k=rec_k)
-        phi_exp = PHI4MFExplainer(emf, rs.train_set)
+        phi_exp = Exp_PHI4MF(emf, rs.train_set)
         assert phi_exp is not None
 
         explanations = phi_exp.explain_recommendations(recommendations=recommendations, feature_k=10)
@@ -168,7 +168,7 @@ class Test_MF_explainers(unittest.TestCase):
         rec_k = 10
 
         recommendations = nemf.recommend_to_multiple_users(user_ids=users, k=rec_k)
-        phi_exp = PHI4MFExplainer(nemf, rs.train_set)
+        phi_exp = Exp_PHI4MF(nemf, rs.train_set)
         assert phi_exp is not None
 
         explanations = phi_exp.explain_recommendations(recommendations=recommendations, feature_k=10)
@@ -204,16 +204,16 @@ class Test_MF_explainers(unittest.TestCase):
         mf_rec = mf.recommend_to_multiple_users(user_ids=users, k=10)
         
         with self.assertRaises(AttributeError):
-            exp = EMFExplainer(als, rs.train_set)
+            exp = Exp_EMF(als, rs.train_set)
             exp.explain_recommendations(als_rec, feature_k=10)
         with self.assertRaises(AttributeError):
-            exp = PHI4MFExplainer(als, rs.train_set)
+            exp = Exp_PHI4MF(als, rs.train_set)
             exp.explain_recommendations(als_rec, feature_k=10)
         with self.assertRaises(AttributeError):
-            exp = ALSExplainer(mf, rs.train_set)
+            exp = Exp_ALS(mf, rs.train_set)
             exp.explain_recommendations(mf_rec, feature_k=10)
         with self.assertRaises(AttributeError):
-            exp = EMFExplainer(mf, rs.train_set)
+            exp = Exp_EMF(mf, rs.train_set)
             exp.explain_recommendations(mf_rec, feature_k=10)
             
         

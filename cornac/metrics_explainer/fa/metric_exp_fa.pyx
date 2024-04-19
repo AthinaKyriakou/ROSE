@@ -1,25 +1,46 @@
 import numpy as np
 cimport numpy as np
-from ..metrics import Metrics
-class FA(Metrics):
+from ..metric_exp import Metric_Exp
+
+
+class Metric_Exp_FA(Metric_Exp):
     """ 
     Feature Agreement: computes the fraction of common features between the sets of top-k features of two explanations.
+    
+    Parameters
+    ----------
+    name : str
+        Name of the metric.
+    feature_k : int
+        Number of features to consider in the explanations.
+        
+    References
+    ----------
+    [1] Krishna, Satyapriya & Han, etc. (2022). https://doi.org/10.48550/arXiv.2202.01602 The Disagreement Problem in Explainable Machine Learning: A Practitioner's Perspective.
+    
     """
-    def __init__(self, name="FA", feature_k=10):
+    def __init__(self, name="Metric_Exp_FA", feature_k=10):
         super().__init__(name=name, feature_k=feature_k)
         
     def compute(self, exp_a, exp_b):
         """Compute the feature agreement between explanations of two different explainer.
         FA = number of common features of explanations from different explainers / rec_k
-        Args:
-            exp_a (np.ndarray): explanations(without feature score) of explainer a, [['uid', 'iid', [f1, f2, ...]], ['uid', 'iid', [f2, f5, ...]],  ...]
-            exp_b (np.ndarray): explanations(without feature score) of explainer b
-        Returns:
-            fa (float): value of feature agreement, the higher the better
-        References:
-            Krishna, Satyapriya & Han, etc. (2022). https://doi.org/10.48550/arXiv.2202.01602
-            The Disagreement Problem in Explainable Machine Learning: A Practitioner's Perspective.
+        
+        Parameters
+        ----------
+        exp_a : np.ndarray
+            Explanations (without feature score) of explainer a, [['uid', 'iid', [f1, f2, ...]], ['uid', 'iid', [f2, f5, ...]],  ...]
+        exp_b : np.ndarray
+            Explanations (without feature score) of explainer b
+            
+        Returns
+        -------
+        fa_avg : float
+            Average feature agreement between explanations of two different explainers.
+        fa_list : list
+            List of feature agreement.
         """
+
         cdef double fa = 0
         cdef double fa_avg=0.0
         #self._check_format(exp_a, exp_b)

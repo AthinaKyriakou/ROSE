@@ -1,26 +1,47 @@
 import numpy as np
 cimport numpy as np
-from ..metrics import Metrics
-class RA(Metrics):
+from ..metric_exp import Metric_Exp
+
+
+class Metric_Exp_RA(Metric_Exp):
     """
         Rank Agreement: computes the fraction of features that are 
         not only common between the sets of top-k features of two explanations, 
         but also have the same position in the respective rank orders.
         a stricter metric than feature agreement since it also considers the ordering of the top-k features.
+        
+        Parameters
+        ----------
+        name: str, default='Metric_Exp_RA'
+        feature_k: int, default=10
+            Number of top features to consider for the metric.
+            
+        Reference
+        ---------
+        [1] Krishna, Satyapriya & Han, etc. (2022). https://doi.org/10.48550/arXiv.2202.01602
+            The Disagreement Problem in Explainable Machine Learning: A Practitioner's Perspective.
     """
-    def __init__(self, name = 'RA', feature_k = 10):
+    def __init__(self, name = 'Metric_Exp_RA', feature_k = 10):
         super().__init__(name=name, feature_k=feature_k)
     
     def compute(self, exp_a, exp_b):
+        """Compute the Rank Agreement for two explanations.
+        
+        Parameters
+        ----------
+        exp_a: np.ndarray
+            The first explanation.
+        exp_b: np.ndarray   
+            The second explanation.
+        
+        Returns
+        -------
+        ra: float
+            Rank Agreement value.
+        ra_list: list
+            List of Rank Agreement values for each instance.
         """
-        Args:
-            exp_a, exp_b (np.ndarray): explanations
-        Returns:
-            ra (float): rank agreement, the higher the better
-        References:
-            Krishna, Satyapriya & Han, etc. (2022). https://doi.org/10.48550/arXiv.2202.01602
-            The Disagreement Problem in Explainable Machine Learning: A Practitioner's Perspective.
-        """
+        
         is_dictionary = isinstance(exp_a[0][2], dict)
         cdef double ra = 0.0
         cdef double ra_avg=0.0

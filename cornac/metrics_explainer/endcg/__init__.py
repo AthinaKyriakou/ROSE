@@ -1,1 +1,1 @@
-from .metric_endcg import EnDCG
+from .metric_exp_endcg import Metric_Exp_EnDCG

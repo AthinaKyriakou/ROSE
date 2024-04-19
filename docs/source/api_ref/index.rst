@@ -11,7 +11,10 @@ functions and classes of the ``cornac`` package.
    data
    models
    metrics
+   explainer
+   metrics_explainer
    eval_methods
    experiment
    datasets
    hyperopt
+   

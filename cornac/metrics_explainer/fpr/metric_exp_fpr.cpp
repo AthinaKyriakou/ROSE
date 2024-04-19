@@ -758,8 +758,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__cornac__metrics_explainer__fpr__feature_precision_recall
-#define __PYX_HAVE_API__cornac__metrics_explainer__fpr__feature_precision_recall
+#define __PYX_HAVE__cornac__metrics_explainer__fpr__metric_exp_fpr
+#define __PYX_HAVE_API__cornac__metrics_explainer__fpr__metric_exp_fpr
 /* Early includes */
 #include <string.h>
 #include <stdio.h>
@@ -1002,12 +1002,12 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "cornac/metrics_explainer/fpr/feature_precision_recall.pyx",
+  "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx",
   "__init__.pxd",
   "type.pxd",
 };
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":689
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":689
  * # in Cython to enable them only on the right systems.
  * 
  * ctypedef npy_int8       int8_t             # <<<<<<<<<<<<<<
@@ -1016,7 +1016,7 @@ static const char *__pyx_f[] = {
  */
 typedef npy_int8 __pyx_t_5numpy_int8_t;
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":690
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":690
  * 
  * ctypedef npy_int8       int8_t
  * ctypedef npy_int16      int16_t             # <<<<<<<<<<<<<<
@@ -1025,7 +1025,7 @@ typedef npy_int8 __pyx_t_5numpy_int8_t;
  */
 typedef npy_int16 __pyx_t_5numpy_int16_t;
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":691
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":691
  * ctypedef npy_int8       int8_t
  * ctypedef npy_int16      int16_t
  * ctypedef npy_int32      int32_t             # <<<<<<<<<<<<<<
@@ -1034,7 +1034,7 @@ typedef npy_int16 __pyx_t_5numpy_int16_t;
  */
 typedef npy_int32 __pyx_t_5numpy_int32_t;
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":692
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":692
  * ctypedef npy_int16      int16_t
  * ctypedef npy_int32      int32_t
  * ctypedef npy_int64      int64_t             # <<<<<<<<<<<<<<
@@ -1043,7 +1043,7 @@ typedef npy_int32 __pyx_t_5numpy_int32_t;
  */
 typedef npy_int64 __pyx_t_5numpy_int64_t;
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":696
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":696
  * #ctypedef npy_int128     int128_t
  * 
  * ctypedef npy_uint8      uint8_t             # <<<<<<<<<<<<<<
@@ -1052,7 +1052,7 @@ typedef npy_int64 __pyx_t_5numpy_int64_t;
  */
 typedef npy_uint8 __pyx_t_5numpy_uint8_t;
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":697
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":697
  * 
  * ctypedef npy_uint8      uint8_t
  * ctypedef npy_uint16     uint16_t             # <<<<<<<<<<<<<<
@@ -1061,7 +1061,7 @@ typedef npy_uint8 __pyx_t_5numpy_uint8_t;
  */
 typedef npy_uint16 __pyx_t_5numpy_uint16_t;
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":698
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":698
  * ctypedef npy_uint8      uint8_t
  * ctypedef npy_uint16     uint16_t
  * ctypedef npy_uint32     uint32_t             # <<<<<<<<<<<<<<
@@ -1070,7 +1070,7 @@ typedef npy_uint16 __pyx_t_5numpy_uint16_t;
  */
 typedef npy_uint32 __pyx_t_5numpy_uint32_t;
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":699
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":699
  * ctypedef npy_uint16     uint16_t
  * ctypedef npy_uint32     uint32_t
  * ctypedef npy_uint64     uint64_t             # <<<<<<<<<<<<<<
@@ -1079,7 +1079,7 @@ typedef npy_uint32 __pyx_t_5numpy_uint32_t;
  */
 typedef npy_uint64 __pyx_t_5numpy_uint64_t;
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":703
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":703
  * #ctypedef npy_uint128    uint128_t
  * 
  * ctypedef npy_float32    float32_t             # <<<<<<<<<<<<<<
@@ -1088,7 +1088,7 @@ typedef npy_uint64 __pyx_t_5numpy_uint64_t;
  */
 typedef npy_float32 __pyx_t_5numpy_float32_t;
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":704
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":704
  * 
  * ctypedef npy_float32    float32_t
  * ctypedef npy_float64    float64_t             # <<<<<<<<<<<<<<
@@ -1097,7 +1097,7 @@ typedef npy_float32 __pyx_t_5numpy_float32_t;
  */
 typedef npy_float64 __pyx_t_5numpy_float64_t;
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":713
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":713
  * # The int types are mapped a bit surprising --
  * # numpy.int corresponds to 'l' and numpy.long to 'q'
  * ctypedef npy_long       int_t             # <<<<<<<<<<<<<<
@@ -1106,7 +1106,7 @@ typedef npy_float64 __pyx_t_5numpy_float64_t;
  */
 typedef npy_long __pyx_t_5numpy_int_t;
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":714
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":714
  * # numpy.int corresponds to 'l' and numpy.long to 'q'
  * ctypedef npy_long       int_t
  * ctypedef npy_longlong   long_t             # <<<<<<<<<<<<<<
@@ -1115,7 +1115,7 @@ typedef npy_long __pyx_t_5numpy_int_t;
  */
 typedef npy_longlong __pyx_t_5numpy_long_t;
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":715
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":715
  * ctypedef npy_long       int_t
  * ctypedef npy_longlong   long_t
  * ctypedef npy_longlong   longlong_t             # <<<<<<<<<<<<<<
@@ -1124,7 +1124,7 @@ typedef npy_longlong __pyx_t_5numpy_long_t;
  */
 typedef npy_longlong __pyx_t_5numpy_longlong_t;
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":717
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":717
  * ctypedef npy_longlong   longlong_t
  * 
  * ctypedef npy_ulong      uint_t             # <<<<<<<<<<<<<<
@@ -1133,7 +1133,7 @@ typedef npy_longlong __pyx_t_5numpy_longlong_t;
  */
 typedef npy_ulong __pyx_t_5numpy_uint_t;
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":718
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":718
  * 
  * ctypedef npy_ulong      uint_t
  * ctypedef npy_ulonglong  ulong_t             # <<<<<<<<<<<<<<
@@ -1142,7 +1142,7 @@ typedef npy_ulong __pyx_t_5numpy_uint_t;
  */
 typedef npy_ulonglong __pyx_t_5numpy_ulong_t;
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":719
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":719
  * ctypedef npy_ulong      uint_t
  * ctypedef npy_ulonglong  ulong_t
  * ctypedef npy_ulonglong  ulonglong_t             # <<<<<<<<<<<<<<
@@ -1151,7 +1151,7 @@ typedef npy_ulonglong __pyx_t_5numpy_ulong_t;
  */
 typedef npy_ulonglong __pyx_t_5numpy_ulonglong_t;
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":721
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":721
  * ctypedef npy_ulonglong  ulonglong_t
  * 
  * ctypedef npy_intp       intp_t             # <<<<<<<<<<<<<<
@@ -1160,7 +1160,7 @@ typedef npy_ulonglong __pyx_t_5numpy_ulonglong_t;
  */
 typedef npy_intp __pyx_t_5numpy_intp_t;
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":722
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":722
  * 
  * ctypedef npy_intp       intp_t
  * ctypedef npy_uintp      uintp_t             # <<<<<<<<<<<<<<
@@ -1169,7 +1169,7 @@ typedef npy_intp __pyx_t_5numpy_intp_t;
  */
 typedef npy_uintp __pyx_t_5numpy_uintp_t;
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":724
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":724
  * ctypedef npy_uintp      uintp_t
  * 
  * ctypedef npy_double     float_t             # <<<<<<<<<<<<<<
@@ -1178,7 +1178,7 @@ typedef npy_uintp __pyx_t_5numpy_uintp_t;
  */
 typedef npy_double __pyx_t_5numpy_float_t;
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":725
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":725
  * 
  * ctypedef npy_double     float_t
  * ctypedef npy_double     double_t             # <<<<<<<<<<<<<<
@@ -1187,7 +1187,7 @@ typedef npy_double __pyx_t_5numpy_float_t;
  */
 typedef npy_double __pyx_t_5numpy_double_t;
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":726
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":726
  * ctypedef npy_double     float_t
  * ctypedef npy_double     double_t
  * ctypedef npy_longdouble longdouble_t             # <<<<<<<<<<<<<<
@@ -1221,9 +1221,9 @@ static CYTHON_INLINE __pyx_t_double_complex __pyx_t_double_complex_from_parts(do
 
 
 /*--- Type declarations ---*/
-struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer;
+struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer;
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":728
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":728
  * ctypedef npy_longdouble longdouble_t
  * 
  * ctypedef npy_cfloat      cfloat_t             # <<<<<<<<<<<<<<
@@ -1232,7 +1232,7 @@ struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___p
  */
 typedef npy_cfloat __pyx_t_5numpy_cfloat_t;
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":729
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":729
  * 
  * ctypedef npy_cfloat      cfloat_t
  * ctypedef npy_cdouble     cdouble_t             # <<<<<<<<<<<<<<
@@ -1241,7 +1241,7 @@ typedef npy_cfloat __pyx_t_5numpy_cfloat_t;
  */
 typedef npy_cdouble __pyx_t_5numpy_cdouble_t;
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":730
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":730
  * ctypedef npy_cfloat      cfloat_t
  * ctypedef npy_cdouble     cdouble_t
  * ctypedef npy_clongdouble clongdouble_t             # <<<<<<<<<<<<<<
@@ -1250,7 +1250,7 @@ typedef npy_cdouble __pyx_t_5numpy_cdouble_t;
  */
 typedef npy_clongdouble __pyx_t_5numpy_clongdouble_t;
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":732
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":732
  * ctypedef npy_clongdouble clongdouble_t
  * 
  * ctypedef npy_cdouble     complex_t             # <<<<<<<<<<<<<<
@@ -1259,14 +1259,14 @@ typedef npy_clongdouble __pyx_t_5numpy_clongdouble_t;
  */
 typedef npy_cdouble __pyx_t_5numpy_complex_t;
 
-/* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":68
+/* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":83
  * 
  * 
  *     def create_ground_truth_limer(self):             # <<<<<<<<<<<<<<
- *         """arg:recommendation df [user_id, item_id] generated by the recommender
- *            return: ground_truth explanation for each user,item pair [user_id, item_id, explanation]
+ *         """ Generate ground truth explanations for each user-item pair
+ * 
  */
-struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer {
+struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer {
   PyObject_HEAD
   PyObject *__pyx_v_extract_gt;
   PyObject *__pyx_v_self;
@@ -2070,13 +2070,13 @@ static PyTypeObject *__pyx_ptype_5numpy_ufunc = 0;
 
 /* Module declarations from 'cython' */
 
-/* Module declarations from 'cornac.metrics_explainer.fpr.feature_precision_recall' */
-static PyTypeObject *__pyx_ptype_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer = 0;
-#define __Pyx_MODULE_NAME "cornac.metrics_explainer.fpr.feature_precision_recall"
-extern int __pyx_module_is_main_cornac__metrics_explainer__fpr__feature_precision_recall;
-int __pyx_module_is_main_cornac__metrics_explainer__fpr__feature_precision_recall = 0;
+/* Module declarations from 'cornac.metrics_explainer.fpr.metric_exp_fpr' */
+static PyTypeObject *__pyx_ptype_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer = 0;
+#define __Pyx_MODULE_NAME "cornac.metrics_explainer.fpr.metric_exp_fpr"
+extern int __pyx_module_is_main_cornac__metrics_explainer__fpr__metric_exp_fpr;
+int __pyx_module_is_main_cornac__metrics_explainer__fpr__metric_exp_fpr = 0;
 
-/* Implementation of 'cornac.metrics_explainer.fpr.feature_precision_recall' */
+/* Implementation of 'cornac.metrics_explainer.fpr.metric_exp_fpr' */
 static PyObject *__pyx_builtin_super;
 static PyObject *__pyx_builtin_ValueError;
 static PyObject *__pyx_builtin_range;
@@ -2099,7 +2099,6 @@ static const char __pyx_k_at[] = "at";
 static const char __pyx_k_np[] = "np";
 static const char __pyx_k_pd[] = "pd";
 static const char __pyx_k_EFM[] = "EFM";
-static const char __pyx_k_FPR[] = "FPR";
 static const char __pyx_k_doc[] = "__doc__";
 static const char __pyx_k_end[] = "end";
 static const char __pyx_k_exp[] = "exp";
@@ -2157,7 +2156,6 @@ static const char __pyx_k_sorted[] = "sorted";
 static const char __pyx_k_u_i_gt[] = "u_i_gt";
 static const char __pyx_k_update[] = "update";
 static const char __pyx_k_user_f[] = "user_f";
-static const char __pyx_k_Metrics[] = "Metrics";
 static const char __pyx_k_columns[] = "columns";
 static const char __pyx_k_compute[] = "compute";
 static const char __pyx_k_dataset[] = "dataset";
@@ -2166,7 +2164,6 @@ static const char __pyx_k_feature[] = "feature";
 static const char __pyx_k_iid_map[] = "iid_map";
 static const char __pyx_k_item_id[] = "item_id";
 static const char __pyx_k_lexicon[] = "lexicon";
-static const char __pyx_k_metrics[] = "metrics";
 static const char __pyx_k_nonzero[] = "nonzero";
 static const char __pyx_k_prepare[] = "__prepare__";
 static const char __pyx_k_reverse[] = "reverse";
@@ -2189,11 +2186,11 @@ static const char __pyx_k_precision[] = "precision";
 static const char __pyx_k_sentiment[] = "sentiment";
 static const char __pyx_k_tqdm_auto[] = "tqdm.auto";
 static const char __pyx_k_train_set[] = "train_set";
-static const char __pyx_k_FPR___init[] = "FPR.__init__";
+static const char __pyx_k_Metric_Exp[] = "Metric_Exp";
 static const char __pyx_k_ValueError[] = "ValueError";
 static const char __pyx_k_aspect_ids[] = "aspect_ids";
 static const char __pyx_k_extract_gt[] = "extract_gt";
-static const char __pyx_k_FPR_compute[] = "FPR.compute";
+static const char __pyx_k_metric_exp[] = "metric_exp";
 static const char __pyx_k_ImportError[] = "ImportError";
 static const char __pyx_k_features_gt[] = "features_gt";
 static const char __pyx_k_item_idx2id[] = "item_idx2id";
@@ -2214,10 +2211,10 @@ static const char __pyx_k_combined_dict[] = "combined_dict";
 static const char __pyx_k_features_pred[] = "features_pred";
 static const char __pyx_k_item_features[] = "item_features";
 static const char __pyx_k_user_features[] = "user_features";
+static const char __pyx_k_Metric_Exp_FPR[] = "Metric_Exp_FPR";
 static const char __pyx_k_build_matrices[] = "_build_matrices";
 static const char __pyx_k_load_sentiment[] = "load_sentiment";
 static const char __pyx_k_precision_list[] = "precision_list";
-static const char __pyx_k_PrecisionRecall[] = "PrecisionRecall";
 static const char __pyx_k_cornac_datasets[] = "cornac.datasets";
 static const char __pyx_k_i_aspect_values[] = "i_aspect_values";
 static const char __pyx_k_u_aspect_values[] = "u_aspect_values";
@@ -2228,52 +2225,53 @@ static const char __pyx_k_transform_format[] = "transform_format";
 static const char __pyx_k_u_aspect_indices[] = "u_aspect_indices";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_Model_not_supported[] = "Model not supported.";
-static const char __pyx_k_FPR_transform_format[] = "FPR.transform_format";
+static const char __pyx_k_Metric_Exp_FPR___init[] = "Metric_Exp_FPR.__init__";
+static const char __pyx_k_Metric_Exp_FPR_compute[] = "Metric_Exp_FPR.compute";
 static const char __pyx_k_creat_grount_truth_efm[] = "creat_grount_truth_efm";
 static const char __pyx_k_create_recommendations[] = "create_recommendations";
 static const char __pyx_k_create_ground_truth_limer[] = "create_ground_truth_limer";
-static const char __pyx_k_FPR_creat_grount_truth_efm[] = "FPR.creat_grount_truth_efm";
-static const char __pyx_k_FPR_create_recommendations[] = "FPR.create_recommendations";
 static const char __pyx_k_recommend_to_multiple_users[] = "recommend_to_multiple_users";
-static const char __pyx_k_FPR_create_ground_truth_limer[] = "FPR.create_ground_truth_limer";
 static const char __pyx_k_create_ground_truth_sentiment[] = "create_ground_truth_sentiment";
+static const char __pyx_k_Metric_Exp_FPR_transform_format[] = "Metric_Exp_FPR.transform_format";
 static const char __pyx_k_numpy_core_multiarray_failed_to[] = "numpy.core.multiarray failed to import";
-static const char __pyx_k_FPR_creat_grount_truth_efm_local[] = "FPR.creat_grount_truth_efm.<locals>.<lambda>";
-static const char __pyx_k_FPR_create_ground_truth_limer_lo[] = "FPR.create_ground_truth_limer.<locals>.extract_gt";
-static const char __pyx_k_FPR_create_ground_truth_sentimen[] = "FPR.create_ground_truth_sentiment";
 static const char __pyx_k_Finished_creating_recommendation[] = "Finished creating recommendations...";
+static const char __pyx_k_Metric_Exp_FPR_creat_grount_trut[] = "Metric_Exp_FPR.creat_grount_truth_efm.<locals>.<lambda>";
+static const char __pyx_k_Metric_Exp_FPR_create_ground_tru[] = "Metric_Exp_FPR.create_ground_truth_limer.<locals>.extract_gt";
+static const char __pyx_k_Metric_Exp_FPR_create_recommenda[] = "Metric_Exp_FPR.create_recommendations";
 static const char __pyx_k_Please_provide_the_path_of_the_g[] = "Please provide the path of the ground truth file.";
 static const char __pyx_k_Started_creating_recommendations[] = "Started creating recommendations...";
-static const char __pyx_k_cornac_metrics_explainer_fpr_fea[] = "cornac.metrics_explainer.fpr.feature_precision_recall";
+static const char __pyx_k_cornac_metrics_explainer_fpr_met[] = "cornac.metrics_explainer.fpr.metric_exp_fpr";
 static const char __pyx_k_explain_one_recommendation_to_us[] = "explain_one_recommendation_to_user";
 static const char __pyx_k_numpy_core_umath_failed_to_impor[] = "numpy.core.umath failed to import";
-static const char __pyx_k_probability_of_feature_precision[] = "probability of feature precision and recall";
-static const char __pyx_k_FPR_create_ground_truth_limer_lo_2[] = "FPR.create_ground_truth_limer.<locals>.combined_exp";
-static const char __pyx_k_FPR_create_ground_truth_limer_lo_3[] = "FPR.create_ground_truth_limer.<locals>.<lambda>";
-static const char __pyx_k_cornac_metrics_explainer_fpr_fea_2[] = "cornac/metrics_explainer/fpr/feature_precision_recall.pyx";
+static const char __pyx_k_probability_of_feature_precision[] = "probability of feature precision and recall\n    \n    Parameters\n    ----------\n    rec_k: int, optional, default: 10\n        The number of items to recommend for each user.\n    feature_k: int, optional, default: 10\n        The number of features to explain for each user-item pair.\n    fpath: str, optional, default: None\n        The path of the ground truth file.\n    \n    References\n    ----------\n    [1]Juntao Tan, Shuyuan Xu, Yingqiang Ge, Yunqi Li, Xu Chen, and Yongfeng Zhang. 2021. Counterfactual Explainable Recommendation. In Proceedings of the 30th ACM International Conference on Information & Knowledge Management (CIKM '21). https://doi.org/10.1145/3459637.3482420\n\n    ";
+static const char __pyx_k_Metric_Exp_FPR_creat_grount_trut_2[] = "Metric_Exp_FPR.creat_grount_truth_efm";
+static const char __pyx_k_Metric_Exp_FPR_create_ground_tru_2[] = "Metric_Exp_FPR.create_ground_truth_limer.<locals>.combined_exp";
+static const char __pyx_k_Metric_Exp_FPR_create_ground_tru_3[] = "Metric_Exp_FPR.create_ground_truth_limer.<locals>.<lambda>";
+static const char __pyx_k_Metric_Exp_FPR_create_ground_tru_4[] = "Metric_Exp_FPR.create_ground_truth_sentiment";
+static const char __pyx_k_Metric_Exp_FPR_create_ground_tru_5[] = "Metric_Exp_FPR.create_ground_truth_limer";
+static const char __pyx_k_cornac_metrics_explainer_fpr_met_2[] = "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx";
 static PyObject *__pyx_n_s_A;
 static PyObject *__pyx_n_s_DataFrame;
 static PyObject *__pyx_n_s_EFM;
-static PyObject *__pyx_n_s_FPR;
-static PyObject *__pyx_n_s_FPR___init;
-static PyObject *__pyx_n_s_FPR_compute;
-static PyObject *__pyx_n_s_FPR_creat_grount_truth_efm;
-static PyObject *__pyx_n_s_FPR_creat_grount_truth_efm_local;
-static PyObject *__pyx_n_s_FPR_create_ground_truth_limer;
-static PyObject *__pyx_n_s_FPR_create_ground_truth_limer_lo;
-static PyObject *__pyx_n_s_FPR_create_ground_truth_limer_lo_2;
-static PyObject *__pyx_n_s_FPR_create_ground_truth_limer_lo_3;
-static PyObject *__pyx_n_s_FPR_create_ground_truth_sentimen;
-static PyObject *__pyx_n_s_FPR_create_recommendations;
-static PyObject *__pyx_n_s_FPR_transform_format;
 static PyObject *__pyx_kp_s_Finished_creating_recommendation;
 static PyObject *__pyx_n_s_ImportError;
 static PyObject *__pyx_n_s_LIMERS;
 static PyObject *__pyx_n_s_MTER;
-static PyObject *__pyx_n_s_Metrics;
+static PyObject *__pyx_n_s_Metric_Exp;
+static PyObject *__pyx_n_s_Metric_Exp_FPR;
+static PyObject *__pyx_n_s_Metric_Exp_FPR___init;
+static PyObject *__pyx_n_s_Metric_Exp_FPR_compute;
+static PyObject *__pyx_n_s_Metric_Exp_FPR_creat_grount_trut;
+static PyObject *__pyx_n_s_Metric_Exp_FPR_creat_grount_trut_2;
+static PyObject *__pyx_n_s_Metric_Exp_FPR_create_ground_tru;
+static PyObject *__pyx_n_s_Metric_Exp_FPR_create_ground_tru_2;
+static PyObject *__pyx_n_s_Metric_Exp_FPR_create_ground_tru_3;
+static PyObject *__pyx_n_s_Metric_Exp_FPR_create_ground_tru_4;
+static PyObject *__pyx_n_s_Metric_Exp_FPR_create_ground_tru_5;
+static PyObject *__pyx_n_s_Metric_Exp_FPR_create_recommenda;
+static PyObject *__pyx_n_s_Metric_Exp_FPR_transform_format;
 static PyObject *__pyx_kp_s_Model_not_supported;
 static PyObject *__pyx_kp_s_Please_provide_the_path_of_the_g;
-static PyObject *__pyx_n_s_PrecisionRecall;
 static PyObject *__pyx_n_s_Series;
 static PyObject *__pyx_kp_s_Start_evaluation;
 static PyObject *__pyx_kp_s_Started_creating_recommendations;
@@ -2293,8 +2291,8 @@ static PyObject *__pyx_n_s_combined_dict;
 static PyObject *__pyx_n_s_combined_exp;
 static PyObject *__pyx_n_s_compute;
 static PyObject *__pyx_n_s_cornac_datasets;
-static PyObject *__pyx_n_s_cornac_metrics_explainer_fpr_fea;
-static PyObject *__pyx_kp_s_cornac_metrics_explainer_fpr_fea_2;
+static PyObject *__pyx_n_s_cornac_metrics_explainer_fpr_met;
+static PyObject *__pyx_kp_s_cornac_metrics_explainer_fpr_met_2;
 static PyObject *__pyx_n_s_creat_grount_truth_efm;
 static PyObject *__pyx_n_s_create_ground_truth_limer;
 static PyObject *__pyx_n_s_create_ground_truth_sentiment;
@@ -2357,7 +2355,7 @@ static PyObject *__pyx_n_s_load_sentiment;
 static PyObject *__pyx_n_s_main;
 static PyObject *__pyx_n_s_mean;
 static PyObject *__pyx_n_s_metaclass;
-static PyObject *__pyx_n_s_metrics;
+static PyObject *__pyx_n_s_metric_exp;
 static PyObject *__pyx_n_s_model;
 static PyObject *__pyx_n_s_module;
 static PyObject *__pyx_n_s_name;
@@ -2419,13 +2417,13 @@ static PyObject *__pyx_n_s_v;
 static PyObject *__pyx_n_s_value;
 static PyObject *__pyx_n_s_x;
 static PyObject *__pyx_n_s_zip;
-static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_name, PyObject *__pyx_v_rec_k, PyObject *__pyx_v_feature_k, PyObject *__pyx_v_fpath); /* proto */
-static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_2create_ground_truth_sentiment(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_4transform_format(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_lexicon); /* proto */
+static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_name, PyObject *__pyx_v_rec_k, PyObject *__pyx_v_feature_k, PyObject *__pyx_v_fpath); /* proto */
+static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_2create_ground_truth_sentiment(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_4transform_format(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_lexicon); /* proto */
 static PyObject *__pyx_lambda_funcdef_lambda(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_item); /* proto */
-static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_6creat_grount_truth_efm(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_extract_gt(PyObject *__pyx_self, PyObject *__pyx_v_x, PyObject *__pyx_v_item); /* proto */
-static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_2combined_exp(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_x); /* proto */
+static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_6creat_grount_truth_efm(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_extract_gt(PyObject *__pyx_self, PyObject *__pyx_v_x, PyObject *__pyx_v_item); /* proto */
+static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_2combined_exp(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_x); /* proto */
 static PyObject *__pyx_lambda_funcdef_lambda1(PyObject *__pyx_self, PyObject *__pyx_v_x); /* proto */
 static PyObject *__pyx_lambda_funcdef_lambda2(PyObject *__pyx_self, PyObject *__pyx_v_x); /* proto */
 static PyObject *__pyx_lambda_funcdef_lambda3(PyObject *__pyx_self, PyObject *__pyx_v_x); /* proto */
@@ -2434,10 +2432,10 @@ static PyObject *__pyx_lambda_funcdef_lambda5(PyObject *__pyx_self, PyObject *__
 static PyObject *__pyx_lambda_funcdef_lambda6(PyObject *__pyx_self, PyObject *__pyx_v_x); /* proto */
 static PyObject *__pyx_lambda_funcdef_lambda7(PyObject *__pyx_self, PyObject *__pyx_v_x); /* proto */
 static PyObject *__pyx_lambda_funcdef_lambda8(PyObject *__pyx_self, PyObject *__pyx_v_x); /* proto */
-static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_8create_ground_truth_limer(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_10compute(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_model, PyObject *__pyx_v_explainer, PyObject *__pyx_v_dataset); /* proto */
-static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_12create_recommendations(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
-static PyObject *__pyx_tp_new_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_8create_ground_truth_limer(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_10compute(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_model, PyObject *__pyx_v_explainer, PyObject *__pyx_v_dataset); /* proto */
+static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_12create_recommendations(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
+static PyObject *__pyx_tp_new_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static __Pyx_CachedCFunction __pyx_umethod_PyDict_Type_items = {0, &__pyx_n_s_items, 0, 0, 0};
 static __Pyx_CachedCFunction __pyx_umethod_PySet_Type_intersection = {0, &__pyx_n_s_intersection, 0, 0, 0};
 static PyObject *__pyx_int_1;
@@ -2475,18 +2473,18 @@ static PyObject *__pyx_codeobj__26;
 static PyObject *__pyx_codeobj__29;
 /* Late includes */
 
-/* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":13
- *     """probability of feature precision and recall"""
+/* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":28
+ *     """
  * 
- *     def __init__(self, name="PrecisionRecall", rec_k=10, feature_k=10, fpath= None):             # <<<<<<<<<<<<<<
+ *     def __init__(self, name="Metric_Exp_FPR", rec_k=10, feature_k=10, fpath= None):             # <<<<<<<<<<<<<<
  *         super().__init__(name=name, rec_k=rec_k, feature_k=feature_k)
  *         self.fpath = fpath
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_1__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_1__init__ = {"__init__", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_1__init__, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_1__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_1__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_1__init__ = {"__init__", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_1__init__, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_1__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_name = 0;
   PyObject *__pyx_v_rec_k = 0;
@@ -2501,7 +2499,7 @@ static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   {
     static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_self,&__pyx_n_s_name,&__pyx_n_s_rec_k,&__pyx_n_s_feature_k,&__pyx_n_s_fpath,0};
     PyObject* values[5] = {0,0,0,0,0};
-    values[1] = ((PyObject *)((PyObject*)__pyx_n_s_PrecisionRecall));
+    values[1] = ((PyObject *)((PyObject*)__pyx_n_s_Metric_Exp_FPR));
     values[2] = ((PyObject *)((PyObject *)__pyx_int_10));
     values[3] = ((PyObject *)((PyObject *)__pyx_int_10));
     values[4] = ((PyObject *)((PyObject *)Py_None));
@@ -2553,7 +2551,7 @@ static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_r
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 13, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 28, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -2578,20 +2576,20 @@ static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 0, 1, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 13, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__init__", 0, 1, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 28, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.feature_precision_recall.FPR.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.metric_exp_fpr.Metric_Exp_FPR.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR___init__(__pyx_self, __pyx_v_self, __pyx_v_name, __pyx_v_rec_k, __pyx_v_feature_k, __pyx_v_fpath);
+  __pyx_r = __pyx_pf_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR___init__(__pyx_self, __pyx_v_self, __pyx_v_name, __pyx_v_rec_k, __pyx_v_feature_k, __pyx_v_fpath);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_name, PyObject *__pyx_v_rec_k, PyObject *__pyx_v_feature_k, PyObject *__pyx_v_fpath) {
+static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_name, PyObject *__pyx_v_rec_k, PyObject *__pyx_v_feature_k, PyObject *__pyx_v_fpath) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2602,17 +2600,17 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":14
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":29
  * 
- *     def __init__(self, name="PrecisionRecall", rec_k=10, feature_k=10, fpath= None):
+ *     def __init__(self, name="Metric_Exp_FPR", rec_k=10, feature_k=10, fpath= None):
  *         super().__init__(name=name, rec_k=rec_k, feature_k=feature_k)             # <<<<<<<<<<<<<<
  *         self.fpath = fpath
  * 
  */
   __pyx_t_1 = __Pyx_CyFunction_GetClassObj(__pyx_self);
-  if (!__pyx_t_1) { PyErr_SetString(PyExc_SystemError, "super(): empty __class__ cell"); __PYX_ERR(0, 14, __pyx_L1_error) }
+  if (!__pyx_t_1) { PyErr_SetString(PyExc_SystemError, "super(): empty __class__ cell"); __PYX_ERR(0, 29, __pyx_L1_error) }
   __Pyx_INCREF(__pyx_t_1);
-  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 14, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 29, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1);
@@ -2620,36 +2618,36 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   __Pyx_GIVEREF(__pyx_v_self);
   PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_v_self);
   __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_super, __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 14, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_super, __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 29, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_init); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 14, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_init); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 29, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 14, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 29, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_name, __pyx_v_name) < 0) __PYX_ERR(0, 14, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_rec_k, __pyx_v_rec_k) < 0) __PYX_ERR(0, 14, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_feature_k, __pyx_v_feature_k) < 0) __PYX_ERR(0, 14, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_empty_tuple, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 14, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_name, __pyx_v_name) < 0) __PYX_ERR(0, 29, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_rec_k, __pyx_v_rec_k) < 0) __PYX_ERR(0, 29, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_feature_k, __pyx_v_feature_k) < 0) __PYX_ERR(0, 29, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_empty_tuple, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 29, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":15
- *     def __init__(self, name="PrecisionRecall", rec_k=10, feature_k=10, fpath= None):
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":30
+ *     def __init__(self, name="Metric_Exp_FPR", rec_k=10, feature_k=10, fpath= None):
  *         super().__init__(name=name, rec_k=rec_k, feature_k=feature_k)
  *         self.fpath = fpath             # <<<<<<<<<<<<<<
  * 
  *     def create_ground_truth_sentiment(self):
  */
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_fpath, __pyx_v_fpath) < 0) __PYX_ERR(0, 15, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_fpath, __pyx_v_fpath) < 0) __PYX_ERR(0, 30, __pyx_L1_error)
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":13
- *     """probability of feature precision and recall"""
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":28
+ *     """
  * 
- *     def __init__(self, name="PrecisionRecall", rec_k=10, feature_k=10, fpath= None):             # <<<<<<<<<<<<<<
+ *     def __init__(self, name="Metric_Exp_FPR", rec_k=10, feature_k=10, fpath= None):             # <<<<<<<<<<<<<<
  *         super().__init__(name=name, rec_k=rec_k, feature_k=feature_k)
  *         self.fpath = fpath
  */
@@ -2661,7 +2659,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.feature_precision_recall.FPR.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.metric_exp_fpr.Metric_Exp_FPR.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2669,7 +2667,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   return __pyx_r;
 }
 
-/* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":17
+/* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":32
  *         self.fpath = fpath
  * 
  *     def create_ground_truth_sentiment(self):             # <<<<<<<<<<<<<<
@@ -2678,20 +2676,20 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_3create_ground_truth_sentiment(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
-static PyMethodDef __pyx_mdef_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_3create_ground_truth_sentiment = {"create_ground_truth_sentiment", (PyCFunction)__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_3create_ground_truth_sentiment, METH_O, 0};
-static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_3create_ground_truth_sentiment(PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_3create_ground_truth_sentiment(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
+static PyMethodDef __pyx_mdef_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_3create_ground_truth_sentiment = {"create_ground_truth_sentiment", (PyCFunction)__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_3create_ground_truth_sentiment, METH_O, 0};
+static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_3create_ground_truth_sentiment(PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("create_ground_truth_sentiment (wrapper)", 0);
-  __pyx_r = __pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_2create_ground_truth_sentiment(__pyx_self, ((PyObject *)__pyx_v_self));
+  __pyx_r = __pyx_pf_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_2create_ground_truth_sentiment(__pyx_self, ((PyObject *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_2create_ground_truth_sentiment(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_2create_ground_truth_sentiment(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_v_u_i_all = NULL;
   PyObject *__pyx_v_user_id_list = NULL;
   PyObject *__pyx_v_item_id_list = NULL;
@@ -2718,34 +2716,34 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("create_ground_truth_sentiment", 0);
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":18
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":33
  * 
  *     def create_ground_truth_sentiment(self):
  *         if self.fpath is None:             # <<<<<<<<<<<<<<
  *             raise ValueError("Please provide the path of the ground truth file.")
  *         u_i_all = pd.DataFrame(goodreads.load_sentiment(self.fpath), columns=['user_id', 'item_id', 'explanations'])
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_fpath); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 18, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_fpath); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 33, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = (__pyx_t_1 == Py_None);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_3 = (__pyx_t_2 != 0);
   if (unlikely(__pyx_t_3)) {
 
-    /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":19
+    /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":34
  *     def create_ground_truth_sentiment(self):
  *         if self.fpath is None:
  *             raise ValueError("Please provide the path of the ground truth file.")             # <<<<<<<<<<<<<<
  *         u_i_all = pd.DataFrame(goodreads.load_sentiment(self.fpath), columns=['user_id', 'item_id', 'explanations'])
  *         u_i_all['explanations'] = u_i_all['explanations'].apply(self.transform_format)
  */
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple_, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 19, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple_, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 34, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_Raise(__pyx_t_1, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 19, __pyx_L1_error)
+    __PYX_ERR(0, 34, __pyx_L1_error)
 
-    /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":18
+    /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":33
  * 
  *     def create_ground_truth_sentiment(self):
  *         if self.fpath is None:             # <<<<<<<<<<<<<<
@@ -2754,24 +2752,24 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
  */
   }
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":20
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":35
  *         if self.fpath is None:
  *             raise ValueError("Please provide the path of the ground truth file.")
  *         u_i_all = pd.DataFrame(goodreads.load_sentiment(self.fpath), columns=['user_id', 'item_id', 'explanations'])             # <<<<<<<<<<<<<<
  *         u_i_all['explanations'] = u_i_all['explanations'].apply(self.transform_format)
  *         user_id_list = self.model.train_set.uid_map.keys()
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_pd); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 20, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_pd); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 35, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_DataFrame); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 20, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_DataFrame); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 35, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_goodreads); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 20, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_goodreads); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 35, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_load_sentiment); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 20, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_load_sentiment); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 35, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_fpath); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 20, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_fpath); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 35, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_7 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_6))) {
@@ -2786,17 +2784,17 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   __pyx_t_1 = (__pyx_t_7) ? __Pyx_PyObject_Call2Args(__pyx_t_6, __pyx_t_7, __pyx_t_5) : __Pyx_PyObject_CallOneArg(__pyx_t_6, __pyx_t_5);
   __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 20, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 35, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  __pyx_t_6 = PyTuple_New(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 20, __pyx_L1_error)
+  __pyx_t_6 = PyTuple_New(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 35, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 20, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 35, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = PyList_New(3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 20, __pyx_L1_error)
+  __pyx_t_5 = PyList_New(3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 35, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_INCREF(__pyx_n_s_user_id);
   __Pyx_GIVEREF(__pyx_n_s_user_id);
@@ -2807,9 +2805,9 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   __Pyx_INCREF(__pyx_n_s_explanations);
   __Pyx_GIVEREF(__pyx_n_s_explanations);
   PyList_SET_ITEM(__pyx_t_5, 2, __pyx_n_s_explanations);
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_columns, __pyx_t_5) < 0) __PYX_ERR(0, 20, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_columns, __pyx_t_5) < 0) __PYX_ERR(0, 35, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, __pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 20, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, __pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 35, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
@@ -2817,19 +2815,19 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   __pyx_v_u_i_all = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":21
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":36
  *             raise ValueError("Please provide the path of the ground truth file.")
  *         u_i_all = pd.DataFrame(goodreads.load_sentiment(self.fpath), columns=['user_id', 'item_id', 'explanations'])
  *         u_i_all['explanations'] = u_i_all['explanations'].apply(self.transform_format)             # <<<<<<<<<<<<<<
  *         user_id_list = self.model.train_set.uid_map.keys()
  *         item_id_list = self.model.train_set.iid_map.keys()
  */
-  __pyx_t_1 = __Pyx_PyObject_Dict_GetItem(__pyx_v_u_i_all, __pyx_n_s_explanations); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 21, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Dict_GetItem(__pyx_v_u_i_all, __pyx_n_s_explanations); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 36, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_apply); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 21, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_apply); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 36, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_transform_format); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 21, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_transform_format); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 36, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_6))) {
@@ -2844,28 +2842,28 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   __pyx_t_5 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_6, __pyx_t_4, __pyx_t_1) : __Pyx_PyObject_CallOneArg(__pyx_t_6, __pyx_t_1);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 21, __pyx_L1_error)
+  if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 36, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  if (unlikely(PyObject_SetItem(__pyx_v_u_i_all, __pyx_n_s_explanations, __pyx_t_5) < 0)) __PYX_ERR(0, 21, __pyx_L1_error)
+  if (unlikely(PyObject_SetItem(__pyx_v_u_i_all, __pyx_n_s_explanations, __pyx_t_5) < 0)) __PYX_ERR(0, 36, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":22
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":37
  *         u_i_all = pd.DataFrame(goodreads.load_sentiment(self.fpath), columns=['user_id', 'item_id', 'explanations'])
  *         u_i_all['explanations'] = u_i_all['explanations'].apply(self.transform_format)
  *         user_id_list = self.model.train_set.uid_map.keys()             # <<<<<<<<<<<<<<
  *         item_id_list = self.model.train_set.iid_map.keys()
  *         selected_indices = []
  */
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 37, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_train_set); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_train_set); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 37, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_uid_map); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_uid_map); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 37, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_keys); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_keys); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 37, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __pyx_t_6 = NULL;
@@ -2880,28 +2878,28 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   }
   __pyx_t_5 = (__pyx_t_6) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_6) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-  if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 22, __pyx_L1_error)
+  if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 37, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_user_id_list = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":23
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":38
  *         u_i_all['explanations'] = u_i_all['explanations'].apply(self.transform_format)
  *         user_id_list = self.model.train_set.uid_map.keys()
  *         item_id_list = self.model.train_set.iid_map.keys()             # <<<<<<<<<<<<<<
  *         selected_indices = []
  *         for i, row in u_i_all.iterrows():
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 23, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 38, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_train_set); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 23, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_train_set); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 38, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_iid_map); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 23, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_iid_map); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 38, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_keys); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 23, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_keys); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 38, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_1 = NULL;
@@ -2916,32 +2914,32 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   }
   __pyx_t_5 = (__pyx_t_1) ? __Pyx_PyObject_CallOneArg(__pyx_t_6, __pyx_t_1) : __Pyx_PyObject_CallNoArg(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 23, __pyx_L1_error)
+  if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 38, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __pyx_v_item_id_list = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":24
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":39
  *         user_id_list = self.model.train_set.uid_map.keys()
  *         item_id_list = self.model.train_set.iid_map.keys()
  *         selected_indices = []             # <<<<<<<<<<<<<<
  *         for i, row in u_i_all.iterrows():
  *             if u_i_all.at[i, 'user_id'] in user_id_list and u_i_all.at[i, 'item_id'] in item_id_list:
  */
-  __pyx_t_5 = PyList_New(0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 24, __pyx_L1_error)
+  __pyx_t_5 = PyList_New(0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 39, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_v_selected_indices = ((PyObject*)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":25
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":40
  *         item_id_list = self.model.train_set.iid_map.keys()
  *         selected_indices = []
  *         for i, row in u_i_all.iterrows():             # <<<<<<<<<<<<<<
  *             if u_i_all.at[i, 'user_id'] in user_id_list and u_i_all.at[i, 'item_id'] in item_id_list:
  *                 selected_indices.append(i)
  */
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_u_i_all, __pyx_n_s_iterrows); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 25, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_u_i_all, __pyx_n_s_iterrows); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __pyx_t_1 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_6))) {
@@ -2955,16 +2953,16 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   }
   __pyx_t_5 = (__pyx_t_1) ? __Pyx_PyObject_CallOneArg(__pyx_t_6, __pyx_t_1) : __Pyx_PyObject_CallNoArg(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 25, __pyx_L1_error)
+  if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   if (likely(PyList_CheckExact(__pyx_t_5)) || PyTuple_CheckExact(__pyx_t_5)) {
     __pyx_t_6 = __pyx_t_5; __Pyx_INCREF(__pyx_t_6); __pyx_t_8 = 0;
     __pyx_t_9 = NULL;
   } else {
-    __pyx_t_8 = -1; __pyx_t_6 = PyObject_GetIter(__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 25, __pyx_L1_error)
+    __pyx_t_8 = -1; __pyx_t_6 = PyObject_GetIter(__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 40, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_9 = Py_TYPE(__pyx_t_6)->tp_iternext; if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 25, __pyx_L1_error)
+    __pyx_t_9 = Py_TYPE(__pyx_t_6)->tp_iternext; if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 40, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   for (;;) {
@@ -2972,17 +2970,17 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
       if (likely(PyList_CheckExact(__pyx_t_6))) {
         if (__pyx_t_8 >= PyList_GET_SIZE(__pyx_t_6)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_5 = PyList_GET_ITEM(__pyx_t_6, __pyx_t_8); __Pyx_INCREF(__pyx_t_5); __pyx_t_8++; if (unlikely(0 < 0)) __PYX_ERR(0, 25, __pyx_L1_error)
+        __pyx_t_5 = PyList_GET_ITEM(__pyx_t_6, __pyx_t_8); __Pyx_INCREF(__pyx_t_5); __pyx_t_8++; if (unlikely(0 < 0)) __PYX_ERR(0, 40, __pyx_L1_error)
         #else
-        __pyx_t_5 = PySequence_ITEM(__pyx_t_6, __pyx_t_8); __pyx_t_8++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 25, __pyx_L1_error)
+        __pyx_t_5 = PySequence_ITEM(__pyx_t_6, __pyx_t_8); __pyx_t_8++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 40, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
         #endif
       } else {
         if (__pyx_t_8 >= PyTuple_GET_SIZE(__pyx_t_6)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_5 = PyTuple_GET_ITEM(__pyx_t_6, __pyx_t_8); __Pyx_INCREF(__pyx_t_5); __pyx_t_8++; if (unlikely(0 < 0)) __PYX_ERR(0, 25, __pyx_L1_error)
+        __pyx_t_5 = PyTuple_GET_ITEM(__pyx_t_6, __pyx_t_8); __Pyx_INCREF(__pyx_t_5); __pyx_t_8++; if (unlikely(0 < 0)) __PYX_ERR(0, 40, __pyx_L1_error)
         #else
-        __pyx_t_5 = PySequence_ITEM(__pyx_t_6, __pyx_t_8); __pyx_t_8++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 25, __pyx_L1_error)
+        __pyx_t_5 = PySequence_ITEM(__pyx_t_6, __pyx_t_8); __pyx_t_8++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 40, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
         #endif
       }
@@ -2992,7 +2990,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 25, __pyx_L1_error)
+          else __PYX_ERR(0, 40, __pyx_L1_error)
         }
         break;
       }
@@ -3004,7 +3002,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
       if (unlikely(size != 2)) {
         if (size > 2) __Pyx_RaiseTooManyValuesError(2);
         else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-        __PYX_ERR(0, 25, __pyx_L1_error)
+        __PYX_ERR(0, 40, __pyx_L1_error)
       }
       #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
       if (likely(PyTuple_CheckExact(sequence))) {
@@ -3017,15 +3015,15 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
       __Pyx_INCREF(__pyx_t_1);
       __Pyx_INCREF(__pyx_t_4);
       #else
-      __pyx_t_1 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 25, __pyx_L1_error)
+      __pyx_t_1 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 40, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_4 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 25, __pyx_L1_error)
+      __pyx_t_4 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 40, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       #endif
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     } else {
       Py_ssize_t index = -1;
-      __pyx_t_7 = PyObject_GetIter(__pyx_t_5); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 25, __pyx_L1_error)
+      __pyx_t_7 = PyObject_GetIter(__pyx_t_5); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 40, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       __pyx_t_10 = Py_TYPE(__pyx_t_7)->tp_iternext;
@@ -3033,7 +3031,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
       __Pyx_GOTREF(__pyx_t_1);
       index = 1; __pyx_t_4 = __pyx_t_10(__pyx_t_7); if (unlikely(!__pyx_t_4)) goto __pyx_L6_unpacking_failed;
       __Pyx_GOTREF(__pyx_t_4);
-      if (__Pyx_IternextUnpackEndCheck(__pyx_t_10(__pyx_t_7), 2) < 0) __PYX_ERR(0, 25, __pyx_L1_error)
+      if (__Pyx_IternextUnpackEndCheck(__pyx_t_10(__pyx_t_7), 2) < 0) __PYX_ERR(0, 40, __pyx_L1_error)
       __pyx_t_10 = NULL;
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       goto __pyx_L7_unpacking_done;
@@ -3041,7 +3039,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       __pyx_t_10 = NULL;
       if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-      __PYX_ERR(0, 25, __pyx_L1_error)
+      __PYX_ERR(0, 40, __pyx_L1_error)
       __pyx_L7_unpacking_done:;
     }
     __Pyx_XDECREF_SET(__pyx_v_i, __pyx_t_1);
@@ -3049,16 +3047,16 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
     __Pyx_XDECREF_SET(__pyx_v_row, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":26
+    /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":41
  *         selected_indices = []
  *         for i, row in u_i_all.iterrows():
  *             if u_i_all.at[i, 'user_id'] in user_id_list and u_i_all.at[i, 'item_id'] in item_id_list:             # <<<<<<<<<<<<<<
  *                 selected_indices.append(i)
  *         u_i_gt = u_i_all.iloc[selected_indices]
  */
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_u_i_all, __pyx_n_s_at); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 26, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_u_i_all, __pyx_n_s_at); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 41, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 26, __pyx_L1_error)
+    __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 41, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_INCREF(__pyx_v_i);
     __Pyx_GIVEREF(__pyx_v_i);
@@ -3066,11 +3064,11 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
     __Pyx_INCREF(__pyx_n_s_user_id);
     __Pyx_GIVEREF(__pyx_n_s_user_id);
     PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_n_s_user_id);
-    __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_t_5, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 26, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_t_5, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 41, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_2 = (__Pyx_PySequence_ContainsTF(__pyx_t_1, __pyx_v_user_id_list, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 26, __pyx_L1_error)
+    __pyx_t_2 = (__Pyx_PySequence_ContainsTF(__pyx_t_1, __pyx_v_user_id_list, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 41, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_11 = (__pyx_t_2 != 0);
     if (__pyx_t_11) {
@@ -3078,9 +3076,9 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
       __pyx_t_3 = __pyx_t_11;
       goto __pyx_L9_bool_binop_done;
     }
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_u_i_all, __pyx_n_s_at); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 26, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_u_i_all, __pyx_n_s_at); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 41, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 26, __pyx_L1_error)
+    __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 41, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_INCREF(__pyx_v_i);
     __Pyx_GIVEREF(__pyx_v_i);
@@ -3088,27 +3086,27 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
     __Pyx_INCREF(__pyx_n_s_item_id);
     __Pyx_GIVEREF(__pyx_n_s_item_id);
     PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_n_s_item_id);
-    __pyx_t_5 = __Pyx_PyObject_GetItem(__pyx_t_1, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 26, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetItem(__pyx_t_1, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 41, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_11 = (__Pyx_PySequence_ContainsTF(__pyx_t_5, __pyx_v_item_id_list, Py_EQ)); if (unlikely(__pyx_t_11 < 0)) __PYX_ERR(0, 26, __pyx_L1_error)
+    __pyx_t_11 = (__Pyx_PySequence_ContainsTF(__pyx_t_5, __pyx_v_item_id_list, Py_EQ)); if (unlikely(__pyx_t_11 < 0)) __PYX_ERR(0, 41, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __pyx_t_2 = (__pyx_t_11 != 0);
     __pyx_t_3 = __pyx_t_2;
     __pyx_L9_bool_binop_done:;
     if (__pyx_t_3) {
 
-      /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":27
+      /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":42
  *         for i, row in u_i_all.iterrows():
  *             if u_i_all.at[i, 'user_id'] in user_id_list and u_i_all.at[i, 'item_id'] in item_id_list:
  *                 selected_indices.append(i)             # <<<<<<<<<<<<<<
  *         u_i_gt = u_i_all.iloc[selected_indices]
  *         return u_i_gt
  */
-      __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_selected_indices, __pyx_v_i); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 27, __pyx_L1_error)
+      __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_selected_indices, __pyx_v_i); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 42, __pyx_L1_error)
 
-      /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":26
+      /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":41
  *         selected_indices = []
  *         for i, row in u_i_all.iterrows():
  *             if u_i_all.at[i, 'user_id'] in user_id_list and u_i_all.at[i, 'item_id'] in item_id_list:             # <<<<<<<<<<<<<<
@@ -3117,7 +3115,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
  */
     }
 
-    /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":25
+    /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":40
  *         item_id_list = self.model.train_set.iid_map.keys()
  *         selected_indices = []
  *         for i, row in u_i_all.iterrows():             # <<<<<<<<<<<<<<
@@ -3127,22 +3125,22 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   }
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":28
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":43
  *             if u_i_all.at[i, 'user_id'] in user_id_list and u_i_all.at[i, 'item_id'] in item_id_list:
  *                 selected_indices.append(i)
  *         u_i_gt = u_i_all.iloc[selected_indices]             # <<<<<<<<<<<<<<
  *         return u_i_gt
  * 
  */
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_u_i_all, __pyx_n_s_iloc); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 28, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_u_i_all, __pyx_n_s_iloc); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 43, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_5 = __Pyx_PyObject_GetItem(__pyx_t_6, __pyx_v_selected_indices); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 28, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetItem(__pyx_t_6, __pyx_v_selected_indices); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 43, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __pyx_v_u_i_gt = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":29
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":44
  *                 selected_indices.append(i)
  *         u_i_gt = u_i_all.iloc[selected_indices]
  *         return u_i_gt             # <<<<<<<<<<<<<<
@@ -3154,7 +3152,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   __pyx_r = __pyx_v_u_i_gt;
   goto __pyx_L0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":17
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":32
  *         self.fpath = fpath
  * 
  *     def create_ground_truth_sentiment(self):             # <<<<<<<<<<<<<<
@@ -3169,7 +3167,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.feature_precision_recall.FPR.create_ground_truth_sentiment", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.metric_exp_fpr.Metric_Exp_FPR.create_ground_truth_sentiment", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_u_i_all);
@@ -3184,7 +3182,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   return __pyx_r;
 }
 
-/* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":31
+/* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":46
  *         return u_i_gt
  * 
  *     def transform_format(self, lexicon):             # <<<<<<<<<<<<<<
@@ -3193,9 +3191,9 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_5transform_format(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_5transform_format = {"transform_format", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_5transform_format, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_5transform_format(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_5transform_format(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_5transform_format = {"transform_format", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_5transform_format, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_5transform_format(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   CYTHON_UNUSED PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_lexicon = 0;
   int __pyx_lineno = 0;
@@ -3227,11 +3225,11 @@ static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_r
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_lexicon)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("transform_format", 1, 2, 2, 1); __PYX_ERR(0, 31, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("transform_format", 1, 2, 2, 1); __PYX_ERR(0, 46, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "transform_format") < 0)) __PYX_ERR(0, 31, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "transform_format") < 0)) __PYX_ERR(0, 46, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -3244,20 +3242,20 @@ static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("transform_format", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 31, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("transform_format", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 46, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.feature_precision_recall.FPR.transform_format", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.metric_exp_fpr.Metric_Exp_FPR.transform_format", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_4transform_format(__pyx_self, __pyx_v_self, __pyx_v_lexicon);
+  __pyx_r = __pyx_pf_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_4transform_format(__pyx_self, __pyx_v_self, __pyx_v_lexicon);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_4transform_format(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_lexicon) {
+static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_4transform_format(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_lexicon) {
   PyObject *__pyx_v_explanation_dict = 0;
   PyObject *__pyx_v_t = NULL;
   PyObject *__pyx_r = NULL;
@@ -3273,19 +3271,19 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("transform_format", 0);
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":33
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":48
  *     def transform_format(self, lexicon):
  *         # Transform each tuple into the desired format
  *         cdef dict explanation_dict = {}             # <<<<<<<<<<<<<<
  *         for t in lexicon:
  *             if int(t[2])== 1:
  */
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 33, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 48, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_explanation_dict = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":34
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":49
  *         # Transform each tuple into the desired format
  *         cdef dict explanation_dict = {}
  *         for t in lexicon:             # <<<<<<<<<<<<<<
@@ -3296,26 +3294,26 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
     __pyx_t_1 = __pyx_v_lexicon; __Pyx_INCREF(__pyx_t_1); __pyx_t_2 = 0;
     __pyx_t_3 = NULL;
   } else {
-    __pyx_t_2 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_v_lexicon); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 34, __pyx_L1_error)
+    __pyx_t_2 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_v_lexicon); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 49, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 34, __pyx_L1_error)
+    __pyx_t_3 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 49, __pyx_L1_error)
   }
   for (;;) {
     if (likely(!__pyx_t_3)) {
       if (likely(PyList_CheckExact(__pyx_t_1))) {
         if (__pyx_t_2 >= PyList_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_4 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_4); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 34, __pyx_L1_error)
+        __pyx_t_4 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_4); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 49, __pyx_L1_error)
         #else
-        __pyx_t_4 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 34, __pyx_L1_error)
+        __pyx_t_4 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 49, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         #endif
       } else {
         if (__pyx_t_2 >= PyTuple_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_4 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_4); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 34, __pyx_L1_error)
+        __pyx_t_4 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_4); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 49, __pyx_L1_error)
         #else
-        __pyx_t_4 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 34, __pyx_L1_error)
+        __pyx_t_4 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 49, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         #endif
       }
@@ -3325,7 +3323,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 34, __pyx_L1_error)
+          else __PYX_ERR(0, 49, __pyx_L1_error)
         }
         break;
       }
@@ -3334,44 +3332,44 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
     __Pyx_XDECREF_SET(__pyx_v_t, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":35
+    /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":50
  *         cdef dict explanation_dict = {}
  *         for t in lexicon:
  *             if int(t[2])== 1:             # <<<<<<<<<<<<<<
  *                 explanation_dict[t[0]] = int(t[2])
  *         # Join the tuples into a comma-separated string
  */
-    __pyx_t_4 = __Pyx_GetItemInt(__pyx_v_t, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 35, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_GetItemInt(__pyx_v_t, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 50, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = __Pyx_PyNumber_Int(__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 35, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyNumber_Int(__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 50, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = __Pyx_PyInt_EqObjC(__pyx_t_5, __pyx_int_1, 1, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 35, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyInt_EqObjC(__pyx_t_5, __pyx_int_1, 1, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 50, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 35, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 50, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     if (__pyx_t_6) {
 
-      /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":36
+      /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":51
  *         for t in lexicon:
  *             if int(t[2])== 1:
  *                 explanation_dict[t[0]] = int(t[2])             # <<<<<<<<<<<<<<
  *         # Join the tuples into a comma-separated string
  *         return explanation_dict
  */
-      __pyx_t_4 = __Pyx_GetItemInt(__pyx_v_t, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 36, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_GetItemInt(__pyx_v_t, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 51, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_5 = __Pyx_PyNumber_Int(__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 36, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyNumber_Int(__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 51, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_t_4 = __Pyx_GetItemInt(__pyx_v_t, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 36, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_GetItemInt(__pyx_v_t, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 51, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      if (unlikely(PyDict_SetItem(__pyx_v_explanation_dict, __pyx_t_4, __pyx_t_5) < 0)) __PYX_ERR(0, 36, __pyx_L1_error)
+      if (unlikely(PyDict_SetItem(__pyx_v_explanation_dict, __pyx_t_4, __pyx_t_5) < 0)) __PYX_ERR(0, 51, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":35
+      /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":50
  *         cdef dict explanation_dict = {}
  *         for t in lexicon:
  *             if int(t[2])== 1:             # <<<<<<<<<<<<<<
@@ -3380,7 +3378,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
  */
     }
 
-    /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":34
+    /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":49
  *         # Transform each tuple into the desired format
  *         cdef dict explanation_dict = {}
  *         for t in lexicon:             # <<<<<<<<<<<<<<
@@ -3390,7 +3388,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":38
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":53
  *                 explanation_dict[t[0]] = int(t[2])
  *         # Join the tuples into a comma-separated string
  *         return explanation_dict             # <<<<<<<<<<<<<<
@@ -3402,7 +3400,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   __pyx_r = __pyx_v_explanation_dict;
   goto __pyx_L0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":31
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":46
  *         return u_i_gt
  * 
  *     def transform_format(self, lexicon):             # <<<<<<<<<<<<<<
@@ -3415,7 +3413,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.feature_precision_recall.FPR.transform_format", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.metric_exp_fpr.Metric_Exp_FPR.transform_format", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_explanation_dict);
@@ -3425,7 +3423,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   return __pyx_r;
 }
 
-/* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":40
+/* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":55
  *         return explanation_dict
  * 
  *     def creat_grount_truth_efm(self):             # <<<<<<<<<<<<<<
@@ -3434,20 +3432,20 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_7creat_grount_truth_efm(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
-static PyMethodDef __pyx_mdef_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_7creat_grount_truth_efm = {"creat_grount_truth_efm", (PyCFunction)__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_7creat_grount_truth_efm, METH_O, 0};
-static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_7creat_grount_truth_efm(PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_7creat_grount_truth_efm(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
+static PyMethodDef __pyx_mdef_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_7creat_grount_truth_efm = {"creat_grount_truth_efm", (PyCFunction)__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_7creat_grount_truth_efm, METH_O, 0};
+static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_7creat_grount_truth_efm(PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("creat_grount_truth_efm (wrapper)", 0);
-  __pyx_r = __pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_6creat_grount_truth_efm(__pyx_self, ((PyObject *)__pyx_v_self));
+  __pyx_r = __pyx_pf_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_6creat_grount_truth_efm(__pyx_self, ((PyObject *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":59
+/* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":74
  * 
  *                 combined_dict = dict(zip(aspect_ids, aspect_values))
  *                 sorted_dict = dict(sorted(combined_dict.items(), key=lambda item: item[1], reverse=True))             # <<<<<<<<<<<<<<
@@ -3456,9 +3454,9 @@ static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_r
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_22creat_grount_truth_efm_lambda(PyObject *__pyx_self, PyObject *__pyx_v_item); /*proto*/
-static PyMethodDef __pyx_mdef_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_22creat_grount_truth_efm_lambda = {"lambda", (PyCFunction)__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_22creat_grount_truth_efm_lambda, METH_O, 0};
-static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_22creat_grount_truth_efm_lambda(PyObject *__pyx_self, PyObject *__pyx_v_item) {
+static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_22creat_grount_truth_efm_lambda(PyObject *__pyx_self, PyObject *__pyx_v_item); /*proto*/
+static PyMethodDef __pyx_mdef_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_22creat_grount_truth_efm_lambda = {"lambda", (PyCFunction)__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_22creat_grount_truth_efm_lambda, METH_O, 0};
+static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_22creat_grount_truth_efm_lambda(PyObject *__pyx_self, PyObject *__pyx_v_item) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("lambda (wrapper)", 0);
@@ -3478,7 +3476,7 @@ static PyObject *__pyx_lambda_funcdef_lambda(CYTHON_UNUSED PyObject *__pyx_self,
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("lambda", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_item, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 59, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_item, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 74, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -3487,7 +3485,7 @@ static PyObject *__pyx_lambda_funcdef_lambda(CYTHON_UNUSED PyObject *__pyx_self,
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.feature_precision_recall.FPR.creat_grount_truth_efm.lambda", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.metric_exp_fpr.Metric_Exp_FPR.creat_grount_truth_efm.lambda", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -3495,7 +3493,7 @@ static PyObject *__pyx_lambda_funcdef_lambda(CYTHON_UNUSED PyObject *__pyx_self,
   return __pyx_r;
 }
 
-/* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":40
+/* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":55
  *         return explanation_dict
  * 
  *     def creat_grount_truth_efm(self):             # <<<<<<<<<<<<<<
@@ -3503,7 +3501,7 @@ static PyObject *__pyx_lambda_funcdef_lambda(CYTHON_UNUSED PyObject *__pyx_self,
  *         user_idx2id = {v: k for k, v in self.model.train_set.uid_map.items()}
  */
 
-static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_6creat_grount_truth_efm(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_6creat_grount_truth_efm(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_v_A = NULL;
   PyObject *__pyx_v_X = NULL;
   PyObject *__pyx_v_Y = NULL;
@@ -3556,21 +3554,21 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("creat_grount_truth_efm", 0);
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":41
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":56
  * 
  *     def creat_grount_truth_efm(self):
  *         A, X, Y = self.model._build_matrices(self.model.train_set)             # <<<<<<<<<<<<<<
  *         user_idx2id = {v: k for k, v in self.model.train_set.uid_map.items()}
  *         item_idx2id = {v: k for k, v in self.model.train_set.iid_map.items()}
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 41, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 56, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_build_matrices); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 41, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_build_matrices); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 56, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 41, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 56, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_train_set); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 41, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_train_set); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 56, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -3586,7 +3584,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_2, __pyx_t_4) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 41, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 56, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if ((likely(PyTuple_CheckExact(__pyx_t_1))) || (PyList_CheckExact(__pyx_t_1))) {
@@ -3595,7 +3593,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
     if (unlikely(size != 3)) {
       if (size > 3) __Pyx_RaiseTooManyValuesError(3);
       else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-      __PYX_ERR(0, 41, __pyx_L1_error)
+      __PYX_ERR(0, 56, __pyx_L1_error)
     }
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
     if (likely(PyTuple_CheckExact(sequence))) {
@@ -3611,17 +3609,17 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
     __Pyx_INCREF(__pyx_t_4);
     __Pyx_INCREF(__pyx_t_2);
     #else
-    __pyx_t_3 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 41, __pyx_L1_error)
+    __pyx_t_3 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 56, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 41, __pyx_L1_error)
+    __pyx_t_4 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 56, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_2 = PySequence_ITEM(sequence, 2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 41, __pyx_L1_error)
+    __pyx_t_2 = PySequence_ITEM(sequence, 2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 56, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     #endif
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   } else {
     Py_ssize_t index = -1;
-    __pyx_t_5 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 41, __pyx_L1_error)
+    __pyx_t_5 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 56, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_6 = Py_TYPE(__pyx_t_5)->tp_iternext;
@@ -3631,7 +3629,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
     __Pyx_GOTREF(__pyx_t_4);
     index = 2; __pyx_t_2 = __pyx_t_6(__pyx_t_5); if (unlikely(!__pyx_t_2)) goto __pyx_L3_unpacking_failed;
     __Pyx_GOTREF(__pyx_t_2);
-    if (__Pyx_IternextUnpackEndCheck(__pyx_t_6(__pyx_t_5), 3) < 0) __PYX_ERR(0, 41, __pyx_L1_error)
+    if (__Pyx_IternextUnpackEndCheck(__pyx_t_6(__pyx_t_5), 3) < 0) __PYX_ERR(0, 56, __pyx_L1_error)
     __pyx_t_6 = NULL;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     goto __pyx_L4_unpacking_done;
@@ -3639,7 +3637,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __pyx_t_6 = NULL;
     if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-    __PYX_ERR(0, 41, __pyx_L1_error)
+    __PYX_ERR(0, 56, __pyx_L1_error)
     __pyx_L4_unpacking_done:;
   }
   __pyx_v_A = __pyx_t_3;
@@ -3649,7 +3647,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   __pyx_v_Y = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":42
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":57
  *     def creat_grount_truth_efm(self):
  *         A, X, Y = self.model._build_matrices(self.model.train_set)
  *         user_idx2id = {v: k for k, v in self.model.train_set.uid_map.items()}             # <<<<<<<<<<<<<<
@@ -3657,17 +3655,17 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
  *         id2aspect = {v:k for k, v in self.model.train_set.sentiment.aspect_id_map.items()}
  */
   { /* enter inner scope */
-    __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 42, __pyx_L7_error)
+    __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 57, __pyx_L7_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 42, __pyx_L7_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 57, __pyx_L7_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_train_set); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 42, __pyx_L7_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_train_set); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 57, __pyx_L7_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_uid_map); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 42, __pyx_L7_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_uid_map); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 57, __pyx_L7_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_items); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 42, __pyx_L7_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_items); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 57, __pyx_L7_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_4 = NULL;
@@ -3682,16 +3680,16 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
     }
     __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 42, __pyx_L7_error)
+    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 57, __pyx_L7_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (likely(PyList_CheckExact(__pyx_t_2)) || PyTuple_CheckExact(__pyx_t_2)) {
       __pyx_t_3 = __pyx_t_2; __Pyx_INCREF(__pyx_t_3); __pyx_t_7 = 0;
       __pyx_t_8 = NULL;
     } else {
-      __pyx_t_7 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 42, __pyx_L7_error)
+      __pyx_t_7 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 57, __pyx_L7_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_8 = Py_TYPE(__pyx_t_3)->tp_iternext; if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 42, __pyx_L7_error)
+      __pyx_t_8 = Py_TYPE(__pyx_t_3)->tp_iternext; if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 57, __pyx_L7_error)
     }
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     for (;;) {
@@ -3699,17 +3697,17 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
         if (likely(PyList_CheckExact(__pyx_t_3))) {
           if (__pyx_t_7 >= PyList_GET_SIZE(__pyx_t_3)) break;
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_2 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_7); __Pyx_INCREF(__pyx_t_2); __pyx_t_7++; if (unlikely(0 < 0)) __PYX_ERR(0, 42, __pyx_L7_error)
+          __pyx_t_2 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_7); __Pyx_INCREF(__pyx_t_2); __pyx_t_7++; if (unlikely(0 < 0)) __PYX_ERR(0, 57, __pyx_L7_error)
           #else
-          __pyx_t_2 = PySequence_ITEM(__pyx_t_3, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 42, __pyx_L7_error)
+          __pyx_t_2 = PySequence_ITEM(__pyx_t_3, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 57, __pyx_L7_error)
           __Pyx_GOTREF(__pyx_t_2);
           #endif
         } else {
           if (__pyx_t_7 >= PyTuple_GET_SIZE(__pyx_t_3)) break;
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_3, __pyx_t_7); __Pyx_INCREF(__pyx_t_2); __pyx_t_7++; if (unlikely(0 < 0)) __PYX_ERR(0, 42, __pyx_L7_error)
+          __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_3, __pyx_t_7); __Pyx_INCREF(__pyx_t_2); __pyx_t_7++; if (unlikely(0 < 0)) __PYX_ERR(0, 57, __pyx_L7_error)
           #else
-          __pyx_t_2 = PySequence_ITEM(__pyx_t_3, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 42, __pyx_L7_error)
+          __pyx_t_2 = PySequence_ITEM(__pyx_t_3, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 57, __pyx_L7_error)
           __Pyx_GOTREF(__pyx_t_2);
           #endif
         }
@@ -3719,7 +3717,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
           PyObject* exc_type = PyErr_Occurred();
           if (exc_type) {
             if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-            else __PYX_ERR(0, 42, __pyx_L7_error)
+            else __PYX_ERR(0, 57, __pyx_L7_error)
           }
           break;
         }
@@ -3731,7 +3729,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
         if (unlikely(size != 2)) {
           if (size > 2) __Pyx_RaiseTooManyValuesError(2);
           else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-          __PYX_ERR(0, 42, __pyx_L7_error)
+          __PYX_ERR(0, 57, __pyx_L7_error)
         }
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
         if (likely(PyTuple_CheckExact(sequence))) {
@@ -3744,15 +3742,15 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
         __Pyx_INCREF(__pyx_t_4);
         __Pyx_INCREF(__pyx_t_5);
         #else
-        __pyx_t_4 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 42, __pyx_L7_error)
+        __pyx_t_4 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 57, __pyx_L7_error)
         __Pyx_GOTREF(__pyx_t_4);
-        __pyx_t_5 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 42, __pyx_L7_error)
+        __pyx_t_5 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 57, __pyx_L7_error)
         __Pyx_GOTREF(__pyx_t_5);
         #endif
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       } else {
         Py_ssize_t index = -1;
-        __pyx_t_9 = PyObject_GetIter(__pyx_t_2); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 42, __pyx_L7_error)
+        __pyx_t_9 = PyObject_GetIter(__pyx_t_2); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 57, __pyx_L7_error)
         __Pyx_GOTREF(__pyx_t_9);
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __pyx_t_6 = Py_TYPE(__pyx_t_9)->tp_iternext;
@@ -3760,7 +3758,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
         __Pyx_GOTREF(__pyx_t_4);
         index = 1; __pyx_t_5 = __pyx_t_6(__pyx_t_9); if (unlikely(!__pyx_t_5)) goto __pyx_L10_unpacking_failed;
         __Pyx_GOTREF(__pyx_t_5);
-        if (__Pyx_IternextUnpackEndCheck(__pyx_t_6(__pyx_t_9), 2) < 0) __PYX_ERR(0, 42, __pyx_L7_error)
+        if (__Pyx_IternextUnpackEndCheck(__pyx_t_6(__pyx_t_9), 2) < 0) __PYX_ERR(0, 57, __pyx_L7_error)
         __pyx_t_6 = NULL;
         __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
         goto __pyx_L11_unpacking_done;
@@ -3768,14 +3766,14 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
         __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
         __pyx_t_6 = NULL;
         if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-        __PYX_ERR(0, 42, __pyx_L7_error)
+        __PYX_ERR(0, 57, __pyx_L7_error)
         __pyx_L11_unpacking_done:;
       }
       __Pyx_XDECREF_SET(__pyx_7genexpr__pyx_v_k, __pyx_t_4);
       __pyx_t_4 = 0;
       __Pyx_XDECREF_SET(__pyx_7genexpr__pyx_v_v, __pyx_t_5);
       __pyx_t_5 = 0;
-      if (unlikely(PyDict_SetItem(__pyx_t_1, (PyObject*)__pyx_7genexpr__pyx_v_v, (PyObject*)__pyx_7genexpr__pyx_v_k))) __PYX_ERR(0, 42, __pyx_L7_error)
+      if (unlikely(PyDict_SetItem(__pyx_t_1, (PyObject*)__pyx_7genexpr__pyx_v_v, (PyObject*)__pyx_7genexpr__pyx_v_k))) __PYX_ERR(0, 57, __pyx_L7_error)
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_XDECREF(__pyx_7genexpr__pyx_v_k); __pyx_7genexpr__pyx_v_k = 0;
@@ -3790,7 +3788,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   __pyx_v_user_idx2id = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":43
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":58
  *         A, X, Y = self.model._build_matrices(self.model.train_set)
  *         user_idx2id = {v: k for k, v in self.model.train_set.uid_map.items()}
  *         item_idx2id = {v: k for k, v in self.model.train_set.iid_map.items()}             # <<<<<<<<<<<<<<
@@ -3798,17 +3796,17 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
  *         users = []
  */
   { /* enter inner scope */
-    __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 43, __pyx_L15_error)
+    __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 58, __pyx_L15_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 43, __pyx_L15_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 58, __pyx_L15_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_train_set); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 43, __pyx_L15_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_train_set); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 58, __pyx_L15_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_iid_map); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 43, __pyx_L15_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_iid_map); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 58, __pyx_L15_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_items); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 43, __pyx_L15_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_items); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 58, __pyx_L15_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
@@ -3823,16 +3821,16 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
     }
     __pyx_t_3 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_5);
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 43, __pyx_L15_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 58, __pyx_L15_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     if (likely(PyList_CheckExact(__pyx_t_3)) || PyTuple_CheckExact(__pyx_t_3)) {
       __pyx_t_5 = __pyx_t_3; __Pyx_INCREF(__pyx_t_5); __pyx_t_7 = 0;
       __pyx_t_8 = NULL;
     } else {
-      __pyx_t_7 = -1; __pyx_t_5 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 43, __pyx_L15_error)
+      __pyx_t_7 = -1; __pyx_t_5 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 58, __pyx_L15_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_8 = Py_TYPE(__pyx_t_5)->tp_iternext; if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 43, __pyx_L15_error)
+      __pyx_t_8 = Py_TYPE(__pyx_t_5)->tp_iternext; if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 58, __pyx_L15_error)
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     for (;;) {
@@ -3840,17 +3838,17 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
         if (likely(PyList_CheckExact(__pyx_t_5))) {
           if (__pyx_t_7 >= PyList_GET_SIZE(__pyx_t_5)) break;
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_3 = PyList_GET_ITEM(__pyx_t_5, __pyx_t_7); __Pyx_INCREF(__pyx_t_3); __pyx_t_7++; if (unlikely(0 < 0)) __PYX_ERR(0, 43, __pyx_L15_error)
+          __pyx_t_3 = PyList_GET_ITEM(__pyx_t_5, __pyx_t_7); __Pyx_INCREF(__pyx_t_3); __pyx_t_7++; if (unlikely(0 < 0)) __PYX_ERR(0, 58, __pyx_L15_error)
           #else
-          __pyx_t_3 = PySequence_ITEM(__pyx_t_5, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 43, __pyx_L15_error)
+          __pyx_t_3 = PySequence_ITEM(__pyx_t_5, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 58, __pyx_L15_error)
           __Pyx_GOTREF(__pyx_t_3);
           #endif
         } else {
           if (__pyx_t_7 >= PyTuple_GET_SIZE(__pyx_t_5)) break;
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_3 = PyTuple_GET_ITEM(__pyx_t_5, __pyx_t_7); __Pyx_INCREF(__pyx_t_3); __pyx_t_7++; if (unlikely(0 < 0)) __PYX_ERR(0, 43, __pyx_L15_error)
+          __pyx_t_3 = PyTuple_GET_ITEM(__pyx_t_5, __pyx_t_7); __Pyx_INCREF(__pyx_t_3); __pyx_t_7++; if (unlikely(0 < 0)) __PYX_ERR(0, 58, __pyx_L15_error)
           #else
-          __pyx_t_3 = PySequence_ITEM(__pyx_t_5, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 43, __pyx_L15_error)
+          __pyx_t_3 = PySequence_ITEM(__pyx_t_5, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 58, __pyx_L15_error)
           __Pyx_GOTREF(__pyx_t_3);
           #endif
         }
@@ -3860,7 +3858,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
           PyObject* exc_type = PyErr_Occurred();
           if (exc_type) {
             if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-            else __PYX_ERR(0, 43, __pyx_L15_error)
+            else __PYX_ERR(0, 58, __pyx_L15_error)
           }
           break;
         }
@@ -3872,7 +3870,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
         if (unlikely(size != 2)) {
           if (size > 2) __Pyx_RaiseTooManyValuesError(2);
           else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-          __PYX_ERR(0, 43, __pyx_L15_error)
+          __PYX_ERR(0, 58, __pyx_L15_error)
         }
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
         if (likely(PyTuple_CheckExact(sequence))) {
@@ -3885,15 +3883,15 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
         __Pyx_INCREF(__pyx_t_2);
         __Pyx_INCREF(__pyx_t_4);
         #else
-        __pyx_t_2 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 43, __pyx_L15_error)
+        __pyx_t_2 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 58, __pyx_L15_error)
         __Pyx_GOTREF(__pyx_t_2);
-        __pyx_t_4 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 43, __pyx_L15_error)
+        __pyx_t_4 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 58, __pyx_L15_error)
         __Pyx_GOTREF(__pyx_t_4);
         #endif
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       } else {
         Py_ssize_t index = -1;
-        __pyx_t_9 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 43, __pyx_L15_error)
+        __pyx_t_9 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 58, __pyx_L15_error)
         __Pyx_GOTREF(__pyx_t_9);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         __pyx_t_6 = Py_TYPE(__pyx_t_9)->tp_iternext;
@@ -3901,7 +3899,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
         __Pyx_GOTREF(__pyx_t_2);
         index = 1; __pyx_t_4 = __pyx_t_6(__pyx_t_9); if (unlikely(!__pyx_t_4)) goto __pyx_L18_unpacking_failed;
         __Pyx_GOTREF(__pyx_t_4);
-        if (__Pyx_IternextUnpackEndCheck(__pyx_t_6(__pyx_t_9), 2) < 0) __PYX_ERR(0, 43, __pyx_L15_error)
+        if (__Pyx_IternextUnpackEndCheck(__pyx_t_6(__pyx_t_9), 2) < 0) __PYX_ERR(0, 58, __pyx_L15_error)
         __pyx_t_6 = NULL;
         __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
         goto __pyx_L19_unpacking_done;
@@ -3909,14 +3907,14 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
         __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
         __pyx_t_6 = NULL;
         if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-        __PYX_ERR(0, 43, __pyx_L15_error)
+        __PYX_ERR(0, 58, __pyx_L15_error)
         __pyx_L19_unpacking_done:;
       }
       __Pyx_XDECREF_SET(__pyx_8genexpr1__pyx_v_k, __pyx_t_2);
       __pyx_t_2 = 0;
       __Pyx_XDECREF_SET(__pyx_8genexpr1__pyx_v_v, __pyx_t_4);
       __pyx_t_4 = 0;
-      if (unlikely(PyDict_SetItem(__pyx_t_1, (PyObject*)__pyx_8genexpr1__pyx_v_v, (PyObject*)__pyx_8genexpr1__pyx_v_k))) __PYX_ERR(0, 43, __pyx_L15_error)
+      if (unlikely(PyDict_SetItem(__pyx_t_1, (PyObject*)__pyx_8genexpr1__pyx_v_v, (PyObject*)__pyx_8genexpr1__pyx_v_k))) __PYX_ERR(0, 58, __pyx_L15_error)
     }
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_XDECREF(__pyx_8genexpr1__pyx_v_k); __pyx_8genexpr1__pyx_v_k = 0;
@@ -3931,7 +3929,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   __pyx_v_item_idx2id = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":44
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":59
  *         user_idx2id = {v: k for k, v in self.model.train_set.uid_map.items()}
  *         item_idx2id = {v: k for k, v in self.model.train_set.iid_map.items()}
  *         id2aspect = {v:k for k, v in self.model.train_set.sentiment.aspect_id_map.items()}             # <<<<<<<<<<<<<<
@@ -3939,20 +3937,20 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
  *         items = []
  */
   { /* enter inner scope */
-    __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 44, __pyx_L23_error)
+    __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 59, __pyx_L23_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 44, __pyx_L23_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 59, __pyx_L23_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_train_set); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 44, __pyx_L23_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_train_set); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 59, __pyx_L23_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_sentiment); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 44, __pyx_L23_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_sentiment); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 59, __pyx_L23_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_aspect_id_map); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 44, __pyx_L23_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_aspect_id_map); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 59, __pyx_L23_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_items); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 44, __pyx_L23_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_items); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 59, __pyx_L23_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_4 = NULL;
@@ -3967,16 +3965,16 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
     }
     __pyx_t_5 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 44, __pyx_L23_error)
+    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 59, __pyx_L23_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (likely(PyList_CheckExact(__pyx_t_5)) || PyTuple_CheckExact(__pyx_t_5)) {
       __pyx_t_3 = __pyx_t_5; __Pyx_INCREF(__pyx_t_3); __pyx_t_7 = 0;
       __pyx_t_8 = NULL;
     } else {
-      __pyx_t_7 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 44, __pyx_L23_error)
+      __pyx_t_7 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 59, __pyx_L23_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_8 = Py_TYPE(__pyx_t_3)->tp_iternext; if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 44, __pyx_L23_error)
+      __pyx_t_8 = Py_TYPE(__pyx_t_3)->tp_iternext; if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 59, __pyx_L23_error)
     }
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     for (;;) {
@@ -3984,17 +3982,17 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
         if (likely(PyList_CheckExact(__pyx_t_3))) {
           if (__pyx_t_7 >= PyList_GET_SIZE(__pyx_t_3)) break;
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_5 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_7); __Pyx_INCREF(__pyx_t_5); __pyx_t_7++; if (unlikely(0 < 0)) __PYX_ERR(0, 44, __pyx_L23_error)
+          __pyx_t_5 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_7); __Pyx_INCREF(__pyx_t_5); __pyx_t_7++; if (unlikely(0 < 0)) __PYX_ERR(0, 59, __pyx_L23_error)
           #else
-          __pyx_t_5 = PySequence_ITEM(__pyx_t_3, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 44, __pyx_L23_error)
+          __pyx_t_5 = PySequence_ITEM(__pyx_t_3, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 59, __pyx_L23_error)
           __Pyx_GOTREF(__pyx_t_5);
           #endif
         } else {
           if (__pyx_t_7 >= PyTuple_GET_SIZE(__pyx_t_3)) break;
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_5 = PyTuple_GET_ITEM(__pyx_t_3, __pyx_t_7); __Pyx_INCREF(__pyx_t_5); __pyx_t_7++; if (unlikely(0 < 0)) __PYX_ERR(0, 44, __pyx_L23_error)
+          __pyx_t_5 = PyTuple_GET_ITEM(__pyx_t_3, __pyx_t_7); __Pyx_INCREF(__pyx_t_5); __pyx_t_7++; if (unlikely(0 < 0)) __PYX_ERR(0, 59, __pyx_L23_error)
           #else
-          __pyx_t_5 = PySequence_ITEM(__pyx_t_3, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 44, __pyx_L23_error)
+          __pyx_t_5 = PySequence_ITEM(__pyx_t_3, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 59, __pyx_L23_error)
           __Pyx_GOTREF(__pyx_t_5);
           #endif
         }
@@ -4004,7 +4002,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
           PyObject* exc_type = PyErr_Occurred();
           if (exc_type) {
             if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-            else __PYX_ERR(0, 44, __pyx_L23_error)
+            else __PYX_ERR(0, 59, __pyx_L23_error)
           }
           break;
         }
@@ -4016,7 +4014,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
         if (unlikely(size != 2)) {
           if (size > 2) __Pyx_RaiseTooManyValuesError(2);
           else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-          __PYX_ERR(0, 44, __pyx_L23_error)
+          __PYX_ERR(0, 59, __pyx_L23_error)
         }
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
         if (likely(PyTuple_CheckExact(sequence))) {
@@ -4029,15 +4027,15 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
         __Pyx_INCREF(__pyx_t_4);
         __Pyx_INCREF(__pyx_t_2);
         #else
-        __pyx_t_4 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 44, __pyx_L23_error)
+        __pyx_t_4 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 59, __pyx_L23_error)
         __Pyx_GOTREF(__pyx_t_4);
-        __pyx_t_2 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 44, __pyx_L23_error)
+        __pyx_t_2 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 59, __pyx_L23_error)
         __Pyx_GOTREF(__pyx_t_2);
         #endif
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       } else {
         Py_ssize_t index = -1;
-        __pyx_t_9 = PyObject_GetIter(__pyx_t_5); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 44, __pyx_L23_error)
+        __pyx_t_9 = PyObject_GetIter(__pyx_t_5); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 59, __pyx_L23_error)
         __Pyx_GOTREF(__pyx_t_9);
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
         __pyx_t_6 = Py_TYPE(__pyx_t_9)->tp_iternext;
@@ -4045,7 +4043,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
         __Pyx_GOTREF(__pyx_t_4);
         index = 1; __pyx_t_2 = __pyx_t_6(__pyx_t_9); if (unlikely(!__pyx_t_2)) goto __pyx_L26_unpacking_failed;
         __Pyx_GOTREF(__pyx_t_2);
-        if (__Pyx_IternextUnpackEndCheck(__pyx_t_6(__pyx_t_9), 2) < 0) __PYX_ERR(0, 44, __pyx_L23_error)
+        if (__Pyx_IternextUnpackEndCheck(__pyx_t_6(__pyx_t_9), 2) < 0) __PYX_ERR(0, 59, __pyx_L23_error)
         __pyx_t_6 = NULL;
         __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
         goto __pyx_L27_unpacking_done;
@@ -4053,14 +4051,14 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
         __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
         __pyx_t_6 = NULL;
         if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-        __PYX_ERR(0, 44, __pyx_L23_error)
+        __PYX_ERR(0, 59, __pyx_L23_error)
         __pyx_L27_unpacking_done:;
       }
       __Pyx_XDECREF_SET(__pyx_8genexpr2__pyx_v_k, __pyx_t_4);
       __pyx_t_4 = 0;
       __Pyx_XDECREF_SET(__pyx_8genexpr2__pyx_v_v, __pyx_t_2);
       __pyx_t_2 = 0;
-      if (unlikely(PyDict_SetItem(__pyx_t_1, (PyObject*)__pyx_8genexpr2__pyx_v_v, (PyObject*)__pyx_8genexpr2__pyx_v_k))) __PYX_ERR(0, 44, __pyx_L23_error)
+      if (unlikely(PyDict_SetItem(__pyx_t_1, (PyObject*)__pyx_8genexpr2__pyx_v_v, (PyObject*)__pyx_8genexpr2__pyx_v_k))) __PYX_ERR(0, 59, __pyx_L23_error)
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_XDECREF(__pyx_8genexpr2__pyx_v_k); __pyx_8genexpr2__pyx_v_k = 0;
@@ -4075,64 +4073,64 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   __pyx_v_id2aspect = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":45
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":60
  *         item_idx2id = {v: k for k, v in self.model.train_set.iid_map.items()}
  *         id2aspect = {v:k for k, v in self.model.train_set.sentiment.aspect_id_map.items()}
  *         users = []             # <<<<<<<<<<<<<<
  *         items = []
  *         explanations = []
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 45, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 60, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_users = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":46
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":61
  *         id2aspect = {v:k for k, v in self.model.train_set.sentiment.aspect_id_map.items()}
  *         users = []
  *         items = []             # <<<<<<<<<<<<<<
  *         explanations = []
  *         for i in range(A.shape[0]):
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 46, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 61, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_items = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":47
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":62
  *         users = []
  *         items = []
  *         explanations = []             # <<<<<<<<<<<<<<
  *         for i in range(A.shape[0]):
  *             for j in A[i,:].nonzero()[1]:
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 47, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 62, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_explanations = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":48
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":63
  *         items = []
  *         explanations = []
  *         for i in range(A.shape[0]):             # <<<<<<<<<<<<<<
  *             for j in A[i,:].nonzero()[1]:
  *                 u_aspect_indices = X[i, :].nonzero()[1]
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_A, __pyx_n_s_shape); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 48, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_A, __pyx_n_s_shape); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 63, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_1, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 48, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_1, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 63, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_range, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 48, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_range, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 63, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (likely(PyList_CheckExact(__pyx_t_1)) || PyTuple_CheckExact(__pyx_t_1)) {
     __pyx_t_3 = __pyx_t_1; __Pyx_INCREF(__pyx_t_3); __pyx_t_7 = 0;
     __pyx_t_8 = NULL;
   } else {
-    __pyx_t_7 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 48, __pyx_L1_error)
+    __pyx_t_7 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 63, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_8 = Py_TYPE(__pyx_t_3)->tp_iternext; if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 48, __pyx_L1_error)
+    __pyx_t_8 = Py_TYPE(__pyx_t_3)->tp_iternext; if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 63, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   for (;;) {
@@ -4140,17 +4138,17 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
       if (likely(PyList_CheckExact(__pyx_t_3))) {
         if (__pyx_t_7 >= PyList_GET_SIZE(__pyx_t_3)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_7); __Pyx_INCREF(__pyx_t_1); __pyx_t_7++; if (unlikely(0 < 0)) __PYX_ERR(0, 48, __pyx_L1_error)
+        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_7); __Pyx_INCREF(__pyx_t_1); __pyx_t_7++; if (unlikely(0 < 0)) __PYX_ERR(0, 63, __pyx_L1_error)
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_3, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 48, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(__pyx_t_3, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 63, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         #endif
       } else {
         if (__pyx_t_7 >= PyTuple_GET_SIZE(__pyx_t_3)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_3, __pyx_t_7); __Pyx_INCREF(__pyx_t_1); __pyx_t_7++; if (unlikely(0 < 0)) __PYX_ERR(0, 48, __pyx_L1_error)
+        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_3, __pyx_t_7); __Pyx_INCREF(__pyx_t_1); __pyx_t_7++; if (unlikely(0 < 0)) __PYX_ERR(0, 63, __pyx_L1_error)
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_3, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 48, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(__pyx_t_3, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 63, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         #endif
       }
@@ -4160,7 +4158,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 48, __pyx_L1_error)
+          else __PYX_ERR(0, 63, __pyx_L1_error)
         }
         break;
       }
@@ -4169,14 +4167,14 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
     __Pyx_XDECREF_SET(__pyx_v_i, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":49
+    /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":64
  *         explanations = []
  *         for i in range(A.shape[0]):
  *             for j in A[i,:].nonzero()[1]:             # <<<<<<<<<<<<<<
  *                 u_aspect_indices = X[i, :].nonzero()[1]
  *                 u_aspect_values = X[i, :].data
  */
-    __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 49, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 64, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_INCREF(__pyx_v_i);
     __Pyx_GIVEREF(__pyx_v_i);
@@ -4184,10 +4182,10 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
     __Pyx_INCREF(__pyx_slice__2);
     __Pyx_GIVEREF(__pyx_slice__2);
     PyTuple_SET_ITEM(__pyx_t_5, 1, __pyx_slice__2);
-    __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_A, __pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 49, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_A, __pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 64, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_nonzero); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 49, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_nonzero); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 64, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
@@ -4202,19 +4200,19 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
     }
     __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_5);
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 49, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 64, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = __Pyx_GetItemInt(__pyx_t_1, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 49, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_GetItemInt(__pyx_t_1, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 64, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (likely(PyList_CheckExact(__pyx_t_5)) || PyTuple_CheckExact(__pyx_t_5)) {
       __pyx_t_1 = __pyx_t_5; __Pyx_INCREF(__pyx_t_1); __pyx_t_10 = 0;
       __pyx_t_11 = NULL;
     } else {
-      __pyx_t_10 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 49, __pyx_L1_error)
+      __pyx_t_10 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 64, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_11 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 49, __pyx_L1_error)
+      __pyx_t_11 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 64, __pyx_L1_error)
     }
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     for (;;) {
@@ -4222,17 +4220,17 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
         if (likely(PyList_CheckExact(__pyx_t_1))) {
           if (__pyx_t_10 >= PyList_GET_SIZE(__pyx_t_1)) break;
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_5 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_10); __Pyx_INCREF(__pyx_t_5); __pyx_t_10++; if (unlikely(0 < 0)) __PYX_ERR(0, 49, __pyx_L1_error)
+          __pyx_t_5 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_10); __Pyx_INCREF(__pyx_t_5); __pyx_t_10++; if (unlikely(0 < 0)) __PYX_ERR(0, 64, __pyx_L1_error)
           #else
-          __pyx_t_5 = PySequence_ITEM(__pyx_t_1, __pyx_t_10); __pyx_t_10++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 49, __pyx_L1_error)
+          __pyx_t_5 = PySequence_ITEM(__pyx_t_1, __pyx_t_10); __pyx_t_10++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 64, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_5);
           #endif
         } else {
           if (__pyx_t_10 >= PyTuple_GET_SIZE(__pyx_t_1)) break;
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_5 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_10); __Pyx_INCREF(__pyx_t_5); __pyx_t_10++; if (unlikely(0 < 0)) __PYX_ERR(0, 49, __pyx_L1_error)
+          __pyx_t_5 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_10); __Pyx_INCREF(__pyx_t_5); __pyx_t_10++; if (unlikely(0 < 0)) __PYX_ERR(0, 64, __pyx_L1_error)
           #else
-          __pyx_t_5 = PySequence_ITEM(__pyx_t_1, __pyx_t_10); __pyx_t_10++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 49, __pyx_L1_error)
+          __pyx_t_5 = PySequence_ITEM(__pyx_t_1, __pyx_t_10); __pyx_t_10++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 64, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_5);
           #endif
         }
@@ -4242,7 +4240,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
           PyObject* exc_type = PyErr_Occurred();
           if (exc_type) {
             if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-            else __PYX_ERR(0, 49, __pyx_L1_error)
+            else __PYX_ERR(0, 64, __pyx_L1_error)
           }
           break;
         }
@@ -4251,14 +4249,14 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
       __Pyx_XDECREF_SET(__pyx_v_j, __pyx_t_5);
       __pyx_t_5 = 0;
 
-      /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":50
+      /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":65
  *         for i in range(A.shape[0]):
  *             for j in A[i,:].nonzero()[1]:
  *                 u_aspect_indices = X[i, :].nonzero()[1]             # <<<<<<<<<<<<<<
  *                 u_aspect_values = X[i, :].data
  *                 i_aspect_ids = Y[j, :].nonzero()[1]
  */
-      __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 50, __pyx_L1_error)
+      __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 65, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_INCREF(__pyx_v_i);
       __Pyx_GIVEREF(__pyx_v_i);
@@ -4266,10 +4264,10 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
       __Pyx_INCREF(__pyx_slice__2);
       __Pyx_GIVEREF(__pyx_slice__2);
       PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_slice__2);
-      __pyx_t_4 = __Pyx_PyObject_GetItem(__pyx_v_X, __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 50, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_GetItem(__pyx_v_X, __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 65, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_nonzero); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 50, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_nonzero); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 65, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __pyx_t_4 = NULL;
@@ -4284,23 +4282,23 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
       }
       __pyx_t_5 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-      if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 50, __pyx_L1_error)
+      if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 65, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_5, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 50, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_5, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 65, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_XDECREF_SET(__pyx_v_u_aspect_indices, __pyx_t_2);
       __pyx_t_2 = 0;
 
-      /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":51
+      /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":66
  *             for j in A[i,:].nonzero()[1]:
  *                 u_aspect_indices = X[i, :].nonzero()[1]
  *                 u_aspect_values = X[i, :].data             # <<<<<<<<<<<<<<
  *                 i_aspect_ids = Y[j, :].nonzero()[1]
  *                 i_aspect_values = Y[j, :].data
  */
-      __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 51, __pyx_L1_error)
+      __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 66, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_INCREF(__pyx_v_i);
       __Pyx_GIVEREF(__pyx_v_i);
@@ -4308,23 +4306,23 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
       __Pyx_INCREF(__pyx_slice__2);
       __Pyx_GIVEREF(__pyx_slice__2);
       PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_slice__2);
-      __pyx_t_5 = __Pyx_PyObject_GetItem(__pyx_v_X, __pyx_t_2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 51, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyObject_GetItem(__pyx_v_X, __pyx_t_2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 66, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_data); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 51, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_data); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 66, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_XDECREF_SET(__pyx_v_u_aspect_values, __pyx_t_2);
       __pyx_t_2 = 0;
 
-      /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":52
+      /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":67
  *                 u_aspect_indices = X[i, :].nonzero()[1]
  *                 u_aspect_values = X[i, :].data
  *                 i_aspect_ids = Y[j, :].nonzero()[1]             # <<<<<<<<<<<<<<
  *                 i_aspect_values = Y[j, :].data
  * 
  */
-      __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 52, __pyx_L1_error)
+      __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 67, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_INCREF(__pyx_v_j);
       __Pyx_GIVEREF(__pyx_v_j);
@@ -4332,10 +4330,10 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
       __Pyx_INCREF(__pyx_slice__2);
       __Pyx_GIVEREF(__pyx_slice__2);
       PyTuple_SET_ITEM(__pyx_t_5, 1, __pyx_slice__2);
-      __pyx_t_4 = __Pyx_PyObject_GetItem(__pyx_v_Y, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 52, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_GetItem(__pyx_v_Y, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 67, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_nonzero); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 52, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_nonzero); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 67, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __pyx_t_4 = NULL;
@@ -4350,23 +4348,23 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
       }
       __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_5);
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-      if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 52, __pyx_L1_error)
+      if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 67, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __pyx_t_5 = __Pyx_GetItemInt(__pyx_t_2, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 52, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_GetItemInt(__pyx_t_2, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 67, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_XDECREF_SET(__pyx_v_i_aspect_ids, __pyx_t_5);
       __pyx_t_5 = 0;
 
-      /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":53
+      /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":68
  *                 u_aspect_values = X[i, :].data
  *                 i_aspect_ids = Y[j, :].nonzero()[1]
  *                 i_aspect_values = Y[j, :].data             # <<<<<<<<<<<<<<
  * 
  *                 aspect_ids = np.hstack((u_aspect_indices, i_aspect_ids))
  */
-      __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 53, __pyx_L1_error)
+      __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 68, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_INCREF(__pyx_v_j);
       __Pyx_GIVEREF(__pyx_v_j);
@@ -4374,28 +4372,28 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
       __Pyx_INCREF(__pyx_slice__2);
       __Pyx_GIVEREF(__pyx_slice__2);
       PyTuple_SET_ITEM(__pyx_t_5, 1, __pyx_slice__2);
-      __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_Y, __pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 53, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_Y, __pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 68, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_data); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 53, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_data); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 68, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_XDECREF_SET(__pyx_v_i_aspect_values, __pyx_t_5);
       __pyx_t_5 = 0;
 
-      /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":55
+      /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":70
  *                 i_aspect_values = Y[j, :].data
  * 
  *                 aspect_ids = np.hstack((u_aspect_indices, i_aspect_ids))             # <<<<<<<<<<<<<<
  *                 aspect_values = np.hstack((u_aspect_values, i_aspect_values))
  * 
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 55, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 70, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_hstack); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 55, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_hstack); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 70, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 55, __pyx_L1_error)
+      __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 70, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_INCREF(__pyx_v_u_aspect_indices);
       __Pyx_GIVEREF(__pyx_v_u_aspect_indices);
@@ -4416,25 +4414,25 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
       __pyx_t_5 = (__pyx_t_9) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_9, __pyx_t_2) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_2);
       __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 55, __pyx_L1_error)
+      if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 70, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_XDECREF_SET(__pyx_v_aspect_ids, __pyx_t_5);
       __pyx_t_5 = 0;
 
-      /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":56
+      /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":71
  * 
  *                 aspect_ids = np.hstack((u_aspect_indices, i_aspect_ids))
  *                 aspect_values = np.hstack((u_aspect_values, i_aspect_values))             # <<<<<<<<<<<<<<
  * 
  *                 combined_dict = dict(zip(aspect_ids, aspect_values))
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 56, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 71, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_hstack); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 56, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_hstack); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 71, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 56, __pyx_L1_error)
+      __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 71, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_INCREF(__pyx_v_u_aspect_values);
       __Pyx_GIVEREF(__pyx_v_u_aspect_values);
@@ -4455,20 +4453,20 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
       __pyx_t_5 = (__pyx_t_9) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_9, __pyx_t_4) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_4);
       __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 56, __pyx_L1_error)
+      if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 71, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_XDECREF_SET(__pyx_v_aspect_values, __pyx_t_5);
       __pyx_t_5 = 0;
 
-      /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":58
+      /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":73
  *                 aspect_values = np.hstack((u_aspect_values, i_aspect_values))
  * 
  *                 combined_dict = dict(zip(aspect_ids, aspect_values))             # <<<<<<<<<<<<<<
  *                 sorted_dict = dict(sorted(combined_dict.items(), key=lambda item: item[1], reverse=True))
  *                 exp_dict = {id2aspect[key]: value for key, value in sorted_dict.items()}
  */
-      __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 58, __pyx_L1_error)
+      __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 73, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_INCREF(__pyx_v_aspect_ids);
       __Pyx_GIVEREF(__pyx_v_aspect_ids);
@@ -4476,47 +4474,47 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
       __Pyx_INCREF(__pyx_v_aspect_values);
       __Pyx_GIVEREF(__pyx_v_aspect_values);
       PyTuple_SET_ITEM(__pyx_t_5, 1, __pyx_v_aspect_values);
-      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_zip, __pyx_t_5, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 58, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_zip, __pyx_t_5, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 73, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __pyx_t_5 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyDict_Type)), __pyx_t_2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 58, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyDict_Type)), __pyx_t_2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 73, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_XDECREF_SET(__pyx_v_combined_dict, ((PyObject*)__pyx_t_5));
       __pyx_t_5 = 0;
 
-      /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":59
+      /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":74
  * 
  *                 combined_dict = dict(zip(aspect_ids, aspect_values))
  *                 sorted_dict = dict(sorted(combined_dict.items(), key=lambda item: item[1], reverse=True))             # <<<<<<<<<<<<<<
  *                 exp_dict = {id2aspect[key]: value for key, value in sorted_dict.items()}
  *                 users.append(user_idx2id[i])
  */
-      __pyx_t_5 = __Pyx_PyDict_Items(__pyx_v_combined_dict); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 59, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyDict_Items(__pyx_v_combined_dict); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 74, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 59, __pyx_L1_error)
+      __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 74, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_GIVEREF(__pyx_t_5);
       PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_5);
       __pyx_t_5 = 0;
-      __pyx_t_5 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 59, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 74, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_22creat_grount_truth_efm_lambda, 0, __pyx_n_s_FPR_creat_grount_truth_efm_local, NULL, __pyx_n_s_cornac_metrics_explainer_fpr_fea, __pyx_d, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 59, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_22creat_grount_truth_efm_lambda, 0, __pyx_n_s_Metric_Exp_FPR_creat_grount_trut, NULL, __pyx_n_s_cornac_metrics_explainer_fpr_met, __pyx_d, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 74, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_key, __pyx_t_4) < 0) __PYX_ERR(0, 59, __pyx_L1_error)
+      if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_key, __pyx_t_4) < 0) __PYX_ERR(0, 74, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_reverse, Py_True) < 0) __PYX_ERR(0, 59, __pyx_L1_error)
-      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_builtin_sorted, __pyx_t_2, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 59, __pyx_L1_error)
+      if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_reverse, Py_True) < 0) __PYX_ERR(0, 74, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_builtin_sorted, __pyx_t_2, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 74, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __pyx_t_5 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyDict_Type)), __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 59, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyDict_Type)), __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 74, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_XDECREF_SET(__pyx_v_sorted_dict, ((PyObject*)__pyx_t_5));
       __pyx_t_5 = 0;
 
-      /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":60
+      /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":75
  *                 combined_dict = dict(zip(aspect_ids, aspect_values))
  *                 sorted_dict = dict(sorted(combined_dict.items(), key=lambda item: item[1], reverse=True))
  *                 exp_dict = {id2aspect[key]: value for key, value in sorted_dict.items()}             # <<<<<<<<<<<<<<
@@ -4524,17 +4522,17 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
  *                 items.append(item_idx2id[j])
  */
       { /* enter inner scope */
-        __pyx_t_5 = PyDict_New(); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 60, __pyx_L35_error)
+        __pyx_t_5 = PyDict_New(); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 75, __pyx_L35_error)
         __Pyx_GOTREF(__pyx_t_5);
-        __pyx_t_4 = __Pyx_PyDict_Items(__pyx_v_sorted_dict); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 60, __pyx_L35_error)
+        __pyx_t_4 = __Pyx_PyDict_Items(__pyx_v_sorted_dict); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 75, __pyx_L35_error)
         __Pyx_GOTREF(__pyx_t_4);
         if (likely(PyList_CheckExact(__pyx_t_4)) || PyTuple_CheckExact(__pyx_t_4)) {
           __pyx_t_2 = __pyx_t_4; __Pyx_INCREF(__pyx_t_2); __pyx_t_12 = 0;
           __pyx_t_13 = NULL;
         } else {
-          __pyx_t_12 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 60, __pyx_L35_error)
+          __pyx_t_12 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 75, __pyx_L35_error)
           __Pyx_GOTREF(__pyx_t_2);
-          __pyx_t_13 = Py_TYPE(__pyx_t_2)->tp_iternext; if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 60, __pyx_L35_error)
+          __pyx_t_13 = Py_TYPE(__pyx_t_2)->tp_iternext; if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 75, __pyx_L35_error)
         }
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         for (;;) {
@@ -4542,17 +4540,17 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
             if (likely(PyList_CheckExact(__pyx_t_2))) {
               if (__pyx_t_12 >= PyList_GET_SIZE(__pyx_t_2)) break;
               #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-              __pyx_t_4 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_12); __Pyx_INCREF(__pyx_t_4); __pyx_t_12++; if (unlikely(0 < 0)) __PYX_ERR(0, 60, __pyx_L35_error)
+              __pyx_t_4 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_12); __Pyx_INCREF(__pyx_t_4); __pyx_t_12++; if (unlikely(0 < 0)) __PYX_ERR(0, 75, __pyx_L35_error)
               #else
-              __pyx_t_4 = PySequence_ITEM(__pyx_t_2, __pyx_t_12); __pyx_t_12++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 60, __pyx_L35_error)
+              __pyx_t_4 = PySequence_ITEM(__pyx_t_2, __pyx_t_12); __pyx_t_12++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 75, __pyx_L35_error)
               __Pyx_GOTREF(__pyx_t_4);
               #endif
             } else {
               if (__pyx_t_12 >= PyTuple_GET_SIZE(__pyx_t_2)) break;
               #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-              __pyx_t_4 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_12); __Pyx_INCREF(__pyx_t_4); __pyx_t_12++; if (unlikely(0 < 0)) __PYX_ERR(0, 60, __pyx_L35_error)
+              __pyx_t_4 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_12); __Pyx_INCREF(__pyx_t_4); __pyx_t_12++; if (unlikely(0 < 0)) __PYX_ERR(0, 75, __pyx_L35_error)
               #else
-              __pyx_t_4 = PySequence_ITEM(__pyx_t_2, __pyx_t_12); __pyx_t_12++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 60, __pyx_L35_error)
+              __pyx_t_4 = PySequence_ITEM(__pyx_t_2, __pyx_t_12); __pyx_t_12++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 75, __pyx_L35_error)
               __Pyx_GOTREF(__pyx_t_4);
               #endif
             }
@@ -4562,7 +4560,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
               PyObject* exc_type = PyErr_Occurred();
               if (exc_type) {
                 if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-                else __PYX_ERR(0, 60, __pyx_L35_error)
+                else __PYX_ERR(0, 75, __pyx_L35_error)
               }
               break;
             }
@@ -4574,7 +4572,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
             if (unlikely(size != 2)) {
               if (size > 2) __Pyx_RaiseTooManyValuesError(2);
               else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-              __PYX_ERR(0, 60, __pyx_L35_error)
+              __PYX_ERR(0, 75, __pyx_L35_error)
             }
             #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
             if (likely(PyTuple_CheckExact(sequence))) {
@@ -4587,15 +4585,15 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
             __Pyx_INCREF(__pyx_t_9);
             __Pyx_INCREF(__pyx_t_14);
             #else
-            __pyx_t_9 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 60, __pyx_L35_error)
+            __pyx_t_9 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 75, __pyx_L35_error)
             __Pyx_GOTREF(__pyx_t_9);
-            __pyx_t_14 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 60, __pyx_L35_error)
+            __pyx_t_14 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 75, __pyx_L35_error)
             __Pyx_GOTREF(__pyx_t_14);
             #endif
             __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
           } else {
             Py_ssize_t index = -1;
-            __pyx_t_15 = PyObject_GetIter(__pyx_t_4); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 60, __pyx_L35_error)
+            __pyx_t_15 = PyObject_GetIter(__pyx_t_4); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 75, __pyx_L35_error)
             __Pyx_GOTREF(__pyx_t_15);
             __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
             __pyx_t_6 = Py_TYPE(__pyx_t_15)->tp_iternext;
@@ -4603,7 +4601,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
             __Pyx_GOTREF(__pyx_t_9);
             index = 1; __pyx_t_14 = __pyx_t_6(__pyx_t_15); if (unlikely(!__pyx_t_14)) goto __pyx_L38_unpacking_failed;
             __Pyx_GOTREF(__pyx_t_14);
-            if (__Pyx_IternextUnpackEndCheck(__pyx_t_6(__pyx_t_15), 2) < 0) __PYX_ERR(0, 60, __pyx_L35_error)
+            if (__Pyx_IternextUnpackEndCheck(__pyx_t_6(__pyx_t_15), 2) < 0) __PYX_ERR(0, 75, __pyx_L35_error)
             __pyx_t_6 = NULL;
             __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
             goto __pyx_L39_unpacking_done;
@@ -4611,16 +4609,16 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
             __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
             __pyx_t_6 = NULL;
             if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-            __PYX_ERR(0, 60, __pyx_L35_error)
+            __PYX_ERR(0, 75, __pyx_L35_error)
             __pyx_L39_unpacking_done:;
           }
           __Pyx_XDECREF_SET(__pyx_8genexpr3__pyx_v_key, __pyx_t_9);
           __pyx_t_9 = 0;
           __Pyx_XDECREF_SET(__pyx_8genexpr3__pyx_v_value, __pyx_t_14);
           __pyx_t_14 = 0;
-          __pyx_t_4 = __Pyx_PyDict_GetItem(__pyx_v_id2aspect, __pyx_8genexpr3__pyx_v_key); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 60, __pyx_L35_error)
+          __pyx_t_4 = __Pyx_PyDict_GetItem(__pyx_v_id2aspect, __pyx_8genexpr3__pyx_v_key); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 75, __pyx_L35_error)
           __Pyx_GOTREF(__pyx_t_4);
-          if (unlikely(PyDict_SetItem(__pyx_t_5, (PyObject*)__pyx_t_4, (PyObject*)__pyx_8genexpr3__pyx_v_value))) __PYX_ERR(0, 60, __pyx_L35_error)
+          if (unlikely(PyDict_SetItem(__pyx_t_5, (PyObject*)__pyx_t_4, (PyObject*)__pyx_8genexpr3__pyx_v_value))) __PYX_ERR(0, 75, __pyx_L35_error)
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         }
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -4636,40 +4634,40 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
       __Pyx_XDECREF_SET(__pyx_v_exp_dict, ((PyObject*)__pyx_t_5));
       __pyx_t_5 = 0;
 
-      /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":61
+      /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":76
  *                 sorted_dict = dict(sorted(combined_dict.items(), key=lambda item: item[1], reverse=True))
  *                 exp_dict = {id2aspect[key]: value for key, value in sorted_dict.items()}
  *                 users.append(user_idx2id[i])             # <<<<<<<<<<<<<<
  *                 items.append(item_idx2id[j])
  *                 explanations.append(exp_dict)
  */
-      __pyx_t_5 = __Pyx_PyDict_GetItem(__pyx_v_user_idx2id, __pyx_v_i); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 61, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyDict_GetItem(__pyx_v_user_idx2id, __pyx_v_i); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 76, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_16 = __Pyx_PyList_Append(__pyx_v_users, __pyx_t_5); if (unlikely(__pyx_t_16 == ((int)-1))) __PYX_ERR(0, 61, __pyx_L1_error)
+      __pyx_t_16 = __Pyx_PyList_Append(__pyx_v_users, __pyx_t_5); if (unlikely(__pyx_t_16 == ((int)-1))) __PYX_ERR(0, 76, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":62
+      /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":77
  *                 exp_dict = {id2aspect[key]: value for key, value in sorted_dict.items()}
  *                 users.append(user_idx2id[i])
  *                 items.append(item_idx2id[j])             # <<<<<<<<<<<<<<
  *                 explanations.append(exp_dict)
  *         u_i_gt = pd.DataFrame({'user_id': users, 'item_id': items, 'explanations':explanations})
  */
-      __pyx_t_5 = __Pyx_PyDict_GetItem(__pyx_v_item_idx2id, __pyx_v_j); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 62, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyDict_GetItem(__pyx_v_item_idx2id, __pyx_v_j); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 77, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_16 = __Pyx_PyList_Append(__pyx_v_items, __pyx_t_5); if (unlikely(__pyx_t_16 == ((int)-1))) __PYX_ERR(0, 62, __pyx_L1_error)
+      __pyx_t_16 = __Pyx_PyList_Append(__pyx_v_items, __pyx_t_5); if (unlikely(__pyx_t_16 == ((int)-1))) __PYX_ERR(0, 77, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":63
+      /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":78
  *                 users.append(user_idx2id[i])
  *                 items.append(item_idx2id[j])
  *                 explanations.append(exp_dict)             # <<<<<<<<<<<<<<
  *         u_i_gt = pd.DataFrame({'user_id': users, 'item_id': items, 'explanations':explanations})
  *         return u_i_gt
  */
-      __pyx_t_16 = __Pyx_PyList_Append(__pyx_v_explanations, __pyx_v_exp_dict); if (unlikely(__pyx_t_16 == ((int)-1))) __PYX_ERR(0, 63, __pyx_L1_error)
+      __pyx_t_16 = __Pyx_PyList_Append(__pyx_v_explanations, __pyx_v_exp_dict); if (unlikely(__pyx_t_16 == ((int)-1))) __PYX_ERR(0, 78, __pyx_L1_error)
 
-      /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":49
+      /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":64
  *         explanations = []
  *         for i in range(A.shape[0]):
  *             for j in A[i,:].nonzero()[1]:             # <<<<<<<<<<<<<<
@@ -4679,7 +4677,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
     }
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":48
+    /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":63
  *         items = []
  *         explanations = []
  *         for i in range(A.shape[0]):             # <<<<<<<<<<<<<<
@@ -4689,23 +4687,23 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":64
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":79
  *                 items.append(item_idx2id[j])
  *                 explanations.append(exp_dict)
  *         u_i_gt = pd.DataFrame({'user_id': users, 'item_id': items, 'explanations':explanations})             # <<<<<<<<<<<<<<
  *         return u_i_gt
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_pd); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 64, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_pd); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 79, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_DataFrame); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 64, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_DataFrame); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 79, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 64, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 79, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_user_id, __pyx_v_users) < 0) __PYX_ERR(0, 64, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_item_id, __pyx_v_items) < 0) __PYX_ERR(0, 64, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_explanations, __pyx_v_explanations) < 0) __PYX_ERR(0, 64, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_user_id, __pyx_v_users) < 0) __PYX_ERR(0, 79, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_item_id, __pyx_v_items) < 0) __PYX_ERR(0, 79, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_explanations, __pyx_v_explanations) < 0) __PYX_ERR(0, 79, __pyx_L1_error)
   __pyx_t_2 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_5))) {
     __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_5);
@@ -4719,13 +4717,13 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   __pyx_t_3 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_5, __pyx_t_2, __pyx_t_1) : __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 64, __pyx_L1_error)
+  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 79, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_v_u_i_gt = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":65
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":80
  *                 explanations.append(exp_dict)
  *         u_i_gt = pd.DataFrame({'user_id': users, 'item_id': items, 'explanations':explanations})
  *         return u_i_gt             # <<<<<<<<<<<<<<
@@ -4737,7 +4735,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   __pyx_r = __pyx_v_u_i_gt;
   goto __pyx_L0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":40
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":55
  *         return explanation_dict
  * 
  *     def creat_grount_truth_efm(self):             # <<<<<<<<<<<<<<
@@ -4755,7 +4753,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   __Pyx_XDECREF(__pyx_t_9);
   __Pyx_XDECREF(__pyx_t_14);
   __Pyx_XDECREF(__pyx_t_15);
-  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.feature_precision_recall.FPR.creat_grount_truth_efm", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.metric_exp_fpr.Metric_Exp_FPR.creat_grount_truth_efm", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_A);
@@ -4792,30 +4790,30 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   return __pyx_r;
 }
 
-/* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":68
+/* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":83
  * 
  * 
  *     def create_ground_truth_limer(self):             # <<<<<<<<<<<<<<
- *         """arg:recommendation df [user_id, item_id] generated by the recommender
- *            return: ground_truth explanation for each user,item pair [user_id, item_id, explanation]
+ *         """ Generate ground truth explanations for each user-item pair
+ * 
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_9create_ground_truth_limer(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
-static char __pyx_doc_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_8create_ground_truth_limer[] = "arg:recommendation df [user_id, item_id] generated by the recommender\n           return: ground_truth explanation for each user,item pair [user_id, item_id, explanation] \n                    {'genre':1} for genre that is mentioned in item feature\n        ";
-static PyMethodDef __pyx_mdef_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_9create_ground_truth_limer = {"create_ground_truth_limer", (PyCFunction)__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_9create_ground_truth_limer, METH_O, __pyx_doc_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_8create_ground_truth_limer};
-static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_9create_ground_truth_limer(PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_9create_ground_truth_limer(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
+static char __pyx_doc_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_8create_ground_truth_limer[] = " Generate ground truth explanations for each user-item pair\n        \n        Returns\n        -------\n        ground_truth explanation for each user,item pair [user_id, item_id, explanation] \n                    {'genre':1} for genre that is mentioned in item feature\n        ";
+static PyMethodDef __pyx_mdef_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_9create_ground_truth_limer = {"create_ground_truth_limer", (PyCFunction)__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_9create_ground_truth_limer, METH_O, __pyx_doc_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_8create_ground_truth_limer};
+static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_9create_ground_truth_limer(PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("create_ground_truth_limer (wrapper)", 0);
-  __pyx_r = __pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_8create_ground_truth_limer(__pyx_self, ((PyObject *)__pyx_v_self));
+  __pyx_r = __pyx_pf_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_8create_ground_truth_limer(__pyx_self, ((PyObject *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":73
+/* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":91
  *                     {'genre':1} for genre that is mentioned in item feature
  *         """
  *         def extract_gt(x,item=True):             # <<<<<<<<<<<<<<
@@ -4824,9 +4822,9 @@ static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_r
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_1extract_gt(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_1extract_gt = {"extract_gt", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_1extract_gt, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_1extract_gt(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_1extract_gt(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_1extract_gt = {"extract_gt", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_1extract_gt, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_1extract_gt(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_x = 0;
   PyObject *__pyx_v_item = 0;
   int __pyx_lineno = 0;
@@ -4863,7 +4861,7 @@ static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_r
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "extract_gt") < 0)) __PYX_ERR(0, 73, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "extract_gt") < 0)) __PYX_ERR(0, 91, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -4879,22 +4877,22 @@ static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("extract_gt", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 73, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("extract_gt", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 91, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.feature_precision_recall.FPR.create_ground_truth_limer.extract_gt", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.metric_exp_fpr.Metric_Exp_FPR.create_ground_truth_limer.extract_gt", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_extract_gt(__pyx_self, __pyx_v_x, __pyx_v_item);
+  __pyx_r = __pyx_pf_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_extract_gt(__pyx_self, __pyx_v_x, __pyx_v_item);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_extract_gt(PyObject *__pyx_self, PyObject *__pyx_v_x, PyObject *__pyx_v_item) {
-  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer *__pyx_cur_scope;
-  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer *__pyx_outer_scope;
+static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_extract_gt(PyObject *__pyx_self, PyObject *__pyx_v_x, PyObject *__pyx_v_item) {
+  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer *__pyx_cur_scope;
+  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer *__pyx_outer_scope;
   PyObject *__pyx_v_temp = NULL;
   PyObject *__pyx_v_exp = NULL;
   PyObject *__pyx_8genexpr4__pyx_v_f = NULL;
@@ -4912,61 +4910,61 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("extract_gt", 0);
-  __pyx_outer_scope = (struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer *) __Pyx_CyFunction_GetClosure(__pyx_self);
+  __pyx_outer_scope = (struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer *) __Pyx_CyFunction_GetClosure(__pyx_self);
   __pyx_cur_scope = __pyx_outer_scope;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":74
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":92
  *         """
  *         def extract_gt(x,item=True):
  *             if item==True:             # <<<<<<<<<<<<<<
  *                 temp = pd.Series(self.model.train_set.item_features[self.model.train_set.item_features['item_id'] == x]['feature'])
  *             else:
  */
-  __pyx_t_1 = PyObject_RichCompare(__pyx_v_item, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 74, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 74, __pyx_L1_error)
+  __pyx_t_1 = PyObject_RichCompare(__pyx_v_item, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 92, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 92, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_2) {
 
-    /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":75
+    /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":93
  *         def extract_gt(x,item=True):
  *             if item==True:
  *                 temp = pd.Series(self.model.train_set.item_features[self.model.train_set.item_features['item_id'] == x]['feature'])             # <<<<<<<<<<<<<<
  *             else:
  *                 temp = pd.Series(self.model.train_set.user_features[self.model.train_set.user_features['user_id'] == x]['feature'])
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_pd); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 75, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_pd); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 93, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_Series); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 75, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_Series); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 93, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_cur_scope->__pyx_v_self)) { __Pyx_RaiseClosureNameError("self"); __PYX_ERR(0, 75, __pyx_L1_error) }
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 75, __pyx_L1_error)
+    if (unlikely(!__pyx_cur_scope->__pyx_v_self)) { __Pyx_RaiseClosureNameError("self"); __PYX_ERR(0, 93, __pyx_L1_error) }
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 93, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_train_set); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 75, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_train_set); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 93, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_item_features); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 75, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_item_features); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 93, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_cur_scope->__pyx_v_self)) { __Pyx_RaiseClosureNameError("self"); __PYX_ERR(0, 75, __pyx_L1_error) }
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 75, __pyx_L1_error)
+    if (unlikely(!__pyx_cur_scope->__pyx_v_self)) { __Pyx_RaiseClosureNameError("self"); __PYX_ERR(0, 93, __pyx_L1_error) }
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 93, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_train_set); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 75, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_train_set); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 93, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_item_features); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 75, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_item_features); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 93, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_6 = __Pyx_PyObject_Dict_GetItem(__pyx_t_5, __pyx_n_s_item_id); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 75, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_Dict_GetItem(__pyx_t_5, __pyx_n_s_item_id); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 93, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = PyObject_RichCompare(__pyx_t_6, __pyx_v_x, Py_EQ); __Pyx_XGOTREF(__pyx_t_5); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 75, __pyx_L1_error)
+    __pyx_t_5 = PyObject_RichCompare(__pyx_t_6, __pyx_v_x, Py_EQ); __Pyx_XGOTREF(__pyx_t_5); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 93, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_6 = __Pyx_PyObject_GetItem(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 75, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_GetItem(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 93, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = __Pyx_PyObject_Dict_GetItem(__pyx_t_6, __pyx_n_s_feature); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 75, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_Dict_GetItem(__pyx_t_6, __pyx_n_s_feature); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 93, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __pyx_t_6 = NULL;
@@ -4982,13 +4980,13 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
     __pyx_t_1 = (__pyx_t_6) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_6, __pyx_t_5) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5);
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 75, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 93, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_v_temp = __pyx_t_1;
     __pyx_t_1 = 0;
 
-    /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":74
+    /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":92
  *         """
  *         def extract_gt(x,item=True):
  *             if item==True:             # <<<<<<<<<<<<<<
@@ -4998,7 +4996,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
     goto __pyx_L3;
   }
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":77
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":95
  *                 temp = pd.Series(self.model.train_set.item_features[self.model.train_set.item_features['item_id'] == x]['feature'])
  *             else:
  *                 temp = pd.Series(self.model.train_set.user_features[self.model.train_set.user_features['user_id'] == x]['feature'])             # <<<<<<<<<<<<<<
@@ -5006,39 +5004,39 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
  *             return exp
  */
   /*else*/ {
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_pd); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 77, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_pd); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 95, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_Series); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 77, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_Series); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 95, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_cur_scope->__pyx_v_self)) { __Pyx_RaiseClosureNameError("self"); __PYX_ERR(0, 77, __pyx_L1_error) }
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 77, __pyx_L1_error)
+    if (unlikely(!__pyx_cur_scope->__pyx_v_self)) { __Pyx_RaiseClosureNameError("self"); __PYX_ERR(0, 95, __pyx_L1_error) }
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 95, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_train_set); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 77, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_train_set); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 95, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_user_features); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 77, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_user_features); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 95, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    if (unlikely(!__pyx_cur_scope->__pyx_v_self)) { __Pyx_RaiseClosureNameError("self"); __PYX_ERR(0, 77, __pyx_L1_error) }
-    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 77, __pyx_L1_error)
+    if (unlikely(!__pyx_cur_scope->__pyx_v_self)) { __Pyx_RaiseClosureNameError("self"); __PYX_ERR(0, 95, __pyx_L1_error) }
+    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 95, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_train_set); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 77, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_train_set); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 95, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_user_features); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 77, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_user_features); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 95, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyObject_Dict_GetItem(__pyx_t_6, __pyx_n_s_user_id); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 77, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Dict_GetItem(__pyx_t_6, __pyx_n_s_user_id); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 95, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_6 = PyObject_RichCompare(__pyx_t_3, __pyx_v_x, Py_EQ); __Pyx_XGOTREF(__pyx_t_6); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 77, __pyx_L1_error)
+    __pyx_t_6 = PyObject_RichCompare(__pyx_t_3, __pyx_v_x, Py_EQ); __Pyx_XGOTREF(__pyx_t_6); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 95, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyObject_GetItem(__pyx_t_4, __pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 77, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetItem(__pyx_t_4, __pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 95, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_6 = __Pyx_PyObject_Dict_GetItem(__pyx_t_3, __pyx_n_s_feature); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 77, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_Dict_GetItem(__pyx_t_3, __pyx_n_s_feature); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 95, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_3 = NULL;
@@ -5054,7 +5052,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
     __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_5, __pyx_t_3, __pyx_t_6) : __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_6);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 77, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 95, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __pyx_v_temp = __pyx_t_1;
@@ -5062,7 +5060,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   }
   __pyx_L3:;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":78
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":96
  *             else:
  *                 temp = pd.Series(self.model.train_set.user_features[self.model.train_set.user_features['user_id'] == x]['feature'])
  *             exp = {f: 1 for f in temp}             # <<<<<<<<<<<<<<
@@ -5070,32 +5068,32 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
  * 
  */
   { /* enter inner scope */
-    __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 78, __pyx_L6_error)
+    __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 96, __pyx_L6_error)
     __Pyx_GOTREF(__pyx_t_1);
     if (likely(PyList_CheckExact(__pyx_v_temp)) || PyTuple_CheckExact(__pyx_v_temp)) {
       __pyx_t_5 = __pyx_v_temp; __Pyx_INCREF(__pyx_t_5); __pyx_t_7 = 0;
       __pyx_t_8 = NULL;
     } else {
-      __pyx_t_7 = -1; __pyx_t_5 = PyObject_GetIter(__pyx_v_temp); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 78, __pyx_L6_error)
+      __pyx_t_7 = -1; __pyx_t_5 = PyObject_GetIter(__pyx_v_temp); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 96, __pyx_L6_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_8 = Py_TYPE(__pyx_t_5)->tp_iternext; if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 78, __pyx_L6_error)
+      __pyx_t_8 = Py_TYPE(__pyx_t_5)->tp_iternext; if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 96, __pyx_L6_error)
     }
     for (;;) {
       if (likely(!__pyx_t_8)) {
         if (likely(PyList_CheckExact(__pyx_t_5))) {
           if (__pyx_t_7 >= PyList_GET_SIZE(__pyx_t_5)) break;
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_6 = PyList_GET_ITEM(__pyx_t_5, __pyx_t_7); __Pyx_INCREF(__pyx_t_6); __pyx_t_7++; if (unlikely(0 < 0)) __PYX_ERR(0, 78, __pyx_L6_error)
+          __pyx_t_6 = PyList_GET_ITEM(__pyx_t_5, __pyx_t_7); __Pyx_INCREF(__pyx_t_6); __pyx_t_7++; if (unlikely(0 < 0)) __PYX_ERR(0, 96, __pyx_L6_error)
           #else
-          __pyx_t_6 = PySequence_ITEM(__pyx_t_5, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 78, __pyx_L6_error)
+          __pyx_t_6 = PySequence_ITEM(__pyx_t_5, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 96, __pyx_L6_error)
           __Pyx_GOTREF(__pyx_t_6);
           #endif
         } else {
           if (__pyx_t_7 >= PyTuple_GET_SIZE(__pyx_t_5)) break;
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_6 = PyTuple_GET_ITEM(__pyx_t_5, __pyx_t_7); __Pyx_INCREF(__pyx_t_6); __pyx_t_7++; if (unlikely(0 < 0)) __PYX_ERR(0, 78, __pyx_L6_error)
+          __pyx_t_6 = PyTuple_GET_ITEM(__pyx_t_5, __pyx_t_7); __Pyx_INCREF(__pyx_t_6); __pyx_t_7++; if (unlikely(0 < 0)) __PYX_ERR(0, 96, __pyx_L6_error)
           #else
-          __pyx_t_6 = PySequence_ITEM(__pyx_t_5, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 78, __pyx_L6_error)
+          __pyx_t_6 = PySequence_ITEM(__pyx_t_5, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 96, __pyx_L6_error)
           __Pyx_GOTREF(__pyx_t_6);
           #endif
         }
@@ -5105,7 +5103,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
           PyObject* exc_type = PyErr_Occurred();
           if (exc_type) {
             if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-            else __PYX_ERR(0, 78, __pyx_L6_error)
+            else __PYX_ERR(0, 96, __pyx_L6_error)
           }
           break;
         }
@@ -5113,7 +5111,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
       }
       __Pyx_XDECREF_SET(__pyx_8genexpr4__pyx_v_f, __pyx_t_6);
       __pyx_t_6 = 0;
-      if (unlikely(PyDict_SetItem(__pyx_t_1, (PyObject*)__pyx_8genexpr4__pyx_v_f, (PyObject*)__pyx_int_1))) __PYX_ERR(0, 78, __pyx_L6_error)
+      if (unlikely(PyDict_SetItem(__pyx_t_1, (PyObject*)__pyx_8genexpr4__pyx_v_f, (PyObject*)__pyx_int_1))) __PYX_ERR(0, 96, __pyx_L6_error)
     }
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_XDECREF(__pyx_8genexpr4__pyx_v_f); __pyx_8genexpr4__pyx_v_f = 0;
@@ -5126,7 +5124,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   __pyx_v_exp = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":79
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":97
  *                 temp = pd.Series(self.model.train_set.user_features[self.model.train_set.user_features['user_id'] == x]['feature'])
  *             exp = {f: 1 for f in temp}
  *             return exp             # <<<<<<<<<<<<<<
@@ -5138,7 +5136,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   __pyx_r = __pyx_v_exp;
   goto __pyx_L0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":73
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":91
  *                     {'genre':1} for genre that is mentioned in item feature
  *         """
  *         def extract_gt(x,item=True):             # <<<<<<<<<<<<<<
@@ -5153,7 +5151,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.feature_precision_recall.FPR.create_ground_truth_limer.extract_gt", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.metric_exp_fpr.Metric_Exp_FPR.create_ground_truth_limer.extract_gt", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_temp);
@@ -5164,7 +5162,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   return __pyx_r;
 }
 
-/* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":81
+/* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":99
  *             return exp
  * 
  *         def combined_exp(x):             # <<<<<<<<<<<<<<
@@ -5173,20 +5171,20 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_3combined_exp(PyObject *__pyx_self, PyObject *__pyx_v_x); /*proto*/
-static PyMethodDef __pyx_mdef_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_3combined_exp = {"combined_exp", (PyCFunction)__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_3combined_exp, METH_O, 0};
-static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_3combined_exp(PyObject *__pyx_self, PyObject *__pyx_v_x) {
+static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_3combined_exp(PyObject *__pyx_self, PyObject *__pyx_v_x); /*proto*/
+static PyMethodDef __pyx_mdef_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_3combined_exp = {"combined_exp", (PyCFunction)__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_3combined_exp, METH_O, 0};
+static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_3combined_exp(PyObject *__pyx_self, PyObject *__pyx_v_x) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("combined_exp (wrapper)", 0);
-  __pyx_r = __pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_2combined_exp(__pyx_self, ((PyObject *)__pyx_v_x));
+  __pyx_r = __pyx_pf_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_2combined_exp(__pyx_self, ((PyObject *)__pyx_v_x));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_2combined_exp(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_x) {
+static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_2combined_exp(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_x) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -5196,7 +5194,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("combined_exp", 0);
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":82
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":100
  * 
  *         def combined_exp(x):
  *             return {**x['exp_1'], **x['exp_2']}             # <<<<<<<<<<<<<<
@@ -5204,37 +5202,37 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
  *         rec_df = self.create_recommendations()
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_2 = __Pyx_PyObject_Dict_GetItem(__pyx_v_x, __pyx_n_s_exp_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 82, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Dict_GetItem(__pyx_v_x, __pyx_n_s_exp_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 100, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (unlikely(__pyx_t_2 == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "argument after ** must be a mapping, not NoneType");
-    __PYX_ERR(0, 82, __pyx_L1_error)
+    __PYX_ERR(0, 100, __pyx_L1_error)
   }
   if (likely(PyDict_CheckExact(__pyx_t_2))) {
-    __pyx_t_1 = PyDict_Copy(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 82, __pyx_L1_error)
+    __pyx_t_1 = PyDict_Copy(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 100, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   } else {
-    __pyx_t_1 = PyObject_CallFunctionObjArgs((PyObject*)&PyDict_Type, __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 82, __pyx_L1_error)
+    __pyx_t_1 = PyObject_CallFunctionObjArgs((PyObject*)&PyDict_Type, __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 100, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
-  __pyx_t_2 = __Pyx_PyObject_Dict_GetItem(__pyx_v_x, __pyx_n_s_exp_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 82, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Dict_GetItem(__pyx_v_x, __pyx_n_s_exp_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 100, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (unlikely(__pyx_t_2 == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "argument after ** must be a mapping, not NoneType");
-    __PYX_ERR(0, 82, __pyx_L1_error)
+    __PYX_ERR(0, 100, __pyx_L1_error)
   }
   if (unlikely(PyDict_Update(__pyx_t_1, __pyx_t_2) < 0)) {
     if (PyErr_ExceptionMatches(PyExc_AttributeError)) __Pyx_RaiseMappingExpectedError(__pyx_t_2);
-    __PYX_ERR(0, 82, __pyx_L1_error)
+    __PYX_ERR(0, 100, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":81
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":99
  *             return exp
  * 
  *         def combined_exp(x):             # <<<<<<<<<<<<<<
@@ -5246,7 +5244,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.feature_precision_recall.FPR.create_ground_truth_limer.combined_exp", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.metric_exp_fpr.Metric_Exp_FPR.create_ground_truth_limer.combined_exp", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -5254,7 +5252,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   return __pyx_r;
 }
 
-/* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":87
+/* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":105
  * 
  *         if self.item_f == True and self.user_f == True:
  *             rec_df['item_idx'] = rec_df['item_id'].apply(lambda x: str(self.model.train_set.iid_map[x]))             # <<<<<<<<<<<<<<
@@ -5263,9 +5261,9 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_4lambda1(PyObject *__pyx_self, PyObject *__pyx_v_x); /*proto*/
-static PyMethodDef __pyx_mdef_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_4lambda1 = {"lambda1", (PyCFunction)__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_4lambda1, METH_O, 0};
-static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_4lambda1(PyObject *__pyx_self, PyObject *__pyx_v_x) {
+static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_4lambda1(PyObject *__pyx_self, PyObject *__pyx_v_x); /*proto*/
+static PyMethodDef __pyx_mdef_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_4lambda1 = {"lambda1", (PyCFunction)__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_4lambda1, METH_O, 0};
+static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_4lambda1(PyObject *__pyx_self, PyObject *__pyx_v_x) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("lambda1 (wrapper)", 0);
@@ -5277,8 +5275,8 @@ static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_r
 }
 
 static PyObject *__pyx_lambda_funcdef_lambda1(PyObject *__pyx_self, PyObject *__pyx_v_x) {
-  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer *__pyx_cur_scope;
-  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer *__pyx_outer_scope;
+  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer *__pyx_cur_scope;
+  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer *__pyx_outer_scope;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -5287,22 +5285,22 @@ static PyObject *__pyx_lambda_funcdef_lambda1(PyObject *__pyx_self, PyObject *__
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("lambda1", 0);
-  __pyx_outer_scope = (struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer *) __Pyx_CyFunction_GetClosure(__pyx_self);
+  __pyx_outer_scope = (struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer *) __Pyx_CyFunction_GetClosure(__pyx_self);
   __pyx_cur_scope = __pyx_outer_scope;
   __Pyx_XDECREF(__pyx_r);
-  if (unlikely(!__pyx_cur_scope->__pyx_v_self)) { __Pyx_RaiseClosureNameError("self"); __PYX_ERR(0, 87, __pyx_L1_error) }
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 87, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_v_self)) { __Pyx_RaiseClosureNameError("self"); __PYX_ERR(0, 105, __pyx_L1_error) }
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 105, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_train_set); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 87, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_train_set); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 105, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_iid_map); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 87, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_iid_map); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 105, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_t_1, __pyx_v_x); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 87, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_t_1, __pyx_v_x); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 105, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 87, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 105, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_r = __pyx_t_1;
@@ -5313,7 +5311,7 @@ static PyObject *__pyx_lambda_funcdef_lambda1(PyObject *__pyx_self, PyObject *__
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.feature_precision_recall.FPR.create_ground_truth_limer.lambda1", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.metric_exp_fpr.Metric_Exp_FPR.create_ground_truth_limer.lambda1", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -5321,7 +5319,7 @@ static PyObject *__pyx_lambda_funcdef_lambda1(PyObject *__pyx_self, PyObject *__
   return __pyx_r;
 }
 
-/* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":88
+/* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":106
  *         if self.item_f == True and self.user_f == True:
  *             rec_df['item_idx'] = rec_df['item_id'].apply(lambda x: str(self.model.train_set.iid_map[x]))
  *             rec_df['exp_1'] = rec_df['item_idx'].apply(lambda x: extract_gt(x,item=True))             # <<<<<<<<<<<<<<
@@ -5330,9 +5328,9 @@ static PyObject *__pyx_lambda_funcdef_lambda1(PyObject *__pyx_self, PyObject *__
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_5lambda2(PyObject *__pyx_self, PyObject *__pyx_v_x); /*proto*/
-static PyMethodDef __pyx_mdef_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_5lambda2 = {"lambda2", (PyCFunction)__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_5lambda2, METH_O, 0};
-static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_5lambda2(PyObject *__pyx_self, PyObject *__pyx_v_x) {
+static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_5lambda2(PyObject *__pyx_self, PyObject *__pyx_v_x); /*proto*/
+static PyMethodDef __pyx_mdef_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_5lambda2 = {"lambda2", (PyCFunction)__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_5lambda2, METH_O, 0};
+static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_5lambda2(PyObject *__pyx_self, PyObject *__pyx_v_x) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("lambda2 (wrapper)", 0);
@@ -5344,8 +5342,8 @@ static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_r
 }
 
 static PyObject *__pyx_lambda_funcdef_lambda2(PyObject *__pyx_self, PyObject *__pyx_v_x) {
-  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer *__pyx_cur_scope;
-  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer *__pyx_outer_scope;
+  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer *__pyx_cur_scope;
+  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer *__pyx_outer_scope;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -5355,19 +5353,19 @@ static PyObject *__pyx_lambda_funcdef_lambda2(PyObject *__pyx_self, PyObject *__
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("lambda2", 0);
-  __pyx_outer_scope = (struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer *) __Pyx_CyFunction_GetClosure(__pyx_self);
+  __pyx_outer_scope = (struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer *) __Pyx_CyFunction_GetClosure(__pyx_self);
   __pyx_cur_scope = __pyx_outer_scope;
   __Pyx_XDECREF(__pyx_r);
-  if (unlikely(!__pyx_cur_scope->__pyx_v_extract_gt)) { __Pyx_RaiseClosureNameError("extract_gt"); __PYX_ERR(0, 88, __pyx_L1_error) }
-  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 88, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_v_extract_gt)) { __Pyx_RaiseClosureNameError("extract_gt"); __PYX_ERR(0, 106, __pyx_L1_error) }
+  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 106, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_v_x);
   __Pyx_GIVEREF(__pyx_v_x);
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_v_x);
-  __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 88, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 106, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_item, Py_True) < 0) __PYX_ERR(0, 88, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_cur_scope->__pyx_v_extract_gt, __pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 88, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_item, Py_True) < 0) __PYX_ERR(0, 106, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_cur_scope->__pyx_v_extract_gt, __pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 106, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -5380,7 +5378,7 @@ static PyObject *__pyx_lambda_funcdef_lambda2(PyObject *__pyx_self, PyObject *__
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.feature_precision_recall.FPR.create_ground_truth_limer.lambda2", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.metric_exp_fpr.Metric_Exp_FPR.create_ground_truth_limer.lambda2", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -5388,7 +5386,7 @@ static PyObject *__pyx_lambda_funcdef_lambda2(PyObject *__pyx_self, PyObject *__
   return __pyx_r;
 }
 
-/* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":89
+/* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":107
  *             rec_df['item_idx'] = rec_df['item_id'].apply(lambda x: str(self.model.train_set.iid_map[x]))
  *             rec_df['exp_1'] = rec_df['item_idx'].apply(lambda x: extract_gt(x,item=True))
  *             rec_df['user_idx'] = rec_df['user_id'].apply(lambda x: str(self.model.train_set.uid_map[x]))             # <<<<<<<<<<<<<<
@@ -5397,9 +5395,9 @@ static PyObject *__pyx_lambda_funcdef_lambda2(PyObject *__pyx_self, PyObject *__
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_6lambda3(PyObject *__pyx_self, PyObject *__pyx_v_x); /*proto*/
-static PyMethodDef __pyx_mdef_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_6lambda3 = {"lambda3", (PyCFunction)__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_6lambda3, METH_O, 0};
-static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_6lambda3(PyObject *__pyx_self, PyObject *__pyx_v_x) {
+static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_6lambda3(PyObject *__pyx_self, PyObject *__pyx_v_x); /*proto*/
+static PyMethodDef __pyx_mdef_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_6lambda3 = {"lambda3", (PyCFunction)__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_6lambda3, METH_O, 0};
+static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_6lambda3(PyObject *__pyx_self, PyObject *__pyx_v_x) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("lambda3 (wrapper)", 0);
@@ -5411,8 +5409,8 @@ static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_r
 }
 
 static PyObject *__pyx_lambda_funcdef_lambda3(PyObject *__pyx_self, PyObject *__pyx_v_x) {
-  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer *__pyx_cur_scope;
-  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer *__pyx_outer_scope;
+  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer *__pyx_cur_scope;
+  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer *__pyx_outer_scope;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -5421,22 +5419,22 @@ static PyObject *__pyx_lambda_funcdef_lambda3(PyObject *__pyx_self, PyObject *__
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("lambda3", 0);
-  __pyx_outer_scope = (struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer *) __Pyx_CyFunction_GetClosure(__pyx_self);
+  __pyx_outer_scope = (struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer *) __Pyx_CyFunction_GetClosure(__pyx_self);
   __pyx_cur_scope = __pyx_outer_scope;
   __Pyx_XDECREF(__pyx_r);
-  if (unlikely(!__pyx_cur_scope->__pyx_v_self)) { __Pyx_RaiseClosureNameError("self"); __PYX_ERR(0, 89, __pyx_L1_error) }
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 89, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_v_self)) { __Pyx_RaiseClosureNameError("self"); __PYX_ERR(0, 107, __pyx_L1_error) }
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 107, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_train_set); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 89, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_train_set); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 107, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_uid_map); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 89, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_uid_map); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 107, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_t_1, __pyx_v_x); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 89, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_t_1, __pyx_v_x); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 107, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 89, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 107, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_r = __pyx_t_1;
@@ -5447,7 +5445,7 @@ static PyObject *__pyx_lambda_funcdef_lambda3(PyObject *__pyx_self, PyObject *__
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.feature_precision_recall.FPR.create_ground_truth_limer.lambda3", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.metric_exp_fpr.Metric_Exp_FPR.create_ground_truth_limer.lambda3", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -5455,7 +5453,7 @@ static PyObject *__pyx_lambda_funcdef_lambda3(PyObject *__pyx_self, PyObject *__
   return __pyx_r;
 }
 
-/* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":90
+/* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":108
  *             rec_df['exp_1'] = rec_df['item_idx'].apply(lambda x: extract_gt(x,item=True))
  *             rec_df['user_idx'] = rec_df['user_id'].apply(lambda x: str(self.model.train_set.uid_map[x]))
  *             rec_df['exp_2'] = rec_df['user_idx'].apply(lambda x: extract_gt(x,item=False))             # <<<<<<<<<<<<<<
@@ -5464,9 +5462,9 @@ static PyObject *__pyx_lambda_funcdef_lambda3(PyObject *__pyx_self, PyObject *__
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_7lambda4(PyObject *__pyx_self, PyObject *__pyx_v_x); /*proto*/
-static PyMethodDef __pyx_mdef_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_7lambda4 = {"lambda4", (PyCFunction)__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_7lambda4, METH_O, 0};
-static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_7lambda4(PyObject *__pyx_self, PyObject *__pyx_v_x) {
+static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_7lambda4(PyObject *__pyx_self, PyObject *__pyx_v_x); /*proto*/
+static PyMethodDef __pyx_mdef_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_7lambda4 = {"lambda4", (PyCFunction)__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_7lambda4, METH_O, 0};
+static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_7lambda4(PyObject *__pyx_self, PyObject *__pyx_v_x) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("lambda4 (wrapper)", 0);
@@ -5478,8 +5476,8 @@ static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_r
 }
 
 static PyObject *__pyx_lambda_funcdef_lambda4(PyObject *__pyx_self, PyObject *__pyx_v_x) {
-  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer *__pyx_cur_scope;
-  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer *__pyx_outer_scope;
+  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer *__pyx_cur_scope;
+  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer *__pyx_outer_scope;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -5489,19 +5487,19 @@ static PyObject *__pyx_lambda_funcdef_lambda4(PyObject *__pyx_self, PyObject *__
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("lambda4", 0);
-  __pyx_outer_scope = (struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer *) __Pyx_CyFunction_GetClosure(__pyx_self);
+  __pyx_outer_scope = (struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer *) __Pyx_CyFunction_GetClosure(__pyx_self);
   __pyx_cur_scope = __pyx_outer_scope;
   __Pyx_XDECREF(__pyx_r);
-  if (unlikely(!__pyx_cur_scope->__pyx_v_extract_gt)) { __Pyx_RaiseClosureNameError("extract_gt"); __PYX_ERR(0, 90, __pyx_L1_error) }
-  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 90, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_v_extract_gt)) { __Pyx_RaiseClosureNameError("extract_gt"); __PYX_ERR(0, 108, __pyx_L1_error) }
+  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 108, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_v_x);
   __Pyx_GIVEREF(__pyx_v_x);
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_v_x);
-  __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 90, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 108, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_item, Py_False) < 0) __PYX_ERR(0, 90, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_cur_scope->__pyx_v_extract_gt, __pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 90, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_item, Py_False) < 0) __PYX_ERR(0, 108, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_cur_scope->__pyx_v_extract_gt, __pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 108, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -5514,7 +5512,7 @@ static PyObject *__pyx_lambda_funcdef_lambda4(PyObject *__pyx_self, PyObject *__
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.feature_precision_recall.FPR.create_ground_truth_limer.lambda4", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.metric_exp_fpr.Metric_Exp_FPR.create_ground_truth_limer.lambda4", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -5522,7 +5520,7 @@ static PyObject *__pyx_lambda_funcdef_lambda4(PyObject *__pyx_self, PyObject *__
   return __pyx_r;
 }
 
-/* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":94
+/* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":112
  * 
  *         elif self.item_f == True:
  *             rec_df['item_idx'] = rec_df['item_id'].apply(lambda x: str(self.model.train_set.iid_map[x]))             # <<<<<<<<<<<<<<
@@ -5531,9 +5529,9 @@ static PyObject *__pyx_lambda_funcdef_lambda4(PyObject *__pyx_self, PyObject *__
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_8lambda5(PyObject *__pyx_self, PyObject *__pyx_v_x); /*proto*/
-static PyMethodDef __pyx_mdef_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_8lambda5 = {"lambda5", (PyCFunction)__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_8lambda5, METH_O, 0};
-static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_8lambda5(PyObject *__pyx_self, PyObject *__pyx_v_x) {
+static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_8lambda5(PyObject *__pyx_self, PyObject *__pyx_v_x); /*proto*/
+static PyMethodDef __pyx_mdef_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_8lambda5 = {"lambda5", (PyCFunction)__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_8lambda5, METH_O, 0};
+static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_8lambda5(PyObject *__pyx_self, PyObject *__pyx_v_x) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("lambda5 (wrapper)", 0);
@@ -5545,8 +5543,8 @@ static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_r
 }
 
 static PyObject *__pyx_lambda_funcdef_lambda5(PyObject *__pyx_self, PyObject *__pyx_v_x) {
-  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer *__pyx_cur_scope;
-  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer *__pyx_outer_scope;
+  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer *__pyx_cur_scope;
+  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer *__pyx_outer_scope;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -5555,22 +5553,22 @@ static PyObject *__pyx_lambda_funcdef_lambda5(PyObject *__pyx_self, PyObject *__
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("lambda5", 0);
-  __pyx_outer_scope = (struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer *) __Pyx_CyFunction_GetClosure(__pyx_self);
+  __pyx_outer_scope = (struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer *) __Pyx_CyFunction_GetClosure(__pyx_self);
   __pyx_cur_scope = __pyx_outer_scope;
   __Pyx_XDECREF(__pyx_r);
-  if (unlikely(!__pyx_cur_scope->__pyx_v_self)) { __Pyx_RaiseClosureNameError("self"); __PYX_ERR(0, 94, __pyx_L1_error) }
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 94, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_v_self)) { __Pyx_RaiseClosureNameError("self"); __PYX_ERR(0, 112, __pyx_L1_error) }
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 112, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_train_set); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 94, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_train_set); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 112, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_iid_map); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 94, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_iid_map); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 112, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_t_1, __pyx_v_x); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 94, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_t_1, __pyx_v_x); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 112, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 94, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 112, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_r = __pyx_t_1;
@@ -5581,7 +5579,7 @@ static PyObject *__pyx_lambda_funcdef_lambda5(PyObject *__pyx_self, PyObject *__
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.feature_precision_recall.FPR.create_ground_truth_limer.lambda5", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.metric_exp_fpr.Metric_Exp_FPR.create_ground_truth_limer.lambda5", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -5589,7 +5587,7 @@ static PyObject *__pyx_lambda_funcdef_lambda5(PyObject *__pyx_self, PyObject *__
   return __pyx_r;
 }
 
-/* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":95
+/* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":113
  *         elif self.item_f == True:
  *             rec_df['item_idx'] = rec_df['item_id'].apply(lambda x: str(self.model.train_set.iid_map[x]))
  *             rec_df['explanations'] = rec_df['item_idx'].apply(lambda x: extract_gt(x,item=True))             # <<<<<<<<<<<<<<
@@ -5598,9 +5596,9 @@ static PyObject *__pyx_lambda_funcdef_lambda5(PyObject *__pyx_self, PyObject *__
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_9lambda6(PyObject *__pyx_self, PyObject *__pyx_v_x); /*proto*/
-static PyMethodDef __pyx_mdef_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_9lambda6 = {"lambda6", (PyCFunction)__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_9lambda6, METH_O, 0};
-static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_9lambda6(PyObject *__pyx_self, PyObject *__pyx_v_x) {
+static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_9lambda6(PyObject *__pyx_self, PyObject *__pyx_v_x); /*proto*/
+static PyMethodDef __pyx_mdef_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_9lambda6 = {"lambda6", (PyCFunction)__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_9lambda6, METH_O, 0};
+static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_9lambda6(PyObject *__pyx_self, PyObject *__pyx_v_x) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("lambda6 (wrapper)", 0);
@@ -5612,8 +5610,8 @@ static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_r
 }
 
 static PyObject *__pyx_lambda_funcdef_lambda6(PyObject *__pyx_self, PyObject *__pyx_v_x) {
-  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer *__pyx_cur_scope;
-  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer *__pyx_outer_scope;
+  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer *__pyx_cur_scope;
+  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer *__pyx_outer_scope;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -5623,19 +5621,19 @@ static PyObject *__pyx_lambda_funcdef_lambda6(PyObject *__pyx_self, PyObject *__
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("lambda6", 0);
-  __pyx_outer_scope = (struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer *) __Pyx_CyFunction_GetClosure(__pyx_self);
+  __pyx_outer_scope = (struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer *) __Pyx_CyFunction_GetClosure(__pyx_self);
   __pyx_cur_scope = __pyx_outer_scope;
   __Pyx_XDECREF(__pyx_r);
-  if (unlikely(!__pyx_cur_scope->__pyx_v_extract_gt)) { __Pyx_RaiseClosureNameError("extract_gt"); __PYX_ERR(0, 95, __pyx_L1_error) }
-  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 95, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_v_extract_gt)) { __Pyx_RaiseClosureNameError("extract_gt"); __PYX_ERR(0, 113, __pyx_L1_error) }
+  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 113, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_v_x);
   __Pyx_GIVEREF(__pyx_v_x);
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_v_x);
-  __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 95, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 113, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_item, Py_True) < 0) __PYX_ERR(0, 95, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_cur_scope->__pyx_v_extract_gt, __pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 95, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_item, Py_True) < 0) __PYX_ERR(0, 113, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_cur_scope->__pyx_v_extract_gt, __pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 113, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -5648,7 +5646,7 @@ static PyObject *__pyx_lambda_funcdef_lambda6(PyObject *__pyx_self, PyObject *__
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.feature_precision_recall.FPR.create_ground_truth_limer.lambda6", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.metric_exp_fpr.Metric_Exp_FPR.create_ground_truth_limer.lambda6", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -5656,7 +5654,7 @@ static PyObject *__pyx_lambda_funcdef_lambda6(PyObject *__pyx_self, PyObject *__
   return __pyx_r;
 }
 
-/* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":97
+/* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":115
  *             rec_df['explanations'] = rec_df['item_idx'].apply(lambda x: extract_gt(x,item=True))
  *         else:
  *             rec_df['user_idx'] = rec_df['user_id'].apply(lambda x: str(self.model.train_set.uid_map[x]))             # <<<<<<<<<<<<<<
@@ -5665,9 +5663,9 @@ static PyObject *__pyx_lambda_funcdef_lambda6(PyObject *__pyx_self, PyObject *__
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_10lambda7(PyObject *__pyx_self, PyObject *__pyx_v_x); /*proto*/
-static PyMethodDef __pyx_mdef_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_10lambda7 = {"lambda7", (PyCFunction)__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_10lambda7, METH_O, 0};
-static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_10lambda7(PyObject *__pyx_self, PyObject *__pyx_v_x) {
+static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_10lambda7(PyObject *__pyx_self, PyObject *__pyx_v_x); /*proto*/
+static PyMethodDef __pyx_mdef_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_10lambda7 = {"lambda7", (PyCFunction)__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_10lambda7, METH_O, 0};
+static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_10lambda7(PyObject *__pyx_self, PyObject *__pyx_v_x) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("lambda7 (wrapper)", 0);
@@ -5679,8 +5677,8 @@ static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_r
 }
 
 static PyObject *__pyx_lambda_funcdef_lambda7(PyObject *__pyx_self, PyObject *__pyx_v_x) {
-  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer *__pyx_cur_scope;
-  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer *__pyx_outer_scope;
+  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer *__pyx_cur_scope;
+  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer *__pyx_outer_scope;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -5689,22 +5687,22 @@ static PyObject *__pyx_lambda_funcdef_lambda7(PyObject *__pyx_self, PyObject *__
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("lambda7", 0);
-  __pyx_outer_scope = (struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer *) __Pyx_CyFunction_GetClosure(__pyx_self);
+  __pyx_outer_scope = (struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer *) __Pyx_CyFunction_GetClosure(__pyx_self);
   __pyx_cur_scope = __pyx_outer_scope;
   __Pyx_XDECREF(__pyx_r);
-  if (unlikely(!__pyx_cur_scope->__pyx_v_self)) { __Pyx_RaiseClosureNameError("self"); __PYX_ERR(0, 97, __pyx_L1_error) }
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 97, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_v_self)) { __Pyx_RaiseClosureNameError("self"); __PYX_ERR(0, 115, __pyx_L1_error) }
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 115, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_train_set); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 97, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_train_set); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 115, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_uid_map); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 97, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_uid_map); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 115, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_t_1, __pyx_v_x); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 97, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_t_1, __pyx_v_x); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 115, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 97, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 115, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_r = __pyx_t_1;
@@ -5715,7 +5713,7 @@ static PyObject *__pyx_lambda_funcdef_lambda7(PyObject *__pyx_self, PyObject *__
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.feature_precision_recall.FPR.create_ground_truth_limer.lambda7", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.metric_exp_fpr.Metric_Exp_FPR.create_ground_truth_limer.lambda7", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -5723,7 +5721,7 @@ static PyObject *__pyx_lambda_funcdef_lambda7(PyObject *__pyx_self, PyObject *__
   return __pyx_r;
 }
 
-/* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":98
+/* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":116
  *         else:
  *             rec_df['user_idx'] = rec_df['user_id'].apply(lambda x: str(self.model.train_set.uid_map[x]))
  *             rec_df['explanations'] = rec_df['user_idx'].apply(lambda x: extract_gt(x,item=False))             # <<<<<<<<<<<<<<
@@ -5732,9 +5730,9 @@ static PyObject *__pyx_lambda_funcdef_lambda7(PyObject *__pyx_self, PyObject *__
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_11lambda8(PyObject *__pyx_self, PyObject *__pyx_v_x); /*proto*/
-static PyMethodDef __pyx_mdef_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_11lambda8 = {"lambda8", (PyCFunction)__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_11lambda8, METH_O, 0};
-static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_11lambda8(PyObject *__pyx_self, PyObject *__pyx_v_x) {
+static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_11lambda8(PyObject *__pyx_self, PyObject *__pyx_v_x); /*proto*/
+static PyMethodDef __pyx_mdef_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_11lambda8 = {"lambda8", (PyCFunction)__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_11lambda8, METH_O, 0};
+static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_11lambda8(PyObject *__pyx_self, PyObject *__pyx_v_x) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("lambda8 (wrapper)", 0);
@@ -5746,8 +5744,8 @@ static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_r
 }
 
 static PyObject *__pyx_lambda_funcdef_lambda8(PyObject *__pyx_self, PyObject *__pyx_v_x) {
-  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer *__pyx_cur_scope;
-  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer *__pyx_outer_scope;
+  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer *__pyx_cur_scope;
+  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer *__pyx_outer_scope;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -5757,19 +5755,19 @@ static PyObject *__pyx_lambda_funcdef_lambda8(PyObject *__pyx_self, PyObject *__
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("lambda8", 0);
-  __pyx_outer_scope = (struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer *) __Pyx_CyFunction_GetClosure(__pyx_self);
+  __pyx_outer_scope = (struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer *) __Pyx_CyFunction_GetClosure(__pyx_self);
   __pyx_cur_scope = __pyx_outer_scope;
   __Pyx_XDECREF(__pyx_r);
-  if (unlikely(!__pyx_cur_scope->__pyx_v_extract_gt)) { __Pyx_RaiseClosureNameError("extract_gt"); __PYX_ERR(0, 98, __pyx_L1_error) }
-  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 98, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_v_extract_gt)) { __Pyx_RaiseClosureNameError("extract_gt"); __PYX_ERR(0, 116, __pyx_L1_error) }
+  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 116, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_v_x);
   __Pyx_GIVEREF(__pyx_v_x);
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_v_x);
-  __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 98, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 116, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_item, Py_False) < 0) __PYX_ERR(0, 98, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_cur_scope->__pyx_v_extract_gt, __pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 98, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_item, Py_False) < 0) __PYX_ERR(0, 116, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_cur_scope->__pyx_v_extract_gt, __pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 116, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -5782,7 +5780,7 @@ static PyObject *__pyx_lambda_funcdef_lambda8(PyObject *__pyx_self, PyObject *__
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.feature_precision_recall.FPR.create_ground_truth_limer.lambda8", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.metric_exp_fpr.Metric_Exp_FPR.create_ground_truth_limer.lambda8", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -5790,16 +5788,16 @@ static PyObject *__pyx_lambda_funcdef_lambda8(PyObject *__pyx_self, PyObject *__
   return __pyx_r;
 }
 
-/* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":68
+/* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":83
  * 
  * 
  *     def create_ground_truth_limer(self):             # <<<<<<<<<<<<<<
- *         """arg:recommendation df [user_id, item_id] generated by the recommender
- *            return: ground_truth explanation for each user,item pair [user_id, item_id, explanation]
+ *         """ Generate ground truth explanations for each user-item pair
+ * 
  */
 
-static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_8create_ground_truth_limer(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
-  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer *__pyx_cur_scope;
+static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_8create_ground_truth_limer(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
+  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer *__pyx_cur_scope;
   PyObject *__pyx_v_combined_exp = 0;
   PyObject *__pyx_v_rec_df = NULL;
   PyObject *__pyx_r = NULL;
@@ -5814,11 +5812,11 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("create_ground_truth_limer", 0);
-  __pyx_cur_scope = (struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer *)__pyx_tp_new_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer(__pyx_ptype_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer, __pyx_empty_tuple, NULL);
+  __pyx_cur_scope = (struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer *)__pyx_tp_new_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer(__pyx_ptype_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer, __pyx_empty_tuple, NULL);
   if (unlikely(!__pyx_cur_scope)) {
-    __pyx_cur_scope = ((struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer *)Py_None);
+    __pyx_cur_scope = ((struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 68, __pyx_L1_error)
+    __PYX_ERR(0, 83, __pyx_L1_error)
   } else {
     __Pyx_GOTREF(__pyx_cur_scope);
   }
@@ -5826,40 +5824,40 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_self);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_self);
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":73
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":91
  *                     {'genre':1} for genre that is mentioned in item feature
  *         """
  *         def extract_gt(x,item=True):             # <<<<<<<<<<<<<<
  *             if item==True:
  *                 temp = pd.Series(self.model.train_set.item_features[self.model.train_set.item_features['item_id'] == x]['feature'])
  */
-  __pyx_t_1 = __Pyx_CyFunction_New(&__pyx_mdef_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_1extract_gt, 0, __pyx_n_s_FPR_create_ground_truth_limer_lo, ((PyObject*)__pyx_cur_scope), __pyx_n_s_cornac_metrics_explainer_fpr_fea, __pyx_d, ((PyObject *)__pyx_codeobj__4)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 73, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_CyFunction_New(&__pyx_mdef_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_1extract_gt, 0, __pyx_n_s_Metric_Exp_FPR_create_ground_tru, ((PyObject*)__pyx_cur_scope), __pyx_n_s_cornac_metrics_explainer_fpr_met, __pyx_d, ((PyObject *)__pyx_codeobj__4)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 91, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_1, __pyx_tuple__5);
   __Pyx_GIVEREF(__pyx_t_1);
   __pyx_cur_scope->__pyx_v_extract_gt = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":81
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":99
  *             return exp
  * 
  *         def combined_exp(x):             # <<<<<<<<<<<<<<
  *             return {**x['exp_1'], **x['exp_2']}
  * 
  */
-  __pyx_t_1 = __Pyx_CyFunction_New(&__pyx_mdef_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_3combined_exp, 0, __pyx_n_s_FPR_create_ground_truth_limer_lo_2, NULL, __pyx_n_s_cornac_metrics_explainer_fpr_fea, __pyx_d, ((PyObject *)__pyx_codeobj__7)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 81, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_CyFunction_New(&__pyx_mdef_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_3combined_exp, 0, __pyx_n_s_Metric_Exp_FPR_create_ground_tru_2, NULL, __pyx_n_s_cornac_metrics_explainer_fpr_met, __pyx_d, ((PyObject *)__pyx_codeobj__7)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 99, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_combined_exp = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":84
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":102
  *             return {**x['exp_1'], **x['exp_2']}
  * 
  *         rec_df = self.create_recommendations()             # <<<<<<<<<<<<<<
  * 
  *         if self.item_f == True and self.user_f == True:
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_create_recommendations); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 84, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_create_recommendations); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 102, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -5873,53 +5871,53 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 84, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 102, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_rec_df = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":86
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":104
  *         rec_df = self.create_recommendations()
  * 
  *         if self.item_f == True and self.user_f == True:             # <<<<<<<<<<<<<<
  *             rec_df['item_idx'] = rec_df['item_id'].apply(lambda x: str(self.model.train_set.iid_map[x]))
  *             rec_df['exp_1'] = rec_df['item_idx'].apply(lambda x: extract_gt(x,item=True))
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_item_f); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 86, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_item_f); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 104, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyObject_RichCompare(__pyx_t_1, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 86, __pyx_L1_error)
+  __pyx_t_2 = PyObject_RichCompare(__pyx_t_1, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 104, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 86, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 104, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (__pyx_t_5) {
   } else {
     __pyx_t_4 = __pyx_t_5;
     goto __pyx_L4_bool_binop_done;
   }
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_user_f); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 86, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_user_f); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 104, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = PyObject_RichCompare(__pyx_t_2, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 86, __pyx_L1_error)
+  __pyx_t_1 = PyObject_RichCompare(__pyx_t_2, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 104, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 86, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 104, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_4 = __pyx_t_5;
   __pyx_L4_bool_binop_done:;
   if (__pyx_t_4) {
 
-    /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":87
+    /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":105
  * 
  *         if self.item_f == True and self.user_f == True:
  *             rec_df['item_idx'] = rec_df['item_id'].apply(lambda x: str(self.model.train_set.iid_map[x]))             # <<<<<<<<<<<<<<
  *             rec_df['exp_1'] = rec_df['item_idx'].apply(lambda x: extract_gt(x,item=True))
  *             rec_df['user_idx'] = rec_df['user_id'].apply(lambda x: str(self.model.train_set.uid_map[x]))
  */
-    __pyx_t_2 = __Pyx_PyObject_Dict_GetItem(__pyx_v_rec_df, __pyx_n_s_item_id); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 87, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_Dict_GetItem(__pyx_v_rec_df, __pyx_n_s_item_id); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 105, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_apply); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 87, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_apply); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 105, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_4lambda1, 0, __pyx_n_s_FPR_create_ground_truth_limer_lo_3, ((PyObject*)__pyx_cur_scope), __pyx_n_s_cornac_metrics_explainer_fpr_fea, __pyx_d, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 87, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_4lambda1, 0, __pyx_n_s_Metric_Exp_FPR_create_ground_tru_3, ((PyObject*)__pyx_cur_scope), __pyx_n_s_cornac_metrics_explainer_fpr_met, __pyx_d, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 105, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_6 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
@@ -5934,25 +5932,25 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
     __pyx_t_1 = (__pyx_t_6) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_6, __pyx_t_2) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2);
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 87, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 105, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(PyObject_SetItem(__pyx_v_rec_df, __pyx_n_s_item_idx, __pyx_t_1) < 0)) __PYX_ERR(0, 87, __pyx_L1_error)
+    if (unlikely(PyObject_SetItem(__pyx_v_rec_df, __pyx_n_s_item_idx, __pyx_t_1) < 0)) __PYX_ERR(0, 105, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":88
+    /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":106
  *         if self.item_f == True and self.user_f == True:
  *             rec_df['item_idx'] = rec_df['item_id'].apply(lambda x: str(self.model.train_set.iid_map[x]))
  *             rec_df['exp_1'] = rec_df['item_idx'].apply(lambda x: extract_gt(x,item=True))             # <<<<<<<<<<<<<<
  *             rec_df['user_idx'] = rec_df['user_id'].apply(lambda x: str(self.model.train_set.uid_map[x]))
  *             rec_df['exp_2'] = rec_df['user_idx'].apply(lambda x: extract_gt(x,item=False))
  */
-    __pyx_t_3 = __Pyx_PyObject_Dict_GetItem(__pyx_v_rec_df, __pyx_n_s_item_idx); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 88, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Dict_GetItem(__pyx_v_rec_df, __pyx_n_s_item_idx); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 106, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_apply); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 88, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_apply); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 106, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_5lambda2, 0, __pyx_n_s_FPR_create_ground_truth_limer_lo_3, ((PyObject*)__pyx_cur_scope), __pyx_n_s_cornac_metrics_explainer_fpr_fea, __pyx_d, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 88, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_5lambda2, 0, __pyx_n_s_Metric_Exp_FPR_create_ground_tru_3, ((PyObject*)__pyx_cur_scope), __pyx_n_s_cornac_metrics_explainer_fpr_met, __pyx_d, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 106, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_6 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -5967,25 +5965,25 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
     __pyx_t_1 = (__pyx_t_6) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_6, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 88, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 106, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(PyObject_SetItem(__pyx_v_rec_df, __pyx_n_s_exp_1, __pyx_t_1) < 0)) __PYX_ERR(0, 88, __pyx_L1_error)
+    if (unlikely(PyObject_SetItem(__pyx_v_rec_df, __pyx_n_s_exp_1, __pyx_t_1) < 0)) __PYX_ERR(0, 106, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":89
+    /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":107
  *             rec_df['item_idx'] = rec_df['item_id'].apply(lambda x: str(self.model.train_set.iid_map[x]))
  *             rec_df['exp_1'] = rec_df['item_idx'].apply(lambda x: extract_gt(x,item=True))
  *             rec_df['user_idx'] = rec_df['user_id'].apply(lambda x: str(self.model.train_set.uid_map[x]))             # <<<<<<<<<<<<<<
  *             rec_df['exp_2'] = rec_df['user_idx'].apply(lambda x: extract_gt(x,item=False))
  *             rec_df['explanations'] = rec_df[['exp_1','exp_2']].apply(combined_exp, axis=1)
  */
-    __pyx_t_2 = __Pyx_PyObject_Dict_GetItem(__pyx_v_rec_df, __pyx_n_s_user_id); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 89, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_Dict_GetItem(__pyx_v_rec_df, __pyx_n_s_user_id); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 107, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_apply); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 89, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_apply); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 107, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_6lambda3, 0, __pyx_n_s_FPR_create_ground_truth_limer_lo_3, ((PyObject*)__pyx_cur_scope), __pyx_n_s_cornac_metrics_explainer_fpr_fea, __pyx_d, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 89, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_6lambda3, 0, __pyx_n_s_Metric_Exp_FPR_create_ground_tru_3, ((PyObject*)__pyx_cur_scope), __pyx_n_s_cornac_metrics_explainer_fpr_met, __pyx_d, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 107, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_6 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
@@ -6000,25 +5998,25 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
     __pyx_t_1 = (__pyx_t_6) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_6, __pyx_t_2) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2);
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 89, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 107, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(PyObject_SetItem(__pyx_v_rec_df, __pyx_n_s_user_idx, __pyx_t_1) < 0)) __PYX_ERR(0, 89, __pyx_L1_error)
+    if (unlikely(PyObject_SetItem(__pyx_v_rec_df, __pyx_n_s_user_idx, __pyx_t_1) < 0)) __PYX_ERR(0, 107, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":90
+    /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":108
  *             rec_df['exp_1'] = rec_df['item_idx'].apply(lambda x: extract_gt(x,item=True))
  *             rec_df['user_idx'] = rec_df['user_id'].apply(lambda x: str(self.model.train_set.uid_map[x]))
  *             rec_df['exp_2'] = rec_df['user_idx'].apply(lambda x: extract_gt(x,item=False))             # <<<<<<<<<<<<<<
  *             rec_df['explanations'] = rec_df[['exp_1','exp_2']].apply(combined_exp, axis=1)
  * 
  */
-    __pyx_t_3 = __Pyx_PyObject_Dict_GetItem(__pyx_v_rec_df, __pyx_n_s_user_idx); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 90, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Dict_GetItem(__pyx_v_rec_df, __pyx_n_s_user_idx); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 108, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_apply); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 90, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_apply); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 108, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_7lambda4, 0, __pyx_n_s_FPR_create_ground_truth_limer_lo_3, ((PyObject*)__pyx_cur_scope), __pyx_n_s_cornac_metrics_explainer_fpr_fea, __pyx_d, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 90, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_7lambda4, 0, __pyx_n_s_Metric_Exp_FPR_create_ground_tru_3, ((PyObject*)__pyx_cur_scope), __pyx_n_s_cornac_metrics_explainer_fpr_met, __pyx_d, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 108, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_6 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -6033,20 +6031,20 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
     __pyx_t_1 = (__pyx_t_6) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_6, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 90, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 108, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(PyObject_SetItem(__pyx_v_rec_df, __pyx_n_s_exp_2, __pyx_t_1) < 0)) __PYX_ERR(0, 90, __pyx_L1_error)
+    if (unlikely(PyObject_SetItem(__pyx_v_rec_df, __pyx_n_s_exp_2, __pyx_t_1) < 0)) __PYX_ERR(0, 108, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":91
+    /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":109
  *             rec_df['user_idx'] = rec_df['user_id'].apply(lambda x: str(self.model.train_set.uid_map[x]))
  *             rec_df['exp_2'] = rec_df['user_idx'].apply(lambda x: extract_gt(x,item=False))
  *             rec_df['explanations'] = rec_df[['exp_1','exp_2']].apply(combined_exp, axis=1)             # <<<<<<<<<<<<<<
  * 
  *         elif self.item_f == True:
  */
-    __pyx_t_1 = PyList_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 91, __pyx_L1_error)
+    __pyx_t_1 = PyList_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 109, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_INCREF(__pyx_n_s_exp_1);
     __Pyx_GIVEREF(__pyx_n_s_exp_1);
@@ -6054,29 +6052,29 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
     __Pyx_INCREF(__pyx_n_s_exp_2);
     __Pyx_GIVEREF(__pyx_n_s_exp_2);
     PyList_SET_ITEM(__pyx_t_1, 1, __pyx_n_s_exp_2);
-    __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_rec_df, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 91, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_rec_df, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 109, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_apply); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 91, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_apply); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 109, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 91, __pyx_L1_error)
+    __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 109, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_INCREF(__pyx_v_combined_exp);
     __Pyx_GIVEREF(__pyx_v_combined_exp);
     PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_v_combined_exp);
-    __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 91, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 109, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_axis, __pyx_int_1) < 0) __PYX_ERR(0, 91, __pyx_L1_error)
-    __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 91, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_axis, __pyx_int_1) < 0) __PYX_ERR(0, 109, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 109, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(PyObject_SetItem(__pyx_v_rec_df, __pyx_n_s_explanations, __pyx_t_6) < 0)) __PYX_ERR(0, 91, __pyx_L1_error)
+    if (unlikely(PyObject_SetItem(__pyx_v_rec_df, __pyx_n_s_explanations, __pyx_t_6) < 0)) __PYX_ERR(0, 109, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-    /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":86
+    /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":104
  *         rec_df = self.create_recommendations()
  * 
  *         if self.item_f == True and self.user_f == True:             # <<<<<<<<<<<<<<
@@ -6086,34 +6084,34 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
     goto __pyx_L3;
   }
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":93
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":111
  *             rec_df['explanations'] = rec_df[['exp_1','exp_2']].apply(combined_exp, axis=1)
  * 
  *         elif self.item_f == True:             # <<<<<<<<<<<<<<
  *             rec_df['item_idx'] = rec_df['item_id'].apply(lambda x: str(self.model.train_set.iid_map[x]))
  *             rec_df['explanations'] = rec_df['item_idx'].apply(lambda x: extract_gt(x,item=True))
  */
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_item_f); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 93, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_item_f); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 111, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_3 = PyObject_RichCompare(__pyx_t_6, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 93, __pyx_L1_error)
+  __pyx_t_3 = PyObject_RichCompare(__pyx_t_6, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 111, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 93, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 111, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (__pyx_t_4) {
 
-    /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":94
+    /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":112
  * 
  *         elif self.item_f == True:
  *             rec_df['item_idx'] = rec_df['item_id'].apply(lambda x: str(self.model.train_set.iid_map[x]))             # <<<<<<<<<<<<<<
  *             rec_df['explanations'] = rec_df['item_idx'].apply(lambda x: extract_gt(x,item=True))
  *         else:
  */
-    __pyx_t_6 = __Pyx_PyObject_Dict_GetItem(__pyx_v_rec_df, __pyx_n_s_item_id); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 94, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_Dict_GetItem(__pyx_v_rec_df, __pyx_n_s_item_id); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 112, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_apply); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 94, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_apply); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 112, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_6 = __Pyx_CyFunction_New(&__pyx_mdef_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_8lambda5, 0, __pyx_n_s_FPR_create_ground_truth_limer_lo_3, ((PyObject*)__pyx_cur_scope), __pyx_n_s_cornac_metrics_explainer_fpr_fea, __pyx_d, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 94, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_CyFunction_New(&__pyx_mdef_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_8lambda5, 0, __pyx_n_s_Metric_Exp_FPR_create_ground_tru_3, ((PyObject*)__pyx_cur_scope), __pyx_n_s_cornac_metrics_explainer_fpr_met, __pyx_d, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 112, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __pyx_t_1 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -6128,25 +6126,25 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
     __pyx_t_3 = (__pyx_t_1) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_1, __pyx_t_6) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_6);
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 94, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 112, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(PyObject_SetItem(__pyx_v_rec_df, __pyx_n_s_item_idx, __pyx_t_3) < 0)) __PYX_ERR(0, 94, __pyx_L1_error)
+    if (unlikely(PyObject_SetItem(__pyx_v_rec_df, __pyx_n_s_item_idx, __pyx_t_3) < 0)) __PYX_ERR(0, 112, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":95
+    /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":113
  *         elif self.item_f == True:
  *             rec_df['item_idx'] = rec_df['item_id'].apply(lambda x: str(self.model.train_set.iid_map[x]))
  *             rec_df['explanations'] = rec_df['item_idx'].apply(lambda x: extract_gt(x,item=True))             # <<<<<<<<<<<<<<
  *         else:
  *             rec_df['user_idx'] = rec_df['user_id'].apply(lambda x: str(self.model.train_set.uid_map[x]))
  */
-    __pyx_t_2 = __Pyx_PyObject_Dict_GetItem(__pyx_v_rec_df, __pyx_n_s_item_idx); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 95, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_Dict_GetItem(__pyx_v_rec_df, __pyx_n_s_item_idx); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 113, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_apply); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 95, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_apply); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 113, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_9lambda6, 0, __pyx_n_s_FPR_create_ground_truth_limer_lo_3, ((PyObject*)__pyx_cur_scope), __pyx_n_s_cornac_metrics_explainer_fpr_fea, __pyx_d, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 95, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_9lambda6, 0, __pyx_n_s_Metric_Exp_FPR_create_ground_tru_3, ((PyObject*)__pyx_cur_scope), __pyx_n_s_cornac_metrics_explainer_fpr_met, __pyx_d, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 113, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_1 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_6))) {
@@ -6161,13 +6159,13 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
     __pyx_t_3 = (__pyx_t_1) ? __Pyx_PyObject_Call2Args(__pyx_t_6, __pyx_t_1, __pyx_t_2) : __Pyx_PyObject_CallOneArg(__pyx_t_6, __pyx_t_2);
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 95, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 113, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    if (unlikely(PyObject_SetItem(__pyx_v_rec_df, __pyx_n_s_explanations, __pyx_t_3) < 0)) __PYX_ERR(0, 95, __pyx_L1_error)
+    if (unlikely(PyObject_SetItem(__pyx_v_rec_df, __pyx_n_s_explanations, __pyx_t_3) < 0)) __PYX_ERR(0, 113, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":93
+    /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":111
  *             rec_df['explanations'] = rec_df[['exp_1','exp_2']].apply(combined_exp, axis=1)
  * 
  *         elif self.item_f == True:             # <<<<<<<<<<<<<<
@@ -6177,7 +6175,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
     goto __pyx_L3;
   }
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":97
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":115
  *             rec_df['explanations'] = rec_df['item_idx'].apply(lambda x: extract_gt(x,item=True))
  *         else:
  *             rec_df['user_idx'] = rec_df['user_id'].apply(lambda x: str(self.model.train_set.uid_map[x]))             # <<<<<<<<<<<<<<
@@ -6185,12 +6183,12 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
  * 
  */
   /*else*/ {
-    __pyx_t_6 = __Pyx_PyObject_Dict_GetItem(__pyx_v_rec_df, __pyx_n_s_user_id); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 97, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_Dict_GetItem(__pyx_v_rec_df, __pyx_n_s_user_id); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 115, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_apply); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 97, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_apply); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 115, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_6 = __Pyx_CyFunction_New(&__pyx_mdef_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_10lambda7, 0, __pyx_n_s_FPR_create_ground_truth_limer_lo_3, ((PyObject*)__pyx_cur_scope), __pyx_n_s_cornac_metrics_explainer_fpr_fea, __pyx_d, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 97, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_CyFunction_New(&__pyx_mdef_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_10lambda7, 0, __pyx_n_s_Metric_Exp_FPR_create_ground_tru_3, ((PyObject*)__pyx_cur_scope), __pyx_n_s_cornac_metrics_explainer_fpr_met, __pyx_d, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 115, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __pyx_t_1 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -6205,25 +6203,25 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
     __pyx_t_3 = (__pyx_t_1) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_1, __pyx_t_6) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_6);
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 97, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 115, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(PyObject_SetItem(__pyx_v_rec_df, __pyx_n_s_user_idx, __pyx_t_3) < 0)) __PYX_ERR(0, 97, __pyx_L1_error)
+    if (unlikely(PyObject_SetItem(__pyx_v_rec_df, __pyx_n_s_user_idx, __pyx_t_3) < 0)) __PYX_ERR(0, 115, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":98
+    /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":116
  *         else:
  *             rec_df['user_idx'] = rec_df['user_id'].apply(lambda x: str(self.model.train_set.uid_map[x]))
  *             rec_df['explanations'] = rec_df['user_idx'].apply(lambda x: extract_gt(x,item=False))             # <<<<<<<<<<<<<<
  * 
  *         rec_df = rec_df[['user_id', 'item_id', 'explanations']]
  */
-    __pyx_t_2 = __Pyx_PyObject_Dict_GetItem(__pyx_v_rec_df, __pyx_n_s_user_idx); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 98, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_Dict_GetItem(__pyx_v_rec_df, __pyx_n_s_user_idx); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 116, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_apply); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 98, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_apply); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 116, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_25create_ground_truth_limer_11lambda8, 0, __pyx_n_s_FPR_create_ground_truth_limer_lo_3, ((PyObject*)__pyx_cur_scope), __pyx_n_s_cornac_metrics_explainer_fpr_fea, __pyx_d, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 98, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_25create_ground_truth_limer_11lambda8, 0, __pyx_n_s_Metric_Exp_FPR_create_ground_tru_3, ((PyObject*)__pyx_cur_scope), __pyx_n_s_cornac_metrics_explainer_fpr_met, __pyx_d, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 116, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_1 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_6))) {
@@ -6238,22 +6236,22 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
     __pyx_t_3 = (__pyx_t_1) ? __Pyx_PyObject_Call2Args(__pyx_t_6, __pyx_t_1, __pyx_t_2) : __Pyx_PyObject_CallOneArg(__pyx_t_6, __pyx_t_2);
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 98, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 116, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    if (unlikely(PyObject_SetItem(__pyx_v_rec_df, __pyx_n_s_explanations, __pyx_t_3) < 0)) __PYX_ERR(0, 98, __pyx_L1_error)
+    if (unlikely(PyObject_SetItem(__pyx_v_rec_df, __pyx_n_s_explanations, __pyx_t_3) < 0)) __PYX_ERR(0, 116, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
   __pyx_L3:;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":100
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":118
  *             rec_df['explanations'] = rec_df['user_idx'].apply(lambda x: extract_gt(x,item=False))
  * 
  *         rec_df = rec_df[['user_id', 'item_id', 'explanations']]             # <<<<<<<<<<<<<<
  *         return rec_df
  * 
  */
-  __pyx_t_3 = PyList_New(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 100, __pyx_L1_error)
+  __pyx_t_3 = PyList_New(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 118, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_INCREF(__pyx_n_s_user_id);
   __Pyx_GIVEREF(__pyx_n_s_user_id);
@@ -6264,13 +6262,13 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   __Pyx_INCREF(__pyx_n_s_explanations);
   __Pyx_GIVEREF(__pyx_n_s_explanations);
   PyList_SET_ITEM(__pyx_t_3, 2, __pyx_n_s_explanations);
-  __pyx_t_6 = __Pyx_PyObject_GetItem(__pyx_v_rec_df, __pyx_t_3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 100, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_GetItem(__pyx_v_rec_df, __pyx_t_3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 118, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF_SET(__pyx_v_rec_df, __pyx_t_6);
   __pyx_t_6 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":101
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":119
  * 
  *         rec_df = rec_df[['user_id', 'item_id', 'explanations']]
  *         return rec_df             # <<<<<<<<<<<<<<
@@ -6282,12 +6280,12 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   __pyx_r = __pyx_v_rec_df;
   goto __pyx_L0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":68
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":83
  * 
  * 
  *     def create_ground_truth_limer(self):             # <<<<<<<<<<<<<<
- *         """arg:recommendation df [user_id, item_id] generated by the recommender
- *            return: ground_truth explanation for each user,item pair [user_id, item_id, explanation]
+ *         """ Generate ground truth explanations for each user-item pair
+ * 
  */
 
   /* function exit code */
@@ -6296,7 +6294,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.feature_precision_recall.FPR.create_ground_truth_limer", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.metric_exp_fpr.Metric_Exp_FPR.create_ground_truth_limer", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_combined_exp);
@@ -6307,18 +6305,19 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   return __pyx_r;
 }
 
-/* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":103
+/* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":121
  *         return rec_df
  * 
  *     def compute(self, model, explainer, dataset=None):             # <<<<<<<<<<<<<<
- *         self.model = model
- *         self.explainer = explainer
+ *         """ Compute the precision, recall, and f1 score for the explanations
+ * 
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_11compute(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_11compute = {"compute", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_11compute, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_11compute(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_11compute(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_10compute[] = " Compute the precision, recall, and f1 score for the explanations\n\n        Parameters\n        ----------\n        model: object\n            The recommendation model to evaluate.\n        explainer: object\n            The explainer model to evaluate.\n        dataset: object, optional, default: None    \n            The dataset to evaluate the model and explainer on. If None, the training set of the model will be used.\n            \n        Returns\n        -------\n        [precision, recall, f1]: [float, float, float]\n            average values for all (user, item) pairs' ground truth (reviews) with predicted explanations\n        [precision_list, recall_list, f1_list]: [list, list, list]\n            list of precision, recall, and f1 values for all (user, item) pairs\n        ";
+static PyMethodDef __pyx_mdef_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_11compute = {"compute", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_11compute, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_10compute};
+static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_11compute(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_model = 0;
   PyObject *__pyx_v_explainer = 0;
@@ -6357,13 +6356,13 @@ static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_r
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_model)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("compute", 0, 3, 4, 1); __PYX_ERR(0, 103, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("compute", 0, 3, 4, 1); __PYX_ERR(0, 121, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_explainer)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("compute", 0, 3, 4, 2); __PYX_ERR(0, 103, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("compute", 0, 3, 4, 2); __PYX_ERR(0, 121, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
@@ -6373,7 +6372,7 @@ static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_r
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "compute") < 0)) __PYX_ERR(0, 103, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "compute") < 0)) __PYX_ERR(0, 121, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -6393,20 +6392,20 @@ static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("compute", 0, 3, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 103, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("compute", 0, 3, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 121, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.feature_precision_recall.FPR.compute", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.metric_exp_fpr.Metric_Exp_FPR.compute", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_10compute(__pyx_self, __pyx_v_self, __pyx_v_model, __pyx_v_explainer, __pyx_v_dataset);
+  __pyx_r = __pyx_pf_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_10compute(__pyx_self, __pyx_v_self, __pyx_v_model, __pyx_v_explainer, __pyx_v_dataset);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_10compute(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_model, PyObject *__pyx_v_explainer, PyObject *__pyx_v_dataset) {
+static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_10compute(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_model, PyObject *__pyx_v_explainer, PyObject *__pyx_v_dataset) {
   PyObject *__pyx_v_u_i_gt = NULL;
   PyObject *__pyx_v_precision_list = 0;
   PyObject *__pyx_v_recall_list = 0;
@@ -6452,34 +6451,34 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("compute", 0);
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":104
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":142
  * 
- *     def compute(self, model, explainer, dataset=None):
+ * 
  *         self.model = model             # <<<<<<<<<<<<<<
  *         self.explainer = explainer
  *         self.dataset = dataset
  */
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_model, __pyx_v_model) < 0) __PYX_ERR(0, 104, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_model, __pyx_v_model) < 0) __PYX_ERR(0, 142, __pyx_L1_error)
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":105
- *     def compute(self, model, explainer, dataset=None):
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":143
+ * 
  *         self.model = model
  *         self.explainer = explainer             # <<<<<<<<<<<<<<
  *         self.dataset = dataset
  *         if dataset is None:
  */
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_explainer, __pyx_v_explainer) < 0) __PYX_ERR(0, 105, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_explainer, __pyx_v_explainer) < 0) __PYX_ERR(0, 143, __pyx_L1_error)
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":106
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":144
  *         self.model = model
  *         self.explainer = explainer
  *         self.dataset = dataset             # <<<<<<<<<<<<<<
  *         if dataset is None:
  *             self.dataset = model.train_set
  */
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_dataset, __pyx_v_dataset) < 0) __PYX_ERR(0, 106, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_dataset, __pyx_v_dataset) < 0) __PYX_ERR(0, 144, __pyx_L1_error)
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":107
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":145
  *         self.explainer = explainer
  *         self.dataset = dataset
  *         if dataset is None:             # <<<<<<<<<<<<<<
@@ -6490,19 +6489,19 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":108
+    /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":146
  *         self.dataset = dataset
  *         if dataset is None:
  *             self.dataset = model.train_set             # <<<<<<<<<<<<<<
  *         self.explainer = explainer
  *         if self.explainer.name == "LIMERS":
  */
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_model, __pyx_n_s_train_set); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 108, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_model, __pyx_n_s_train_set); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 146, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_dataset, __pyx_t_3) < 0) __PYX_ERR(0, 108, __pyx_L1_error)
+    if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_dataset, __pyx_t_3) < 0) __PYX_ERR(0, 146, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":107
+    /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":145
  *         self.explainer = explainer
  *         self.dataset = dataset
  *         if dataset is None:             # <<<<<<<<<<<<<<
@@ -6511,50 +6510,50 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
  */
   }
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":109
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":147
  *         if dataset is None:
  *             self.dataset = model.train_set
  *         self.explainer = explainer             # <<<<<<<<<<<<<<
  *         if self.explainer.name == "LIMERS":
  *             self.item_f = False if self.model.train_set.item_features.empty else True
  */
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_explainer, __pyx_v_explainer) < 0) __PYX_ERR(0, 109, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_explainer, __pyx_v_explainer) < 0) __PYX_ERR(0, 147, __pyx_L1_error)
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":110
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":148
  *             self.dataset = model.train_set
  *         self.explainer = explainer
  *         if self.explainer.name == "LIMERS":             # <<<<<<<<<<<<<<
  *             self.item_f = False if self.model.train_set.item_features.empty else True
  *             self.user_f = False if self.model.train_set.user_features.empty else True
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_explainer); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 110, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_explainer); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 148, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_name); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 110, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_name); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 148, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_2 = (__Pyx_PyString_Equals(__pyx_t_4, __pyx_n_s_LIMERS, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 110, __pyx_L1_error)
+  __pyx_t_2 = (__Pyx_PyString_Equals(__pyx_t_4, __pyx_n_s_LIMERS, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 148, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   if (__pyx_t_2) {
 
-    /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":111
+    /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":149
  *         self.explainer = explainer
  *         if self.explainer.name == "LIMERS":
  *             self.item_f = False if self.model.train_set.item_features.empty else True             # <<<<<<<<<<<<<<
  *             self.user_f = False if self.model.train_set.user_features.empty else True
- *         """
+ * 
  */
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 111, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 149, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_train_set); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 111, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_train_set); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 149, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_item_features); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 111, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_item_features); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 149, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_empty); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 111, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_empty); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 149, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 111, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 149, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     if (__pyx_t_2) {
       __Pyx_INCREF(Py_False);
@@ -6563,28 +6562,28 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
       __Pyx_INCREF(Py_True);
       __pyx_t_4 = Py_True;
     }
-    if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_item_f, __pyx_t_4) < 0) __PYX_ERR(0, 111, __pyx_L1_error)
+    if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_item_f, __pyx_t_4) < 0) __PYX_ERR(0, 149, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":112
+    /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":150
  *         if self.explainer.name == "LIMERS":
  *             self.item_f = False if self.model.train_set.item_features.empty else True
  *             self.user_f = False if self.model.train_set.user_features.empty else True             # <<<<<<<<<<<<<<
- *         """
- *         perform explainer evaluation
+ * 
+ *         u_i_gt = None
  */
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 112, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 150, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_train_set); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 112, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_train_set); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 150, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_user_features); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 112, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_user_features); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 150, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_empty); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 112, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_empty); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 150, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 112, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 150, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (__pyx_t_2) {
       __Pyx_INCREF(Py_False);
@@ -6593,10 +6592,10 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
       __Pyx_INCREF(Py_True);
       __pyx_t_4 = Py_True;
     }
-    if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_user_f, __pyx_t_4) < 0) __PYX_ERR(0, 112, __pyx_L1_error)
+    if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_user_f, __pyx_t_4) < 0) __PYX_ERR(0, 150, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":110
+    /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":148
  *             self.dataset = model.train_set
  *         self.explainer = explainer
  *         if self.explainer.name == "LIMERS":             # <<<<<<<<<<<<<<
@@ -6605,9 +6604,9 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
  */
   }
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":126
- *         In Proceedings of the 30th ACM International Conference on Information & Knowledge Management (CIKM '21). https://doi.org/10.1145/3459637.3482420
- *         """
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":152
+ *             self.user_f = False if self.model.train_set.user_features.empty else True
+ * 
  *         u_i_gt = None             # <<<<<<<<<<<<<<
  *         if self.model.name == 'MTER':
  *             u_i_gt = self.create_ground_truth_sentiment()
@@ -6615,30 +6614,30 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   __Pyx_INCREF(Py_None);
   __pyx_v_u_i_gt = Py_None;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":127
- *         """
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":153
+ * 
  *         u_i_gt = None
  *         if self.model.name == 'MTER':             # <<<<<<<<<<<<<<
  *             u_i_gt = self.create_ground_truth_sentiment()
  *         elif self.model.name == 'EFM':
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 127, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 153, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_name); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 127, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_name); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 153, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_2 = (__Pyx_PyString_Equals(__pyx_t_3, __pyx_n_s_MTER, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 127, __pyx_L1_error)
+  __pyx_t_2 = (__Pyx_PyString_Equals(__pyx_t_3, __pyx_n_s_MTER, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 153, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (__pyx_t_2) {
 
-    /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":128
+    /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":154
  *         u_i_gt = None
  *         if self.model.name == 'MTER':
  *             u_i_gt = self.create_ground_truth_sentiment()             # <<<<<<<<<<<<<<
  *         elif self.model.name == 'EFM':
  *             u_i_gt = self.creat_grount_truth_efm()
  */
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_create_ground_truth_sentiment); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 128, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_create_ground_truth_sentiment); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 154, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_5 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -6652,14 +6651,14 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
     }
     __pyx_t_3 = (__pyx_t_5) ? __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5) : __Pyx_PyObject_CallNoArg(__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 128, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 154, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF_SET(__pyx_v_u_i_gt, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":127
- *         """
+    /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":153
+ * 
  *         u_i_gt = None
  *         if self.model.name == 'MTER':             # <<<<<<<<<<<<<<
  *             u_i_gt = self.create_ground_truth_sentiment()
@@ -6668,30 +6667,30 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
     goto __pyx_L5;
   }
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":129
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":155
  *         if self.model.name == 'MTER':
  *             u_i_gt = self.create_ground_truth_sentiment()
  *         elif self.model.name == 'EFM':             # <<<<<<<<<<<<<<
  *             u_i_gt = self.creat_grount_truth_efm()
  *         elif self.model.name in ['fm_regressor']:
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 129, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 155, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_name); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 129, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_name); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 155, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_2 = (__Pyx_PyString_Equals(__pyx_t_4, __pyx_n_s_EFM, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 129, __pyx_L1_error)
+  __pyx_t_2 = (__Pyx_PyString_Equals(__pyx_t_4, __pyx_n_s_EFM, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 155, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   if (__pyx_t_2) {
 
-    /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":130
+    /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":156
  *             u_i_gt = self.create_ground_truth_sentiment()
  *         elif self.model.name == 'EFM':
  *             u_i_gt = self.creat_grount_truth_efm()             # <<<<<<<<<<<<<<
  *         elif self.model.name in ['fm_regressor']:
  *             u_i_gt = self.create_ground_truth_limer()
  */
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_creat_grount_truth_efm); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 130, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_creat_grount_truth_efm); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 156, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_5 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
@@ -6705,13 +6704,13 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
     }
     __pyx_t_4 = (__pyx_t_5) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_5) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 130, __pyx_L1_error)
+    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 156, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF_SET(__pyx_v_u_i_gt, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":129
+    /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":155
  *         if self.model.name == 'MTER':
  *             u_i_gt = self.create_ground_truth_sentiment()
  *         elif self.model.name == 'EFM':             # <<<<<<<<<<<<<<
@@ -6721,31 +6720,31 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
     goto __pyx_L5;
   }
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":131
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":157
  *         elif self.model.name == 'EFM':
  *             u_i_gt = self.creat_grount_truth_efm()
  *         elif self.model.name in ['fm_regressor']:             # <<<<<<<<<<<<<<
  *             u_i_gt = self.create_ground_truth_limer()
  *         else:
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 131, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 157, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_name); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 131, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_name); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 157, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_2 = (__Pyx_PyString_Equals(__pyx_t_3, __pyx_n_s_fm_regressor, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 131, __pyx_L1_error)
+  __pyx_t_2 = (__Pyx_PyString_Equals(__pyx_t_3, __pyx_n_s_fm_regressor, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 157, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_1 = (__pyx_t_2 != 0);
   if (likely(__pyx_t_1)) {
 
-    /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":132
+    /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":158
  *             u_i_gt = self.creat_grount_truth_efm()
  *         elif self.model.name in ['fm_regressor']:
  *             u_i_gt = self.create_ground_truth_limer()             # <<<<<<<<<<<<<<
  *         else:
  *             raise ValueError("Model not supported.")
  */
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_create_ground_truth_limer); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 132, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_create_ground_truth_limer); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 158, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_5 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -6759,13 +6758,13 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
     }
     __pyx_t_3 = (__pyx_t_5) ? __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5) : __Pyx_PyObject_CallNoArg(__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 132, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 158, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF_SET(__pyx_v_u_i_gt, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":131
+    /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":157
  *         elif self.model.name == 'EFM':
  *             u_i_gt = self.creat_grount_truth_efm()
  *         elif self.model.name in ['fm_regressor']:             # <<<<<<<<<<<<<<
@@ -6775,7 +6774,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
     goto __pyx_L5;
   }
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":134
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":160
  *             u_i_gt = self.create_ground_truth_limer()
  *         else:
  *             raise ValueError("Model not supported.")             # <<<<<<<<<<<<<<
@@ -6783,67 +6782,67 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
  *         cdef list precision_list = []
  */
   /*else*/ {
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__8, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 134, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__8, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 160, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_Raise(__pyx_t_3, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __PYX_ERR(0, 134, __pyx_L1_error)
+    __PYX_ERR(0, 160, __pyx_L1_error)
   }
   __pyx_L5:;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":136
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":162
  *             raise ValueError("Model not supported.")
  * 
  *         cdef list precision_list = []             # <<<<<<<<<<<<<<
  *         cdef list recall_list = []
  *         cdef list f1_list = []
  */
-  __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 136, __pyx_L1_error)
+  __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 162, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_v_precision_list = ((PyObject*)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":137
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":163
  * 
  *         cdef list precision_list = []
  *         cdef list recall_list = []             # <<<<<<<<<<<<<<
  *         cdef list f1_list = []
  *         cdef int total = u_i_gt.shape[0]
  */
-  __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 137, __pyx_L1_error)
+  __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 163, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_v_recall_list = ((PyObject*)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":138
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":164
  *         cdef list precision_list = []
  *         cdef list recall_list = []
  *         cdef list f1_list = []             # <<<<<<<<<<<<<<
  *         cdef int total = u_i_gt.shape[0]
  *         cdef int interval = int(total * 0.1)
  */
-  __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 138, __pyx_L1_error)
+  __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 164, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_v_f1_list = ((PyObject*)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":139
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":165
  *         cdef list recall_list = []
  *         cdef list f1_list = []
  *         cdef int total = u_i_gt.shape[0]             # <<<<<<<<<<<<<<
  *         cdef int interval = int(total * 0.1)
  *         cdef int i
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_u_i_gt, __pyx_n_s_shape); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 139, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_u_i_gt, __pyx_n_s_shape); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 165, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_GetItemInt(__pyx_t_3, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 139, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetItemInt(__pyx_t_3, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 165, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_6 = __Pyx_PyInt_As_int(__pyx_t_4); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 139, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyInt_As_int(__pyx_t_4); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 165, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_v_total = __pyx_t_6;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":140
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":166
  *         cdef list f1_list = []
  *         cdef int total = u_i_gt.shape[0]
  *         cdef int interval = int(total * 0.1)             # <<<<<<<<<<<<<<
@@ -6852,7 +6851,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
  */
   __pyx_v_interval = ((int)(__pyx_v_total * 0.1));
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":143
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":169
  *         cdef int i
  *         cdef double p, r
  *         with tqdm(total=total, desc="Start evaluation... ") as pbar:             # <<<<<<<<<<<<<<
@@ -6860,22 +6859,22 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
  *                 features_gt = set(row['explanations'].keys())
  */
   /*with:*/ {
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_tqdm); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 143, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_tqdm); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 169, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_3 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 143, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 169, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_total); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 143, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_total); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 169, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_total, __pyx_t_5) < 0) __PYX_ERR(0, 143, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_total, __pyx_t_5) < 0) __PYX_ERR(0, 169, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_desc, __pyx_kp_s_Start_evaluation) < 0) __PYX_ERR(0, 143, __pyx_L1_error)
-    __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_empty_tuple, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 143, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_desc, __pyx_kp_s_Start_evaluation) < 0) __PYX_ERR(0, 169, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_empty_tuple, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 169, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_7 = __Pyx_PyObject_LookupSpecial(__pyx_t_5, __pyx_n_s_exit); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 143, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_LookupSpecial(__pyx_t_5, __pyx_n_s_exit); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 169, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
-    __pyx_t_4 = __Pyx_PyObject_LookupSpecial(__pyx_t_5, __pyx_n_s_enter); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 143, __pyx_L6_error)
+    __pyx_t_4 = __Pyx_PyObject_LookupSpecial(__pyx_t_5, __pyx_n_s_enter); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 169, __pyx_L6_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_8 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -6889,7 +6888,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
     }
     __pyx_t_3 = (__pyx_t_8) ? __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_8) : __Pyx_PyObject_CallNoArg(__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 143, __pyx_L6_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 169, __pyx_L6_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_4 = __pyx_t_3;
@@ -6907,14 +6906,14 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
           __pyx_v_pbar = __pyx_t_4;
           __pyx_t_4 = 0;
 
-          /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":144
+          /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":170
  *         cdef double p, r
  *         with tqdm(total=total, desc="Start evaluation... ") as pbar:
  *             for i, row in u_i_gt.iterrows():             # <<<<<<<<<<<<<<
  *                 features_gt = set(row['explanations'].keys())
  *                 if len(features_gt) != 0:
  */
-          __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_u_i_gt, __pyx_n_s_iterrows); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 144, __pyx_L10_error)
+          __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_u_i_gt, __pyx_n_s_iterrows); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 170, __pyx_L10_error)
           __Pyx_GOTREF(__pyx_t_5);
           __pyx_t_3 = NULL;
           if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_5))) {
@@ -6928,16 +6927,16 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
           }
           __pyx_t_4 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_5);
           __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-          if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 144, __pyx_L10_error)
+          if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 170, __pyx_L10_error)
           __Pyx_GOTREF(__pyx_t_4);
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
           if (likely(PyList_CheckExact(__pyx_t_4)) || PyTuple_CheckExact(__pyx_t_4)) {
             __pyx_t_5 = __pyx_t_4; __Pyx_INCREF(__pyx_t_5); __pyx_t_12 = 0;
             __pyx_t_13 = NULL;
           } else {
-            __pyx_t_12 = -1; __pyx_t_5 = PyObject_GetIter(__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 144, __pyx_L10_error)
+            __pyx_t_12 = -1; __pyx_t_5 = PyObject_GetIter(__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 170, __pyx_L10_error)
             __Pyx_GOTREF(__pyx_t_5);
-            __pyx_t_13 = Py_TYPE(__pyx_t_5)->tp_iternext; if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 144, __pyx_L10_error)
+            __pyx_t_13 = Py_TYPE(__pyx_t_5)->tp_iternext; if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 170, __pyx_L10_error)
           }
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
           for (;;) {
@@ -6945,17 +6944,17 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
               if (likely(PyList_CheckExact(__pyx_t_5))) {
                 if (__pyx_t_12 >= PyList_GET_SIZE(__pyx_t_5)) break;
                 #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-                __pyx_t_4 = PyList_GET_ITEM(__pyx_t_5, __pyx_t_12); __Pyx_INCREF(__pyx_t_4); __pyx_t_12++; if (unlikely(0 < 0)) __PYX_ERR(0, 144, __pyx_L10_error)
+                __pyx_t_4 = PyList_GET_ITEM(__pyx_t_5, __pyx_t_12); __Pyx_INCREF(__pyx_t_4); __pyx_t_12++; if (unlikely(0 < 0)) __PYX_ERR(0, 170, __pyx_L10_error)
                 #else
-                __pyx_t_4 = PySequence_ITEM(__pyx_t_5, __pyx_t_12); __pyx_t_12++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 144, __pyx_L10_error)
+                __pyx_t_4 = PySequence_ITEM(__pyx_t_5, __pyx_t_12); __pyx_t_12++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 170, __pyx_L10_error)
                 __Pyx_GOTREF(__pyx_t_4);
                 #endif
               } else {
                 if (__pyx_t_12 >= PyTuple_GET_SIZE(__pyx_t_5)) break;
                 #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-                __pyx_t_4 = PyTuple_GET_ITEM(__pyx_t_5, __pyx_t_12); __Pyx_INCREF(__pyx_t_4); __pyx_t_12++; if (unlikely(0 < 0)) __PYX_ERR(0, 144, __pyx_L10_error)
+                __pyx_t_4 = PyTuple_GET_ITEM(__pyx_t_5, __pyx_t_12); __Pyx_INCREF(__pyx_t_4); __pyx_t_12++; if (unlikely(0 < 0)) __PYX_ERR(0, 170, __pyx_L10_error)
                 #else
-                __pyx_t_4 = PySequence_ITEM(__pyx_t_5, __pyx_t_12); __pyx_t_12++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 144, __pyx_L10_error)
+                __pyx_t_4 = PySequence_ITEM(__pyx_t_5, __pyx_t_12); __pyx_t_12++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 170, __pyx_L10_error)
                 __Pyx_GOTREF(__pyx_t_4);
                 #endif
               }
@@ -6965,7 +6964,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
                 PyObject* exc_type = PyErr_Occurred();
                 if (exc_type) {
                   if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-                  else __PYX_ERR(0, 144, __pyx_L10_error)
+                  else __PYX_ERR(0, 170, __pyx_L10_error)
                 }
                 break;
               }
@@ -6977,7 +6976,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
               if (unlikely(size != 2)) {
                 if (size > 2) __Pyx_RaiseTooManyValuesError(2);
                 else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-                __PYX_ERR(0, 144, __pyx_L10_error)
+                __PYX_ERR(0, 170, __pyx_L10_error)
               }
               #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
               if (likely(PyTuple_CheckExact(sequence))) {
@@ -6990,15 +6989,15 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
               __Pyx_INCREF(__pyx_t_3);
               __Pyx_INCREF(__pyx_t_8);
               #else
-              __pyx_t_3 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 144, __pyx_L10_error)
+              __pyx_t_3 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 170, __pyx_L10_error)
               __Pyx_GOTREF(__pyx_t_3);
-              __pyx_t_8 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 144, __pyx_L10_error)
+              __pyx_t_8 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 170, __pyx_L10_error)
               __Pyx_GOTREF(__pyx_t_8);
               #endif
               __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
             } else {
               Py_ssize_t index = -1;
-              __pyx_t_14 = PyObject_GetIter(__pyx_t_4); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 144, __pyx_L10_error)
+              __pyx_t_14 = PyObject_GetIter(__pyx_t_4); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 170, __pyx_L10_error)
               __Pyx_GOTREF(__pyx_t_14);
               __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
               __pyx_t_15 = Py_TYPE(__pyx_t_14)->tp_iternext;
@@ -7006,7 +7005,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
               __Pyx_GOTREF(__pyx_t_3);
               index = 1; __pyx_t_8 = __pyx_t_15(__pyx_t_14); if (unlikely(!__pyx_t_8)) goto __pyx_L18_unpacking_failed;
               __Pyx_GOTREF(__pyx_t_8);
-              if (__Pyx_IternextUnpackEndCheck(__pyx_t_15(__pyx_t_14), 2) < 0) __PYX_ERR(0, 144, __pyx_L10_error)
+              if (__Pyx_IternextUnpackEndCheck(__pyx_t_15(__pyx_t_14), 2) < 0) __PYX_ERR(0, 170, __pyx_L10_error)
               __pyx_t_15 = NULL;
               __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
               goto __pyx_L19_unpacking_done;
@@ -7014,25 +7013,25 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
               __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
               __pyx_t_15 = NULL;
               if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-              __PYX_ERR(0, 144, __pyx_L10_error)
+              __PYX_ERR(0, 170, __pyx_L10_error)
               __pyx_L19_unpacking_done:;
             }
-            __pyx_t_6 = __Pyx_PyInt_As_int(__pyx_t_3); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 144, __pyx_L10_error)
+            __pyx_t_6 = __Pyx_PyInt_As_int(__pyx_t_3); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 170, __pyx_L10_error)
             __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
             __pyx_v_i = __pyx_t_6;
             __Pyx_XDECREF_SET(__pyx_v_row, __pyx_t_8);
             __pyx_t_8 = 0;
 
-            /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":145
+            /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":171
  *         with tqdm(total=total, desc="Start evaluation... ") as pbar:
  *             for i, row in u_i_gt.iterrows():
  *                 features_gt = set(row['explanations'].keys())             # <<<<<<<<<<<<<<
  *                 if len(features_gt) != 0:
  *                     features_pred = set(self.explainer.explain_one_recommendation_to_user(row['user_id'], row['item_id'], num_features=self.feature_k).keys())
  */
-            __pyx_t_8 = __Pyx_PyObject_Dict_GetItem(__pyx_v_row, __pyx_n_s_explanations); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 145, __pyx_L10_error)
+            __pyx_t_8 = __Pyx_PyObject_Dict_GetItem(__pyx_v_row, __pyx_n_s_explanations); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 171, __pyx_L10_error)
             __Pyx_GOTREF(__pyx_t_8);
-            __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_keys); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 145, __pyx_L10_error)
+            __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_keys); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 171, __pyx_L10_error)
             __Pyx_GOTREF(__pyx_t_3);
             __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
             __pyx_t_8 = NULL;
@@ -7047,43 +7046,43 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
             }
             __pyx_t_4 = (__pyx_t_8) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_8) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
             __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
-            if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 145, __pyx_L10_error)
+            if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 171, __pyx_L10_error)
             __Pyx_GOTREF(__pyx_t_4);
             __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-            __pyx_t_3 = PySet_New(__pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 145, __pyx_L10_error)
+            __pyx_t_3 = PySet_New(__pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 171, __pyx_L10_error)
             __Pyx_GOTREF(__pyx_t_3);
             __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
             __Pyx_XDECREF_SET(__pyx_v_features_gt, ((PyObject*)__pyx_t_3));
             __pyx_t_3 = 0;
 
-            /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":146
+            /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":172
  *             for i, row in u_i_gt.iterrows():
  *                 features_gt = set(row['explanations'].keys())
  *                 if len(features_gt) != 0:             # <<<<<<<<<<<<<<
  *                     features_pred = set(self.explainer.explain_one_recommendation_to_user(row['user_id'], row['item_id'], num_features=self.feature_k).keys())
  *                     if self.model.name == 'fm_regressor':
  */
-            __pyx_t_16 = PySet_GET_SIZE(__pyx_v_features_gt); if (unlikely(__pyx_t_16 == ((Py_ssize_t)-1))) __PYX_ERR(0, 146, __pyx_L10_error)
+            __pyx_t_16 = PySet_GET_SIZE(__pyx_v_features_gt); if (unlikely(__pyx_t_16 == ((Py_ssize_t)-1))) __PYX_ERR(0, 172, __pyx_L10_error)
             __pyx_t_1 = ((__pyx_t_16 != 0) != 0);
             if (__pyx_t_1) {
 
-              /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":147
+              /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":173
  *                 features_gt = set(row['explanations'].keys())
  *                 if len(features_gt) != 0:
  *                     features_pred = set(self.explainer.explain_one_recommendation_to_user(row['user_id'], row['item_id'], num_features=self.feature_k).keys())             # <<<<<<<<<<<<<<
  *                     if self.model.name == 'fm_regressor':
  *                         features_pred = [x[:-4] if x[-2:] == '_f' else x for x in list(features_pred)]
  */
-              __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_explainer); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 147, __pyx_L10_error)
+              __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_explainer); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 173, __pyx_L10_error)
               __Pyx_GOTREF(__pyx_t_4);
-              __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_explain_one_recommendation_to_us); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 147, __pyx_L10_error)
+              __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_explain_one_recommendation_to_us); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 173, __pyx_L10_error)
               __Pyx_GOTREF(__pyx_t_8);
               __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-              __pyx_t_4 = __Pyx_PyObject_Dict_GetItem(__pyx_v_row, __pyx_n_s_user_id); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 147, __pyx_L10_error)
+              __pyx_t_4 = __Pyx_PyObject_Dict_GetItem(__pyx_v_row, __pyx_n_s_user_id); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 173, __pyx_L10_error)
               __Pyx_GOTREF(__pyx_t_4);
-              __pyx_t_14 = __Pyx_PyObject_Dict_GetItem(__pyx_v_row, __pyx_n_s_item_id); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 147, __pyx_L10_error)
+              __pyx_t_14 = __Pyx_PyObject_Dict_GetItem(__pyx_v_row, __pyx_n_s_item_id); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 173, __pyx_L10_error)
               __Pyx_GOTREF(__pyx_t_14);
-              __pyx_t_17 = PyTuple_New(2); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 147, __pyx_L10_error)
+              __pyx_t_17 = PyTuple_New(2); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 173, __pyx_L10_error)
               __Pyx_GOTREF(__pyx_t_17);
               __Pyx_GIVEREF(__pyx_t_4);
               PyTuple_SET_ITEM(__pyx_t_17, 0, __pyx_t_4);
@@ -7091,18 +7090,18 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
               PyTuple_SET_ITEM(__pyx_t_17, 1, __pyx_t_14);
               __pyx_t_4 = 0;
               __pyx_t_14 = 0;
-              __pyx_t_14 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 147, __pyx_L10_error)
+              __pyx_t_14 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 173, __pyx_L10_error)
               __Pyx_GOTREF(__pyx_t_14);
-              __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_feature_k); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 147, __pyx_L10_error)
+              __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_feature_k); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 173, __pyx_L10_error)
               __Pyx_GOTREF(__pyx_t_4);
-              if (PyDict_SetItem(__pyx_t_14, __pyx_n_s_num_features, __pyx_t_4) < 0) __PYX_ERR(0, 147, __pyx_L10_error)
+              if (PyDict_SetItem(__pyx_t_14, __pyx_n_s_num_features, __pyx_t_4) < 0) __PYX_ERR(0, 173, __pyx_L10_error)
               __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-              __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_8, __pyx_t_17, __pyx_t_14); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 147, __pyx_L10_error)
+              __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_8, __pyx_t_17, __pyx_t_14); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 173, __pyx_L10_error)
               __Pyx_GOTREF(__pyx_t_4);
               __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
               __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
               __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-              __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_keys); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 147, __pyx_L10_error)
+              __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_keys); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 173, __pyx_L10_error)
               __Pyx_GOTREF(__pyx_t_14);
               __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
               __pyx_t_4 = NULL;
@@ -7117,60 +7116,60 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
               }
               __pyx_t_3 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_14, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_14);
               __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-              if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 147, __pyx_L10_error)
+              if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 173, __pyx_L10_error)
               __Pyx_GOTREF(__pyx_t_3);
               __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-              __pyx_t_14 = PySet_New(__pyx_t_3); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 147, __pyx_L10_error)
+              __pyx_t_14 = PySet_New(__pyx_t_3); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 173, __pyx_L10_error)
               __Pyx_GOTREF(__pyx_t_14);
               __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
               __Pyx_XDECREF_SET(__pyx_v_features_pred, __pyx_t_14);
               __pyx_t_14 = 0;
 
-              /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":148
+              /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":174
  *                 if len(features_gt) != 0:
  *                     features_pred = set(self.explainer.explain_one_recommendation_to_user(row['user_id'], row['item_id'], num_features=self.feature_k).keys())
  *                     if self.model.name == 'fm_regressor':             # <<<<<<<<<<<<<<
  *                         features_pred = [x[:-4] if x[-2:] == '_f' else x for x in list(features_pred)]
  *                     p = 1.0*len(features_gt.intersection(features_pred)) / len(features_pred)
  */
-              __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 148, __pyx_L10_error)
+              __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 174, __pyx_L10_error)
               __Pyx_GOTREF(__pyx_t_14);
-              __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_14, __pyx_n_s_name); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 148, __pyx_L10_error)
+              __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_14, __pyx_n_s_name); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 174, __pyx_L10_error)
               __Pyx_GOTREF(__pyx_t_3);
               __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-              __pyx_t_1 = (__Pyx_PyString_Equals(__pyx_t_3, __pyx_n_s_fm_regressor, Py_EQ)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 148, __pyx_L10_error)
+              __pyx_t_1 = (__Pyx_PyString_Equals(__pyx_t_3, __pyx_n_s_fm_regressor, Py_EQ)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 174, __pyx_L10_error)
               __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
               if (__pyx_t_1) {
 
-                /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":149
+                /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":175
  *                     features_pred = set(self.explainer.explain_one_recommendation_to_user(row['user_id'], row['item_id'], num_features=self.feature_k).keys())
  *                     if self.model.name == 'fm_regressor':
  *                         features_pred = [x[:-4] if x[-2:] == '_f' else x for x in list(features_pred)]             # <<<<<<<<<<<<<<
  *                     p = 1.0*len(features_gt.intersection(features_pred)) / len(features_pred)
  *                     r = 1.0*len(features_gt.intersection(features_pred)) / len(features_gt)
  */
-                __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 149, __pyx_L10_error)
+                __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 175, __pyx_L10_error)
                 __Pyx_GOTREF(__pyx_t_3);
-                __pyx_t_14 = PySequence_List(__pyx_v_features_pred); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 149, __pyx_L10_error)
+                __pyx_t_14 = PySequence_List(__pyx_v_features_pred); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 175, __pyx_L10_error)
                 __Pyx_GOTREF(__pyx_t_14);
                 __pyx_t_4 = __pyx_t_14; __Pyx_INCREF(__pyx_t_4); __pyx_t_16 = 0;
                 __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
                 for (;;) {
                   if (__pyx_t_16 >= PyList_GET_SIZE(__pyx_t_4)) break;
                   #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-                  __pyx_t_14 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_16); __Pyx_INCREF(__pyx_t_14); __pyx_t_16++; if (unlikely(0 < 0)) __PYX_ERR(0, 149, __pyx_L10_error)
+                  __pyx_t_14 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_16); __Pyx_INCREF(__pyx_t_14); __pyx_t_16++; if (unlikely(0 < 0)) __PYX_ERR(0, 175, __pyx_L10_error)
                   #else
-                  __pyx_t_14 = PySequence_ITEM(__pyx_t_4, __pyx_t_16); __pyx_t_16++; if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 149, __pyx_L10_error)
+                  __pyx_t_14 = PySequence_ITEM(__pyx_t_4, __pyx_t_16); __pyx_t_16++; if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 175, __pyx_L10_error)
                   __Pyx_GOTREF(__pyx_t_14);
                   #endif
                   __Pyx_XDECREF_SET(__pyx_v_x, __pyx_t_14);
                   __pyx_t_14 = 0;
-                  __pyx_t_17 = __Pyx_PyObject_GetSlice(__pyx_v_x, -2L, 0, NULL, NULL, &__pyx_slice__9, 1, 0, 1); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 149, __pyx_L10_error)
+                  __pyx_t_17 = __Pyx_PyObject_GetSlice(__pyx_v_x, -2L, 0, NULL, NULL, &__pyx_slice__9, 1, 0, 1); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 175, __pyx_L10_error)
                   __Pyx_GOTREF(__pyx_t_17);
-                  __pyx_t_1 = (__Pyx_PyString_Equals(__pyx_t_17, __pyx_n_s_f_2, Py_EQ)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 149, __pyx_L10_error)
+                  __pyx_t_1 = (__Pyx_PyString_Equals(__pyx_t_17, __pyx_n_s_f_2, Py_EQ)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 175, __pyx_L10_error)
                   __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
                   if (__pyx_t_1) {
-                    __pyx_t_17 = __Pyx_PyObject_GetSlice(__pyx_v_x, 0, -4L, NULL, NULL, &__pyx_slice__10, 0, 1, 1); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 149, __pyx_L10_error)
+                    __pyx_t_17 = __Pyx_PyObject_GetSlice(__pyx_v_x, 0, -4L, NULL, NULL, &__pyx_slice__10, 0, 1, 1); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 175, __pyx_L10_error)
                     __Pyx_GOTREF(__pyx_t_17);
                     __pyx_t_14 = __pyx_t_17;
                     __pyx_t_17 = 0;
@@ -7178,14 +7177,14 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
                     __Pyx_INCREF(__pyx_v_x);
                     __pyx_t_14 = __pyx_v_x;
                   }
-                  if (unlikely(__Pyx_ListComp_Append(__pyx_t_3, (PyObject*)__pyx_t_14))) __PYX_ERR(0, 149, __pyx_L10_error)
+                  if (unlikely(__Pyx_ListComp_Append(__pyx_t_3, (PyObject*)__pyx_t_14))) __PYX_ERR(0, 175, __pyx_L10_error)
                   __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
                 }
                 __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
                 __Pyx_DECREF_SET(__pyx_v_features_pred, __pyx_t_3);
                 __pyx_t_3 = 0;
 
-                /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":148
+                /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":174
  *                 if len(features_gt) != 0:
  *                     features_pred = set(self.explainer.explain_one_recommendation_to_user(row['user_id'], row['item_id'], num_features=self.feature_k).keys())
  *                     if self.model.name == 'fm_regressor':             # <<<<<<<<<<<<<<
@@ -7194,45 +7193,45 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
  */
               }
 
-              /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":150
+              /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":176
  *                     if self.model.name == 'fm_regressor':
  *                         features_pred = [x[:-4] if x[-2:] == '_f' else x for x in list(features_pred)]
  *                     p = 1.0*len(features_gt.intersection(features_pred)) / len(features_pred)             # <<<<<<<<<<<<<<
  *                     r = 1.0*len(features_gt.intersection(features_pred)) / len(features_gt)
  *                     if (p + r) == 0:
  */
-              __pyx_t_3 = __Pyx_CallUnboundCMethod1(&__pyx_umethod_PySet_Type_intersection, __pyx_v_features_gt, __pyx_v_features_pred); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 150, __pyx_L10_error)
+              __pyx_t_3 = __Pyx_CallUnboundCMethod1(&__pyx_umethod_PySet_Type_intersection, __pyx_v_features_gt, __pyx_v_features_pred); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 176, __pyx_L10_error)
               __Pyx_GOTREF(__pyx_t_3);
-              __pyx_t_16 = PyObject_Length(__pyx_t_3); if (unlikely(__pyx_t_16 == ((Py_ssize_t)-1))) __PYX_ERR(0, 150, __pyx_L10_error)
+              __pyx_t_16 = PyObject_Length(__pyx_t_3); if (unlikely(__pyx_t_16 == ((Py_ssize_t)-1))) __PYX_ERR(0, 176, __pyx_L10_error)
               __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
               __pyx_t_18 = (1.0 * __pyx_t_16);
-              __pyx_t_16 = PyObject_Length(__pyx_v_features_pred); if (unlikely(__pyx_t_16 == ((Py_ssize_t)-1))) __PYX_ERR(0, 150, __pyx_L10_error)
+              __pyx_t_16 = PyObject_Length(__pyx_v_features_pred); if (unlikely(__pyx_t_16 == ((Py_ssize_t)-1))) __PYX_ERR(0, 176, __pyx_L10_error)
               if (unlikely(__pyx_t_16 == 0)) {
                 PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-                __PYX_ERR(0, 150, __pyx_L10_error)
+                __PYX_ERR(0, 176, __pyx_L10_error)
               }
               __pyx_v_p = (__pyx_t_18 / __pyx_t_16);
 
-              /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":151
+              /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":177
  *                         features_pred = [x[:-4] if x[-2:] == '_f' else x for x in list(features_pred)]
  *                     p = 1.0*len(features_gt.intersection(features_pred)) / len(features_pred)
  *                     r = 1.0*len(features_gt.intersection(features_pred)) / len(features_gt)             # <<<<<<<<<<<<<<
  *                     if (p + r) == 0:
  *                         continue
  */
-              __pyx_t_3 = __Pyx_CallUnboundCMethod1(&__pyx_umethod_PySet_Type_intersection, __pyx_v_features_gt, __pyx_v_features_pred); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 151, __pyx_L10_error)
+              __pyx_t_3 = __Pyx_CallUnboundCMethod1(&__pyx_umethod_PySet_Type_intersection, __pyx_v_features_gt, __pyx_v_features_pred); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 177, __pyx_L10_error)
               __Pyx_GOTREF(__pyx_t_3);
-              __pyx_t_16 = PyObject_Length(__pyx_t_3); if (unlikely(__pyx_t_16 == ((Py_ssize_t)-1))) __PYX_ERR(0, 151, __pyx_L10_error)
+              __pyx_t_16 = PyObject_Length(__pyx_t_3); if (unlikely(__pyx_t_16 == ((Py_ssize_t)-1))) __PYX_ERR(0, 177, __pyx_L10_error)
               __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
               __pyx_t_18 = (1.0 * __pyx_t_16);
-              __pyx_t_16 = PySet_GET_SIZE(__pyx_v_features_gt); if (unlikely(__pyx_t_16 == ((Py_ssize_t)-1))) __PYX_ERR(0, 151, __pyx_L10_error)
+              __pyx_t_16 = PySet_GET_SIZE(__pyx_v_features_gt); if (unlikely(__pyx_t_16 == ((Py_ssize_t)-1))) __PYX_ERR(0, 177, __pyx_L10_error)
               if (unlikely(__pyx_t_16 == 0)) {
                 PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-                __PYX_ERR(0, 151, __pyx_L10_error)
+                __PYX_ERR(0, 177, __pyx_L10_error)
               }
               __pyx_v_r = (__pyx_t_18 / __pyx_t_16);
 
-              /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":152
+              /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":178
  *                     p = 1.0*len(features_gt.intersection(features_pred)) / len(features_pred)
  *                     r = 1.0*len(features_gt.intersection(features_pred)) / len(features_gt)
  *                     if (p + r) == 0:             # <<<<<<<<<<<<<<
@@ -7242,7 +7241,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
               __pyx_t_1 = (((__pyx_v_p + __pyx_v_r) == 0.0) != 0);
               if (__pyx_t_1) {
 
-                /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":153
+                /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":179
  *                     r = 1.0*len(features_gt.intersection(features_pred)) / len(features_gt)
  *                     if (p + r) == 0:
  *                         continue             # <<<<<<<<<<<<<<
@@ -7251,7 +7250,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
  */
                 goto __pyx_L16_continue;
 
-                /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":152
+                /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":178
  *                     p = 1.0*len(features_gt.intersection(features_pred)) / len(features_pred)
  *                     r = 1.0*len(features_gt.intersection(features_pred)) / len(features_gt)
  *                     if (p + r) == 0:             # <<<<<<<<<<<<<<
@@ -7260,31 +7259,31 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
  */
               }
 
-              /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":154
+              /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":180
  *                     if (p + r) == 0:
  *                         continue
  *                     precision_list.append(p)             # <<<<<<<<<<<<<<
  *                     recall_list.append(r)
  *                     f1_list.append(2 * p * r / (p + r))
  */
-              __pyx_t_3 = PyFloat_FromDouble(__pyx_v_p); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 154, __pyx_L10_error)
+              __pyx_t_3 = PyFloat_FromDouble(__pyx_v_p); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 180, __pyx_L10_error)
               __Pyx_GOTREF(__pyx_t_3);
-              __pyx_t_19 = __Pyx_PyList_Append(__pyx_v_precision_list, __pyx_t_3); if (unlikely(__pyx_t_19 == ((int)-1))) __PYX_ERR(0, 154, __pyx_L10_error)
+              __pyx_t_19 = __Pyx_PyList_Append(__pyx_v_precision_list, __pyx_t_3); if (unlikely(__pyx_t_19 == ((int)-1))) __PYX_ERR(0, 180, __pyx_L10_error)
               __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-              /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":155
+              /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":181
  *                         continue
  *                     precision_list.append(p)
  *                     recall_list.append(r)             # <<<<<<<<<<<<<<
  *                     f1_list.append(2 * p * r / (p + r))
  * 
  */
-              __pyx_t_3 = PyFloat_FromDouble(__pyx_v_r); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 155, __pyx_L10_error)
+              __pyx_t_3 = PyFloat_FromDouble(__pyx_v_r); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 181, __pyx_L10_error)
               __Pyx_GOTREF(__pyx_t_3);
-              __pyx_t_19 = __Pyx_PyList_Append(__pyx_v_recall_list, __pyx_t_3); if (unlikely(__pyx_t_19 == ((int)-1))) __PYX_ERR(0, 155, __pyx_L10_error)
+              __pyx_t_19 = __Pyx_PyList_Append(__pyx_v_recall_list, __pyx_t_3); if (unlikely(__pyx_t_19 == ((int)-1))) __PYX_ERR(0, 181, __pyx_L10_error)
               __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-              /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":156
+              /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":182
  *                     precision_list.append(p)
  *                     recall_list.append(r)
  *                     f1_list.append(2 * p * r / (p + r))             # <<<<<<<<<<<<<<
@@ -7295,14 +7294,14 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
               __pyx_t_20 = (__pyx_v_p + __pyx_v_r);
               if (unlikely(__pyx_t_20 == 0)) {
                 PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-                __PYX_ERR(0, 156, __pyx_L10_error)
+                __PYX_ERR(0, 182, __pyx_L10_error)
               }
-              __pyx_t_3 = PyFloat_FromDouble((__pyx_t_18 / __pyx_t_20)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 156, __pyx_L10_error)
+              __pyx_t_3 = PyFloat_FromDouble((__pyx_t_18 / __pyx_t_20)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 182, __pyx_L10_error)
               __Pyx_GOTREF(__pyx_t_3);
-              __pyx_t_19 = __Pyx_PyList_Append(__pyx_v_f1_list, __pyx_t_3); if (unlikely(__pyx_t_19 == ((int)-1))) __PYX_ERR(0, 156, __pyx_L10_error)
+              __pyx_t_19 = __Pyx_PyList_Append(__pyx_v_f1_list, __pyx_t_3); if (unlikely(__pyx_t_19 == ((int)-1))) __PYX_ERR(0, 182, __pyx_L10_error)
               __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-              /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":158
+              /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":184
  *                     f1_list.append(2 * p * r / (p + r))
  * 
  *                     if i % interval == 0:             # <<<<<<<<<<<<<<
@@ -7311,21 +7310,21 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
  */
               if (unlikely(__pyx_v_interval == 0)) {
                 PyErr_SetString(PyExc_ZeroDivisionError, "integer division or modulo by zero");
-                __PYX_ERR(0, 158, __pyx_L10_error)
+                __PYX_ERR(0, 184, __pyx_L10_error)
               }
               __pyx_t_1 = ((__Pyx_mod_int(__pyx_v_i, __pyx_v_interval) == 0) != 0);
               if (__pyx_t_1) {
 
-                /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":159
+                /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":185
  * 
  *                     if i % interval == 0:
  *                         pbar.update(interval)             # <<<<<<<<<<<<<<
  *         precision = np.mean(precision_list)
  *         recall = np.mean(recall_list)
  */
-                __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_pbar, __pyx_n_s_update); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 159, __pyx_L10_error)
+                __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_pbar, __pyx_n_s_update); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 185, __pyx_L10_error)
                 __Pyx_GOTREF(__pyx_t_4);
-                __pyx_t_14 = __Pyx_PyInt_From_int(__pyx_v_interval); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 159, __pyx_L10_error)
+                __pyx_t_14 = __Pyx_PyInt_From_int(__pyx_v_interval); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 185, __pyx_L10_error)
                 __Pyx_GOTREF(__pyx_t_14);
                 __pyx_t_17 = NULL;
                 if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -7340,12 +7339,12 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
                 __pyx_t_3 = (__pyx_t_17) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_17, __pyx_t_14) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_14);
                 __Pyx_XDECREF(__pyx_t_17); __pyx_t_17 = 0;
                 __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-                if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 159, __pyx_L10_error)
+                if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 185, __pyx_L10_error)
                 __Pyx_GOTREF(__pyx_t_3);
                 __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
                 __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-                /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":158
+                /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":184
  *                     f1_list.append(2 * p * r / (p + r))
  * 
  *                     if i % interval == 0:             # <<<<<<<<<<<<<<
@@ -7354,7 +7353,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
  */
               }
 
-              /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":146
+              /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":172
  *             for i, row in u_i_gt.iterrows():
  *                 features_gt = set(row['explanations'].keys())
  *                 if len(features_gt) != 0:             # <<<<<<<<<<<<<<
@@ -7363,7 +7362,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
  */
             }
 
-            /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":144
+            /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":170
  *         cdef double p, r
  *         with tqdm(total=total, desc="Start evaluation... ") as pbar:
  *             for i, row in u_i_gt.iterrows():             # <<<<<<<<<<<<<<
@@ -7374,7 +7373,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
           }
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-          /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":143
+          /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":169
  *         cdef int i
  *         cdef double p, r
  *         with tqdm(total=total, desc="Start evaluation... ") as pbar:             # <<<<<<<<<<<<<<
@@ -7394,21 +7393,21 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
         /*except:*/ {
-          __Pyx_AddTraceback("cornac.metrics_explainer.fpr.feature_precision_recall.FPR.compute", __pyx_clineno, __pyx_lineno, __pyx_filename);
-          if (__Pyx_GetException(&__pyx_t_5, &__pyx_t_3, &__pyx_t_4) < 0) __PYX_ERR(0, 143, __pyx_L12_except_error)
+          __Pyx_AddTraceback("cornac.metrics_explainer.fpr.metric_exp_fpr.Metric_Exp_FPR.compute", __pyx_clineno, __pyx_lineno, __pyx_filename);
+          if (__Pyx_GetException(&__pyx_t_5, &__pyx_t_3, &__pyx_t_4) < 0) __PYX_ERR(0, 169, __pyx_L12_except_error)
           __Pyx_GOTREF(__pyx_t_5);
           __Pyx_GOTREF(__pyx_t_3);
           __Pyx_GOTREF(__pyx_t_4);
-          __pyx_t_14 = PyTuple_Pack(3, __pyx_t_5, __pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 143, __pyx_L12_except_error)
+          __pyx_t_14 = PyTuple_Pack(3, __pyx_t_5, __pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 169, __pyx_L12_except_error)
           __Pyx_GOTREF(__pyx_t_14);
           __pyx_t_21 = __Pyx_PyObject_Call(__pyx_t_7, __pyx_t_14, NULL);
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
           __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-          if (unlikely(!__pyx_t_21)) __PYX_ERR(0, 143, __pyx_L12_except_error)
+          if (unlikely(!__pyx_t_21)) __PYX_ERR(0, 169, __pyx_L12_except_error)
           __Pyx_GOTREF(__pyx_t_21);
           __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_t_21);
           __Pyx_DECREF(__pyx_t_21); __pyx_t_21 = 0;
-          if (__pyx_t_1 < 0) __PYX_ERR(0, 143, __pyx_L12_except_error)
+          if (__pyx_t_1 < 0) __PYX_ERR(0, 169, __pyx_L12_except_error)
           __pyx_t_2 = ((!(__pyx_t_1 != 0)) != 0);
           if (__pyx_t_2) {
             __Pyx_GIVEREF(__pyx_t_5);
@@ -7416,7 +7415,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
             __Pyx_XGIVEREF(__pyx_t_4);
             __Pyx_ErrRestoreWithState(__pyx_t_5, __pyx_t_3, __pyx_t_4);
             __pyx_t_5 = 0; __pyx_t_3 = 0; __pyx_t_4 = 0; 
-            __PYX_ERR(0, 143, __pyx_L12_except_error)
+            __PYX_ERR(0, 169, __pyx_L12_except_error)
           }
           __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
           __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -7442,7 +7441,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
         if (__pyx_t_7) {
           __pyx_t_11 = __Pyx_PyObject_Call(__pyx_t_7, __pyx_tuple__11, NULL);
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-          if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 143, __pyx_L1_error)
+          if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 169, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_11);
           __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
         }
@@ -7457,16 +7456,16 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
     __pyx_L29:;
   }
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":160
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":186
  *                     if i % interval == 0:
  *                         pbar.update(interval)
  *         precision = np.mean(precision_list)             # <<<<<<<<<<<<<<
  *         recall = np.mean(recall_list)
  *         ff1 = np.mean(f1_list)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 160, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 186, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_mean); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 160, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_mean); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 186, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -7481,22 +7480,22 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   }
   __pyx_t_4 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_5, __pyx_t_3, __pyx_v_precision_list) : __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_v_precision_list);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 160, __pyx_L1_error)
+  if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 186, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_v_precision = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":161
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":187
  *                         pbar.update(interval)
  *         precision = np.mean(precision_list)
  *         recall = np.mean(recall_list)             # <<<<<<<<<<<<<<
  *         ff1 = np.mean(f1_list)
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 161, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 187, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_mean); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 161, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_mean); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 187, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_t_5 = NULL;
@@ -7511,22 +7510,22 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   }
   __pyx_t_4 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_5, __pyx_v_recall_list) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_recall_list);
   __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 161, __pyx_L1_error)
+  if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 187, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_v_recall = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":162
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":188
  *         precision = np.mean(precision_list)
  *         recall = np.mean(recall_list)
  *         ff1 = np.mean(f1_list)             # <<<<<<<<<<<<<<
  * 
  *         return [precision, recall, ff1], [precision_list, recall_list, f1_list]
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 162, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 188, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_mean); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 162, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_mean); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 188, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -7541,13 +7540,13 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   }
   __pyx_t_4 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_5, __pyx_t_3, __pyx_v_f1_list) : __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_v_f1_list);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 162, __pyx_L1_error)
+  if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 188, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_v_ff1 = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":164
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":190
  *         ff1 = np.mean(f1_list)
  * 
  *         return [precision, recall, ff1], [precision_list, recall_list, f1_list]             # <<<<<<<<<<<<<<
@@ -7555,7 +7554,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
  *     def create_recommendations(self):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_4 = PyList_New(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 164, __pyx_L1_error)
+  __pyx_t_4 = PyList_New(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 190, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_INCREF(__pyx_v_precision);
   __Pyx_GIVEREF(__pyx_v_precision);
@@ -7566,7 +7565,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   __Pyx_INCREF(__pyx_v_ff1);
   __Pyx_GIVEREF(__pyx_v_ff1);
   PyList_SET_ITEM(__pyx_t_4, 2, __pyx_v_ff1);
-  __pyx_t_5 = PyList_New(3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 164, __pyx_L1_error)
+  __pyx_t_5 = PyList_New(3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 190, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_INCREF(__pyx_v_precision_list);
   __Pyx_GIVEREF(__pyx_v_precision_list);
@@ -7577,7 +7576,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   __Pyx_INCREF(__pyx_v_f1_list);
   __Pyx_GIVEREF(__pyx_v_f1_list);
   PyList_SET_ITEM(__pyx_t_5, 2, __pyx_v_f1_list);
-  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 164, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 190, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_4);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_4);
@@ -7589,12 +7588,12 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":103
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":121
  *         return rec_df
  * 
  *     def compute(self, model, explainer, dataset=None):             # <<<<<<<<<<<<<<
- *         self.model = model
- *         self.explainer = explainer
+ *         """ Compute the precision, recall, and f1 score for the explanations
+ * 
  */
 
   /* function exit code */
@@ -7605,7 +7604,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_14);
   __Pyx_XDECREF(__pyx_t_17);
-  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.feature_precision_recall.FPR.compute", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.metric_exp_fpr.Metric_Exp_FPR.compute", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_u_i_gt);
@@ -7625,7 +7624,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   return __pyx_r;
 }
 
-/* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":166
+/* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":192
  *         return [precision, recall, ff1], [precision_list, recall_list, f1_list]
  * 
  *     def create_recommendations(self):             # <<<<<<<<<<<<<<
@@ -7634,21 +7633,21 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_13create_recommendations(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
-static char __pyx_doc_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_12create_recommendations[] = "create recommendations for all users available in the dataset";
-static PyMethodDef __pyx_mdef_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_13create_recommendations = {"create_recommendations", (PyCFunction)__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_13create_recommendations, METH_O, __pyx_doc_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_12create_recommendations};
-static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_13create_recommendations(PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_13create_recommendations(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
+static char __pyx_doc_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_12create_recommendations[] = "create recommendations for all users available in the dataset";
+static PyMethodDef __pyx_mdef_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_13create_recommendations = {"create_recommendations", (PyCFunction)__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_13create_recommendations, METH_O, __pyx_doc_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_12create_recommendations};
+static PyObject *__pyx_pw_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_13create_recommendations(PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("create_recommendations (wrapper)", 0);
-  __pyx_r = __pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_12create_recommendations(__pyx_self, ((PyObject *)__pyx_v_self));
+  __pyx_r = __pyx_pf_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_12create_recommendations(__pyx_self, ((PyObject *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_12create_recommendations(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_12create_recommendations(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_v_users = NULL;
   PyObject *__pyx_v_rec_df = NULL;
   PyObject *__pyx_v_k = NULL;
@@ -7667,30 +7666,30 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("create_recommendations", 0);
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":168
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":194
  *     def create_recommendations(self):
  *         """create recommendations for all users available in the dataset"""
  *         print("Started creating recommendations...")             # <<<<<<<<<<<<<<
  *         users = [k for k in self.dataset.uid_map.keys()]
  *         rec_df = self.model.recommend_to_multiple_users(users, self.rec_k) ##to be updated
  */
-  if (__Pyx_PrintOne(0, __pyx_kp_s_Started_creating_recommendations) < 0) __PYX_ERR(0, 168, __pyx_L1_error)
+  if (__Pyx_PrintOne(0, __pyx_kp_s_Started_creating_recommendations) < 0) __PYX_ERR(0, 194, __pyx_L1_error)
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":169
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":195
  *         """create recommendations for all users available in the dataset"""
  *         print("Started creating recommendations...")
  *         users = [k for k in self.dataset.uid_map.keys()]             # <<<<<<<<<<<<<<
  *         rec_df = self.model.recommend_to_multiple_users(users, self.rec_k) ##to be updated
  *         print("Finished creating recommendations...")
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 169, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 195, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_dataset); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 169, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_dataset); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 195, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_uid_map); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 169, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_uid_map); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 195, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_keys); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 169, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_keys); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 195, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_t_4 = NULL;
@@ -7705,16 +7704,16 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   }
   __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 169, __pyx_L1_error)
+  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 195, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (likely(PyList_CheckExact(__pyx_t_2)) || PyTuple_CheckExact(__pyx_t_2)) {
     __pyx_t_3 = __pyx_t_2; __Pyx_INCREF(__pyx_t_3); __pyx_t_5 = 0;
     __pyx_t_6 = NULL;
   } else {
-    __pyx_t_5 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 169, __pyx_L1_error)
+    __pyx_t_5 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 195, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_6 = Py_TYPE(__pyx_t_3)->tp_iternext; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 169, __pyx_L1_error)
+    __pyx_t_6 = Py_TYPE(__pyx_t_3)->tp_iternext; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 195, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   for (;;) {
@@ -7722,17 +7721,17 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
       if (likely(PyList_CheckExact(__pyx_t_3))) {
         if (__pyx_t_5 >= PyList_GET_SIZE(__pyx_t_3)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_2 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_5); __Pyx_INCREF(__pyx_t_2); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 169, __pyx_L1_error)
+        __pyx_t_2 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_5); __Pyx_INCREF(__pyx_t_2); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 195, __pyx_L1_error)
         #else
-        __pyx_t_2 = PySequence_ITEM(__pyx_t_3, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 169, __pyx_L1_error)
+        __pyx_t_2 = PySequence_ITEM(__pyx_t_3, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 195, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         #endif
       } else {
         if (__pyx_t_5 >= PyTuple_GET_SIZE(__pyx_t_3)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_3, __pyx_t_5); __Pyx_INCREF(__pyx_t_2); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 169, __pyx_L1_error)
+        __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_3, __pyx_t_5); __Pyx_INCREF(__pyx_t_2); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 195, __pyx_L1_error)
         #else
-        __pyx_t_2 = PySequence_ITEM(__pyx_t_3, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 169, __pyx_L1_error)
+        __pyx_t_2 = PySequence_ITEM(__pyx_t_3, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 195, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         #endif
       }
@@ -7742,7 +7741,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 169, __pyx_L1_error)
+          else __PYX_ERR(0, 195, __pyx_L1_error)
         }
         break;
       }
@@ -7750,25 +7749,25 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
     }
     __Pyx_XDECREF_SET(__pyx_v_k, __pyx_t_2);
     __pyx_t_2 = 0;
-    if (unlikely(__Pyx_ListComp_Append(__pyx_t_1, (PyObject*)__pyx_v_k))) __PYX_ERR(0, 169, __pyx_L1_error)
+    if (unlikely(__Pyx_ListComp_Append(__pyx_t_1, (PyObject*)__pyx_v_k))) __PYX_ERR(0, 195, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_v_users = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":170
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":196
  *         print("Started creating recommendations...")
  *         users = [k for k in self.dataset.uid_map.keys()]
  *         rec_df = self.model.recommend_to_multiple_users(users, self.rec_k) ##to be updated             # <<<<<<<<<<<<<<
  *         print("Finished creating recommendations...")
  *         return rec_df[['user_id', 'item_id']]
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 170, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_model); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 196, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_recommend_to_multiple_users); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 170, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_recommend_to_multiple_users); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 196, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_rec_k); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 170, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_rec_k); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 196, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   __pyx_t_7 = 0;
@@ -7785,7 +7784,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_2)) {
     PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_v_users, __pyx_t_3};
-    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 170, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 196, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -7794,14 +7793,14 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
     PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_v_users, __pyx_t_3};
-    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 170, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 196, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   } else
   #endif
   {
-    __pyx_t_8 = PyTuple_New(2+__pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 170, __pyx_L1_error)
+    __pyx_t_8 = PyTuple_New(2+__pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 196, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
     if (__pyx_t_4) {
       __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_4); __pyx_t_4 = NULL;
@@ -7812,7 +7811,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
     __Pyx_GIVEREF(__pyx_t_3);
     PyTuple_SET_ITEM(__pyx_t_8, 1+__pyx_t_7, __pyx_t_3);
     __pyx_t_3 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_8, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 170, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_8, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 196, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   }
@@ -7820,21 +7819,21 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   __pyx_v_rec_df = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":171
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":197
  *         users = [k for k in self.dataset.uid_map.keys()]
  *         rec_df = self.model.recommend_to_multiple_users(users, self.rec_k) ##to be updated
  *         print("Finished creating recommendations...")             # <<<<<<<<<<<<<<
  *         return rec_df[['user_id', 'item_id']]
  */
-  if (__Pyx_PrintOne(0, __pyx_kp_s_Finished_creating_recommendation) < 0) __PYX_ERR(0, 171, __pyx_L1_error)
+  if (__Pyx_PrintOne(0, __pyx_kp_s_Finished_creating_recommendation) < 0) __PYX_ERR(0, 197, __pyx_L1_error)
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":172
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":198
  *         rec_df = self.model.recommend_to_multiple_users(users, self.rec_k) ##to be updated
  *         print("Finished creating recommendations...")
  *         return rec_df[['user_id', 'item_id']]             # <<<<<<<<<<<<<<
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyList_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 172, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 198, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_n_s_user_id);
   __Pyx_GIVEREF(__pyx_n_s_user_id);
@@ -7842,14 +7841,14 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   __Pyx_INCREF(__pyx_n_s_item_id);
   __Pyx_GIVEREF(__pyx_n_s_item_id);
   PyList_SET_ITEM(__pyx_t_1, 1, __pyx_n_s_item_id);
-  __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_rec_df, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 172, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_rec_df, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 198, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":166
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":192
  *         return [precision, recall, ff1], [precision_list, recall_list, f1_list]
  * 
  *     def create_recommendations(self):             # <<<<<<<<<<<<<<
@@ -7864,7 +7863,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_8);
-  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.feature_precision_recall.FPR.create_recommendations", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cornac.metrics_explainer.fpr.metric_exp_fpr.Metric_Exp_FPR.create_recommendations", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_users);
@@ -7875,7 +7874,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   return __pyx_r;
 }
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":734
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":734
  * ctypedef npy_cdouble     complex_t
  * 
  * cdef inline object PyArray_MultiIterNew1(a):             # <<<<<<<<<<<<<<
@@ -7892,7 +7891,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew1", 0);
 
-  /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":735
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":735
  * 
  * cdef inline object PyArray_MultiIterNew1(a):
  *     return PyArray_MultiIterNew(1, <void*>a)             # <<<<<<<<<<<<<<
@@ -7906,7 +7905,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":734
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":734
  * ctypedef npy_cdouble     complex_t
  * 
  * cdef inline object PyArray_MultiIterNew1(a):             # <<<<<<<<<<<<<<
@@ -7925,7 +7924,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   return __pyx_r;
 }
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":737
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":737
  *     return PyArray_MultiIterNew(1, <void*>a)
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):             # <<<<<<<<<<<<<<
@@ -7942,7 +7941,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew2", 0);
 
-  /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":738
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":738
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)             # <<<<<<<<<<<<<<
@@ -7956,7 +7955,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":737
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":737
  *     return PyArray_MultiIterNew(1, <void*>a)
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):             # <<<<<<<<<<<<<<
@@ -7975,7 +7974,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   return __pyx_r;
 }
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":740
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":740
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):             # <<<<<<<<<<<<<<
@@ -7992,7 +7991,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew3", 0);
 
-  /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":741
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":741
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)             # <<<<<<<<<<<<<<
@@ -8006,7 +8005,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":740
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":740
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):             # <<<<<<<<<<<<<<
@@ -8025,7 +8024,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   return __pyx_r;
 }
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":743
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":743
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):             # <<<<<<<<<<<<<<
@@ -8042,7 +8041,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew4", 0);
 
-  /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":744
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":744
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)             # <<<<<<<<<<<<<<
@@ -8056,7 +8055,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":743
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":743
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):             # <<<<<<<<<<<<<<
@@ -8075,7 +8074,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   return __pyx_r;
 }
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":746
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":746
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):             # <<<<<<<<<<<<<<
@@ -8092,7 +8091,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew5", 0);
 
-  /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":747
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":747
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)             # <<<<<<<<<<<<<<
@@ -8106,7 +8105,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":746
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":746
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):             # <<<<<<<<<<<<<<
@@ -8125,7 +8124,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   return __pyx_r;
 }
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":749
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":749
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):             # <<<<<<<<<<<<<<
@@ -8139,7 +8138,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("PyDataType_SHAPE", 0);
 
-  /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":750
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":750
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):
  *     if PyDataType_HASSUBARRAY(d):             # <<<<<<<<<<<<<<
@@ -8149,7 +8148,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
   __pyx_t_1 = (PyDataType_HASSUBARRAY(__pyx_v_d) != 0);
   if (__pyx_t_1) {
 
-    /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":751
+    /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":751
  * cdef inline tuple PyDataType_SHAPE(dtype d):
  *     if PyDataType_HASSUBARRAY(d):
  *         return <tuple>d.subarray.shape             # <<<<<<<<<<<<<<
@@ -8161,7 +8160,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
     __pyx_r = ((PyObject*)__pyx_v_d->subarray->shape);
     goto __pyx_L0;
 
-    /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":750
+    /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":750
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):
  *     if PyDataType_HASSUBARRAY(d):             # <<<<<<<<<<<<<<
@@ -8170,7 +8169,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
  */
   }
 
-  /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":753
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":753
  *         return <tuple>d.subarray.shape
  *     else:
  *         return ()             # <<<<<<<<<<<<<<
@@ -8184,7 +8183,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
     goto __pyx_L0;
   }
 
-  /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":749
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":749
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):             # <<<<<<<<<<<<<<
@@ -8199,7 +8198,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
   return __pyx_r;
 }
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":928
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":928
  *     int _import_umath() except -1
  * 
  * cdef inline void set_array_base(ndarray arr, object base):             # <<<<<<<<<<<<<<
@@ -8211,7 +8210,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("set_array_base", 0);
 
-  /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":929
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":929
  * 
  * cdef inline void set_array_base(ndarray arr, object base):
  *     Py_INCREF(base) # important to do this before stealing the reference below!             # <<<<<<<<<<<<<<
@@ -8220,7 +8219,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
   Py_INCREF(__pyx_v_base);
 
-  /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":930
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":930
  * cdef inline void set_array_base(ndarray arr, object base):
  *     Py_INCREF(base) # important to do this before stealing the reference below!
  *     PyArray_SetBaseObject(arr, base)             # <<<<<<<<<<<<<<
@@ -8229,7 +8228,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
   (void)(PyArray_SetBaseObject(__pyx_v_arr, __pyx_v_base));
 
-  /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":928
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":928
  *     int _import_umath() except -1
  * 
  * cdef inline void set_array_base(ndarray arr, object base):             # <<<<<<<<<<<<<<
@@ -8241,7 +8240,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   __Pyx_RefNannyFinishContext();
 }
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":932
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":932
  *     PyArray_SetBaseObject(arr, base)
  * 
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
@@ -8256,7 +8255,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("get_array_base", 0);
 
-  /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":933
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":933
  * 
  * cdef inline object get_array_base(ndarray arr):
  *     base = PyArray_BASE(arr)             # <<<<<<<<<<<<<<
@@ -8265,7 +8264,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
  */
   __pyx_v_base = PyArray_BASE(__pyx_v_arr);
 
-  /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":934
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":934
  * cdef inline object get_array_base(ndarray arr):
  *     base = PyArray_BASE(arr)
  *     if base is NULL:             # <<<<<<<<<<<<<<
@@ -8275,7 +8274,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   __pyx_t_1 = ((__pyx_v_base == NULL) != 0);
   if (__pyx_t_1) {
 
-    /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":935
+    /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":935
  *     base = PyArray_BASE(arr)
  *     if base is NULL:
  *         return None             # <<<<<<<<<<<<<<
@@ -8286,7 +8285,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
     __pyx_r = Py_None; __Pyx_INCREF(Py_None);
     goto __pyx_L0;
 
-    /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":934
+    /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":934
  * cdef inline object get_array_base(ndarray arr):
  *     base = PyArray_BASE(arr)
  *     if base is NULL:             # <<<<<<<<<<<<<<
@@ -8295,7 +8294,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
  */
   }
 
-  /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":936
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":936
  *     if base is NULL:
  *         return None
  *     return <object>base             # <<<<<<<<<<<<<<
@@ -8307,7 +8306,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   __pyx_r = ((PyObject *)__pyx_v_base);
   goto __pyx_L0;
 
-  /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":932
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":932
  *     PyArray_SetBaseObject(arr, base)
  * 
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
@@ -8322,7 +8321,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   return __pyx_r;
 }
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":940
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":940
  * # Versions of the import_* functions which are more suitable for
  * # Cython code.
  * cdef inline int import_array() except -1:             # <<<<<<<<<<<<<<
@@ -8346,7 +8345,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("import_array", 0);
 
-  /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":941
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":941
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -8362,7 +8361,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":942
+      /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":942
  * cdef inline int import_array() except -1:
  *     try:
  *         __pyx_import_array()             # <<<<<<<<<<<<<<
@@ -8371,7 +8370,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
  */
       __pyx_t_4 = _import_array(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(1, 942, __pyx_L3_error)
 
-      /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":941
+      /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":941
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -8385,7 +8384,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     goto __pyx_L8_try_end;
     __pyx_L3_error:;
 
-    /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":943
+    /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":943
  *     try:
  *         __pyx_import_array()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -8400,7 +8399,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_7);
 
-      /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":944
+      /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":944
  *         __pyx_import_array()
  *     except Exception:
  *         raise ImportError("numpy.core.multiarray failed to import")             # <<<<<<<<<<<<<<
@@ -8416,7 +8415,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":941
+    /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":941
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -8431,7 +8430,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     __pyx_L8_try_end:;
   }
 
-  /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":940
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":940
  * # Versions of the import_* functions which are more suitable for
  * # Cython code.
  * cdef inline int import_array() except -1:             # <<<<<<<<<<<<<<
@@ -8454,7 +8453,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
   return __pyx_r;
 }
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":946
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":946
  *         raise ImportError("numpy.core.multiarray failed to import")
  * 
  * cdef inline int import_umath() except -1:             # <<<<<<<<<<<<<<
@@ -8478,7 +8477,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("import_umath", 0);
 
-  /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":947
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":947
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -8494,7 +8493,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":948
+      /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":948
  * cdef inline int import_umath() except -1:
  *     try:
  *         _import_umath()             # <<<<<<<<<<<<<<
@@ -8503,7 +8502,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
  */
       __pyx_t_4 = _import_umath(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(1, 948, __pyx_L3_error)
 
-      /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":947
+      /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":947
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -8517,7 +8516,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     goto __pyx_L8_try_end;
     __pyx_L3_error:;
 
-    /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":949
+    /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":949
  *     try:
  *         _import_umath()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -8532,7 +8531,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_7);
 
-      /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":950
+      /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":950
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -8548,7 +8547,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":947
+    /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":947
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -8563,7 +8562,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     __pyx_L8_try_end:;
   }
 
-  /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":946
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":946
  *         raise ImportError("numpy.core.multiarray failed to import")
  * 
  * cdef inline int import_umath() except -1:             # <<<<<<<<<<<<<<
@@ -8586,7 +8585,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
   return __pyx_r;
 }
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":952
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":952
  *         raise ImportError("numpy.core.umath failed to import")
  * 
  * cdef inline int import_ufunc() except -1:             # <<<<<<<<<<<<<<
@@ -8610,7 +8609,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("import_ufunc", 0);
 
-  /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":953
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":953
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -8626,7 +8625,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":954
+      /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":954
  * cdef inline int import_ufunc() except -1:
  *     try:
  *         _import_umath()             # <<<<<<<<<<<<<<
@@ -8635,7 +8634,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
  */
       __pyx_t_4 = _import_umath(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(1, 954, __pyx_L3_error)
 
-      /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":953
+      /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":953
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -8649,7 +8648,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     goto __pyx_L8_try_end;
     __pyx_L3_error:;
 
-    /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":955
+    /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":955
  *     try:
  *         _import_umath()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -8664,7 +8663,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_7);
 
-      /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":956
+      /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":956
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -8680,7 +8679,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":953
+    /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":953
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -8695,7 +8694,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     __pyx_L8_try_end:;
   }
 
-  /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":952
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":952
  *         raise ImportError("numpy.core.umath failed to import")
  * 
  * cdef inline int import_ufunc() except -1:             # <<<<<<<<<<<<<<
@@ -8718,7 +8717,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
   return __pyx_r;
 }
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":966
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":966
  * 
  * 
  * cdef inline bint is_timedelta64_object(object obj):             # <<<<<<<<<<<<<<
@@ -8731,7 +8730,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_timedelta64_object(PyObject *__pyx_v_
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("is_timedelta64_object", 0);
 
-  /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":978
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":978
  *     bool
  *     """
  *     return PyObject_TypeCheck(obj, &PyTimedeltaArrType_Type)             # <<<<<<<<<<<<<<
@@ -8741,7 +8740,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_timedelta64_object(PyObject *__pyx_v_
   __pyx_r = PyObject_TypeCheck(__pyx_v_obj, (&PyTimedeltaArrType_Type));
   goto __pyx_L0;
 
-  /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":966
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":966
  * 
  * 
  * cdef inline bint is_timedelta64_object(object obj):             # <<<<<<<<<<<<<<
@@ -8755,7 +8754,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_timedelta64_object(PyObject *__pyx_v_
   return __pyx_r;
 }
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":981
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":981
  * 
  * 
  * cdef inline bint is_datetime64_object(object obj):             # <<<<<<<<<<<<<<
@@ -8768,7 +8767,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_o
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("is_datetime64_object", 0);
 
-  /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":993
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":993
  *     bool
  *     """
  *     return PyObject_TypeCheck(obj, &PyDatetimeArrType_Type)             # <<<<<<<<<<<<<<
@@ -8778,7 +8777,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_o
   __pyx_r = PyObject_TypeCheck(__pyx_v_obj, (&PyDatetimeArrType_Type));
   goto __pyx_L0;
 
-  /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":981
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":981
  * 
  * 
  * cdef inline bint is_datetime64_object(object obj):             # <<<<<<<<<<<<<<
@@ -8792,7 +8791,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_o
   return __pyx_r;
 }
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":996
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":996
  * 
  * 
  * cdef inline npy_datetime get_datetime64_value(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -8803,7 +8802,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_o
 static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *__pyx_v_obj) {
   npy_datetime __pyx_r;
 
-  /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":1003
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":1003
  *     also needed.  That can be found using `get_datetime64_unit`.
  *     """
  *     return (<PyDatetimeScalarObject*>obj).obval             # <<<<<<<<<<<<<<
@@ -8813,7 +8812,7 @@ static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *
   __pyx_r = ((PyDatetimeScalarObject *)__pyx_v_obj)->obval;
   goto __pyx_L0;
 
-  /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":996
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":996
  * 
  * 
  * cdef inline npy_datetime get_datetime64_value(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -8826,7 +8825,7 @@ static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *
   return __pyx_r;
 }
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":1006
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":1006
  * 
  * 
  * cdef inline npy_timedelta get_timedelta64_value(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -8837,7 +8836,7 @@ static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *
 static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject *__pyx_v_obj) {
   npy_timedelta __pyx_r;
 
-  /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":1010
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":1010
  *     returns the int64 value underlying scalar numpy timedelta64 object
  *     """
  *     return (<PyTimedeltaScalarObject*>obj).obval             # <<<<<<<<<<<<<<
@@ -8847,7 +8846,7 @@ static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject
   __pyx_r = ((PyTimedeltaScalarObject *)__pyx_v_obj)->obval;
   goto __pyx_L0;
 
-  /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":1006
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":1006
  * 
  * 
  * cdef inline npy_timedelta get_timedelta64_value(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -8860,7 +8859,7 @@ static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject
   return __pyx_r;
 }
 
-/* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":1013
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":1013
  * 
  * 
  * cdef inline NPY_DATETIMEUNIT get_datetime64_unit(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -8871,7 +8870,7 @@ static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject
 static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObject *__pyx_v_obj) {
   NPY_DATETIMEUNIT __pyx_r;
 
-  /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":1017
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":1017
  *     returns the unit part of the dtype for a numpy datetime64 object.
  *     """
  *     return <NPY_DATETIMEUNIT>(<PyDatetimeScalarObject*>obj).obmeta.base             # <<<<<<<<<<<<<<
@@ -8879,7 +8878,7 @@ static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObjec
   __pyx_r = ((NPY_DATETIMEUNIT)((PyDatetimeScalarObject *)__pyx_v_obj)->obmeta.base);
   goto __pyx_L0;
 
-  /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":1013
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":1013
  * 
  * 
  * cdef inline NPY_DATETIMEUNIT get_datetime64_unit(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -8892,14 +8891,14 @@ static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObjec
   return __pyx_r;
 }
 
-static struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer *__pyx_freelist_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer[8];
-static int __pyx_freecount_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer = 0;
+static struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer *__pyx_freelist_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer[8];
+static int __pyx_freecount_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer = 0;
 
-static PyObject *__pyx_tp_new_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
+static PyObject *__pyx_tp_new_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
   PyObject *o;
-  if (CYTHON_COMPILING_IN_CPYTHON && likely((__pyx_freecount_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer > 0) & (t->tp_basicsize == sizeof(struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer)))) {
-    o = (PyObject*)__pyx_freelist_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer[--__pyx_freecount_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer];
-    memset(o, 0, sizeof(struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer));
+  if (CYTHON_COMPILING_IN_CPYTHON && likely((__pyx_freecount_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer > 0) & (t->tp_basicsize == sizeof(struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer)))) {
+    o = (PyObject*)__pyx_freelist_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer[--__pyx_freecount_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer];
+    memset(o, 0, sizeof(struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer));
     (void) PyObject_INIT(o, t);
     PyObject_GC_Track(o);
   } else {
@@ -8909,21 +8908,21 @@ static PyObject *__pyx_tp_new_6cornac_17metrics_explainer_3fpr_24feature_precisi
   return o;
 }
 
-static void __pyx_tp_dealloc_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer(PyObject *o) {
-  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer *p = (struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer *)o;
+static void __pyx_tp_dealloc_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer(PyObject *o) {
+  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer *p = (struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer *)o;
   PyObject_GC_UnTrack(o);
   Py_CLEAR(p->__pyx_v_extract_gt);
   Py_CLEAR(p->__pyx_v_self);
-  if (CYTHON_COMPILING_IN_CPYTHON && ((__pyx_freecount_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer < 8) & (Py_TYPE(o)->tp_basicsize == sizeof(struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer)))) {
-    __pyx_freelist_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer[__pyx_freecount_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer++] = ((struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer *)o);
+  if (CYTHON_COMPILING_IN_CPYTHON && ((__pyx_freecount_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer < 8) & (Py_TYPE(o)->tp_basicsize == sizeof(struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer)))) {
+    __pyx_freelist_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer[__pyx_freecount_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer++] = ((struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer *)o);
   } else {
     (*Py_TYPE(o)->tp_free)(o);
   }
 }
 
-static int __pyx_tp_traverse_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer(PyObject *o, visitproc v, void *a) {
+static int __pyx_tp_traverse_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer(PyObject *o, visitproc v, void *a) {
   int e;
-  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer *p = (struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer *)o;
+  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer *p = (struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer *)o;
   if (p->__pyx_v_extract_gt) {
     e = (*v)(p->__pyx_v_extract_gt, a); if (e) return e;
   }
@@ -8933,9 +8932,9 @@ static int __pyx_tp_traverse_6cornac_17metrics_explainer_3fpr_24feature_precisio
   return 0;
 }
 
-static int __pyx_tp_clear_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer(PyObject *o) {
+static int __pyx_tp_clear_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer(PyObject *o) {
   PyObject* tmp;
-  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer *p = (struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer *)o;
+  struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer *p = (struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer *)o;
   tmp = ((PyObject*)p->__pyx_v_extract_gt);
   p->__pyx_v_extract_gt = Py_None; Py_INCREF(Py_None);
   Py_XDECREF(tmp);
@@ -8945,12 +8944,12 @@ static int __pyx_tp_clear_6cornac_17metrics_explainer_3fpr_24feature_precision_r
   return 0;
 }
 
-static PyTypeObject __pyx_type_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer = {
+static PyTypeObject __pyx_type_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer = {
   PyVarObject_HEAD_INIT(0, 0)
-  "cornac.metrics_explainer.fpr.feature_precision_recall.__pyx_scope_struct__create_ground_truth_limer", /*tp_name*/
-  sizeof(struct __pyx_obj_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer), /*tp_basicsize*/
+  "cornac.metrics_explainer.fpr.metric_exp_fpr.__pyx_scope_struct__create_ground_truth_limer", /*tp_name*/
+  sizeof(struct __pyx_obj_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer, /*tp_dealloc*/
+  __pyx_tp_dealloc_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer, /*tp_dealloc*/
   #if PY_VERSION_HEX < 0x030800b4
   0, /*tp_print*/
   #endif
@@ -8977,8 +8976,8 @@ static PyTypeObject __pyx_type_6cornac_17metrics_explainer_3fpr_24feature_precis
   0, /*tp_as_buffer*/
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_HAVE_GC, /*tp_flags*/
   0, /*tp_doc*/
-  __pyx_tp_traverse_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer, /*tp_traverse*/
-  __pyx_tp_clear_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer, /*tp_clear*/
+  __pyx_tp_traverse_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer, /*tp_traverse*/
+  __pyx_tp_clear_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer, /*tp_clear*/
   0, /*tp_richcompare*/
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
@@ -8993,7 +8992,7 @@ static PyTypeObject __pyx_type_6cornac_17metrics_explainer_3fpr_24feature_precis
   0, /*tp_dictoffset*/
   0, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer, /*tp_new*/
+  __pyx_tp_new_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -9024,17 +9023,17 @@ static PyMethodDef __pyx_methods[] = {
 #if PY_MAJOR_VERSION >= 3
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 static PyObject* __pyx_pymod_create(PyObject *spec, PyModuleDef *def); /*proto*/
-static int __pyx_pymod_exec_feature_precision_recall(PyObject* module); /*proto*/
+static int __pyx_pymod_exec_metric_exp_fpr(PyObject* module); /*proto*/
 static PyModuleDef_Slot __pyx_moduledef_slots[] = {
   {Py_mod_create, (void*)__pyx_pymod_create},
-  {Py_mod_exec, (void*)__pyx_pymod_exec_feature_precision_recall},
+  {Py_mod_exec, (void*)__pyx_pymod_exec_metric_exp_fpr},
   {0, NULL}
 };
 #endif
 
 static struct PyModuleDef __pyx_moduledef = {
     PyModuleDef_HEAD_INIT,
-    "feature_precision_recall",
+    "metric_exp_fpr",
     0, /* m_doc */
   #if CYTHON_PEP489_MULTI_PHASE_INIT
     0, /* m_size */
@@ -9066,26 +9065,25 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_A, __pyx_k_A, sizeof(__pyx_k_A), 0, 0, 1, 1},
   {&__pyx_n_s_DataFrame, __pyx_k_DataFrame, sizeof(__pyx_k_DataFrame), 0, 0, 1, 1},
   {&__pyx_n_s_EFM, __pyx_k_EFM, sizeof(__pyx_k_EFM), 0, 0, 1, 1},
-  {&__pyx_n_s_FPR, __pyx_k_FPR, sizeof(__pyx_k_FPR), 0, 0, 1, 1},
-  {&__pyx_n_s_FPR___init, __pyx_k_FPR___init, sizeof(__pyx_k_FPR___init), 0, 0, 1, 1},
-  {&__pyx_n_s_FPR_compute, __pyx_k_FPR_compute, sizeof(__pyx_k_FPR_compute), 0, 0, 1, 1},
-  {&__pyx_n_s_FPR_creat_grount_truth_efm, __pyx_k_FPR_creat_grount_truth_efm, sizeof(__pyx_k_FPR_creat_grount_truth_efm), 0, 0, 1, 1},
-  {&__pyx_n_s_FPR_creat_grount_truth_efm_local, __pyx_k_FPR_creat_grount_truth_efm_local, sizeof(__pyx_k_FPR_creat_grount_truth_efm_local), 0, 0, 1, 1},
-  {&__pyx_n_s_FPR_create_ground_truth_limer, __pyx_k_FPR_create_ground_truth_limer, sizeof(__pyx_k_FPR_create_ground_truth_limer), 0, 0, 1, 1},
-  {&__pyx_n_s_FPR_create_ground_truth_limer_lo, __pyx_k_FPR_create_ground_truth_limer_lo, sizeof(__pyx_k_FPR_create_ground_truth_limer_lo), 0, 0, 1, 1},
-  {&__pyx_n_s_FPR_create_ground_truth_limer_lo_2, __pyx_k_FPR_create_ground_truth_limer_lo_2, sizeof(__pyx_k_FPR_create_ground_truth_limer_lo_2), 0, 0, 1, 1},
-  {&__pyx_n_s_FPR_create_ground_truth_limer_lo_3, __pyx_k_FPR_create_ground_truth_limer_lo_3, sizeof(__pyx_k_FPR_create_ground_truth_limer_lo_3), 0, 0, 1, 1},
-  {&__pyx_n_s_FPR_create_ground_truth_sentimen, __pyx_k_FPR_create_ground_truth_sentimen, sizeof(__pyx_k_FPR_create_ground_truth_sentimen), 0, 0, 1, 1},
-  {&__pyx_n_s_FPR_create_recommendations, __pyx_k_FPR_create_recommendations, sizeof(__pyx_k_FPR_create_recommendations), 0, 0, 1, 1},
-  {&__pyx_n_s_FPR_transform_format, __pyx_k_FPR_transform_format, sizeof(__pyx_k_FPR_transform_format), 0, 0, 1, 1},
   {&__pyx_kp_s_Finished_creating_recommendation, __pyx_k_Finished_creating_recommendation, sizeof(__pyx_k_Finished_creating_recommendation), 0, 0, 1, 0},
   {&__pyx_n_s_ImportError, __pyx_k_ImportError, sizeof(__pyx_k_ImportError), 0, 0, 1, 1},
   {&__pyx_n_s_LIMERS, __pyx_k_LIMERS, sizeof(__pyx_k_LIMERS), 0, 0, 1, 1},
   {&__pyx_n_s_MTER, __pyx_k_MTER, sizeof(__pyx_k_MTER), 0, 0, 1, 1},
-  {&__pyx_n_s_Metrics, __pyx_k_Metrics, sizeof(__pyx_k_Metrics), 0, 0, 1, 1},
+  {&__pyx_n_s_Metric_Exp, __pyx_k_Metric_Exp, sizeof(__pyx_k_Metric_Exp), 0, 0, 1, 1},
+  {&__pyx_n_s_Metric_Exp_FPR, __pyx_k_Metric_Exp_FPR, sizeof(__pyx_k_Metric_Exp_FPR), 0, 0, 1, 1},
+  {&__pyx_n_s_Metric_Exp_FPR___init, __pyx_k_Metric_Exp_FPR___init, sizeof(__pyx_k_Metric_Exp_FPR___init), 0, 0, 1, 1},
+  {&__pyx_n_s_Metric_Exp_FPR_compute, __pyx_k_Metric_Exp_FPR_compute, sizeof(__pyx_k_Metric_Exp_FPR_compute), 0, 0, 1, 1},
+  {&__pyx_n_s_Metric_Exp_FPR_creat_grount_trut, __pyx_k_Metric_Exp_FPR_creat_grount_trut, sizeof(__pyx_k_Metric_Exp_FPR_creat_grount_trut), 0, 0, 1, 1},
+  {&__pyx_n_s_Metric_Exp_FPR_creat_grount_trut_2, __pyx_k_Metric_Exp_FPR_creat_grount_trut_2, sizeof(__pyx_k_Metric_Exp_FPR_creat_grount_trut_2), 0, 0, 1, 1},
+  {&__pyx_n_s_Metric_Exp_FPR_create_ground_tru, __pyx_k_Metric_Exp_FPR_create_ground_tru, sizeof(__pyx_k_Metric_Exp_FPR_create_ground_tru), 0, 0, 1, 1},
+  {&__pyx_n_s_Metric_Exp_FPR_create_ground_tru_2, __pyx_k_Metric_Exp_FPR_create_ground_tru_2, sizeof(__pyx_k_Metric_Exp_FPR_create_ground_tru_2), 0, 0, 1, 1},
+  {&__pyx_n_s_Metric_Exp_FPR_create_ground_tru_3, __pyx_k_Metric_Exp_FPR_create_ground_tru_3, sizeof(__pyx_k_Metric_Exp_FPR_create_ground_tru_3), 0, 0, 1, 1},
+  {&__pyx_n_s_Metric_Exp_FPR_create_ground_tru_4, __pyx_k_Metric_Exp_FPR_create_ground_tru_4, sizeof(__pyx_k_Metric_Exp_FPR_create_ground_tru_4), 0, 0, 1, 1},
+  {&__pyx_n_s_Metric_Exp_FPR_create_ground_tru_5, __pyx_k_Metric_Exp_FPR_create_ground_tru_5, sizeof(__pyx_k_Metric_Exp_FPR_create_ground_tru_5), 0, 0, 1, 1},
+  {&__pyx_n_s_Metric_Exp_FPR_create_recommenda, __pyx_k_Metric_Exp_FPR_create_recommenda, sizeof(__pyx_k_Metric_Exp_FPR_create_recommenda), 0, 0, 1, 1},
+  {&__pyx_n_s_Metric_Exp_FPR_transform_format, __pyx_k_Metric_Exp_FPR_transform_format, sizeof(__pyx_k_Metric_Exp_FPR_transform_format), 0, 0, 1, 1},
   {&__pyx_kp_s_Model_not_supported, __pyx_k_Model_not_supported, sizeof(__pyx_k_Model_not_supported), 0, 0, 1, 0},
   {&__pyx_kp_s_Please_provide_the_path_of_the_g, __pyx_k_Please_provide_the_path_of_the_g, sizeof(__pyx_k_Please_provide_the_path_of_the_g), 0, 0, 1, 0},
-  {&__pyx_n_s_PrecisionRecall, __pyx_k_PrecisionRecall, sizeof(__pyx_k_PrecisionRecall), 0, 0, 1, 1},
   {&__pyx_n_s_Series, __pyx_k_Series, sizeof(__pyx_k_Series), 0, 0, 1, 1},
   {&__pyx_kp_s_Start_evaluation, __pyx_k_Start_evaluation, sizeof(__pyx_k_Start_evaluation), 0, 0, 1, 0},
   {&__pyx_kp_s_Started_creating_recommendations, __pyx_k_Started_creating_recommendations, sizeof(__pyx_k_Started_creating_recommendations), 0, 0, 1, 0},
@@ -9105,8 +9103,8 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_combined_exp, __pyx_k_combined_exp, sizeof(__pyx_k_combined_exp), 0, 0, 1, 1},
   {&__pyx_n_s_compute, __pyx_k_compute, sizeof(__pyx_k_compute), 0, 0, 1, 1},
   {&__pyx_n_s_cornac_datasets, __pyx_k_cornac_datasets, sizeof(__pyx_k_cornac_datasets), 0, 0, 1, 1},
-  {&__pyx_n_s_cornac_metrics_explainer_fpr_fea, __pyx_k_cornac_metrics_explainer_fpr_fea, sizeof(__pyx_k_cornac_metrics_explainer_fpr_fea), 0, 0, 1, 1},
-  {&__pyx_kp_s_cornac_metrics_explainer_fpr_fea_2, __pyx_k_cornac_metrics_explainer_fpr_fea_2, sizeof(__pyx_k_cornac_metrics_explainer_fpr_fea_2), 0, 0, 1, 0},
+  {&__pyx_n_s_cornac_metrics_explainer_fpr_met, __pyx_k_cornac_metrics_explainer_fpr_met, sizeof(__pyx_k_cornac_metrics_explainer_fpr_met), 0, 0, 1, 1},
+  {&__pyx_kp_s_cornac_metrics_explainer_fpr_met_2, __pyx_k_cornac_metrics_explainer_fpr_met_2, sizeof(__pyx_k_cornac_metrics_explainer_fpr_met_2), 0, 0, 1, 0},
   {&__pyx_n_s_creat_grount_truth_efm, __pyx_k_creat_grount_truth_efm, sizeof(__pyx_k_creat_grount_truth_efm), 0, 0, 1, 1},
   {&__pyx_n_s_create_ground_truth_limer, __pyx_k_create_ground_truth_limer, sizeof(__pyx_k_create_ground_truth_limer), 0, 0, 1, 1},
   {&__pyx_n_s_create_ground_truth_sentiment, __pyx_k_create_ground_truth_sentiment, sizeof(__pyx_k_create_ground_truth_sentiment), 0, 0, 1, 1},
@@ -9169,7 +9167,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_main, __pyx_k_main, sizeof(__pyx_k_main), 0, 0, 1, 1},
   {&__pyx_n_s_mean, __pyx_k_mean, sizeof(__pyx_k_mean), 0, 0, 1, 1},
   {&__pyx_n_s_metaclass, __pyx_k_metaclass, sizeof(__pyx_k_metaclass), 0, 0, 1, 1},
-  {&__pyx_n_s_metrics, __pyx_k_metrics, sizeof(__pyx_k_metrics), 0, 0, 1, 1},
+  {&__pyx_n_s_metric_exp, __pyx_k_metric_exp, sizeof(__pyx_k_metric_exp), 0, 0, 1, 1},
   {&__pyx_n_s_model, __pyx_k_model, sizeof(__pyx_k_model), 0, 0, 1, 1},
   {&__pyx_n_s_module, __pyx_k_module, sizeof(__pyx_k_module), 0, 0, 1, 1},
   {&__pyx_n_s_name, __pyx_k_name, sizeof(__pyx_k_name), 0, 0, 1, 1},
@@ -9234,11 +9232,11 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {0, 0, 0, 0, 0, 0, 0}
 };
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_super = __Pyx_GetBuiltinName(__pyx_n_s_super); if (!__pyx_builtin_super) __PYX_ERR(0, 14, __pyx_L1_error)
-  __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(0, 19, __pyx_L1_error)
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 48, __pyx_L1_error)
-  __pyx_builtin_zip = __Pyx_GetBuiltinName(__pyx_n_s_zip); if (!__pyx_builtin_zip) __PYX_ERR(0, 58, __pyx_L1_error)
-  __pyx_builtin_sorted = __Pyx_GetBuiltinName(__pyx_n_s_sorted); if (!__pyx_builtin_sorted) __PYX_ERR(0, 59, __pyx_L1_error)
+  __pyx_builtin_super = __Pyx_GetBuiltinName(__pyx_n_s_super); if (!__pyx_builtin_super) __PYX_ERR(0, 29, __pyx_L1_error)
+  __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(0, 34, __pyx_L1_error)
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 63, __pyx_L1_error)
+  __pyx_builtin_zip = __Pyx_GetBuiltinName(__pyx_n_s_zip); if (!__pyx_builtin_zip) __PYX_ERR(0, 73, __pyx_L1_error)
+  __pyx_builtin_sorted = __Pyx_GetBuiltinName(__pyx_n_s_sorted); if (!__pyx_builtin_sorted) __PYX_ERR(0, 74, __pyx_L1_error)
   __pyx_builtin_ImportError = __Pyx_GetBuiltinName(__pyx_n_s_ImportError); if (!__pyx_builtin_ImportError) __PYX_ERR(1, 944, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
@@ -9249,92 +9247,92 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":19
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":34
  *     def create_ground_truth_sentiment(self):
  *         if self.fpath is None:
  *             raise ValueError("Please provide the path of the ground truth file.")             # <<<<<<<<<<<<<<
  *         u_i_all = pd.DataFrame(goodreads.load_sentiment(self.fpath), columns=['user_id', 'item_id', 'explanations'])
  *         u_i_all['explanations'] = u_i_all['explanations'].apply(self.transform_format)
  */
-  __pyx_tuple_ = PyTuple_Pack(1, __pyx_kp_s_Please_provide_the_path_of_the_g); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 19, __pyx_L1_error)
+  __pyx_tuple_ = PyTuple_Pack(1, __pyx_kp_s_Please_provide_the_path_of_the_g); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 34, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":49
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":64
  *         explanations = []
  *         for i in range(A.shape[0]):
  *             for j in A[i,:].nonzero()[1]:             # <<<<<<<<<<<<<<
  *                 u_aspect_indices = X[i, :].nonzero()[1]
  *                 u_aspect_values = X[i, :].data
  */
-  __pyx_slice__2 = PySlice_New(Py_None, Py_None, Py_None); if (unlikely(!__pyx_slice__2)) __PYX_ERR(0, 49, __pyx_L1_error)
+  __pyx_slice__2 = PySlice_New(Py_None, Py_None, Py_None); if (unlikely(!__pyx_slice__2)) __PYX_ERR(0, 64, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_slice__2);
   __Pyx_GIVEREF(__pyx_slice__2);
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":73
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":91
  *                     {'genre':1} for genre that is mentioned in item feature
  *         """
  *         def extract_gt(x,item=True):             # <<<<<<<<<<<<<<
  *             if item==True:
  *                 temp = pd.Series(self.model.train_set.item_features[self.model.train_set.item_features['item_id'] == x]['feature'])
  */
-  __pyx_tuple__3 = PyTuple_Pack(5, __pyx_n_s_x, __pyx_n_s_item, __pyx_n_s_temp, __pyx_n_s_exp, __pyx_n_s_f); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 73, __pyx_L1_error)
+  __pyx_tuple__3 = PyTuple_Pack(5, __pyx_n_s_x, __pyx_n_s_item, __pyx_n_s_temp, __pyx_n_s_exp, __pyx_n_s_f); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 91, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
-  __pyx_codeobj__4 = (PyObject*)__Pyx_PyCode_New(2, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__3, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cornac_metrics_explainer_fpr_fea_2, __pyx_n_s_extract_gt, 73, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__4)) __PYX_ERR(0, 73, __pyx_L1_error)
-  __pyx_tuple__5 = PyTuple_Pack(1, ((PyObject *)Py_True)); if (unlikely(!__pyx_tuple__5)) __PYX_ERR(0, 73, __pyx_L1_error)
+  __pyx_codeobj__4 = (PyObject*)__Pyx_PyCode_New(2, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__3, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cornac_metrics_explainer_fpr_met_2, __pyx_n_s_extract_gt, 91, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__4)) __PYX_ERR(0, 91, __pyx_L1_error)
+  __pyx_tuple__5 = PyTuple_Pack(1, ((PyObject *)Py_True)); if (unlikely(!__pyx_tuple__5)) __PYX_ERR(0, 91, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__5);
   __Pyx_GIVEREF(__pyx_tuple__5);
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":81
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":99
  *             return exp
  * 
  *         def combined_exp(x):             # <<<<<<<<<<<<<<
  *             return {**x['exp_1'], **x['exp_2']}
  * 
  */
-  __pyx_tuple__6 = PyTuple_Pack(1, __pyx_n_s_x); if (unlikely(!__pyx_tuple__6)) __PYX_ERR(0, 81, __pyx_L1_error)
+  __pyx_tuple__6 = PyTuple_Pack(1, __pyx_n_s_x); if (unlikely(!__pyx_tuple__6)) __PYX_ERR(0, 99, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__6);
   __Pyx_GIVEREF(__pyx_tuple__6);
-  __pyx_codeobj__7 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__6, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cornac_metrics_explainer_fpr_fea_2, __pyx_n_s_combined_exp, 81, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__7)) __PYX_ERR(0, 81, __pyx_L1_error)
+  __pyx_codeobj__7 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__6, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cornac_metrics_explainer_fpr_met_2, __pyx_n_s_combined_exp, 99, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__7)) __PYX_ERR(0, 99, __pyx_L1_error)
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":134
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":160
  *             u_i_gt = self.create_ground_truth_limer()
  *         else:
  *             raise ValueError("Model not supported.")             # <<<<<<<<<<<<<<
  * 
  *         cdef list precision_list = []
  */
-  __pyx_tuple__8 = PyTuple_Pack(1, __pyx_kp_s_Model_not_supported); if (unlikely(!__pyx_tuple__8)) __PYX_ERR(0, 134, __pyx_L1_error)
+  __pyx_tuple__8 = PyTuple_Pack(1, __pyx_kp_s_Model_not_supported); if (unlikely(!__pyx_tuple__8)) __PYX_ERR(0, 160, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__8);
   __Pyx_GIVEREF(__pyx_tuple__8);
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":149
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":175
  *                     features_pred = set(self.explainer.explain_one_recommendation_to_user(row['user_id'], row['item_id'], num_features=self.feature_k).keys())
  *                     if self.model.name == 'fm_regressor':
  *                         features_pred = [x[:-4] if x[-2:] == '_f' else x for x in list(features_pred)]             # <<<<<<<<<<<<<<
  *                     p = 1.0*len(features_gt.intersection(features_pred)) / len(features_pred)
  *                     r = 1.0*len(features_gt.intersection(features_pred)) / len(features_gt)
  */
-  __pyx_slice__9 = PySlice_New(__pyx_int_neg_2, Py_None, Py_None); if (unlikely(!__pyx_slice__9)) __PYX_ERR(0, 149, __pyx_L1_error)
+  __pyx_slice__9 = PySlice_New(__pyx_int_neg_2, Py_None, Py_None); if (unlikely(!__pyx_slice__9)) __PYX_ERR(0, 175, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_slice__9);
   __Pyx_GIVEREF(__pyx_slice__9);
-  __pyx_slice__10 = PySlice_New(Py_None, __pyx_int_neg_4, Py_None); if (unlikely(!__pyx_slice__10)) __PYX_ERR(0, 149, __pyx_L1_error)
+  __pyx_slice__10 = PySlice_New(Py_None, __pyx_int_neg_4, Py_None); if (unlikely(!__pyx_slice__10)) __PYX_ERR(0, 175, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_slice__10);
   __Pyx_GIVEREF(__pyx_slice__10);
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":143
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":169
  *         cdef int i
  *         cdef double p, r
  *         with tqdm(total=total, desc="Start evaluation... ") as pbar:             # <<<<<<<<<<<<<<
  *             for i, row in u_i_gt.iterrows():
  *                 features_gt = set(row['explanations'].keys())
  */
-  __pyx_tuple__11 = PyTuple_Pack(3, Py_None, Py_None, Py_None); if (unlikely(!__pyx_tuple__11)) __PYX_ERR(0, 143, __pyx_L1_error)
+  __pyx_tuple__11 = PyTuple_Pack(3, Py_None, Py_None, Py_None); if (unlikely(!__pyx_tuple__11)) __PYX_ERR(0, 169, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__11);
   __Pyx_GIVEREF(__pyx_tuple__11);
 
-  /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":944
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":944
  *         __pyx_import_array()
  *     except Exception:
  *         raise ImportError("numpy.core.multiarray failed to import")             # <<<<<<<<<<<<<<
@@ -9345,7 +9343,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__12);
   __Pyx_GIVEREF(__pyx_tuple__12);
 
-  /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":950
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":950
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -9356,95 +9354,95 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__13);
   __Pyx_GIVEREF(__pyx_tuple__13);
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":13
- *     """probability of feature precision and recall"""
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":28
+ *     """
  * 
- *     def __init__(self, name="PrecisionRecall", rec_k=10, feature_k=10, fpath= None):             # <<<<<<<<<<<<<<
+ *     def __init__(self, name="Metric_Exp_FPR", rec_k=10, feature_k=10, fpath= None):             # <<<<<<<<<<<<<<
  *         super().__init__(name=name, rec_k=rec_k, feature_k=feature_k)
  *         self.fpath = fpath
  */
-  __pyx_tuple__14 = PyTuple_Pack(5, __pyx_n_s_self, __pyx_n_s_name, __pyx_n_s_rec_k, __pyx_n_s_feature_k, __pyx_n_s_fpath); if (unlikely(!__pyx_tuple__14)) __PYX_ERR(0, 13, __pyx_L1_error)
+  __pyx_tuple__14 = PyTuple_Pack(5, __pyx_n_s_self, __pyx_n_s_name, __pyx_n_s_rec_k, __pyx_n_s_feature_k, __pyx_n_s_fpath); if (unlikely(!__pyx_tuple__14)) __PYX_ERR(0, 28, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__14);
   __Pyx_GIVEREF(__pyx_tuple__14);
-  __pyx_codeobj__15 = (PyObject*)__Pyx_PyCode_New(5, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__14, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cornac_metrics_explainer_fpr_fea_2, __pyx_n_s_init, 13, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__15)) __PYX_ERR(0, 13, __pyx_L1_error)
-  __pyx_tuple__16 = PyTuple_Pack(4, ((PyObject*)__pyx_n_s_PrecisionRecall), ((PyObject *)__pyx_int_10), ((PyObject *)__pyx_int_10), ((PyObject *)Py_None)); if (unlikely(!__pyx_tuple__16)) __PYX_ERR(0, 13, __pyx_L1_error)
+  __pyx_codeobj__15 = (PyObject*)__Pyx_PyCode_New(5, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__14, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cornac_metrics_explainer_fpr_met_2, __pyx_n_s_init, 28, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__15)) __PYX_ERR(0, 28, __pyx_L1_error)
+  __pyx_tuple__16 = PyTuple_Pack(4, ((PyObject*)__pyx_n_s_Metric_Exp_FPR), ((PyObject *)__pyx_int_10), ((PyObject *)__pyx_int_10), ((PyObject *)Py_None)); if (unlikely(!__pyx_tuple__16)) __PYX_ERR(0, 28, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__16);
   __Pyx_GIVEREF(__pyx_tuple__16);
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":17
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":32
  *         self.fpath = fpath
  * 
  *     def create_ground_truth_sentiment(self):             # <<<<<<<<<<<<<<
  *         if self.fpath is None:
  *             raise ValueError("Please provide the path of the ground truth file.")
  */
-  __pyx_tuple__17 = PyTuple_Pack(8, __pyx_n_s_self, __pyx_n_s_u_i_all, __pyx_n_s_user_id_list, __pyx_n_s_item_id_list, __pyx_n_s_selected_indices, __pyx_n_s_i, __pyx_n_s_row, __pyx_n_s_u_i_gt); if (unlikely(!__pyx_tuple__17)) __PYX_ERR(0, 17, __pyx_L1_error)
+  __pyx_tuple__17 = PyTuple_Pack(8, __pyx_n_s_self, __pyx_n_s_u_i_all, __pyx_n_s_user_id_list, __pyx_n_s_item_id_list, __pyx_n_s_selected_indices, __pyx_n_s_i, __pyx_n_s_row, __pyx_n_s_u_i_gt); if (unlikely(!__pyx_tuple__17)) __PYX_ERR(0, 32, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__17);
   __Pyx_GIVEREF(__pyx_tuple__17);
-  __pyx_codeobj__18 = (PyObject*)__Pyx_PyCode_New(1, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__17, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cornac_metrics_explainer_fpr_fea_2, __pyx_n_s_create_ground_truth_sentiment, 17, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__18)) __PYX_ERR(0, 17, __pyx_L1_error)
+  __pyx_codeobj__18 = (PyObject*)__Pyx_PyCode_New(1, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__17, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cornac_metrics_explainer_fpr_met_2, __pyx_n_s_create_ground_truth_sentiment, 32, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__18)) __PYX_ERR(0, 32, __pyx_L1_error)
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":31
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":46
  *         return u_i_gt
  * 
  *     def transform_format(self, lexicon):             # <<<<<<<<<<<<<<
  *         # Transform each tuple into the desired format
  *         cdef dict explanation_dict = {}
  */
-  __pyx_tuple__19 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_lexicon, __pyx_n_s_explanation_dict, __pyx_n_s_t); if (unlikely(!__pyx_tuple__19)) __PYX_ERR(0, 31, __pyx_L1_error)
+  __pyx_tuple__19 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_lexicon, __pyx_n_s_explanation_dict, __pyx_n_s_t); if (unlikely(!__pyx_tuple__19)) __PYX_ERR(0, 46, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__19);
   __Pyx_GIVEREF(__pyx_tuple__19);
-  __pyx_codeobj__20 = (PyObject*)__Pyx_PyCode_New(2, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__19, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cornac_metrics_explainer_fpr_fea_2, __pyx_n_s_transform_format, 31, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__20)) __PYX_ERR(0, 31, __pyx_L1_error)
+  __pyx_codeobj__20 = (PyObject*)__Pyx_PyCode_New(2, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__19, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cornac_metrics_explainer_fpr_met_2, __pyx_n_s_transform_format, 46, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__20)) __PYX_ERR(0, 46, __pyx_L1_error)
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":40
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":55
  *         return explanation_dict
  * 
  *     def creat_grount_truth_efm(self):             # <<<<<<<<<<<<<<
  *         A, X, Y = self.model._build_matrices(self.model.train_set)
  *         user_idx2id = {v: k for k, v in self.model.train_set.uid_map.items()}
  */
-  __pyx_tuple__21 = PyTuple_Pack(30, __pyx_n_s_self, __pyx_n_s_A, __pyx_n_s_X, __pyx_n_s_Y, __pyx_n_s_user_idx2id, __pyx_n_s_item_idx2id, __pyx_n_s_id2aspect, __pyx_n_s_users, __pyx_n_s_items, __pyx_n_s_explanations, __pyx_n_s_i, __pyx_n_s_j, __pyx_n_s_u_aspect_indices, __pyx_n_s_u_aspect_values, __pyx_n_s_i_aspect_ids, __pyx_n_s_i_aspect_values, __pyx_n_s_aspect_ids, __pyx_n_s_aspect_values, __pyx_n_s_combined_dict, __pyx_n_s_sorted_dict, __pyx_n_s_exp_dict, __pyx_n_s_u_i_gt, __pyx_n_s_k, __pyx_n_s_v, __pyx_n_s_k, __pyx_n_s_v, __pyx_n_s_k, __pyx_n_s_v, __pyx_n_s_key, __pyx_n_s_value); if (unlikely(!__pyx_tuple__21)) __PYX_ERR(0, 40, __pyx_L1_error)
+  __pyx_tuple__21 = PyTuple_Pack(30, __pyx_n_s_self, __pyx_n_s_A, __pyx_n_s_X, __pyx_n_s_Y, __pyx_n_s_user_idx2id, __pyx_n_s_item_idx2id, __pyx_n_s_id2aspect, __pyx_n_s_users, __pyx_n_s_items, __pyx_n_s_explanations, __pyx_n_s_i, __pyx_n_s_j, __pyx_n_s_u_aspect_indices, __pyx_n_s_u_aspect_values, __pyx_n_s_i_aspect_ids, __pyx_n_s_i_aspect_values, __pyx_n_s_aspect_ids, __pyx_n_s_aspect_values, __pyx_n_s_combined_dict, __pyx_n_s_sorted_dict, __pyx_n_s_exp_dict, __pyx_n_s_u_i_gt, __pyx_n_s_k, __pyx_n_s_v, __pyx_n_s_k, __pyx_n_s_v, __pyx_n_s_k, __pyx_n_s_v, __pyx_n_s_key, __pyx_n_s_value); if (unlikely(!__pyx_tuple__21)) __PYX_ERR(0, 55, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__21);
   __Pyx_GIVEREF(__pyx_tuple__21);
-  __pyx_codeobj__22 = (PyObject*)__Pyx_PyCode_New(1, 0, 30, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__21, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cornac_metrics_explainer_fpr_fea_2, __pyx_n_s_creat_grount_truth_efm, 40, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__22)) __PYX_ERR(0, 40, __pyx_L1_error)
+  __pyx_codeobj__22 = (PyObject*)__Pyx_PyCode_New(1, 0, 30, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__21, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cornac_metrics_explainer_fpr_met_2, __pyx_n_s_creat_grount_truth_efm, 55, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__22)) __PYX_ERR(0, 55, __pyx_L1_error)
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":68
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":83
  * 
  * 
  *     def create_ground_truth_limer(self):             # <<<<<<<<<<<<<<
- *         """arg:recommendation df [user_id, item_id] generated by the recommender
- *            return: ground_truth explanation for each user,item pair [user_id, item_id, explanation]
+ *         """ Generate ground truth explanations for each user-item pair
+ * 
  */
-  __pyx_tuple__23 = PyTuple_Pack(6, __pyx_n_s_self, __pyx_n_s_extract_gt, __pyx_n_s_extract_gt, __pyx_n_s_combined_exp, __pyx_n_s_combined_exp, __pyx_n_s_rec_df); if (unlikely(!__pyx_tuple__23)) __PYX_ERR(0, 68, __pyx_L1_error)
+  __pyx_tuple__23 = PyTuple_Pack(6, __pyx_n_s_self, __pyx_n_s_extract_gt, __pyx_n_s_extract_gt, __pyx_n_s_combined_exp, __pyx_n_s_combined_exp, __pyx_n_s_rec_df); if (unlikely(!__pyx_tuple__23)) __PYX_ERR(0, 83, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__23);
   __Pyx_GIVEREF(__pyx_tuple__23);
-  __pyx_codeobj__24 = (PyObject*)__Pyx_PyCode_New(1, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__23, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cornac_metrics_explainer_fpr_fea_2, __pyx_n_s_create_ground_truth_limer, 68, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__24)) __PYX_ERR(0, 68, __pyx_L1_error)
+  __pyx_codeobj__24 = (PyObject*)__Pyx_PyCode_New(1, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__23, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cornac_metrics_explainer_fpr_met_2, __pyx_n_s_create_ground_truth_limer, 83, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__24)) __PYX_ERR(0, 83, __pyx_L1_error)
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":103
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":121
  *         return rec_df
  * 
  *     def compute(self, model, explainer, dataset=None):             # <<<<<<<<<<<<<<
- *         self.model = model
- *         self.explainer = explainer
+ *         """ Compute the precision, recall, and f1 score for the explanations
+ * 
  */
-  __pyx_tuple__25 = PyTuple_Pack(21, __pyx_n_s_self, __pyx_n_s_model, __pyx_n_s_explainer, __pyx_n_s_dataset, __pyx_n_s_u_i_gt, __pyx_n_s_precision_list, __pyx_n_s_recall_list, __pyx_n_s_f1_list, __pyx_n_s_total, __pyx_n_s_interval, __pyx_n_s_i, __pyx_n_s_p, __pyx_n_s_r, __pyx_n_s_pbar, __pyx_n_s_row, __pyx_n_s_features_gt, __pyx_n_s_features_pred, __pyx_n_s_precision, __pyx_n_s_recall, __pyx_n_s_ff1, __pyx_n_s_x); if (unlikely(!__pyx_tuple__25)) __PYX_ERR(0, 103, __pyx_L1_error)
+  __pyx_tuple__25 = PyTuple_Pack(21, __pyx_n_s_self, __pyx_n_s_model, __pyx_n_s_explainer, __pyx_n_s_dataset, __pyx_n_s_u_i_gt, __pyx_n_s_precision_list, __pyx_n_s_recall_list, __pyx_n_s_f1_list, __pyx_n_s_total, __pyx_n_s_interval, __pyx_n_s_i, __pyx_n_s_p, __pyx_n_s_r, __pyx_n_s_pbar, __pyx_n_s_row, __pyx_n_s_features_gt, __pyx_n_s_features_pred, __pyx_n_s_precision, __pyx_n_s_recall, __pyx_n_s_ff1, __pyx_n_s_x); if (unlikely(!__pyx_tuple__25)) __PYX_ERR(0, 121, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__25);
   __Pyx_GIVEREF(__pyx_tuple__25);
-  __pyx_codeobj__26 = (PyObject*)__Pyx_PyCode_New(4, 0, 21, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__25, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cornac_metrics_explainer_fpr_fea_2, __pyx_n_s_compute, 103, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__26)) __PYX_ERR(0, 103, __pyx_L1_error)
-  __pyx_tuple__27 = PyTuple_Pack(1, ((PyObject *)Py_None)); if (unlikely(!__pyx_tuple__27)) __PYX_ERR(0, 103, __pyx_L1_error)
+  __pyx_codeobj__26 = (PyObject*)__Pyx_PyCode_New(4, 0, 21, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__25, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cornac_metrics_explainer_fpr_met_2, __pyx_n_s_compute, 121, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__26)) __PYX_ERR(0, 121, __pyx_L1_error)
+  __pyx_tuple__27 = PyTuple_Pack(1, ((PyObject *)Py_None)); if (unlikely(!__pyx_tuple__27)) __PYX_ERR(0, 121, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__27);
   __Pyx_GIVEREF(__pyx_tuple__27);
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":166
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":192
  *         return [precision, recall, ff1], [precision_list, recall_list, f1_list]
  * 
  *     def create_recommendations(self):             # <<<<<<<<<<<<<<
  *         """create recommendations for all users available in the dataset"""
  *         print("Started creating recommendations...")
  */
-  __pyx_tuple__28 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_users, __pyx_n_s_rec_df, __pyx_n_s_k); if (unlikely(!__pyx_tuple__28)) __PYX_ERR(0, 166, __pyx_L1_error)
+  __pyx_tuple__28 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_users, __pyx_n_s_rec_df, __pyx_n_s_k); if (unlikely(!__pyx_tuple__28)) __PYX_ERR(0, 192, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__28);
   __Pyx_GIVEREF(__pyx_tuple__28);
-  __pyx_codeobj__29 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__28, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cornac_metrics_explainer_fpr_fea_2, __pyx_n_s_create_recommendations, 166, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__29)) __PYX_ERR(0, 166, __pyx_L1_error)
+  __pyx_codeobj__29 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__28, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cornac_metrics_explainer_fpr_met_2, __pyx_n_s_create_recommendations, 192, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__29)) __PYX_ERR(0, 192, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -9504,14 +9502,14 @@ static int __Pyx_modinit_type_init_code(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__Pyx_modinit_type_init_code", 0);
   /*--- Type init code ---*/
-  if (PyType_Ready(&__pyx_type_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer) < 0) __PYX_ERR(0, 68, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer) < 0) __PYX_ERR(0, 83, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
-  __pyx_type_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer.tp_print = 0;
+  __pyx_type_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer.tp_print = 0;
   #endif
-  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_type_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer.tp_dictoffset && __pyx_type_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer.tp_getattro == PyObject_GenericGetAttr)) {
-    __pyx_type_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
+  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_type_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer.tp_dictoffset && __pyx_type_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer.tp_getattro == PyObject_GenericGetAttr)) {
+    __pyx_type_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
-  __pyx_ptype_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer = &__pyx_type_6cornac_17metrics_explainer_3fpr_24feature_precision_recall___pyx_scope_struct__create_ground_truth_limer;
+  __pyx_ptype_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer = &__pyx_type_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr___pyx_scope_struct__create_ground_truth_limer;
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -9598,11 +9596,11 @@ static int __Pyx_modinit_function_import_code(void) {
 
 
 #if PY_MAJOR_VERSION < 3
-__Pyx_PyMODINIT_FUNC initfeature_precision_recall(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC initfeature_precision_recall(void)
+__Pyx_PyMODINIT_FUNC initmetric_exp_fpr(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC initmetric_exp_fpr(void)
 #else
-__Pyx_PyMODINIT_FUNC PyInit_feature_precision_recall(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC PyInit_feature_precision_recall(void)
+__Pyx_PyMODINIT_FUNC PyInit_metric_exp_fpr(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC PyInit_metric_exp_fpr(void)
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 {
   return PyModuleDef_Init(&__pyx_moduledef);
@@ -9669,7 +9667,7 @@ bad:
 }
 
 
-static CYTHON_SMALL_CODE int __pyx_pymod_exec_feature_precision_recall(PyObject *__pyx_pyinit_module)
+static CYTHON_SMALL_CODE int __pyx_pymod_exec_metric_exp_fpr(PyObject *__pyx_pyinit_module)
 #endif
 #endif
 {
@@ -9685,7 +9683,7 @@ static CYTHON_SMALL_CODE int __pyx_pymod_exec_feature_precision_recall(PyObject 
   #if CYTHON_PEP489_MULTI_PHASE_INIT
   if (__pyx_m) {
     if (__pyx_m == __pyx_pyinit_module) return 0;
-    PyErr_SetString(PyExc_RuntimeError, "Module 'feature_precision_recall' has already been imported. Re-initialisation is not supported.");
+    PyErr_SetString(PyExc_RuntimeError, "Module 'metric_exp_fpr' has already been imported. Re-initialisation is not supported.");
     return -1;
   }
   #elif PY_MAJOR_VERSION >= 3
@@ -9700,7 +9698,7 @@ if (!__Pyx_RefNanny) {
       Py_FatalError("failed to import 'refnanny' module");
 }
 #endif
-  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_feature_precision_recall(void)", 0);
+  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_metric_exp_fpr(void)", 0);
   if (__Pyx_check_binary_version() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #ifdef __Pxy_PyFrame_Initialize_Offsets
   __Pxy_PyFrame_Initialize_Offsets();
@@ -9737,7 +9735,7 @@ if (!__Pyx_RefNanny) {
   Py_INCREF(__pyx_m);
   #else
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("feature_precision_recall", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("metric_exp_fpr", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
   #endif
@@ -9755,14 +9753,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_cornac__metrics_explainer__fpr__feature_precision_recall) {
+  if (__pyx_module_is_main_cornac__metrics_explainer__fpr__metric_exp_fpr) {
     if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name_2, __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "cornac.metrics_explainer.fpr.feature_precision_recall")) {
-      if (unlikely(PyDict_SetItemString(modules, "cornac.metrics_explainer.fpr.feature_precision_recall", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "cornac.metrics_explainer.fpr.metric_exp_fpr")) {
+      if (unlikely(PyDict_SetItemString(modules, "cornac.metrics_explainer.fpr.metric_exp_fpr", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -9783,7 +9781,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":1
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":1
  * import numpy as np             # <<<<<<<<<<<<<<
  * cimport numpy as np
  * import pandas as pd
@@ -9793,7 +9791,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_1) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":3
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":3
  * import numpy as np
  * cimport numpy as np
  * import pandas as pd             # <<<<<<<<<<<<<<
@@ -9805,7 +9803,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_pd, __pyx_t_1) < 0) __PYX_ERR(0, 3, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":5
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":5
  * import pandas as pd
  * cimport cython
  * from cornac.datasets import goodreads             # <<<<<<<<<<<<<<
@@ -9826,12 +9824,12 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":6
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":6
  * cimport cython
  * from cornac.datasets import goodreads
  * from tqdm.auto import tqdm             # <<<<<<<<<<<<<<
  * 
- * from ..metrics import Metrics
+ * from ..metric_exp import Metric_Exp
  */
   __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 6, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
@@ -9847,35 +9845,35 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":8
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":8
  * from tqdm.auto import tqdm
  * 
- * from ..metrics import Metrics             # <<<<<<<<<<<<<<
+ * from ..metric_exp import Metric_Exp             # <<<<<<<<<<<<<<
  * 
- * class FPR(Metrics):
+ * class Metric_Exp_FPR(Metric_Exp):
  */
   __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 8, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_INCREF(__pyx_n_s_Metrics);
-  __Pyx_GIVEREF(__pyx_n_s_Metrics);
-  PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_Metrics);
-  __pyx_t_2 = __Pyx_Import(__pyx_n_s_metrics, __pyx_t_1, 2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 8, __pyx_L1_error)
+  __Pyx_INCREF(__pyx_n_s_Metric_Exp);
+  __Pyx_GIVEREF(__pyx_n_s_Metric_Exp);
+  PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_Metric_Exp);
+  __pyx_t_2 = __Pyx_Import(__pyx_n_s_metric_exp, __pyx_t_1, 2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 8, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_Metrics); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 8, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_Metric_Exp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 8, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Metrics, __pyx_t_1) < 0) __PYX_ERR(0, 8, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Metric_Exp, __pyx_t_1) < 0) __PYX_ERR(0, 8, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":10
- * from ..metrics import Metrics
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":10
+ * from ..metric_exp import Metric_Exp
  * 
- * class FPR(Metrics):             # <<<<<<<<<<<<<<
- *     """probability of feature precision and recall"""
+ * class Metric_Exp_FPR(Metric_Exp):             # <<<<<<<<<<<<<<
+ *     """probability of feature precision and recall
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_Metrics); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 10, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_Metric_Exp); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -9884,118 +9882,118 @@ if (!__Pyx_RefNanny) {
   __pyx_t_2 = 0;
   __pyx_t_2 = __Pyx_CalculateMetaclass(NULL, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_Py3MetaclassPrepare(__pyx_t_2, __pyx_t_1, __pyx_n_s_FPR, __pyx_n_s_FPR, (PyObject *) NULL, __pyx_n_s_cornac_metrics_explainer_fpr_fea, __pyx_kp_s_probability_of_feature_precision); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 10, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_Py3MetaclassPrepare(__pyx_t_2, __pyx_t_1, __pyx_n_s_Metric_Exp_FPR, __pyx_n_s_Metric_Exp_FPR, (PyObject *) NULL, __pyx_n_s_cornac_metrics_explainer_fpr_met, __pyx_kp_s_probability_of_feature_precision); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = PyList_New(0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":13
- *     """probability of feature precision and recall"""
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":28
+ *     """
  * 
- *     def __init__(self, name="PrecisionRecall", rec_k=10, feature_k=10, fpath= None):             # <<<<<<<<<<<<<<
+ *     def __init__(self, name="Metric_Exp_FPR", rec_k=10, feature_k=10, fpath= None):             # <<<<<<<<<<<<<<
  *         super().__init__(name=name, rec_k=rec_k, feature_k=feature_k)
  *         self.fpath = fpath
  */
-  __pyx_t_5 = __Pyx_CyFunction_New(&__pyx_mdef_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_1__init__, 0, __pyx_n_s_FPR___init, NULL, __pyx_n_s_cornac_metrics_explainer_fpr_fea, __pyx_d, ((PyObject *)__pyx_codeobj__15)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 13, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_CyFunction_New(&__pyx_mdef_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_1__init__, 0, __pyx_n_s_Metric_Exp_FPR___init, NULL, __pyx_n_s_cornac_metrics_explainer_fpr_met, __pyx_d, ((PyObject *)__pyx_codeobj__15)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 28, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_INCREF(__pyx_t_5);
   PyList_Append(__pyx_t_4, __pyx_t_5);
   __Pyx_GIVEREF(__pyx_t_5);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_5, __pyx_tuple__16);
-  if (__Pyx_SetNameInClass(__pyx_t_3, __pyx_n_s_init, __pyx_t_5) < 0) __PYX_ERR(0, 13, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_3, __pyx_n_s_init, __pyx_t_5) < 0) __PYX_ERR(0, 28, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":17
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":32
  *         self.fpath = fpath
  * 
  *     def create_ground_truth_sentiment(self):             # <<<<<<<<<<<<<<
  *         if self.fpath is None:
  *             raise ValueError("Please provide the path of the ground truth file.")
  */
-  __pyx_t_5 = __Pyx_CyFunction_New(&__pyx_mdef_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_3create_ground_truth_sentiment, 0, __pyx_n_s_FPR_create_ground_truth_sentimen, NULL, __pyx_n_s_cornac_metrics_explainer_fpr_fea, __pyx_d, ((PyObject *)__pyx_codeobj__18)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 17, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_CyFunction_New(&__pyx_mdef_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_3create_ground_truth_sentiment, 0, __pyx_n_s_Metric_Exp_FPR_create_ground_tru_4, NULL, __pyx_n_s_cornac_metrics_explainer_fpr_met, __pyx_d, ((PyObject *)__pyx_codeobj__18)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 32, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  if (__Pyx_SetNameInClass(__pyx_t_3, __pyx_n_s_create_ground_truth_sentiment, __pyx_t_5) < 0) __PYX_ERR(0, 17, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_3, __pyx_n_s_create_ground_truth_sentiment, __pyx_t_5) < 0) __PYX_ERR(0, 32, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":31
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":46
  *         return u_i_gt
  * 
  *     def transform_format(self, lexicon):             # <<<<<<<<<<<<<<
  *         # Transform each tuple into the desired format
  *         cdef dict explanation_dict = {}
  */
-  __pyx_t_5 = __Pyx_CyFunction_New(&__pyx_mdef_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_5transform_format, 0, __pyx_n_s_FPR_transform_format, NULL, __pyx_n_s_cornac_metrics_explainer_fpr_fea, __pyx_d, ((PyObject *)__pyx_codeobj__20)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 31, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_CyFunction_New(&__pyx_mdef_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_5transform_format, 0, __pyx_n_s_Metric_Exp_FPR_transform_format, NULL, __pyx_n_s_cornac_metrics_explainer_fpr_met, __pyx_d, ((PyObject *)__pyx_codeobj__20)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 46, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  if (__Pyx_SetNameInClass(__pyx_t_3, __pyx_n_s_transform_format, __pyx_t_5) < 0) __PYX_ERR(0, 31, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_3, __pyx_n_s_transform_format, __pyx_t_5) < 0) __PYX_ERR(0, 46, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":40
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":55
  *         return explanation_dict
  * 
  *     def creat_grount_truth_efm(self):             # <<<<<<<<<<<<<<
  *         A, X, Y = self.model._build_matrices(self.model.train_set)
  *         user_idx2id = {v: k for k, v in self.model.train_set.uid_map.items()}
  */
-  __pyx_t_5 = __Pyx_CyFunction_New(&__pyx_mdef_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_7creat_grount_truth_efm, 0, __pyx_n_s_FPR_creat_grount_truth_efm, NULL, __pyx_n_s_cornac_metrics_explainer_fpr_fea, __pyx_d, ((PyObject *)__pyx_codeobj__22)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 40, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_CyFunction_New(&__pyx_mdef_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_7creat_grount_truth_efm, 0, __pyx_n_s_Metric_Exp_FPR_creat_grount_trut_2, NULL, __pyx_n_s_cornac_metrics_explainer_fpr_met, __pyx_d, ((PyObject *)__pyx_codeobj__22)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 55, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  if (__Pyx_SetNameInClass(__pyx_t_3, __pyx_n_s_creat_grount_truth_efm, __pyx_t_5) < 0) __PYX_ERR(0, 40, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_3, __pyx_n_s_creat_grount_truth_efm, __pyx_t_5) < 0) __PYX_ERR(0, 55, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":68
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":83
  * 
  * 
  *     def create_ground_truth_limer(self):             # <<<<<<<<<<<<<<
- *         """arg:recommendation df [user_id, item_id] generated by the recommender
- *            return: ground_truth explanation for each user,item pair [user_id, item_id, explanation]
+ *         """ Generate ground truth explanations for each user-item pair
+ * 
  */
-  __pyx_t_5 = __Pyx_CyFunction_New(&__pyx_mdef_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_9create_ground_truth_limer, 0, __pyx_n_s_FPR_create_ground_truth_limer, NULL, __pyx_n_s_cornac_metrics_explainer_fpr_fea, __pyx_d, ((PyObject *)__pyx_codeobj__24)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 68, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_CyFunction_New(&__pyx_mdef_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_9create_ground_truth_limer, 0, __pyx_n_s_Metric_Exp_FPR_create_ground_tru_5, NULL, __pyx_n_s_cornac_metrics_explainer_fpr_met, __pyx_d, ((PyObject *)__pyx_codeobj__24)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 83, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  if (__Pyx_SetNameInClass(__pyx_t_3, __pyx_n_s_create_ground_truth_limer, __pyx_t_5) < 0) __PYX_ERR(0, 68, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_3, __pyx_n_s_create_ground_truth_limer, __pyx_t_5) < 0) __PYX_ERR(0, 83, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":103
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":121
  *         return rec_df
  * 
  *     def compute(self, model, explainer, dataset=None):             # <<<<<<<<<<<<<<
- *         self.model = model
- *         self.explainer = explainer
+ *         """ Compute the precision, recall, and f1 score for the explanations
+ * 
  */
-  __pyx_t_5 = __Pyx_CyFunction_New(&__pyx_mdef_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_11compute, 0, __pyx_n_s_FPR_compute, NULL, __pyx_n_s_cornac_metrics_explainer_fpr_fea, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 103, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_CyFunction_New(&__pyx_mdef_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_11compute, 0, __pyx_n_s_Metric_Exp_FPR_compute, NULL, __pyx_n_s_cornac_metrics_explainer_fpr_met, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 121, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_5, __pyx_tuple__27);
-  if (__Pyx_SetNameInClass(__pyx_t_3, __pyx_n_s_compute, __pyx_t_5) < 0) __PYX_ERR(0, 103, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_3, __pyx_n_s_compute, __pyx_t_5) < 0) __PYX_ERR(0, 121, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":166
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":192
  *         return [precision, recall, ff1], [precision_list, recall_list, f1_list]
  * 
  *     def create_recommendations(self):             # <<<<<<<<<<<<<<
  *         """create recommendations for all users available in the dataset"""
  *         print("Started creating recommendations...")
  */
-  __pyx_t_5 = __Pyx_CyFunction_New(&__pyx_mdef_6cornac_17metrics_explainer_3fpr_24feature_precision_recall_3FPR_13create_recommendations, 0, __pyx_n_s_FPR_create_recommendations, NULL, __pyx_n_s_cornac_metrics_explainer_fpr_fea, __pyx_d, ((PyObject *)__pyx_codeobj__29)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 166, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_CyFunction_New(&__pyx_mdef_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Metric_Exp_FPR_13create_recommendations, 0, __pyx_n_s_Metric_Exp_FPR_create_recommenda, NULL, __pyx_n_s_cornac_metrics_explainer_fpr_met, __pyx_d, ((PyObject *)__pyx_codeobj__29)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 192, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  if (__Pyx_SetNameInClass(__pyx_t_3, __pyx_n_s_create_recommendations, __pyx_t_5) < 0) __PYX_ERR(0, 166, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_3, __pyx_n_s_create_recommendations, __pyx_t_5) < 0) __PYX_ERR(0, 192, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":10
- * from ..metrics import Metrics
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":10
+ * from ..metric_exp import Metric_Exp
  * 
- * class FPR(Metrics):             # <<<<<<<<<<<<<<
- *     """probability of feature precision and recall"""
+ * class Metric_Exp_FPR(Metric_Exp):             # <<<<<<<<<<<<<<
+ *     """probability of feature precision and recall
  * 
  */
-  __pyx_t_5 = __Pyx_Py3ClassCreate(__pyx_t_2, __pyx_n_s_FPR, __pyx_t_1, __pyx_t_3, NULL, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 10, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_Py3ClassCreate(__pyx_t_2, __pyx_n_s_Metric_Exp_FPR, __pyx_t_1, __pyx_t_3, NULL, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   if (__Pyx_CyFunction_InitClassCell(__pyx_t_4, __pyx_t_5) < 0) __PYX_ERR(0, 10, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_FPR, __pyx_t_5) < 0) __PYX_ERR(0, 10, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Metric_Exp_FPR, __pyx_t_5) < 0) __PYX_ERR(0, 10, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "cornac/metrics_explainer/fpr/feature_precision_recall.pyx":1
+  /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":1
  * import numpy as np             # <<<<<<<<<<<<<<
  * cimport numpy as np
  * import pandas as pd
@@ -10005,7 +10003,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_test, __pyx_t_1) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "../../miniconda3/envs/rose/lib/python3.9/site-packages/numpy/__init__.pxd":1013
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":1013
  * 
  * 
  * cdef inline NPY_DATETIMEUNIT get_datetime64_unit(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -10024,11 +10022,11 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_5);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init cornac.metrics_explainer.fpr.feature_precision_recall", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init cornac.metrics_explainer.fpr.metric_exp_fpr", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_CLEAR(__pyx_m);
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init cornac.metrics_explainer.fpr.feature_precision_recall");
+    PyErr_SetString(PyExc_ImportError, "init cornac.metrics_explainer.fpr.metric_exp_fpr");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

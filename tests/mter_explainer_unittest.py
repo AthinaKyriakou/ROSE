@@ -1,6 +1,6 @@
 import unittest
 import numpy as np
-from cornac.explainer.sentiment_mter_explainer import MTERExplainer
+from cornac.explainer.exp_mter import Exp_MTER
 import cornac
 import pandas as pd
 from cornac.utils import cache
@@ -28,7 +28,7 @@ class TestMTERExplainer(unittest.TestCase):
         cls.dataset = mter.train_set  
         
         # Init the explainer
-        cls.explainer = MTERExplainer(cls.rec_model, cls.dataset)
+        cls.explainer = Exp_MTER(cls.rec_model, cls.dataset)
         # Make sure the recommender and explainer is not None
         assert cls.rec_model is not None
         assert cls.explainer is not None

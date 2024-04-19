@@ -1,6 +1,6 @@
 import unittest
 import numpy as np
-from cornac.explainer.sentiment_efm_explainer import EFMExplainer
+from cornac.explainer.exp_efm import Exp_EFM
 import cornac
 import pandas as pd
 from cornac.utils import cache
@@ -30,7 +30,7 @@ class TestEFMExplainer(unittest.TestCase):
         cls.dataset = efm.train_set  
         
         # Init the explainer
-        cls.explainer = EFMExplainer(cls.rec_model, cls.dataset)
+        cls.explainer = Exp_EFM(cls.rec_model, cls.dataset)
         # Make sure the recommender and explainer is not None
         assert cls.rec_model is not None
         assert cls.explainer is not None

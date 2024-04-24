@@ -7,11 +7,11 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from cornac.models import Recommender
 from cornac.explainer import Explainer
-from cornac.metrics_explainer import Metrics
+from cornac.metrics_explainer.metric_exp import Metric_Exp as Metrics
 
 
 NUM_FMT = "{:.4f}"
-VALID_COMBO = [("fm_regressor", "LIMERS"), ("EFM", "EFM_Exp"), ("MTER", "MTER_Exp"), ("EFM", "MEFM"),
+VALID_COMBO = [("fm_regressor", "LIMERS"), ("EFM", "Exp_EFM"), ("MTER", "Exp_MTER"), ("EFM", "Exp_EFM_Mod"),
                ("ALS", "ALS"), ("MF", "PHI4MF"), ("EMF", "PHI4MF"), ("NEMF", "PHI4MF"), ("EMF", "EMF"), ("NEMF", "EMF")]
 
 class MetricError(ValueError):
@@ -81,6 +81,7 @@ class Explainers_Experiment:
         self.recommendations2 = None
         self.explanations1 = None
         self.explanations2 = None
+        self.result = None
     
     @staticmethod
     def _validate_models(models):
@@ -129,13 +130,13 @@ class Explainers_Experiment:
             if metric.name in ["FA", "RA"]:
                 metrics_support = True
         else:
-            if metric.name == 'diversity':
+            if metric.name == 'Metric_Exp_DIV':
                 metrics_support = True 
-            elif metric.name == 'PrecisionRecall':
-                if self.current_exp.name in ['LIMERS', 'EFM_Exp', 'MTER_Exp']:
+            elif metric.name == 'Metric_Exp_FPR':
+                if self.current_exp.name in ['LIMERS', 'Exp_EFM', 'Exp_MTER']:
                     metrics_support = True 
             elif metric.name == 'PSPNFNS':
-                if self.current_exp.name in ['LIMERS', 'EFM_Exp', 'MTER_Exp']:
+                if self.current_exp.name in ['LIMERS', 'Exp_EFM', 'Exp_MTER']:
                     metrics_support = True
             elif metric.name in ["FA", "RA"]:
                 pass
@@ -173,14 +174,12 @@ class Explainers_Experiment:
             self._plot_distribution("PS", ps_d)
             self._plot_distribution("FNS", fns_d)
             return fns  
-        elif self.current_metric.name == 'diversity':
-            ##TODO: to be verified
+        elif self.current_metric.name == 'Metric_Exp_DIV':
             fd, fd_d = self.current_metric.compute(self.explanations1)
             print(f'Result: Feature diversity: {fd}')
             self._plot_distribution("FDIV", fd_d, groupby="explanation")
             return fd
-        elif self.current_metric.name == 'PrecisionRecall':
-            ##TODO: to be verified
+        elif self.current_metric.name == 'Metric_Exp_FPR':
             (precision, recall, ff1), (precision_d, recall_d, ff1_d) = self.current_metric.compute(self.current_rec, self.current_exp)
             print(f'Result: Feature Precision: {precision}; Feature Recall: {recall}; Harmonic Mean: {ff1}')
             self._plot_distribution("FP", precision_d, groupby="explanation")
@@ -323,6 +322,7 @@ class Explainers_Experiment:
             models.append(model_name)
         metrics.extend(["Train(s)", "Evaluate(s)"])
         print(f"experiment data: {data}")
+        self.result = data.copy()
         result = _table_format(data=data, headers = metrics, index=models)
         print("\n")
         print(result)
@@ -333,3 +333,5 @@ class Explainers_Experiment:
         output_file = os.path.join(save_dir, "CornacMetricExp-{}-{}-{}.log".format(self.rec_name, self.exp_name, timestamp))
         with open(output_file, "w") as f:
             f.write(result)
+            
+

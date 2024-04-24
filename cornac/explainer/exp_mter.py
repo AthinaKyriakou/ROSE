@@ -25,13 +25,13 @@ class Exp_MTER(Explainer):
     def __init__(self, rec_model, dataset, name="Exp_MTER"):
 
         super().__init__(name, rec_model, dataset)
-        self.G1 = self.model.G1
-        self.G2 = self.model.G2
-        self.G3 = self.model.G3
-        self.U = self.model.U
-        self.I = self.model.I
-        self.A = self.model.A
-        self.O = self.model.O
+        # self.G1 = self.model.G1
+        # self.G2 = self.model.G2
+        # self.G3 = self.model.G3
+        # self.U = self.model.U
+        # self.I = self.model.I
+        # self.A = self.model.A
+        # self.O = self.model.O
 
         if self.model is None:
             raise NotImplementedError("The model is None.")

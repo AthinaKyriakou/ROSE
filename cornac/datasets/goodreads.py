@@ -2,6 +2,7 @@
 """
 This data is built based on the GoodReads dataset
 """
+from ..utils import cache
 from ..data import Reader
 from typing import List
 
@@ -53,14 +54,15 @@ def load_sentiment(fpath, reader: Reader = None) -> List:
 
 
 def prepare_data(data_name = "goodreads",test_size=0.2, dense=False, verbose=False, seed=42, item=True, user=False,sample_size=0.1):
-    fpath_uir_dense = 'cornac/datasets/good_reads/good_read_dense.csv'
+    # fpath_uir_dense = 'cornac/datasets/good_reads/good_read_dense.csv'
+    fpath_uir_dense = cache(url='https://zenodo.org/records/11061007/files/good_read_dense.csv?download=1')
     sep_rating = ','
     skip_lines = 0
     if verbose:
         print('Preparing data...')
     if data_name == 'goodreads':
-        fpath_sentiment = 'cornac/datasets/good_reads/goodreads_sentiment.txt'
-        fpath_rating = 'cornac/datasets/good_reads/goodreads_rating.txt'
+        fpath_sentiment = cache(url='https://zenodo.org/records/11061007/files/goodreads_sentiment.txt?download=1')
+        fpath_rating = cache(url='https://zenodo.org/records/11061007/files/goodreads_rating.txt?download=1')
 
         if dense:
             fpath_rating = fpath_uir_dense
@@ -75,14 +77,14 @@ def prepare_data(data_name = "goodreads",test_size=0.2, dense=False, verbose=Fal
         rs = RatioSplit(data=rating, test_size=test_size, exclude_unknowns=True, sentiment=sentiment_modality, verbose=verbose, seed=seed)
 
     elif data_name == 'goodreads_uir':
-        fpath_uir = 'cornac/datasets/good_reads/good_read_UIR_sample.csv'
+        fpath_uir = cache(url='https://zenodo.org/records/11061007/files/good_read_UIR_sample.csv?download=1')
         df = pd.read_csv(fpath_uir, sep='\t', header=0, names=['user_id', 'item_id', 'rating'])
         df = df.sample(frac=sample_size)
         data = df[['user_id', 'item_id', 'rating']].values
         rs = RatioSplit(data=data, test_size=test_size, verbose=verbose, seed=seed)
         
     elif data_name == 'goodreads_uir_1000':
-        fpath_uir = 'cornac/datasets/good_reads/good_read_UIR_1000.csv'
+        fpath_uir = cache(url='https://zenodo.org/records/11061007/files/good_read_UIR_1000.csv?download=1')
         if dense:
             fpath_uir = fpath_uir_dense
         df = pd.read_csv(fpath_uir, sep='\t', header=0, names=['user_id', 'item_id', 'rating'])
@@ -91,10 +93,10 @@ def prepare_data(data_name = "goodreads",test_size=0.2, dense=False, verbose=Fal
         rs = RatioSplit(data=data, test_size=test_size, verbose=verbose, seed=seed)
 
     elif data_name == "goodreads_limers":
-        fpath_uir = 'cornac/datasets/good_reads/good_read_UIR_sample.csv'
-        #fpath_uir = 'cornac/datasets/good_reads/good_read_UIR_1000.csv'
-        fpath_genres = 'cornac/datasets/good_reads/goodreads_genres.csv'
-        fpath_aspects = 'cornac/datasets/good_reads/uid_aspect_features.txt'
+        fpath_uir = cache(url='https://zenodo.org/records/11061007/files/good_read_UIR_sample.csv?download=1')
+        #fpath_uir = cache(url='https://zenodo.org/records/11061007/files/good_read_UIR_1000.csv?download=1')
+        fpath_genres = cache(url='https://zenodo.org/records/11061007/files/goodreads_genres.csv?download=1')
+        fpath_aspects = cache(url='https://zenodo.org/records/11061007/files/uid_aspect_features.txt?download=1')
         if dense:
             fpath_uir = fpath_uir_dense
         #df = pd.read_csv(fpath_uir, header=0, names=['user_id', 'item_id', 'rating'])

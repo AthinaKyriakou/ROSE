@@ -5,7 +5,7 @@ from tqdm.auto import tqdm
 
 
 class Exp_EFM_Mod(Explainer):
-    """Explainer for EFM (Explicit Factor Model) with .
+    """Explainer for EFM (Explicit Factor Model) with filter.
 
     Parameters
     ----------

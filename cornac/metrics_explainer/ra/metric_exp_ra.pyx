@@ -16,8 +16,8 @@ class Metric_Exp_RA(Metric_Exp):
         feature_k: int, default=10
             Number of top features to consider for the metric.
             
-        Reference
-        ---------
+        References
+        ----------
         [1] Krishna, Satyapriya & Han, etc. (2022). https://doi.org/10.48550/arXiv.2202.01602
             The Disagreement Problem in Explainable Machine Learning: A Practitioner's Perspective.
     """

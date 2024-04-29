@@ -8,7 +8,7 @@ bash setup.sh
 And then build the project.
 ```sh
 python setup.py install
-python setup.py  build_ext --inplace
+python setup.py build_ext --inplace
 ```
 
 ## Quick Start

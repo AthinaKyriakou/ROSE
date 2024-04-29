@@ -9,9 +9,6 @@ ROSE: RecOmmender Systems Explainers
 
    Installation <install>
    API Reference <api_ref/index>
-   .. User Guide <user/index>
-   .. Contributors Guide <developer/index>
-   
 
 
 **ROSE** is a Python library for generating and evaluate explanations for recommender systems. It is built on top of the `Cornac <https://cornac.readthedocs.io/en/v2.0.0/>`_.
@@ -27,6 +24,6 @@ Quick Links
 
 Fisrt time here? Check out the installation guide: :doc:`install` 
 
-
+And all API reference can be found here: :doc:`api_ref/index`
 
 

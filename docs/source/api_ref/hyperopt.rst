@@ -1,6 +1,7 @@
 Hyper-parameter Tuning
 ======================
 
+This module is provided by Cornac.
 
 Grid Search
 ---------------

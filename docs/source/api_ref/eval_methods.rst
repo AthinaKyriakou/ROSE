@@ -1,6 +1,8 @@
 Evaluation Methods
 ==================
 
+This module is provided by Cornac.
+
 .. automodule:: cornac.eval_methods
 
 Base Method

@@ -1,5 +1,7 @@
-Metrics
-========
+Metrics for Recommender
+========================
+
+This module is provided by Cornac.
 
 .. automodule:: cornac.metrics
 

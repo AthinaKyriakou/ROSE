@@ -5,6 +5,16 @@ Built-in Datasets
 .. automodule:: cornac.datasets
     :members:
 
+Below is the list of built-in datasets added by ROSE:
+
+Goodreads
+---------
+.. automodule:: cornac.datasets.goodreads
+   :members:
+
+
+Below is the list of built-in datasets in Cornac:
+
 Amazon Clothing
 ---------------
 .. automodule:: cornac.datasets.amazon_clothing

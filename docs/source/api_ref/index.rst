@@ -2,7 +2,7 @@ API Reference
 =============
 
 Welcome to the API Reference. This section contains the documentation of the
-functions and classes of the ``cornac`` package.
+functions and classes of ``ROSE``.
 
 .. toctree::
    :maxdepth: 2

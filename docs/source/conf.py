@@ -17,9 +17,9 @@ sys.path.append(os.path.abspath('../..'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'Cornac'
-copyright = '2023, Preferred.AI'
-author = 'Preferred.AI'
+project = 'ROSE'
+# copyright = '2023, Preferred.AI'
+# author = 'Preferred.AI'
 
 # The short X.Y version
 version = '2.0'
@@ -62,7 +62,8 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'pydata_sphinx_theme'
+# html_theme = 'pydata_sphinx_theme'
+html_theme = 'sphinx_rtd_theme'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -70,33 +71,33 @@ html_theme = 'pydata_sphinx_theme'
 html_static_path = ["_static"]
 html_css_files = ["custom.css"]
 
-html_title = "Cornac"
+html_title = "ROSE"
 html_logo = "_static/logo.png"
 
 html_theme_options = {
     # "switcher": {
     #     "json_url": "https://cornac.readthedocs.io/latest/_static/switcher.json",
     # }
-    "external_links": [
-        {
-            "url": "https://cornac.preferred.ai",
-            "name": "Official Site",
-        },
-        {
-            "url": "https://preferred.ai",
-            "name": "Preferred.AI",
-        },
-    ],
-    "icon_links": [
-        {
-            "name": "GitHub",
-            "url": "https://github.com/preferredAI/cornac",
-            "icon": "fa-brands fa-github",
-        },
-    ],
-    "announcement": "https://raw.githubusercontent.com/PreferredAI/cornac/master/docs/announcement.html",
+    # "external_links": [
+    #     {
+    #         "url": "https://cornac.preferred.ai",
+    #         "name": "Official Site",
+    #     },
+    #     {
+    #         "url": "https://preferred.ai",
+    #         "name": "Preferred.AI",
+    #     },
+    # ],
+    # "icon_links": [
+    #     {
+    #         "name": "GitHub",
+    #         "url": "https://github.com/preferredAI/cornac",
+    #         "icon": "fa-brands fa-github",
+    #     },
+    # ],
+    "announcement": "https://github.com/AthinaKyriakou/ROSE/blob/main/docs/announcement.html",
     "logo": {
-        "text": "Cornac",
+        "text": "ROSE",
     },
     "pygment_light_style": "default",
     "pygment_dark_style": "github-dark",

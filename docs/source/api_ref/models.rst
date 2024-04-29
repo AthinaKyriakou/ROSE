@@ -1,8 +1,6 @@
 Models
 ======
 
-Below are the models that are currently supported in Cornac.
-
 .. automodule:: cornac.models
     :members:
 
@@ -10,6 +8,32 @@ Recommender (Generic Class)
 ---------------------------
 .. automodule:: cornac.models.recommender
    :members:
+
+
+Below are the models that ROSE added.
+
+Alternating Least Squares for Implicit Datasets (ALS)
+-----------------------------------------------------
+.. automodule:: cornac.models.als.recom_als
+   :members:
+
+Explainable Matrix Factorization (EMF)
+--------------------------------------
+.. automodule:: cornac.models.emf.recom_emf
+   :members:
+
+Novel and Explainable Matrix Factorisation (NEMF)
+-------------------------------------------------
+.. automodule:: cornac.models.nemf.recom_nemf
+   :members:
+
+Factoriazation Machine Recommender Algorithm (FM_py)
+-----------------------------------------------------
+.. automodule:: cornac.models.fm_py.recom_fm_py
+   :members:
+
+
+Below are the models that are currently supported in Cornac.
 
 Bilateral VAE for Collaborative Filtering (BiVAECF)
 ---------------------------------------------------

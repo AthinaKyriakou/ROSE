@@ -10,7 +10,7 @@ from config import cfg
 from cornac.eval_methods.ratio_split import RatioSplit
 from cornac.data.modality import FeatureModality
 from cornac.datasets.goodreads import prepare_data
-from cornac.models.fm_py.FM import FMRec
+from cornac.models.fm_py.recom_fm_py import FMRec
 
 class TestFMModel_user_item_features(unittest.TestCase):
     """

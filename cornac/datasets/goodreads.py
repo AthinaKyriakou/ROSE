@@ -1,6 +1,6 @@
 
 """
-This data is built based on the GoodReads dataset
+This data is built based on the GoodReads dataset.  
 """
 from ..utils import cache
 from ..data import Reader
@@ -46,14 +46,53 @@ def load_sentiment(fpath, reader: Reader = None) -> List:
 
     References
     ----------
-    Cornac.data.amazon_toy
-    Gao, J., Wang, X., Wang, Y., & Xie, X. (2019). Explainable Recommendation Through Attentive Multi-View Learning. AAAI.
+    [1] Gao, J., Wang, X., Wang, Y., & Xie, X. (2019). Explainable Recommendation Through Attentive Multi-View Learning. AAAI.
     """
     reader = Reader() if reader is None else reader
     return reader.read(fpath, fmt='UITup', sep=',', tup_sep=':')
 
 
 def prepare_data(data_name = "goodreads",test_size=0.2, dense=False, verbose=False, seed=42, item=True, user=False,sample_size=0.1):
+    """Prepare data for the GoodReads dataset. 
+    Generate the data split for the dataset.
+
+    Parameters
+    ----------
+    data_name: str, default: 'goodreads'
+        Name of the dataset to be prepared.
+        
+        Options: 'goodreads', 'goodreads_uir', 'goodreads_uir_1000', 'goodreads_limers'
+        
+        - 'goodreads': user-item-rating with sentiment data.
+        
+        - 'goodreads_uir': user-item-rating data in the whole dataset.
+        
+        - 'goodreads_uir_1000': user-item-rating data with 1000 samples.
+        
+        - 'goodreads_limers': user-item-rating data with item genres and user aspects.
+        
+    test_size: float, default: 0.2
+        The proportion of the dataset to include in the test split.
+    dense: bool, default: False
+        If True, use the dense version of the dataset.
+    verbose: bool, default: False
+        If True, print out messages.
+    seed: int, default: 42
+        Random seed.
+    item: bool, default: True
+        If True, include item genres when preparing 'goodreads_limers'.
+    user: bool, default: False
+        If True, include user aspects when preparing 'goodreads_limers'.
+    sample_size: float, default: 0.1
+        The proportion of the dataset to include in the split.
+        
+    Returns
+    -------
+    rs: `obj:cornac.eval_methods.RatioSplit`
+        The data split.
+    """
+    
+    
     # fpath_uir_dense = 'cornac/datasets/good_reads/good_read_dense.csv'
     fpath_uir_dense = cache(url='https://zenodo.org/records/11061007/files/good_read_dense.csv?download=1')
     sep_rating = ','

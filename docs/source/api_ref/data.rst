@@ -1,6 +1,6 @@
 Data
 ====
-
+Data module is provided by Cornac.
 	
 Dataset
 ------------------------------------

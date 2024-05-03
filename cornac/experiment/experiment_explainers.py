@@ -46,21 +46,33 @@ class Experiment_Explainers:
     """
     Create experiment to evaluate explainers and output evaluation results
     Inherits from base class cornac.experiment.Experiment
+    
+    Parameters
+    ----------
+    eval_method: cornac.eval_methods.BaseMethod
+        Evaluation method (e.g. ratiosplit)
+    models: list of (recommender, explainer) tuples
+        List of recommender and explainer pairs to be evaluated
+    metrics: list of cornac.metrics_explainer.Metric_Exp
+        List of metrics to be used for evaluation
+    distribution: bool, optional, default: True
+        If True, histogram of result distribution are saved
+    rec_k: int, optional, default: 10
+        Number of recommendations created by recommender
+    feature_k: int, optional, default: 10
+        Number of features in explanations created by explainer
+    eval_train: bool, optional, default: True
+        If True, evaluate train_set, else evaluate test_set
+    verbose: bool, optional, default: True  
+        If True, print out evaluation steps
+    num_threads: int, optional, default: 0
+        Number of threads to be used for evaluation
+    save_dir: str, optional, default: "./experiment_plots"
+        Directory to save experiment result
+    **kwargs: dict
+        Additional parameters to be passed to the evaluation method
     """
     def __init__(self, eval_method, models, metrics, distribution=True, rec_k = 10, feature_k = 10, eval_train=True, verbose=True, num_threads=0, save_dir="./experiment_plots", **kwargs):
-        """"
-        Args:
-            eval_method: evaluation method (e.g. ratiosplit) 
-            models: list of (recommender, explainer) tuples to be evaluated
-            metrics: list of explainer metrics
-            distribution: if True, histogram of result distribution are saved
-            rec_k: default 10, number of recommendations created by recommender
-            feature_k: default 10, number of features in explanations created by explainer
-            eval_train: default True, if True, evaluate train_set, else evaluate test_set
-            verbose: default True
-            num_threads: default 0
-            save_dir: default None (current folder), used to save experiment result
-        """
         self.eval_method = eval_method
         self.dataset = self.eval_method.train_set if eval_train else self.eval_method.test_set
         self.models = self._validate_models(models)
@@ -254,6 +266,8 @@ class Experiment_Explainers:
                 plt.close() 
 
     def run(self):
+        """Run the experiment.
+        """
         data = []
         models = []
         metrics = []

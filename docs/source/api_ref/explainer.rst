@@ -14,7 +14,7 @@ Explainer for Alternating Least Squares of Matrix Factorization for Implicit Fee
     :members:
 
 Explainer for Explicit Factor Model (EFM_Mod)
------------------------------------------
+---------------------------------------------
 .. automodule:: cornac.explainer.exp_efm_mod
     :members:
 

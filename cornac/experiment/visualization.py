@@ -161,7 +161,28 @@ class Visualization(object):
             top_k:int = 10,
             save_plot:bool = True,
         ):
-        """Plot feature importance plot for individual recommendation"""
+        """Plot feature importance plot for individual recommendation
+        
+        Parameters
+        ----------
+            df: pd.DataFrame
+                the dataframe containing the explanation data
+            user_id: str
+                the user id
+            item_id: int
+                the item id
+            type: str, optional, default: "bar"
+                the type of the plot, options: "bar", "line", "scatter"
+            top_k: int, optional, default: 10
+                the number of top features to be plotted
+            save_plot: bool, optional, default: True
+                whether to save the plot or not
+                
+        Returns
+        -------
+            pd.DataFrame
+                the filtered dataframe only containing the explanation data for the given user_id and item_id    
+        """
         filtered_df = df[(df["user_id"] == user_id) & (df["item_id"] == item_id)]
 
         if not filtered_df.empty:
@@ -197,7 +218,29 @@ class Visualization(object):
             save_plot:bool = True,
         ):
         """Plot by count and weighted coefficient for whole explanation dataframe.
-        Can filter by user_id and/or item_id"""
+        Can filter by user_id and/or item_id
+        
+        Parameters
+        ----------
+            df: pd.DataFrame
+                the dataframe containing the explanation data
+            user_id: str, optional, default: None
+                the user id, if None, will use all users
+            item_id: int, optional, default: None
+                the item id, if None, will use all items
+            type: str, optional, default: "bar"
+                the type of the plot, options: "bar", "line", "scatter"
+            top_k: int, optional, default: 10
+                the number of top features to be plotted
+            save_plot: bool, optional, default: True
+                whether to save the plot or not
+        
+        Returns
+        -------
+            pd.DataFrame
+                the filtered dataframe only containing the explanation data for the given user_id and item_id
+        
+        """
         filter_condition = pd.Series([True] * len(df), index=df.index)
         plot_title = ""
         if user_id:

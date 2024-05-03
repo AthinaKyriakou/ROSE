@@ -48,11 +48,9 @@ class ALS(Recommender):
 
     References
     ----------
-    Y. Hu, Y. Koren, and C. Volinsky, “Collaborative Filtering for Implicit Feedback Datasets,” in 2008 Eighth IEEE International Conference on Data Mining, Pisa, Italy: IEEE, Dec. 2008, pp. 263-272. doi: 10.1109/ICDM.2008.22.
+    [1] Y. Hu, Y. Koren, and C. Volinsky, “Collaborative Filtering for Implicit Feedback Datasets,” in 2008 Eighth IEEE International Conference on Data Mining, Pisa, Italy: IEEE, Dec. 2008, pp. 263-272. doi: 10.1109/ICDM.2008.22.
     
-    Code Reference
-    ----------
-    implicit library: https://pypi.org/project/implicit/
+    [2] implicit library: https://pypi.org/project/implicit/
     """
     
     

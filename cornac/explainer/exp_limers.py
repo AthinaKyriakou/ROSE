@@ -48,8 +48,8 @@ class Exp_LIMERS(Explainer):
         generate random numbers. If None, the random state will be
         initialized using the internal numpy seed.
 
-    Reference
-    ---------
+    References
+    ----------
     [1] Caio Nóbrega and Leandro Marinho. 2019. Towards explaining recommendations through local surrogate models. https://doi.org/10.1145/3297280.3297443
 
     """

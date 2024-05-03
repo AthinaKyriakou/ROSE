@@ -1,38 +1,10 @@
 Data
 ====
-Data module is provided by Cornac.
-	
-Dataset
-------------------------------------
-.. automodule:: cornac.data.dataset
+
+Other modules in data are provided by Cornac, document `here <https://cornac.readthedocs.io/en/v2.0.0/api_ref/data.html>`_.
+
+Sentiment Analysis
+------------------
+.. autoclass:: cornac.data.lexicon.SentimentAnalysis
    :members:
 
-Modality
----------------------------------
-.. automodule:: cornac.data.modality
-   :members:
-
-Graph Modality
----------------------------------
-.. automodule:: cornac.data.graph
-   :members:
-
-Text Modality
----------------------------------
-.. automodule:: cornac.data.text
-   :members:
-
-Image Modality
----------------------------------
-.. automodule:: cornac.data.image
-   :members:
-
-Sentiment Modality
----------------------------------
-.. automodule:: cornac.data.sentiment
-   :members:
-
-Reader
-----------------------------------
-.. automodule:: cornac.data.reader
-   :members:

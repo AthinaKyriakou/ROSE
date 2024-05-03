@@ -22,8 +22,8 @@ class Exp_PHI4MF(Explainer):
         minimum lift for the apriori algorithm
     name: string, optional, default: 'Exp_PHI4MF'
 
-    Reference
-    ---------
+    References
+    ----------
     [1] Georgina Peake and Jun Wang. 2018. Explanation Mining: Post Hoc Interpretability of Latent Factor Models for Recommendation Systems.
     In Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining, ACM, London United Kingdom, 2060-2069.
     DOI:https://doi.org/10.1145/3219819.3220072

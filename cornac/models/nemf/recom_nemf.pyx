@@ -22,8 +22,8 @@ from cornac.exception import ScoreException
 
 
 class NEMF(Recommender):
-
     """ Novel and Explainable Matrix Factorisation.
+    
     Parameters
     ----------
     k: int, optional, default: 10
@@ -66,15 +66,11 @@ class NEMF(Recommender):
     sim_filter_zeros: boolean, optional, default: True
         When True, the similarity matrix will be computed by filtering out the zero values.
         When False, the similarity matrix will be computed by keeping the zero values.
+    
     References
     ----------
-    L. Coba, P. Symeonidis, and M. Zanker, “Personalised novel and explainable matrix factorisation,” \
+    [1] L. Coba, P. Symeonidis, and M. Zanker, “Personalised novel and explainable matrix factorisation,” 
     Data & Knowledge Engineering, vol. 122, pp. 142-158, Jul. 2019, doi: 10.1016/j.datak.2019.06.003.
-
-    Code Reference
-    ----------
-    cornac.models.mf.recom_mf.MF
-    https://github.com/ludovikcoba/recoxplainer/blob/master/recoxplainer/models/emf_model.py
     """
 
     def __init__(

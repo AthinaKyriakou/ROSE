@@ -12,6 +12,7 @@ ROSE: RecOmmender Systems Explainers
 
 
 **ROSE** is a Python library for generating and evaluate explanations for recommender systems. It is built on top of the `Cornac <https://cornac.readthedocs.io/en/v2.0.0/>`_.
+
 ROSE provides a set of tools to generate explanations for recommender systems, including model-agnostic and model-specific methods.
 It also provides a set of metrics to evaluate the quality of the generated explanations.
 

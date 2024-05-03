@@ -1,31 +1,4 @@
 Evaluation Methods
 ==================
 
-This module is provided by Cornac.
-
-.. automodule:: cornac.eval_methods
-
-Base Method
------------
-.. automodule:: cornac.eval_methods.base_method
-   :members:
-     
-Cross Validation
-----------------
-.. automodule:: cornac.eval_methods.cross_validation
-   :members:
-
-Propensity Stratified Evaluation
---------------------------------
-.. automodule:: cornac.eval_methods.propensity_stratified_evaluation
-   :members:
-
-Ratio Split
------------
-.. automodule:: cornac.eval_methods.ratio_split
-   :members:
-
-Stratified Split
-----------------
-.. automodule:: cornac.eval_methods.stratified_split
-   :members:
+This module is provided by Cornac, document can be found `here <http://127.0.0.1:8000/api_ref/eval_methods.html>`_.

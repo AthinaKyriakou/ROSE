@@ -1,67 +1,13 @@
-Built-in Datasets
+Datasets
 =================
 
 
 .. automodule:: cornac.datasets
-    :members:
+   :members:
 
-Below is the list of built-in datasets added by ROSE:
+Below is the list of built-in datasets added by ROSE. Other datasets built by Cornac can be found in the `Cornac documentation <https://cornac.readthedocs.io/en/v2.0.0/api_ref/datasets.html>`_.
 
 Goodreads
 ---------
 .. automodule:: cornac.datasets.goodreads
    :members:
-
-
-Below is the list of built-in datasets in Cornac:
-
-Amazon Clothing
----------------
-.. automodule:: cornac.datasets.amazon_clothing
-   :members:
-
-Amazon Digital Music
---------------------
-.. automodule:: cornac.datasets.amazon_digital_music
-   :members:
-
-Amazon Office
--------------
-.. automodule:: cornac.datasets.amazon_office
-   :members:
-
-Amazon Toys and Games
----------------------
-.. automodule:: cornac.datasets.amazon_toy
-   :members:
-
-CiteULike
----------
-.. automodule:: cornac.datasets.citeulike
-   :members:
-
-Epinions
---------
-.. automodule:: cornac.datasets.epinions
-   :members:
-
-FilmTrust
----------
-.. automodule:: cornac.datasets.filmtrust
-   :members:
-
-MovieLens
----------
-.. automodule:: cornac.datasets.movielens
-   :members:
-
-Netflix
--------
-.. automodule:: cornac.datasets.netflix
-   :members:
-
-Tradesy
--------
-.. automodule:: cornac.datasets.tradesy
-   :members:
-

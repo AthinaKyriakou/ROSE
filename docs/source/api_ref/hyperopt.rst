@@ -1,19 +1,4 @@
 Hyper-parameter Tuning
 ======================
 
-This module is provided by Cornac.
-
-Grid Search
----------------
-.. automodule:: cornac.hyperopt
-   :members: GridSearch
-
-Random Search
---------------------
-.. automodule:: cornac.hyperopt
-   :members: RandomSearch
-
-Search Domain
----------------
-.. automodule:: cornac.hyperopt
-   :members: Discrete, Continuous
+This module is provided by Cornac, document can be found `here <https://cornac.readthedocs.io/en/v2.0.0/api_ref/hyperopt.html>`_.

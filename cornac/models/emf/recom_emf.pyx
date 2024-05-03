@@ -21,8 +21,8 @@ from cornac.exception import ScoreException
 
 
 class EMF(Recommender):
-
     """Explainable Matrix Factorization.
+    
     Parameters
     ----------
     k: int, optional, default: 10
@@ -61,15 +61,12 @@ class EMF(Recommender):
     sim_filter_zeros: boolean, optional, default: True
         When True, the similarity matrix will be computed by filtering out the zero ratings.
         When False, the similarity matrix will be computed by considering the zero ratings.
+    
     References
     ----------
-    B. Abdollahi and O. Nasraoui, “Explainable Matrix Factorization for Collaborative Filtering,” \
+    B. Abdollahi and O. Nasraoui, “Explainable Matrix Factorization for Collaborative Filtering,” 
     ACM Press, 2016, pp. 5-6. doi: 10.1145/2872518.2889405.
 
-    Code Reference
-    ----------
-    cornac.models.mf.recom_mf.MF
-    https://github.com/ludovikcoba/recoxplainer/blob/master/recoxplainer/models/emf_model.py
     """
 
     def __init__(

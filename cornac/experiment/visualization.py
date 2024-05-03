@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import seaborn as sns
 from datetime import datetime
 import os
 
@@ -14,6 +15,7 @@ class Visualization(object):
             
         """
         self.save_dir = "." if save_dir is None else save_dir
+        self.target_k_name = None
                 
     def visualize_experiemnt_result(self, EE_list, kind = "bar", rotate_x = 90):
         """Visualize the result of the runing experiment
@@ -91,7 +93,55 @@ class Visualization(object):
         plt.ylabel("time(s)")
         plt.legend()
         plt.show()
+        
+    def visualize_target_k(self, EE_list, target_k_name="feature_k", kind = "bar"):
+        """plot the change of metrics' value along with the change of target k parameter
 
+        Args:
+            EE_list (list):  a list of Explainers_Experiment instances
+            name (str, optional): the name of target parameter. Defaults to "feature_k", options: "feature_k", "rec_k".
+            kind (str, optional): the wanted type of chart. Defaults to "bar". Options: "bar", "line", "scatter".
+        """
+        self.target_k_name = target_k_name
+        df_list = self._transform_format(EE_list)
+        columns = df_list[0].columns[:-1]
+        feature_k_list = [df_list[i][self.target_k_name].unique()[0] for i in range(len(df_list))]
+        fig, ax = plt.subplots(len(columns), 1, figsize=(8, 4*len(columns)))
+        for i, col in enumerate(columns):
+            data = pd.concat([d[col] for d in df_list], axis=1)
+            data.columns = feature_k_list
+            data = data.T
+            if kind == "bar":
+                data.plot(kind=kind, ax=ax[i], title=col)
+            elif kind == "line":
+                sns.lineplot(data=data, ax=ax[i])
+            elif kind == "scatter":
+                sns.scatterplot(data=data, ax=ax[i])
+            else:
+                raise ValueError("kind should be one of ['bar', 'line', 'scatter']")
+            ax[i].set_xlabel(self.target_k_name)
+            ax[i].set_title(col)
+        plt.tight_layout()
+        plt.show()
+    
+    def _transform_format(self, EE_list):
+        """Transform the result of the experiment to a list of dataframes"""
+        
+        df_list = []
+        for EE in EE_list:
+            if not hasattr(EE, "result"):
+                raise ValueError("The input object is not an instance of Explainers_Experiment")
+            
+            result = [list[1:] for list in EE.result]
+            #result.append(EE.feature_k)
+            pair_name_list = [list[0] for list in EE.result]
+            columns = [metric.name for metric in EE.metrics]
+            columns.extend(["train_cost", "evaluate_cost"])
+            data_df = pd.DataFrame(result, columns=columns, index = pair_name_list)
+            data_df[self.target_k_name] = EE.feature_k if self.target_k_name == "feature_k" else EE.rec_k
+            data_df.fillna(0, inplace=True)
+            df_list.append(data_df)
+        return df_list
     
     def create_individual_feature_importance_plot(
             self,

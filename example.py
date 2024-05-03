@@ -5,7 +5,7 @@ from cornac.eval_methods import RatioSplit
 from cornac.models import EMF, NEMF, ALS
 from cornac.explainer import Exp_EMF, Exp_ALS
 from cornac.datasets.goodreads import prepare_data
-from cornac.metrics_explainer import Explainers_Experiment
+from cornac.experiment.explainers_experiment import Explainers_Experiment
 
 VERBOSE = False
 SEED = 42

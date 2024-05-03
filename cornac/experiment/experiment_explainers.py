@@ -11,8 +11,8 @@ from cornac.metrics_explainer.metric_exp import Metric_Exp as Metrics
 
 
 NUM_FMT = "{:.4f}"
-VALID_COMBO = [("fm_regressor", "Exp_LIMERS"), ("EFM", "Exp_EFM"), ("MTER", "Exp_MTER"), ("EFM", "Exp_EFM_Mod"),
-               ("ALS", "Exp_ALS"), ("MF", "Exp_PHI4MF"), ("EMF", "Exp_PHI4MF"), ("NEMF", "Exp_PHI4MF"), ("EMF", "Exp_EMF"), ("NEMF", "Exp_EMF")]
+VALID_COMBO = [("fm_regressor", "LIMERS"), ("EFM", "Exp_EFM"), ("MTER", "Exp_MTER"), ("EFM", "Exp_EFM_Mod"),
+               ("ALS", "ALS"), ("MF", "PHI4MF"), ("EMF", "PHI4MF"), ("NEMF", "PHI4MF"), ("EMF", "EMF"), ("NEMF", "EMF")]
 
 class MetricError(ValueError):
     pass
@@ -45,6 +45,7 @@ def _table_format(data, headers=None, index=None, extra_spaces=0, h_bars=None):
 class Explainers_Experiment:
     """
     Create experiment to evaluate explainers and output evaluation results
+    Inherits from base class cornac.experiment.Experiment
     """
     def __init__(self, eval_method, models, metrics, distribution=True, rec_k = 10, feature_k = 10, eval_train=True, verbose=True, num_threads=0, save_dir="./experiment_plots", **kwargs):
         """"
@@ -133,18 +134,18 @@ class Explainers_Experiment:
             if metric.name == 'Metric_Exp_DIV':
                 metrics_support = True 
             elif metric.name == 'Metric_Exp_FPR':
-                if self.current_exp.name in ['Exp_LIMERS', 'Exp_EFM', 'Exp_MTER']:
+                if self.current_exp.name in ['LIMERS', 'Exp_EFM', 'Exp_MTER']:
                     metrics_support = True 
             elif metric.name == 'PSPNFNS':
-                if self.current_exp.name in ['Exp_LIMERS', 'Exp_EFM', 'Exp_MTER']:
+                if self.current_exp.name in ['LIMERS', 'Exp_EFM', 'Exp_MTER']:
                     metrics_support = True
             elif metric.name in ["FA", "RA"]:
                 pass
             elif metric.name in ['EnDCG', 'MEP']:
-                if self.current_exp.name in ['Exp_EMF', 'Exp_PHI4MF'] and self.current_rec.name in ['EMF', 'NEMF']:
+                if self.current_exp.name in ['EMF', 'PHI4MF'] and self.current_rec.name in ['EMF', 'NEMF']:
                     metrics_support = True
             elif metric.name in ['PGF']:
-                if self.current_exp.name in ['Exp_EMF', 'Exp_PHI4MF', 'Exp_ALS']:
+                if self.current_exp.name in ['EMF', 'PHI4MF', 'ALS']:
                     metrics_support = True
             else:
                 print(f'Metric {metric.name} not found')
@@ -224,7 +225,7 @@ class Explainers_Experiment:
         """
         exp = current_exp.explain_recommendations(recommendations=recommendations, num_features=self.feature_k)[['user_id', 'item_id', 'explanations']]
         exp = exp[exp['explanations'] != {}] #remove records with empty explanation
-        if not current_exp.name in ['Exp_EMF', 'Exp_PHI4MF']:
+        if not current_exp.name in ['EMF', 'PHI4MF']:
             exp['explanations'] = exp['explanations'].apply(lambda x: [v for v in x.keys()])
         exp = exp[['user_id', 'item_id', 'explanations']].values
         return exp

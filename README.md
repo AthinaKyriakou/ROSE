@@ -20,7 +20,8 @@ import pandas as pd
 from cornac.models import EMF, NEMF, ALS
 from cornac.explainer import EMFExplainer, ALSExplainer
 from cornac.datasets.goodreads import prepare_data
-from cornac.metrics_explainer import Explainers_Experiment, MEP, EnDCG, PGF
+from cornac.experiment.experiment_explainers import Experiment_Explainers
+from cornac.metrics_explainer import MEP, EnDCG, PGF
 
 # dataset
 dataset_dense = prepare_data(data_name="goodreads_uir_1000",test_size=0, verbose=True, sample_size=1, dense=True)
@@ -41,7 +42,7 @@ endcg = EnDCG()
 pgf = PGF(phi=10)
 
 # experiment
-experiment = Explainers_Experiment(eval_method=dataset_dense, 
+experiment = Experiment_Explainers(eval_method=dataset_dense, 
                                     models=[emf_emf, nemf_emf, als_als], 
                                     metrics=[mep, endcg, pgf], 
                                     rec_k=10, 

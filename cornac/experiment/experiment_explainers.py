@@ -42,7 +42,7 @@ def _table_format(data, headers=None, index=None, extra_spaces=0, h_bars=None):
         output += row_fmt.format(*row)
     return output
 
-class Explainers_Experiment:
+class Experiment_Explainers:
     """
     Create experiment to evaluate explainers and output evaluation results
     Inherits from base class cornac.experiment.Experiment

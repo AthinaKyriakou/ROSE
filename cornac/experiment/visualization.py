@@ -6,13 +6,13 @@ from datetime import datetime
 import os
 
 class Visualization(object):
-    """Data Visualization class   """
+    """Class for visualizing the result of the experiment, and the feature importance.
+  
+    """
     
-    def __init__(self, save_dir:str = None,):
+    def __init__(self, save_dir:str = None):
         """Initialize the Visualization class
-
-        Args:
-            
+  
         """
         self.save_dir = "." if save_dir is None else save_dir
         self.target_k_name = None
@@ -20,9 +20,15 @@ class Visualization(object):
     def visualize_experiemnt_result(self, EE_list, kind = "bar", rotate_x = 90):
         """Visualize the result of the runing experiment
 
-        Args:
-            EE (_class_): the class Object of the Explainers_Experiment
-            kind (_string_): the type of the chart to be plotted, default is "bar", options: "bar", "line";
+        Parameters
+        ----------
+            EE: class 
+                the class Object of the Explainers_Experiment
+            kind: string
+                the type of the chart to be plotted, default is "bar", options: "bar", "line"
+            rotate_x: int
+                the degree of rotation of x-axis labels, default is 90
+                
         """
         df_list = []
         for EE in EE_list:
@@ -48,12 +54,7 @@ class Visualization(object):
             self._plot_cost(cost_data, rotate_x)
         
     def _plot_exp_vs_metric(self, df, kind, rotate_x = 90):
-        """Plot the bar chart: compare the performance of model/explainer pairs on a specific metric
-
-        Args:
-            df (_dataframe_): a dataframe with the model/explainer pairs as rows and the metrics as columns
-            kind (_string_): the type of the chart to be plotted, options: "bar", "line";
-        """
+        """Plot the bar chart: compare the performance of model/explainer pairs on a specific metric"""
         
         print(f"Plot the {kind} chart for the metrics:")
         if kind == "bar":
@@ -70,18 +71,10 @@ class Visualization(object):
             ax.set_xticklabels(df.index)
             plt.xticks(rotation=rotate_x)
             plt.show()
-        
-        # for column in df.columns:
-        #     plt.bar(df.index, df[column], label=column)
-        #     plt.ylabel(column)
-        #     plt.show()
+    
 
     def _plot_cost(self, df, rotate_x = 90):
-        """Plot the bar chart: compare the cost of training and evaluating the model/explainer pairs
-
-        Args:
-            df (_dataframe_): a dataframe with the model/explainer pairs as rows and the cost as columns
-        """
+        """Plot the bar chart: compare the cost of training and evaluating the model/explainer pairs"""
         print("Plot the bar chart for the cost:")
         # Plotting the stacked bar chart
         # plt.bar(df.index, df.iloc[:, -2], label=df.columns[-2])
@@ -97,10 +90,15 @@ class Visualization(object):
     def visualize_target_k(self, EE_list, target_k_name="feature_k", kind = "bar"):
         """plot the change of metrics' value along with the change of target k parameter
 
-        Args:
-            EE_list (list):  a list of Explainers_Experiment instances
-            name (str, optional): the name of target parameter. Defaults to "feature_k", options: "feature_k", "rec_k".
-            kind (str, optional): the wanted type of chart. Defaults to "bar". Options: "bar", "line", "scatter".
+        PARAMETERS
+        ----------
+            EE_list: list
+                a list of Explainers_Experiment instances
+            target_k_name: str
+                optional, the name of target parameter. Defaults to "feature_k", options: "feature_k", "rec_k"
+            kind: str
+                optional, the wanted type of chart. Defaults to "bar". Options: "bar", "line", "scatter"
+                
         """
         self.target_k_name = target_k_name
         df_list = self._transform_format(EE_list)
@@ -125,7 +123,18 @@ class Visualization(object):
         plt.show()
     
     def _transform_format(self, EE_list):
-        """Transform the result of the experiment to a list of dataframes"""
+        """Transform the result of the experiment to a list of dataframes
+        
+        PARAMETERS
+        ----------
+            EE_list: list
+                a list of Explainers_Experiment instances
+                
+        RETURNS
+        -------
+            df_list: list
+                a list of dataframes, each dataframe contains the metrics' value for each pair of model:explainer
+        """
         
         df_list = []
         for EE in EE_list:

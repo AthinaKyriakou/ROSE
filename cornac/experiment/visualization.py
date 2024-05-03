@@ -15,46 +15,49 @@ class Visualization(object):
         """
         self.save_dir = "." if save_dir is None else save_dir
                 
-    def visualize_experiemnt_result(self, EE, kind = "bar"):
+    def visualize_experiemnt_result(self, EE_list, kind = "bar", rotate_x = 90):
         """Visualize the result of the runing experiment
 
         Args:
             EE (_class_): the class Object of the Explainers_Experiment
             kind (_string_): the type of the chart to be plotted, default is "bar", options: "bar", "line";
         """
-        if EE.result is None:
-            EE.run()
-        # result = EE.data # list: the result of the experiment
-        # pairs = EE.models # list: [model:explainer, model:explainer, ..]
-        # metrics = EE.metrics # list: [metric1, metric2, .., train_cost, evaluate_cost]
-        result = [list[1:] for list in EE.result]
-        columns = [metric.name for metric in EE.metrics]
-        columns.extend(["train_cost", "evaluate_cost"])
-        pair_name_list = [list[0] for list in EE.result]
-        data_df = pd.DataFrame(result, columns=columns, index=pair_name_list)
-        data_df.fillna(0, inplace=True)
-        metrics_data = data_df.iloc[:,:-2]
-        cost_data = data_df.iloc[:,-2:]
-        print("=======Start Visualization=======")
-        if len(metrics_data.columns)>0:
-            self._plot_exp_vs_metric(metrics_data, kind)
-        if len(cost_data.columns)>0:
-            self._plot_cost(cost_data)
-        print("=======Visualization Done=======")
+        df_list = []
+        for EE in EE_list:
+            if not hasattr(EE, "result"):
+                raise ValueError("The input object is not an instance of Explainers_Experiment")
+            # result = EE.data # list: the result of the experiment
+            # pairs = EE.models # list: [model:explainer, model:explainer, ..]
+            # metrics = EE.metrics # list: [metric1, metric2, .., train_cost, evaluate_cost]
+            result = [list[1:] for list in EE.result]
+            columns = [metric.name for metric in EE.metrics]
+            columns.extend(["train_cost", "evaluate_cost"])
+            pair_name_list = [list[0] for list in EE.result]
+            data_df = pd.DataFrame(result, columns=columns, index=pair_name_list)
+            df_list.append(data_df)
+        df_all = pd.concat(df_list, axis=0)
+        df_all.fillna(0, inplace=True)
+        metrics_data = df_all.drop(columns=["train_cost", "evaluate_cost"])
+        cost_data = df_all[["train_cost", "evaluate_cost"]]
         
-    def _plot_exp_vs_metric(self, df, kind = "bar"):
+        if len(metrics_data.columns)>0:
+            self._plot_exp_vs_metric(metrics_data, kind, rotate_x)
+        if len(cost_data.columns)>0:
+            self._plot_cost(cost_data, rotate_x)
+        
+    def _plot_exp_vs_metric(self, df, kind, rotate_x = 90):
         """Plot the bar chart: compare the performance of model/explainer pairs on a specific metric
 
         Args:
             df (_dataframe_): a dataframe with the model/explainer pairs as rows and the metrics as columns
-            kind (_string_): the type of the chart to be plotted, default is "bar", options: "bar", "line";
+            kind (_string_): the type of the chart to be plotted, options: "bar", "line";
         """
         
         print(f"Plot the {kind} chart for the metrics:")
         if kind == "bar":
             plt.figure(figsize=(6, 4))
             df.plot(kind=kind, ax=plt.gca())
-            plt.xticks(rotation=0)
+            plt.xticks(rotation=90)
             plt.show()
         print(df)
         if kind == "line":
@@ -63,7 +66,7 @@ class Visualization(object):
             # Set x-axis labels to be the DataFrame index
             ax.set_xticks(range(len(df.index)))
             ax.set_xticklabels(df.index)
-            plt.xticks(rotation=0)
+            plt.xticks(rotation=rotate_x)
             plt.show()
         
         # for column in df.columns:
@@ -71,7 +74,7 @@ class Visualization(object):
         #     plt.ylabel(column)
         #     plt.show()
 
-    def _plot_cost(self, df):
+    def _plot_cost(self, df, rotate_x = 90):
         """Plot the bar chart: compare the cost of training and evaluating the model/explainer pairs
 
         Args:
@@ -83,7 +86,7 @@ class Visualization(object):
         # plt.bar(df.index, df.iloc[:, -1], bottom=df.iloc[:, -2], label=df.columns[-1])
         df.plot(kind='bar', stacked=True)
         # Adding labels and title
-        plt.xticks(rotation=0)
+        plt.xticks(rotation=rotate_x)
         #plt.xlabel("model:explainer")
         plt.ylabel("time(s)")
         plt.legend()

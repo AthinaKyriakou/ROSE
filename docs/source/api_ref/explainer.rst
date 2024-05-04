@@ -42,3 +42,8 @@ Post-Hoc Explanation for Matrix Factorization(PHI4MF)
 -----------------------------------------------------
 .. automodule:: cornac.explainer.exp_phi4mf
     :members:
+
+Similar User Explanation for EMF(SU4EMF)
+----------------------------------------
+.. automodule:: cornac.explainer.exp_su4emf
+    :members:

@@ -1,2 +1,2 @@
-recursive-include cornac/metrics_explainer *
+recursive-include cornac/experiment *
 recursive-include cornac/explainer *

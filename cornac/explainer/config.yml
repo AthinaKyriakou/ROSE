@@ -1,5 +1,5 @@
 Exp_LIMERS:
-  valid_recommenders: [fm_regressor]
+  valid_recommenders: [FMRec]
 Exp_EFM_Mod:
   valid_recommenders: [EFM]
 Exp_EFM:
@@ -10,6 +10,7 @@ Exp_ALS:
   valid_recommenders: [ALS]
 Exp_PHI4MF:
   valid_recommenders: [MF, EMF, NEMF]
+Exp_SU4EMF:
+  valid_recommenders: [EMF, NEMF]
 Exp_EMF:
   valid_recommenders: [EMF, NEMF]
-

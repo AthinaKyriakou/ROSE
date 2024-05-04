@@ -8,11 +8,17 @@ import matplotlib.pyplot as plt
 from cornac.models import Recommender
 from cornac.explainer import Explainer
 from cornac.metrics_explainer.metric_exp import Metric_Exp as Metrics
-
+import yaml
 
 NUM_FMT = "{:.4f}"
-VALID_COMBO = [("fm_regressor", "LIMERS"), ("EFM", "Exp_EFM"), ("MTER", "Exp_MTER"), ("EFM", "Exp_EFM_Mod"),
-               ("ALS", "ALS"), ("MF", "PHI4MF"), ("EMF", "PHI4MF"), ("NEMF", "PHI4MF"), ("EMF", "EMF"), ("NEMF", "EMF")]
+
+script_dir = os.path.dirname(__file__)
+config_path = os.path.join(script_dir, "config_experiment.yml")
+with open(config_path, "r") as ymlfile:
+    VALID_EXP_METRIC_COMBO = yaml.safe_load(ymlfile)
+config_path = os.path.join(script_dir, '../explainer/config.yml')
+with open(config_path, "r") as ymlfile:
+    VALID_RS_EXP_COMBO = yaml.safe_load(ymlfile)
 
 class MetricError(ValueError):
     pass
@@ -105,13 +111,16 @@ class Experiment_Explainers:
 
         valid_models = []
         for model in models:
-            if (isinstance(model[0], Recommender) and isinstance(model[1], Explainer)):
-                if (model[0].name, model[1].name) in VALID_COMBO:
+            if model[1].name not in VALID_RS_EXP_COMBO.keys():
+                print(f'Explainer {model[1].name} is not a valid Explainer for current experiment.')
+                continue
+            elif (isinstance(model[0], Recommender) and isinstance(model[1], Explainer)):
+                if model[0].name in VALID_RS_EXP_COMBO[model[1].name]['valid_recommenders']:
                     valid_models.append(model)
                 else:
                     print(f'{model[0].name}:{model[1].name} removed from list of models since the combination is not valid!')
             elif (isinstance(model[0][0], Recommender) and isinstance(model[0][1], Recommender) and isinstance(model[1][0], Explainer) and isinstance(model[1][1], Explainer)):
-                if (model[0][0].name, model[1][0].name) in VALID_COMBO and (model[0][1].name, model[1][1].name) in VALID_COMBO:
+                if model[0][0].name in VALID_RS_EXP_COMBO[model[1][0].name]['valid_recommenders'] and model[0][1].name in VALID_RS_EXP_COMBO[model[1][1].name]['valid_recommenders']:
                     valid_models.append(model)
                 else:
                     print(f'({model[0][0].name},{model[0][1].name}):({model[1][0].name},{model[1][1].name}) removed from list of models since the combination is not valid!')
@@ -143,25 +152,16 @@ class Experiment_Explainers:
             if metric.name in ["FA", "RA"]:
                 metrics_support = True
         else:
-            if metric.name == 'Metric_Exp_DIV':
-                metrics_support = True 
-            elif metric.name == 'Metric_Exp_FPR':
-                if self.current_exp.name in ['LIMERS', 'Exp_EFM', 'Exp_MTER']:
-                    metrics_support = True 
-            elif metric.name == 'PSPNFNS':
-                if self.current_exp.name in ['LIMERS', 'Exp_EFM', 'Exp_MTER']:
-                    metrics_support = True
-            elif metric.name in ["FA", "RA"]:
-                pass
-            elif metric.name in ['EnDCG', 'MEP']:
-                if self.current_exp.name in ['EMF', 'PHI4MF'] and self.current_rec.name in ['EMF', 'NEMF']:
-                    metrics_support = True
-            elif metric.name in ['PGF']:
-                if self.current_exp.name in ['EMF', 'PHI4MF', 'ALS']:
-                    metrics_support = True
+            if metric.name not in VALID_EXP_METRIC_COMBO.keys():
+                raise MetricError(f'Metric {metric.name} is not supported in current experiment.')
+               
             else:
-                print(f'Metric {metric.name} not found')
-                return None
+                if self.current_exp.name in VALID_EXP_METRIC_COMBO[metric.name]['valid_explainers']:
+                    metrics_support = True
+
+            # elif metric.name in ['EnDCG', 'MEP']:
+            #     if self.current_exp.name in ['EMF', 'PHI4MF'] and self.current_rec.name in ['EMF', 'NEMF']:
+            #         metrics_support = True
 
         if not metrics_support:
             raise MetricError(f'Metric {metric.name} does not support {self.exp_name}.')

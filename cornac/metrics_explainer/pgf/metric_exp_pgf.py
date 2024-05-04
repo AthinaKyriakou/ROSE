@@ -31,7 +31,7 @@ class Metric_Exp_PGF(Metric_Exp):
             feature_k=10,
             num_threads=0,
             phi=0.1,
-            name='PGF'):
+            name='Metric_Exp_PGF'):
 
         super().__init__(name=name, rec_k=rec_k, feature_k=feature_k)
         if num_threads > 0 and num_threads < multiprocessing.cpu_count():

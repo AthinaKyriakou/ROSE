@@ -129,7 +129,7 @@ class FMRec(Recommender):
 
     def __init__(
         self,
-        name="fm_regressor",
+        name="FMRec",
         trainable=True,
         verbose=True,
         uses_features=True,

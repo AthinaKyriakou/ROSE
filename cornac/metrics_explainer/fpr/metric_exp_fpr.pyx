@@ -32,7 +32,7 @@ class Metric_Exp_FPR(Metric_Exp):
     def _create_ground_truth_sentiment(self):
         if self.ground_truth is None:
             raise ValueError("Please provide the ground truth.")
-        u_i_all = self.ground_truth
+        u_i_all = pd.DataFrame(self.ground_truth, columns=['user_id', 'item_id', 'explanations'])
         u_i_all['explanations'] = u_i_all['explanations'].apply(self._transform_format)
         user_id_list = self.model.train_set.uid_map.keys()
         item_id_list = self.model.train_set.iid_map.keys()

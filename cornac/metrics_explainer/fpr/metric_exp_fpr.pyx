@@ -2,10 +2,10 @@ import numpy as np
 cimport numpy as np
 import pandas as pd
 cimport cython
-from cornac.datasets import goodreads
 from tqdm.auto import tqdm
 
 from ..metric_exp import Metric_Exp
+
 
 class Metric_Exp_FPR(Metric_Exp):
     """probability of feature precision and recall
@@ -16,24 +16,24 @@ class Metric_Exp_FPR(Metric_Exp):
         The number of items to recommend for each user.
     feature_k: int, optional, default: 10
         The number of features to explain for each user-item pair.
-    fpath: str, optional, default: None
-        The path of the ground truth file.
-    
+    ground_truth: pd.DataFrame, optional, default: None
+        The ground truth explanations for each user-item pair, columns=['user_id', 'item_id', 'explanations']
+
     References
     ----------
     [1]Juntao Tan, Shuyuan Xu, Yingqiang Ge, Yunqi Li, Xu Chen, and Yongfeng Zhang. 2021. Counterfactual Explainable Recommendation. In Proceedings of the 30th ACM International Conference on Information & Knowledge Management (CIKM '21). https://doi.org/10.1145/3459637.3482420
 
     """
 
-    def __init__(self, name="Metric_Exp_FPR", rec_k=10, feature_k=10, fpath= None):
+    def __init__(self, name="Metric_Exp_FPR", rec_k=10, feature_k=10, ground_truth=None):
         super().__init__(name=name, rec_k=rec_k, feature_k=feature_k)
-        self.fpath = fpath
+        self.ground_truth = ground_truth
 
-    def create_ground_truth_sentiment(self):
-        if self.fpath is None:
-            raise ValueError("Please provide the path of the ground truth file.")
-        u_i_all = pd.DataFrame(goodreads.load_sentiment(self.fpath), columns=['user_id', 'item_id', 'explanations'])
-        u_i_all['explanations'] = u_i_all['explanations'].apply(self.transform_format)
+    def _create_ground_truth_sentiment(self):
+        if self.ground_truth is None:
+            raise ValueError("Please provide the ground truth.")
+        u_i_all = self.ground_truth
+        u_i_all['explanations'] = u_i_all['explanations'].apply(self._transform_format)
         user_id_list = self.model.train_set.uid_map.keys()
         item_id_list = self.model.train_set.iid_map.keys()
         selected_indices = []
@@ -43,7 +43,7 @@ class Metric_Exp_FPR(Metric_Exp):
         u_i_gt = u_i_all.iloc[selected_indices]
         return u_i_gt
 
-    def transform_format(self, lexicon):
+    def _transform_format(self, lexicon):
         # Transform each tuple into the desired format
         cdef dict explanation_dict = {}
         for t in lexicon:
@@ -52,7 +52,7 @@ class Metric_Exp_FPR(Metric_Exp):
         # Join the tuples into a comma-separated string
         return explanation_dict
 
-    def creat_grount_truth_efm(self):
+    def _creat_grount_truth_efm(self):
         A, X, Y = self.model._build_matrices(self.model.train_set)
         user_idx2id = {v: k for k, v in self.model.train_set.uid_map.items()}
         item_idx2id = {v: k for k, v in self.model.train_set.iid_map.items()}
@@ -80,7 +80,7 @@ class Metric_Exp_FPR(Metric_Exp):
         return u_i_gt
 
 
-    def create_ground_truth_limer(self):
+    def _create_ground_truth_limer(self):
         """ Generate ground truth explanations for each user-item pair
         
         Returns
@@ -99,7 +99,7 @@ class Metric_Exp_FPR(Metric_Exp):
         def combined_exp(x):
             return {**x['exp_1'], **x['exp_2']}
         
-        rec_df = self.create_recommendations()
+        rec_df = self._create_recommendations()
 
         if self.item_f == True and self.user_f == True:
             rec_df['item_idx'] = rec_df['item_id'].apply(lambda x: str(self.model.train_set.iid_map[x]))
@@ -151,11 +151,11 @@ class Metric_Exp_FPR(Metric_Exp):
 
         u_i_gt = None
         if self.model.name == 'MTER':
-            u_i_gt = self.create_ground_truth_sentiment()
+            u_i_gt = self._create_ground_truth_sentiment()
         elif self.model.name == 'EFM':
-            u_i_gt = self.creat_grount_truth_efm()
+            u_i_gt = self._creat_grount_truth_efm()
         elif self.model.name in ['fm_regressor']:
-            u_i_gt = self.create_ground_truth_limer()
+            u_i_gt = self._create_ground_truth_limer()
         else:
             raise ValueError("Model not supported.")
         
@@ -189,7 +189,7 @@ class Metric_Exp_FPR(Metric_Exp):
         
         return [precision, recall, ff1], [precision_list, recall_list, f1_list]
 
-    def create_recommendations(self):
+    def _create_recommendations(self):
         """create recommendations for all users available in the dataset"""
         print("Started creating recommendations...")
         users = [k for k in self.dataset.uid_map.keys()] 

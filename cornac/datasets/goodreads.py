@@ -26,16 +26,16 @@ def load_feedback(fpath, fmt="UIR", sep=',', skip_lines=0, reader: Reader = None
     data: array-like
         Data in the form of a list of tuples (user, item, rating).
     """
+    
     reader = Reader() if reader is None else reader
     return reader.read(fpath, fmt=fmt, sep=sep, skip_lines=skip_lines)
 
-def load_sentiment(fpath, reader: Reader = None) -> List:
+def load_sentiment(reader: Reader = None) -> List:
     """Load the user-item-sentiments
     The dataset was constructed by the method described in the reference paper.
 
     Parameters
     ----------
-    fpath: file path to xx-sentiment.txt
     reader: `obj:cornac.data.Reader`, default: None
         Reader object used to read the data.
 
@@ -48,8 +48,9 @@ def load_sentiment(fpath, reader: Reader = None) -> List:
     ----------
     [1] Gao, J., Wang, X., Wang, Y., & Xie, X. (2019). Explainable Recommendation Through Attentive Multi-View Learning. AAAI.
     """
+    fpath_sentiment = cache(url='https://zenodo.org/records/11061007/files/goodreads_sentiment.txt?download=1')
     reader = Reader() if reader is None else reader
-    return reader.read(fpath, fmt='UITup', sep=',', tup_sep=':')
+    return reader.read(fpath_sentiment, fmt='UITup', sep=',', tup_sep=':')
 
 
 def prepare_data(data_name = "goodreads",test_size=0.2, dense=False, verbose=False, seed=42, item=True, user=False,sample_size=0.1):
@@ -91,8 +92,6 @@ def prepare_data(data_name = "goodreads",test_size=0.2, dense=False, verbose=Fal
     rs: `obj:cornac.eval_methods.RatioSplit`
         The data split.
     """
-    
-    
     # fpath_uir_dense = 'cornac/datasets/good_reads/good_read_dense.csv'
     fpath_uir_dense = cache(url='https://zenodo.org/records/11061007/files/good_read_dense.csv?download=1')
     sep_rating = ','
@@ -100,17 +99,15 @@ def prepare_data(data_name = "goodreads",test_size=0.2, dense=False, verbose=Fal
     if verbose:
         print('Preparing data...')
     if data_name == 'goodreads':
-        fpath_sentiment = cache(url='https://zenodo.org/records/11061007/files/goodreads_sentiment.txt?download=1')
-        fpath_rating = cache(url='https://zenodo.org/records/11061007/files/goodreads_rating.txt?download=1')
-
         if dense:
             fpath_rating = fpath_uir_dense
             sep_rating = '\t'
             skip_lines = 1
-        sentiment = load_sentiment(fpath = fpath_sentiment)
-        
+        else:
+            fpath_rating = cache(url='https://zenodo.org/records/11061007/files/goodreads_rating.txt?download=1')
+        sentiment = load_sentiment()
         sentiment_modality = SentimentModality(data = sentiment)
-        rating = load_feedback(fpath = fpath_rating, sep = sep_rating, skip_lines = skip_lines)
+        rating = load_feedback(fpath_rating, sep = sep_rating, skip_lines = skip_lines)
         indices = np.random.choice(len(rating), int(len(rating)*sample_size), replace=False)
         rating = np.array(rating)[indices]
         rs = RatioSplit(data=rating, test_size=test_size, exclude_unknowns=True, sentiment=sentiment_modality, verbose=verbose, seed=seed)

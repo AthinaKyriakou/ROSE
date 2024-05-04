@@ -4,7 +4,7 @@ import pandas as pd
 from config import cfg
 
 from cornac.models import MF, EMF, NEMF, ALS
-from cornac.explainer import Exp_EMF, Exp_ALS, Exp_PHI4MF
+from cornac.explainer import Exp_SU4EMF, Exp_ALS, Exp_PHI4MF
 from cornac.datasets.goodreads import prepare_data
 
 class Test_MF_explainers(unittest.TestCase):
@@ -64,7 +64,7 @@ class Test_MF_explainers(unittest.TestCase):
         rec_k = 10
 
         recommendations = emf.recommend_to_multiple_users(user_ids=users, k=rec_k)
-        emf_exp = Exp_EMF(emf, rs.train_set)
+        emf_exp = Exp_SU4EMF(emf, rs.train_set)
         assert emf_exp is not None
 
         explanations = emf_exp.explain_recommendations(recommendations=recommendations, feature_k=10)
@@ -90,7 +90,7 @@ class Test_MF_explainers(unittest.TestCase):
         rec_k = 10
 
         recommendations = nemf.recommend_to_multiple_users(user_ids=users, k=rec_k)
-        emf_exp = Exp_EMF(nemf, rs.train_set)
+        emf_exp = Exp_SU4EMF(nemf, rs.train_set)
         assert emf_exp is not None
 
         explanations = emf_exp.explain_recommendations(recommendations=recommendations, feature_k=10)
@@ -204,7 +204,7 @@ class Test_MF_explainers(unittest.TestCase):
         mf_rec = mf.recommend_to_multiple_users(user_ids=users, k=10)
         
         with self.assertRaises(AttributeError):
-            exp = Exp_EMF(als, rs.train_set)
+            exp = Exp_SU4EMF(als, rs.train_set)
             exp.explain_recommendations(als_rec, feature_k=10)
         with self.assertRaises(AttributeError):
             exp = Exp_PHI4MF(als, rs.train_set)
@@ -213,7 +213,7 @@ class Test_MF_explainers(unittest.TestCase):
             exp = Exp_ALS(mf, rs.train_set)
             exp.explain_recommendations(mf_rec, feature_k=10)
         with self.assertRaises(AttributeError):
-            exp = Exp_EMF(mf, rs.train_set)
+            exp = Exp_SU4EMF(mf, rs.train_set)
             exp.explain_recommendations(mf_rec, feature_k=10)
             
         

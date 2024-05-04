@@ -4,7 +4,7 @@ import pandas as pd
 
 from cornac.datasets.goodreads import prepare_data
 from cornac.models import FMRec, EFM, MTER, ALS, MF, EMF, NEMF
-from cornac.explainer import Exp_LIMERS, Exp_EFM, Exp_MTER, Exp_EMF, Exp_ALS, Exp_PHI4MF
+from cornac.explainer import Exp_LIMERS, Exp_EFM, Exp_MTER, Exp_SU4EMF, Exp_ALS, Exp_PHI4MF
 from cornac.metrics_explainer import Metric_Exp_PSPNFNS
 from cornac.metrics_explainer import Metric_Exp_DIV as DIV
 from cornac.metrics_explainer import Metric_Exp_MEP as MEP
@@ -39,7 +39,7 @@ class TestExperiment(unittest.TestCase):
         als = ALS()
         mf = MF()
         nemf = NEMF()
-        emf_exp = Exp_EMF(rec_model=emf, dataset=rs.train_set)
+        emf_exp = Exp_SU4EMF(rec_model=emf, dataset=rs.train_set)
         als_exp = Exp_ALS(rec_model=als, dataset=rs.train_set)
         phi4 = Exp_PHI4MF(rec_model=nemf, dataset=rs.train_set)
         models = [(emf, emf_exp), (als, als_exp), (nemf,phi4)]
@@ -59,7 +59,7 @@ class TestExperiment(unittest.TestCase):
         """validate invalid metrics raise ValueError"""
         rs = prepare_data(data_name="goodreads", test_size=0.2, dense=True, item=True, user=True, sample_size=0.1, seed=21)
         emf = EMF()
-        emf_exp = Exp_EMF(rec_model=emf, dataset=rs.train_set)
+        emf_exp = Exp_SU4EMF(rec_model=emf, dataset=rs.train_set)
         models = [emf, emf_exp]
         try:
             Explainers_Experiment(rs, models, None)

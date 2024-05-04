@@ -16,7 +16,7 @@ from cornac import Experiment
 
 from cornac.metrics_explainer import Explainers_Experiment
 from cornac.models import MF, EMF, NEMF, ALS, MTER, FMRec, NMF, EFM
-from cornac.explainer import Exp_EMF, Exp_EFM, Exp_ALS, Exp_PHI4MF, Exp_MTER, Exp_EFM_Mod, Exp_LIMERS
+from cornac.explainer import Exp_SU4EMF, Exp_EFM, Exp_ALS, Exp_PHI4MF, Exp_MTER, Exp_EFM_Mod, Exp_LIMERS
 from cornac.datasets.goodreads import prepare_data
 # from cornac.utils.libffm_mod import LibffmModConverter
 from cornac.metrics_explainer import Metric_Exp_MEP, Metric_Exp_EnDCG, Metric_Exp_PGF, Metric_Exp_DIV, Metric_Exp_FPR, Metric_Exp_FA, Metric_Exp_RA, Metric_Exp_PSPNFNS
@@ -94,13 +94,13 @@ for d_name, data in datasets.items():
     print("RecSys evaluation done")
     
     # Match Recommenders with Explainers
-    emf_emf = (emf, Exp_EMF(emf, data.train_set))
+    emf_emf = (emf, Exp_SU4EMF(emf, data.train_set))
     Explainers_Experiment(eval_method=data, models=[emf_emf], 
                           metrics=expl_metrics, rec_k=10, feature_k=10, eval_train=True, distribution=True, save_dir="output/" + d_name + "/explanation_eval/").run()
     print("EMF_EMF done")
     del emf, emf_emf
 
-    nemf_emf = (nemf, Exp_EMF(nemf, data.train_set))
+    nemf_emf = (nemf, Exp_SU4EMF(nemf, data.train_set))
     Explainers_Experiment(eval_method=data, models=[nemf_emf], 
                           metrics=expl_metrics, rec_k=10, feature_k=10, eval_train=True, distribution=True, save_dir="output/" + d_name + "/explanation_eval/").run()
     print("NEMF_EMF done")

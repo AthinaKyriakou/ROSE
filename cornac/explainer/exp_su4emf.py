@@ -3,8 +3,8 @@ import numpy as np
 from .explainer import Explainer
 
 
-class Exp_EMF(Explainer):
-    """Explainer from Explainable Matrix Factorization for Collaborative Filtering
+class Exp_SU4EMF(Explainer):
+    """Explainer from Explainable Matrix Factorization for Collaborative Filtering. Explains by rating distribution of similar users.
     
     Parameters
     ----------
@@ -12,7 +12,7 @@ class Exp_EMF(Explainer):
         The recommender model to be explained.
     dataset: object, dataset
         The dataset object that is used to explain.
-    name: string, optional, default: 'Exp_EMF'
+    name: string, optional, default: 'Exp_SU4EMF'
     
     References
     ----------
@@ -22,7 +22,7 @@ class Exp_EMF(Explainer):
     [2] https://github.com/ludovikcoba/recoxplainer/blob/master/recoxplainer/explain/model_based_emf.py
     """
 
-    def __init__(self, rec_model, dataset, name="Exp_EMF"):
+    def __init__(self, rec_model, dataset, name="Exp_SU4EMF"):
         super().__init__(name=name, rec_model=rec_model, dataset=dataset)
 
     def explain_one_recommendation_to_user(self, user_id, item_id, **kwargs):

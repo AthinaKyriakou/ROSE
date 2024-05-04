@@ -4,7 +4,7 @@ import pandas as pd
 from config import cfg
 
 from cornac.models import FMRec, EFM, EMF
-from cornac.explainer import Exp_LIMERS, Exp_EFM, Exp_EMF
+from cornac.explainer import Exp_LIMERS, Exp_EFM, Exp_SU4EMF
 from cornac.metrics_explainer import Metric_Exp_PSPNFNS
 from cornac.datasets.goodreads import prepare_data
 
@@ -56,7 +56,7 @@ class TestPSPNModel(unittest.TestCase):
         """test the metric would raise value error when unsupported explainers are used"""
         rs = prepare_data(data_name="goodreads_uir_1000", test_size=0.2, dense=True, item=True, user=True, sample_size=0.6, seed=21)
         emf = EMF().fit(rs.train_set)
-        emf_exp = Exp_EMF(rec_model=emf, dataset=rs.train_set)
+        emf_exp = Exp_SU4EMF(rec_model=emf, dataset=rs.train_set)
         lst_users = [key for key in rs.train_set.uid_map.keys()]
         recommendations = emf.recommend_to_multiple_users(lst_users, k=10)
         explanations = emf_exp.explain_recommendations(recommendations)[['user_id', 'item_id', 'explanations']].values      

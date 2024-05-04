@@ -4,7 +4,7 @@ import pandas as pd
 from config import cfg
 
 from cornac.models import EMF, ALS, EFM
-from cornac.explainer import Exp_EMF, Exp_ALS, Exp_PHI4MF, Exp_EFM
+from cornac.explainer import Exp_SU4EMF, Exp_ALS, Exp_PHI4MF, Exp_EFM
 from cornac.metrics_explainer import Metric_Exp_PGF as PGF
 from cornac.datasets.goodreads import prepare_data
 
@@ -39,7 +39,7 @@ class TestPGF(unittest.TestCase):
         rs = prepare_data(data_name="goodreads_uir_1000", test_size=0, verbose=False, sample_size=1, dense=True)
         emf = EMF(**cfg.model.emf)
         emf.fit(rs.train_set)
-        emf_exp = Exp_EMF(emf, rs.train_set)
+        emf_exp = Exp_SU4EMF(emf, rs.train_set)
         users = [k for k in rs.train_set.uid_map.keys()] 
         rec_df = emf.recommend_to_multiple_users(users, k=10)
         exp = emf_exp.explain_recommendations(recommendations=rec_df, feature_k=10)[['user_id', 'item_id', 'explanations']].values

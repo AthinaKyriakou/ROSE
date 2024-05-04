@@ -3,7 +3,7 @@ import cornac
 
 from cornac.eval_methods import RatioSplit
 from cornac.models import EMF, NEMF, ALS
-from cornac.explainer import Exp_EMF, Exp_ALS
+from cornac.explainer import Exp_SU4EMF, Exp_ALS
 from cornac.datasets.goodreads import prepare_data
 from cornac.experiment.experiment_explainer import Experiment_Explainers
 
@@ -22,8 +22,8 @@ nemf = NEMF(k=10, max_iter=500, learning_rate=0.001, lambda_reg=0.1, explain_reg
 als = ALS(k=10, max_iter=500, lambda_reg=0.001, alpha=1, verbose=True, seed=6)
 
 # (recommender, explainer) pairs
-emf_emf = (emf, Exp_EMF(emf, ac.train_set))
-nemf_emf = (nemf, Exp_EMF(nemf, ac.train_set))
+emf_emf = (emf, Exp_SU4EMF(emf, ac.train_set))
+nemf_emf = (nemf, Exp_SU4EMF(nemf, ac.train_set))
 als_als = (als, Exp_ALS(als, ac.train_set))
 
 # metrics

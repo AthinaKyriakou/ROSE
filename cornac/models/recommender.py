@@ -583,7 +583,7 @@ class Recommender:
 
         Returns
         -------
-        recommendations: a list of pandas.DataFrame [user_id, item_id, prediction]
+        recommendations: pandas.DataFrame, columns as [user_id, item_id, prediction]
             Recommended items in the form of their original IDs.
         """
         recommendations = []

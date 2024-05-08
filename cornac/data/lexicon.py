@@ -18,14 +18,14 @@ class SentimentAnalysis:
         
         Parameters
         ----------
-            input_path: string, required
-                csv/txt file path
-            sep: string, optional, default '\t'
-                separator of the file, default is '\t'
-            usecols: list, required
-                must specific the column names within the file, order matters, must be [name of user id, name of item id, name of rating, name of review]
-            min_frequency: int, optional, default 1
-                drop users who have less than min_frequency reviews
+        input_path: string, required
+            csv/txt file path
+        sep: string, optional, default '\t'
+            separator of the file, default is '\t'
+        usecols: list, required
+            must specific the column names within the file, order matters, must be [name of user id, name of item id, name of rating, name of review]
+        min_frequency: int, optional, default 1
+            drop users who have less than min_frequency reviews
         """
         self.input_path = input_path
         self.sep = sep

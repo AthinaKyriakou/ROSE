@@ -12,21 +12,22 @@ nlp = spacy.load("en_core_web_sm")
 sid = SentimentIntensityAnalyzer()
 
 class SentimentAnalysis:
+    """
+    Process raw data, like text reviews, to generate lexicons in form of (feature:opinion:+/-1).
+    
+    Parameters
+    ----------
+    input_path: string, required
+        csv/txt file path. Expected format: the first line in file should be the column names, at least include ['user_id', 'book_id', 'rating', 'review_text'], which are consistent with the usecols parameter.
+    sep: string, optional, default '\t'
+        separator of the file, default is '\t'
+    usecols: list, required
+        must specific the column names within the file, order matters, [name of user id, name of item id, name of rating, name of review]
+    min_frequency: int, optional, default 1
+        drop users who have less than min_frequency reviews
+    """
     def __init__(self, input_path, sep='\t', usecols = ['user_id', 'book_id', 'rating', 'review_text'], min_frequency=1):
-        """
-        Process raw data, like text reviews, to generate lexicons in form of (feature:opinion:+/-1).
         
-        Parameters
-        ----------
-        input_path: string, required
-            csv/txt file path
-        sep: string, optional, default '\t'
-            separator of the file, default is '\t'
-        usecols: list, required
-            must specific the column names within the file, order matters, must be [name of user id, name of item id, name of rating, name of review]
-        min_frequency: int, optional, default 1
-            drop users who have less than min_frequency reviews
-        """
         self.input_path = input_path
         self.sep = sep
         self.usecols = usecols

@@ -16,7 +16,8 @@ class SentimentAnalysis:
         """
         Process raw data, like text reviews, to generate lexicons in form of (feature:opinion:+/-1).
         
-        Parameters:
+        Parameters
+        ----------
             input_path: string, required
                 csv/txt file path
             sep: string, optional, default '\t'
@@ -32,11 +33,12 @@ class SentimentAnalysis:
         self.min_frequency = min_frequency
         self.data = pd.DataFrame()
         
-    def get_relations(self, sentence):
+    def _get_relations(self, sentence):
         """
         sentence: tokenized sentence
 
-        Returns:
+        Returns
+        --------
            relations: dict, key: modifier, value: (word, relation)
         """
         relations = {}
@@ -51,8 +53,9 @@ class SentimentAnalysis:
                                 relations[child.lower_] = (relations[token.lower_][0], relation)
         return relations
     
-    def get_reverse_sent(self, sentence):
+    def _get_reverse_sent(self, sentence):
         """
+        
         sentence: tokenized sentence
         Returns:
             reverse_sent: list, all words that are reversed by negation
@@ -67,7 +70,7 @@ class SentimentAnalysis:
                         reverse_sent.append(child.lower_)
         return reverse_sent
     
-    def get_polarity(self, word):
+    def _get_polarity(self, word):
         """
         word: string, required
         Returns:
@@ -76,7 +79,7 @@ class SentimentAnalysis:
         score = 1 if sid.polarity_scores(word)['pos'] >= sid.polarity_scores(word)['neg'] else -1
         return score
     
-    def detect_outlier_char(self, word, pattern = r"[^\w\s]"):
+    def _detect_outlier_char(self, word, pattern = r"[^\w\s]"):
         """
         Parameters:
             word: string, required
@@ -87,7 +90,7 @@ class SentimentAnalysis:
         return re.findall(pattern, word)
     
     
-    def analysis_relations(self, relations, reverse_sent):
+    def _analysis_relations(self, relations, reverse_sent):
         """
         Parameters:
             relations: dict, key: modifier, value: (word, relation)
@@ -98,9 +101,9 @@ class SentimentAnalysis:
         """
         lexicons = []
         for modifier, (word, relation) in relations.items():
-            if self.detect_outlier_char(word) or self.detect_outlier_char(modifier):
+            if self._detect_outlier_char(word) or self._detect_outlier_char(modifier):
                 continue
-            sentiment_score = self.get_polarity(modifier)
+            sentiment_score = self._get_polarity(modifier)
             if modifier in reverse_sent or word in reverse_sent:
                 #print(f"reversed modifier: {modifier} word: {word}")
                 lexicons.append(f'{word}:{modifier}:{-1 * sentiment_score}')
@@ -108,7 +111,7 @@ class SentimentAnalysis:
                 lexicons.append(f'{word}:{modifier}:{sentiment_score}')
         return lexicons
     
-    def transform_format(self, lexicons):
+    def _transform_format(self, lexicons):
         """
         This function is not useless for now.
         transform list to the format of "aspect:opinion:score1,aspect:opinion:score2,..."
@@ -122,7 +125,7 @@ class SentimentAnalysis:
         return ','.join(tuples) if len(tuples)>0 else np.NaN
         
     
-    def build_lexicons_one_text(self, text):
+    def _build_lexicons_one_text(self, text):
         """
         Parameters:
             text: string, required
@@ -136,25 +139,29 @@ class SentimentAnalysis:
         doc = nlp(text)
         lexicons = []
         for sentence in doc.sents:
-            relations = self.get_relations(sentence)
-            reverse_sent = self.get_reverse_sent(sentence)
-            l = self.analysis_relations(relations, reverse_sent)
+            relations = self._get_relations(sentence)
+            reverse_sent = self._get_reverse_sent(sentence)
+            l = self._analysis_relations(relations, reverse_sent)
             if len(l) == 0:
                 continue
             lexicons.extend(l)
         return ','.join(lexicons) if (len(lexicons) > 0) else np.NaN
     
     def build_lexicons(self):
+        """ Build the lexicons
+        
+        Returns
+        -------
+        df: dataframe
+            ['user_id', 'item_id', 'rating, 'lexicon']
+        
         """
-        Returns:
-            df: dataframe, ['user_id', 'item_id', 'rating, 'lexicon']
-        """
-        self.data = self.read_raw_data()
+        self.data = self._read_raw_data()
         self.data['lexicon'] = np.NaN
         df = self.data.__deepcopy__()
         text_name = self.usecols[-1]
         for i, row in tqdm(df.iterrows(), total=df.shape[0]):
-            df.at[i, 'lexicon'] = self.build_lexicons_one_text(row[text_name]) if row[text_name] is not np.NaN else np.NaN
+            df.at[i, 'lexicon'] = self._build_lexicons_one_text(row[text_name]) if row[text_name] is not np.NaN else np.NaN
     
         print(f'number of users: {df[self.usecols[0]].nunique()}')
         print(f'number of items: {df[self.usecols[1]].nunique()}')
@@ -163,14 +170,13 @@ class SentimentAnalysis:
         print(f'{df["lexicon"].isna().sum()} rows have no lexicon')
         df = df.dropna(axis=0, subset=['lexicon'])
         if self.min_frequency > 1:
-            df = self.prune_dataset(df)
+            df = self._prune_dataset(df)
         print(f'{len(df)} rows after dropping users having less than {self.min_frequency} reviews')
         self.data = df
         return self.data
     
-    def prune_dataset(self, df):
+    def _prune_dataset(self, df):
         """
-
         Parameters:
             df: dataframe, ['user_id', 'item_id', 'rating, 'lexicon']
 
@@ -184,7 +190,7 @@ class SentimentAnalysis:
         pruned_df = df[df[self.usecols[0]].isin(users_to_keep)]
         return pruned_df
     
-    def read_raw_data(self):
+    def _read_raw_data(self):
         """
         Returns:
             df: dataframe, ['user_id', 'item_id', 'rating, 'review_text']
@@ -205,15 +211,18 @@ class SentimentAnalysis:
         return self.data
     
     def save_to_file(self, lexicon_path, rating_path):
+        """ save the processed data to two files, one for lexicons, one for ratings
+        
+        parameters
+        ----------
+        lexicon_path: string, required 
+            path to save the lexicons, including [user_id, item_id, lexicons]
+        rating_path: string, required
+            path to save the ratings, including [user_id, item_id, rating]
+
         """
-        parameters:
-            lexicon_path: string, required 
-                path to save the lexicons, including [user_id, item_id, lexicons]
-            rating_path: string, required
-                path to save the ratings, including [user_id, item_id, rating]
-        Note: 
-            tear one dataframe to two files, [user_id, item_id] are exactly the same, to ensure the consistency
-        """
+        #Note: 
+        #    tear one dataframe to two files, [user_id, item_id] are exactly the same, to ensure the consistency
         columns_sentiment = [self.usecols[0], self.usecols[1], 'lexicon']
         columns_rating = self.usecols[:3]
         # write to output files

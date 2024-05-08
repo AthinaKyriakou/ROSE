@@ -37,8 +37,8 @@ class Exp_EMF(Explainer):
 
         Returns
         -------
-        explanations: dict
-            Key: rating, Value: number of similar users who rated the item with that rating.
+        explanations: float
+            The W matrix value of the user and item.
         """
         if self.model is None:
             raise NotImplementedError("The model is None.")

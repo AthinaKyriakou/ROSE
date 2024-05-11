@@ -1,11 +1,11 @@
 Exp_LIMERS:
   valid_recommenders: [FMRec]
 Exp_EFM_Mod:
-  valid_recommenders: [EFM]
+  valid_recommenders: [EFM, ComparERObj]
 Exp_EFM:
-  valid_recommenders: [EFM]
+  valid_recommenders: [EFM, ComparERObj]
 Exp_MTER:
-  valid_recommenders: [MTER]
+  valid_recommenders: [MTER, ComparERSub]
 Exp_ALS:
   valid_recommenders: [ALS]
 Exp_PHI4MF:
@@ -14,3 +14,5 @@ Exp_SU4EMF:
   valid_recommenders: [EMF, NEMF]
 Exp_EMF:
   valid_recommenders: [EMF, NEMF]
+Exp_NARRE:
+  valid_recommenders: [NARRE]

@@ -47,8 +47,6 @@ class Exp_PHI4MF(Explainer):
 
         if self.model is None:
             raise NotImplementedError("The model is None.")
-        if self.model.name not in ["MF", "EMF", "NEMF"]:
-            raise AttributeError("The explainer does not support this recommender.")
 
         self.rules = self.generate_rules()
 

@@ -16,3 +16,5 @@ Exp_EMF:
   valid_recommenders: [EMF, NEMF]
 Exp_NARRE:
   valid_recommenders: [NARRE]
+Exp_TriRank:
+  valid_recommenders: [TriRank]

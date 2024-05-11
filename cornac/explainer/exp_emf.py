@@ -32,8 +32,6 @@ class Exp_EMF(Explainer):
             One user's id.
         item_id: str
             One item's id.
-        feature_k: int, optional, default:10
-            Number of features in explanations created by explainer.
 
         Returns
         -------

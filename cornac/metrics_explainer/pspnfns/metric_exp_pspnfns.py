@@ -50,7 +50,7 @@ class Metric_Exp_PSPNFNS(Metric_Exp):
         self.explainer = explainer
         self.explanations = explanations
         
-        if self.explainer.name == "LIMERS":
+        if self.explainer.name == "Exp_LIMERS":
             self.item_f = False
             self.user_f = False
             if not self.model.train_set.item_features.empty:
@@ -70,10 +70,10 @@ class Metric_Exp_PSPNFNS(Metric_Exp):
         with tqdm(total=total, desc="Re-evaluate after features removal... ") as pbar:
             for i, (user, item, exp) in enumerate(self.explanations):
                 # remove features mentioned in exp in item_feature_matrix
-                if self.explainer.name == 'LIMERS':
+                if self.explainer.name == 'Exp_LIMERS':
                     rank_scores_pn = self._reevaluate_limers(exp, user, pn=True)
                     rank_scores_ps = self._reevaluate_limers(exp, user, pn=False)
-                elif self.explainer.name in ['EFM_Exp', 'MTER_Exp']:
+                elif self.explainer.name in ['Exp_EFM', 'Exp_MTER']:
                     rank_scores_pn = self._reevaluate_sentiment(exp, user, pn=True)
                     rank_scores_ps = self._reevaluate_sentiment(exp, user, pn=False)
                 else:

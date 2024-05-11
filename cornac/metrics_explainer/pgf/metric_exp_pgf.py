@@ -41,7 +41,7 @@ class Metric_Exp_PGF(Metric_Exp):
             
         self.phi = phi
 
-    def compute(self, recommender, explainer, explanations, distribution=False):
+    def compute(self, recommender, explainer, explanations, distribution=FExp_ALSe):
         """The main function to compute PGF
         
         Parameters
@@ -65,8 +65,6 @@ class Metric_Exp_PGF(Metric_Exp):
             # print('Please train model first!')
             # return
             raise AttributeError("The recommender is not trained yet.")
-        if explainer.name not in ['EMF', 'PHI4MF', 'ALS']:
-            raise NotImplementedError("The explainer does not support this recommender.")
 
         self.recommender = recommender
         self.explainer = explainer
@@ -92,9 +90,9 @@ class Metric_Exp_PGF(Metric_Exp):
         user_idx: int
             The index of the user(not id).
         """
-        if self.explainer.name == 'EMF':
+        if self.explainer.name == 'Exp_SU4EMF':
             return self.recommender.sim_users[user_idx][:self.feature_k]
-        elif self.explainer.name == 'PHI4MF':
+        elif self.explainer.name == 'Exp_PHI4MF':
             user_id = self.idx2uid[user_idx]
             explanations = self.explanations[self.explanations[:, 0] == user_id][:, 2]
             # get the item id before "=>"
@@ -116,7 +114,7 @@ class Metric_Exp_PGF(Metric_Exp):
                             continue
             item_idxs = [self.dataset.iid_map[item_id] for item_id in item_ids]
             return item_idxs
-        elif self.explainer.name == 'ALS':
+        elif self.explainer.name == 'Exp_ALS':
             user_id = self.idx2uid[user_idx]
             explanations = self.explanations[self.explanations[:, 0] == user_id][:, 2]
             # explanations is a dict with item_id as key
@@ -132,7 +130,7 @@ class Metric_Exp_PGF(Metric_Exp):
         Compute PGF
         """
         self.gaps = np.zeros(self.dataset.num_users)
-        if self.explainer.name == 'EMF':
+        if self.explainer.name == 'Exp_SU4EMF':
             sum_pgf = 0
             for user_idx in tqdm.tqdm(range(self.dataset.num_users)):
                 top_elements = self._get_top_elements(user_idx)
@@ -147,7 +145,7 @@ class Metric_Exp_PGF(Metric_Exp):
                 self.gaps[user_idx] = diff
             return sum_pgf / self.dataset.num_users 
             
-        elif self.explainer.name in ['PHI4MF', 'ALS']:
+        elif self.explainer.name in ['Exp_PHI4MF', 'Exp_ALS']:
             sum_pgf = 0
             for user_idx in tqdm.tqdm(range(self.dataset.num_users)):
                 top_elements = self._get_top_elements(user_idx)

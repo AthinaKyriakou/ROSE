@@ -17,7 +17,8 @@ import numpy as np
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers, initializers, Input
-from tensorflow.python.keras.preprocessing.sequence import pad_sequences
+# from tensorflow.python.keras.preprocessing.sequence import pad_sequences
+from keras.utils import pad_sequences
 
 from ...utils import get_rng
 from ...utils.init_utils import uniform
@@ -184,6 +185,7 @@ class NARREModel:
     def get_weights(self, train_set, batch_size=64):
         X = np.zeros((self.n_users, self.n_factors))
         Y = np.zeros((self.n_items, self.n_factors))
+        item_attention_all = np.zeros((self.n_items, self.max_num_review))
         for batch_users in train_set.user_iter(batch_size):
             i_user_review, i_user_iid_review, i_user_num_reviews = get_data(batch_users, train_set, self.max_text_length, by='user', max_num_review=self.max_num_review)
             user_review_embedding = self.graph.l_user_review_embedding(i_user_review)

@@ -35,8 +35,6 @@ class Exp_EFM_Mod(Explainer):
 
         if self.model is None:
             raise NotImplementedError("The model is None.")
-        if self.model.name not in ["EFM"]:
-            raise AttributeError("The explainer does not support this recommender.")
 
     def explain_one_recommendation_to_user(self, user_id, item_id, **kwargs):
         """Get aspect with the highest score of the item, and at the same time, being the user's most cared aspect.

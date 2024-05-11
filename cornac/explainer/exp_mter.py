@@ -35,8 +35,6 @@ class Exp_MTER(Explainer):
 
         if self.model is None:
             raise NotImplementedError("The model is None.")
-        if self.model.name not in ["MTER"]:
-            raise AttributeError("The explainer does not support this recommender.")
 
     def explain_one_recommendation_to_user(self, user_id, item_id, **kwargs):
         """Get aspect performs best and user's opinion word of that aspect.

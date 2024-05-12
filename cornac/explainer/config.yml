@@ -9,7 +9,7 @@ Exp_MTER:
 Exp_ALS:
   valid_recommenders: [ALS]
 Exp_PHI4MF:
-  valid_recommenders: [MF, EMF, NEMF]
+  valid_recommenders: [MF, EMF, NEMF, LRPPM]
 Exp_SU4EMF:
   valid_recommenders: [EMF, NEMF]
 Exp_EMF:

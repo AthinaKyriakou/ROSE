@@ -9,8 +9,10 @@ from cornac.models import Recommender
 from cornac.explainer import Explainer
 from cornac.metrics_explainer.metric_exp import Metric_Exp as Metrics
 import yaml
+import logging
 
 NUM_FMT = "{:.4f}"
+logger = logging.getLogger(__name__)
 
 script_dir = os.path.dirname(__file__)
 config_path = os.path.join(script_dir, "config_experiment.yml")
@@ -19,10 +21,6 @@ with open(config_path, "r") as ymlfile:
 config_path = os.path.join(script_dir, "../explainer/config.yml")
 with open(config_path, "r") as ymlfile:
     VALID_RS_EXP_COMBO = yaml.safe_load(ymlfile)
-
-
-class MetricError(ValueError):
-    pass
 
 
 def _table_format(data, headers=None, index=None, extra_spaces=0, h_bars=None):
@@ -129,7 +127,7 @@ class Experiment_Explainers:
         valid_models = []
         for model in models:
             if model[1].name not in VALID_RS_EXP_COMBO.keys():
-                print(
+                logger.error(
                     f"Explainer {model[1].name} is not a valid Explainer for current experiment."
                 )
                 continue
@@ -140,7 +138,7 @@ class Experiment_Explainers:
                 ):
                     valid_models.append(model)
                 else:
-                    print(
+                    logger.error(
                         f"{model[0].name}:{model[1].name} removed from list of models since the combination is not valid!"
                     )
             elif (
@@ -157,7 +155,7 @@ class Experiment_Explainers:
                 ):
                     valid_models.append(model)
                 else:
-                    print(
+                    logger.error(
                         f"({model[0][0].name},{model[0][1].name}):({model[1][0].name},{model[1][1].name})",
                         f"removed from list of models since the combination is not valid!",
                     )
@@ -187,7 +185,7 @@ class Experiment_Explainers:
                 metrics_support = True
         else:
             if metric.name not in VALID_EXP_METRIC_COMBO.keys():
-                raise MetricError(
+                raise ValueError(
                     f"Metric {metric.name} is not supported in current experiment."
                 )
 
@@ -199,7 +197,7 @@ class Experiment_Explainers:
                     metrics_support = True
 
         if not metrics_support:
-            raise MetricError(f"Metric {metric.name} does not support {self.exp_name}.")
+            raise ValueError(f"Metric {metric.name} does not support {self.exp_name}.")
 
         return metric
 
@@ -213,15 +211,15 @@ class Experiment_Explainers:
             evaluation result
         """
         name = "placeholder"  # to be addressed by each condition
-        print(f"Step 3/3: Metric {self.current_metric.name} starts evaluation...")
-        if self.current_metric.name == "PSPNFNS":
-            print(
+        logger.info(f"Step 3/3: Metric {self.current_metric.name} starts evaluation...")
+        if self.current_metric.name == "Metric_Exp_PSPNFNS":
+            logger.info(
                 f"self.current_rec: {self.current_rec.name}, self.current_exp: {self.current_exp.name}"
             )
             (pn, ps, fns), (pn_d, ps_d, fns_d) = self.current_metric.compute(
                 self.current_rec, self.current_exp, self.explanations1
             )
-            print(
+            logger.info(
                 f"Result: Probability of Necessity: {pn}; Probability of Sufficiency: {ps}; Harmonic Mean: {fns}"
             )
             self._plot_distribution("PN", pn_d)
@@ -230,47 +228,47 @@ class Experiment_Explainers:
             return fns
         elif self.current_metric.name == "Metric_Exp_DIV":
             fd, fd_d = self.current_metric.compute(self.explanations1)
-            print(f"Result: Feature diversity: {fd}")
+            logger.info(f"Result: Feature diversity: {fd}")
             self._plot_distribution("FDIV", fd_d, groupby="explanation")
             return fd
         elif self.current_metric.name == "Metric_Exp_FPR":
             (precision, recall, ff1), (precision_d, recall_d, ff1_d) = (
                 self.current_metric.compute(self.current_rec, self.current_exp)
             )
-            print(
+            logger.info(
                 f"Result: Feature Precision: {precision}; Feature Recall: {recall}; Harmonic Mean: {ff1}"
             )
             self._plot_distribution("FP", precision_d, groupby="explanation")
             self._plot_distribution("FR", recall_d, groupby="explanation")
             self._plot_distribution("FF1", ff1_d, groupby="explanation")
             return ff1
-        elif self.current_metric.name in ["FA", "RA"]:
+        elif self.current_metric.name in ["Metric_Exp_FA", "Metric_Exp_RA"]:
             (result, result_d) = self.current_metric.compute(
                 self.explanations1, self.explanations2
             )
-            print(f"Result: Average {self.current_metric.name}: {result}")
+            logger.info(f"Result: Average {self.current_metric.name}: {result}")
             self._plot_distribution(self.current_metric.name, result_d)
             return result
-        elif self.current_metric.name in ["EnDCG", "MEP"]:
+        elif self.current_metric.name in ["Metric_Exp_EnDCG", "Metric_Exp_MEP"]:
             (result, result_d) = self.current_metric.compute(
                 recommender=self.current_rec, recommendations=self.recommendations1
             )
-            print(f"Result: {self.current_metric.name}: {result}")
+            logger.info(f"Result: {self.current_metric.name}: {result}")
             self._plot_distribution(self.current_metric.name, result_d)
             return result
-        elif self.current_metric.name in ["PGF"]:
+        elif self.current_metric.name in ["Metric_Exp_PGF"]:
             (result, result_d) = self.current_metric.compute(
                 recommender=self.current_rec,
                 explainer=self.current_exp,
                 explanations=self.explanations1,
             )
-            print(f"Result: {self.current_metric.name}: {result}")
+            logger.info(f"Result: {self.current_metric.name}: {result}")
             self._plot_distribution(self.current_metric.name, result_d)
             return result
         else:
             ##TODO: to be verified
-            print(f"Metric {self.current_metric.name} has not be implemented")
-            return None
+            logger.error(f"Metric {self.current_metric.name} has not be implemented")
+            return "N/A"
 
     def _get_recommendations(self, current_rec):
         """
@@ -359,21 +357,25 @@ class Experiment_Explainers:
 
             start_time = time.time()
             if self.pair_exp:
-                print(f"Start training Recommender1 {self.current_rec[0].name}...")
+                logger.info(
+                    f"Start training Recommender1 {self.current_rec[0].name}..."
+                )
                 self.current_rec[0].fit(self.eval_method.train_set)
-                print(f"Start training Recommender2 {self.current_rec[1].name}...")
+                logger.info(
+                    f"Start training Recommender2 {self.current_rec[1].name}..."
+                )
                 self.current_rec[1].fit(self.eval_method.train_set)
             else:
-                print(f"Start training Recommender {self.current_rec.name}...")
+                logger.info(f"Start training Recommender {self.current_rec.name}...")
                 self.current_rec.fit(self.eval_method.train_set)
             end_time = time.time()
             train_time = end_time - start_time
 
             result = []
             start_time = time.time()
-            print(f"*****Start evaluating model-explainer: '{model_name}'...")
+            logger.info(f"*****Start evaluating model-explainer: '{model_name}'...")
             if self.pair_exp:
-                print(
+                logger.info(
                     f"Step 1/3: Creates fake recommendations from dataset for common used"
                 )
                 users = np.array(list(self.dataset.uid_map.keys()))
@@ -382,24 +384,24 @@ class Experiment_Explainers:
                 self.recommendations = pd.DataFrame(
                     {"user_id": users[:min_num], "item_id": items[:min_num]}
                 )
-                print(
+                logger.info(
                     f"Step 2/3: Explainer1 {self.current_exp[0].name} create explanation for all recommendations"
                 )
                 self.explanations1 = self._get_explanations(
                     self.current_exp[0], self.recommendations
                 )
-                print(
+                logger.info(
                     f"Step 2/3: Explainer2 {self.current_exp[1].name} create explanation for all recommendations"
                 )
                 self.explanations2 = self._get_explanations(
                     self.current_exp[1], self.recommendations
                 )
             else:
-                print(
+                logger.info(
                     f"Step 1/3: Recommender {self.current_rec.name} creates recommendations"
                 )
                 self.recommendations1 = self._get_recommendations(self.current_rec)
-                print(
+                logger.info(
                     f"Step 2/3: Explainer {self.current_exp.name} create explanation for all recommendations"
                 )
                 self.explanations1 = self._get_explanations(
@@ -412,9 +414,11 @@ class Experiment_Explainers:
                 try:
                     self.current_metric = self._get_metric_explainer(metric)
                     temp = self._evaluate_explainer()
-                except MetricError:
+                except ValueError:
                     temp = "N/A"
-                    print(f"Metric {metric.name} does not support {self.exp_name}.")
+                    logger.error(
+                        f"Metric {metric.name} does not support {self.exp_name}."
+                    )
                 result.append(temp)
 
             end_time = time.time()
@@ -426,11 +430,10 @@ class Experiment_Explainers:
             data.append(result)
             models.append(model_name)
         metrics.extend(["Train(s)", "Evaluate(s)"])
-        print(f"experiment data: {data}")
+        logger.info(f"experiment data: {data}")
         self.result = data.copy()
         result = _table_format(data=data, headers=metrics, index=models)
-        print("\n")
-        print(result)
+        logger.info(f"Experiment result: \n {result}")
 
         # save result
         timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S-%f")

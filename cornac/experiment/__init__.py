@@ -21,9 +21,11 @@ from .result import PSTResult
 from .result import CVExperimentResult
 from .visualization import Visualization
 
-__all__ = ['Experiment',
-           'Result',
-           'ExperimentResult',
-           'CVResult',
-           'PSTResult',
-           'CVExperimentResult']
+__all__ = [
+    "Experiment",
+    "Result",
+    "ExperimentResult",
+    "CVResult",
+    "PSTResult",
+    "CVExperimentResult",
+]

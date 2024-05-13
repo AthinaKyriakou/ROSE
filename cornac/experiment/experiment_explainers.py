@@ -126,7 +126,10 @@ class Experiment_Explainers:
 
         valid_models = []
         for model in models:
-            if model[1].name not in VALID_RS_EXP_COMBO.keys():
+            if (
+                isinstance(model[1], Explainer)
+                and model[1].name not in VALID_RS_EXP_COMBO.keys()
+            ):
                 logger.error(
                     f"Explainer {model[1].name} is not a valid Explainer for current experiment."
                 )
@@ -181,7 +184,7 @@ class Experiment_Explainers:
         """
         metrics_support = False
         if self.pair_exp:
-            if metric.name in ["FA", "RA"]:
+            if metric.name in ["Metric_Exp_FA", "Metric_Exp_RA"]:
                 metrics_support = True
         else:
             if metric.name not in VALID_EXP_METRIC_COMBO.keys():
@@ -243,12 +246,16 @@ class Experiment_Explainers:
             self._plot_distribution("FF1", ff1_d, groupby="explanation")
             return ff1
         elif self.current_metric.name in ["Metric_Exp_FA", "Metric_Exp_RA"]:
-            (result, result_d) = self.current_metric.compute(
-                self.explanations1, self.explanations2
-            )
-            logger.info(f"Result: Average {self.current_metric.name}: {result}")
-            self._plot_distribution(self.current_metric.name, result_d)
-            return result
+            # only valid for comparing two explainers
+            if self.pair_exp:
+                (result, result_d) = self.current_metric.compute(
+                    self.explanations1, self.explanations2
+                )
+                logger.info(f"Result: Average {self.current_metric.name}: {result}")
+                self._plot_distribution(self.current_metric.name, result_d)
+                return result
+            else:
+                return "N/A"
         elif self.current_metric.name in ["Metric_Exp_EnDCG", "Metric_Exp_MEP"]:
             (result, result_d) = self.current_metric.compute(
                 recommender=self.current_rec, recommendations=self.recommendations1

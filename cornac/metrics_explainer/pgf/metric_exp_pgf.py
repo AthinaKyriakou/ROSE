@@ -100,16 +100,22 @@ class Metric_Exp_PGF(Metric_Exp):
                 for item in explanation:
                     if len(item) == 0:
                         continue
-                    item_id = item.split("=>")[0]
-                    # make item_id is the same type as in dataset.iid_map
-                    if isinstance(item_id, type_iid_map_key):
-                        item_ids.append(item_id)
-                    else:
-                        try:
-                            item_id = type_iid_map_key(item_id)
+                    # s = item.split("=>")[0]
+                    s = item
+                    s = s.replace("[", "")
+                    s = s.replace("]", "")
+                    s = s.replace("'", "")
+                    antecedents = s.split(", ")
+                    for item_id in antecedents:
+                        # make item_id is the same type as in dataset.iid_map
+                        if isinstance(item_id, type_iid_map_key):
                             item_ids.append(item_id)
-                        except ValueError:
-                            continue
+                        else:
+                            try:
+                                item_id = type_iid_map_key(item_id)
+                                item_ids.append(item_id)
+                            except ValueError:
+                                continue
             item_idxs = [self.dataset.iid_map[item_id] for item_id in item_ids]
             return item_idxs
         elif self.explainer.name == "Exp_ALS":

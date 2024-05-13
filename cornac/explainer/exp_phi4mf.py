@@ -94,8 +94,8 @@ class Exp_PHI4MF(Explainer):
 
         Returns
         -------
-        explanations: list
-            Explanations as a list of tuple (association rules, confidence).
+        explanations: dict
+            Explanations as a dictionary of antecedents: confidence.
         """
         if self.rules is None:
             self.generate_rules()
@@ -125,8 +125,10 @@ class Exp_PHI4MF(Explainer):
         rules = rules[rules['antecedents'].apply(lambda x: set(x).issubset(user_items))]
         if rules.empty:
             return []
-        explanations = rules.sort_values(by=["confidence"], ascending=False)[:feature_k]
-        return [
-            (str(list(e['antecedents'])) + '=>' + str(item_id), e['confidence'])
-            for _, e in explanations.iterrows()
-        ]
+        exp = rules.sort_values(by=["confidence"], ascending=False)[:feature_k]
+        explanation = {}
+        
+        for _, e in exp.iterrows():
+            text = str(list(e['antecedents']))
+            explanation[text] = e['confidence']
+        return explanation

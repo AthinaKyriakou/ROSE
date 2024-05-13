@@ -91,9 +91,11 @@ class Exp_NARRE(Explainer):
         review_ids = self.all_item_review_ids[item_idx]
         top_k = np.argsort(attention)[::-1][:feature_k]
         
-        explanation = []
+        explanation = {}
         for idx in top_k:
-            explanation.append((attention[idx], train_set.review_text.reviews[review_ids[idx]]))
+            # explanation.append((attention[idx], train_set.review_text.reviews[review_ids[idx]]))
+            text = train_set.review_text.reviews[review_ids[idx]]
+            explanation[text] = attention[idx]
         
         return explanation
         

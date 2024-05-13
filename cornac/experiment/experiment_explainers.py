@@ -297,7 +297,15 @@ class Experiment_Explainers:
             recommendations=recommendations, num_features=self.feature_k
         )[["user_id", "item_id", "explanations"]]
         exp = exp[exp["explanations"] != {}]  # remove records with empty explanation
-        if not current_exp.name in ["EMF", "PHI4MF"]:
+        if current_exp.name in ["Exp_Trirank"]:
+            # get the first element of the tuple
+            exp["explanations"] = exp["explanations"].apply(
+                lambda x: [v[0] for v in x.values()]
+            )
+        elif current_exp.name in ["Exp_EMF", "Exp_SU4EMF"]:
+            # already in right format
+            pass
+        else:
             exp["explanations"] = exp["explanations"].apply(
                 lambda x: [v for v in x.keys()]
             )
@@ -326,13 +334,10 @@ class Experiment_Explainers:
                     name, self.rec_name, self.exp_name, timestamp
                 ),
             )
-            try:
-                plt.savefig(output_file)
-                plt.close()
-            except FileNotFoundError:
+            if not os.path.exists(save_dir):
                 os.mkdir(save_dir)
-                plt.savefig(output_file)
-                plt.close()
+            plt.savefig(output_file)
+            plt.close()
 
     def run(self):
         """Run the experiment."""
@@ -451,5 +456,7 @@ class Experiment_Explainers:
                 self.rec_name, self.exp_name, timestamp
             ),
         )
+        if not os.path.exists(save_dir):
+            os.mkdir(save_dir)
         with open(output_file, "w") as f:
             f.write(result)

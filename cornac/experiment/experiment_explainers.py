@@ -297,6 +297,9 @@ class Experiment_Explainers:
             recommendations=recommendations, num_features=self.feature_k
         )[["user_id", "item_id", "explanations"]]
         exp = exp[exp["explanations"] != {}]  # remove records with empty explanation
+        
+        if current_exp.name in ["Exp_PHI4MF"]:
+            print(f"========================{exp['explanations'][0]}========================")
         if current_exp.name in ["Exp_Trirank"]:
             # get the first element of the tuple
             exp["explanations"] = exp["explanations"].apply(
@@ -307,7 +310,7 @@ class Experiment_Explainers:
             pass
         else:
             exp["explanations"] = exp["explanations"].apply(
-                lambda x: [v for v in x.keys()]
+                lambda x: [v for v in dict(x).keys()]
             )
         exp = exp[["user_id", "item_id", "explanations"]].values
         return exp

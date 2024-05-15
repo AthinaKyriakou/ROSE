@@ -167,7 +167,7 @@ class SentimentAnalysis:
         print(f'number of users: {df[self.usecols[0]].nunique()}')
         print(f'number of items: {df[self.usecols[1]].nunique()}')
         #df['lexicon'] = df['lexicon'].apply(self.transform_format)
-        print(f'total{len(df)}')
+        #print(f'total{len(df)}')
         print(f'{df["lexicon"].isna().sum()} rows have no lexicon')
         df = df.dropna(axis=0, subset=['lexicon'])
         if self.min_frequency > 1:

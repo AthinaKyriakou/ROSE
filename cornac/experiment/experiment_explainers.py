@@ -300,7 +300,7 @@ class Experiment_Explainers:
         if current_exp.name in ["Exp_TriRank"]:
             # get the first element of the tuple
             exp["explanations"] = exp["explanations"].apply(
-                lambda x: [v[0] for v in x.values()]
+                lambda x: [v[0] for v in x]
             )
         elif current_exp.name in ["Exp_EMF", "Exp_SU4EMF"]:
             # already in right format

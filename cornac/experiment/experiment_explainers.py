@@ -294,13 +294,10 @@ class Experiment_Explainers:
             Numpy array of user_id, item_id, explanations. Return only non-zero explanations
         """
         exp = current_exp.explain_recommendations(
-            recommendations=recommendations, num_features=self.feature_k
+            recommendations=recommendations, feature_k=self.feature_k
         )[["user_id", "item_id", "explanations"]]
         exp = exp[exp["explanations"] != {}]  # remove records with empty explanation
-        
-        if current_exp.name in ["Exp_PHI4MF"]:
-            print(f"========================{exp['explanations'][0]}========================")
-        if current_exp.name in ["Exp_Trirank"]:
+        if current_exp.name in ["Exp_TriRank"]:
             # get the first element of the tuple
             exp["explanations"] = exp["explanations"].apply(
                 lambda x: [v[0] for v in x.values()]
@@ -310,7 +307,7 @@ class Experiment_Explainers:
             pass
         else:
             exp["explanations"] = exp["explanations"].apply(
-                lambda x: [v for v in dict(x).keys()]
+                lambda x: [v for v in x.keys()]
             )
         exp = exp[["user_id", "item_id", "explanations"]].values
         return exp

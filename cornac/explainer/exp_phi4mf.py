@@ -113,18 +113,18 @@ class Exp_PHI4MF(Explainer):
             self.uir_df["item_id"] = self.uir_df["item"].apply(lambda x: self.item_idx_2_id[x])
         if user_id not in self.dataset.uid_map:
             print(f"User {user_id} not in dataset")
-            return []
+            return {}
         user_idx = self.dataset.uid_map[user_id]
         if item_id not in self.dataset.iid_map:
             print(f"Item {item_id} not in dataset")
-            return []
+            return {}
         # item_idx = self.dataset.iid_map[item_id]
         
         user_items = set(self.uir_df[self.uir_df.user == user_idx]["item_id"])
         rules = self.rules[self.rules['consequents'] == item_id]
         rules = rules[rules['antecedents'].apply(lambda x: set(x).issubset(user_items))]
         if rules.empty:
-            return []
+            return {}
         exp = rules.sort_values(by=["confidence"], ascending=False)[:feature_k]
         explanation = {}
         

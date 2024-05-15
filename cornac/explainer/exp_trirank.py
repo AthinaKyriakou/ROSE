@@ -65,12 +65,12 @@ class Exp_TriRank(Explainer):
         user_idx = self.dataset.uid_map[user_id]
         item_idx = self.dataset.iid_map[item_id]
         
-        item_aspect = self.model.Y.getrow(item_idx).toarray().flatten()
+        item_aspect = self.model.X.getrow(item_idx).toarray().flatten()
         top_k_item_aspect = np.argsort(item_aspect)[-feature_k:] 
 
         explanation = []
         for aspect in top_k_item_aspect:
-            user_interest = self.model.X.getrow(user_idx).toarray().flatten()[aspect]
+            user_interest = self.model.Y.getrow(user_idx).toarray().flatten()[aspect]
             item_aspect_score = item_aspect[aspect]
             aspect_text = self.id_to_aspect[aspect]
             explanation.append((aspect_text, item_aspect_score, user_interest))

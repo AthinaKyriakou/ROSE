@@ -1,13 +1,13 @@
 Metric_Exp_PSPNFNS:
   valid_explainers: [Exp_LIMERS, Exp_EFM, Exp_MTER]
 Metric_Exp_FA:
-  valid_explainers: [Exp_LIMERS, Exp_EFM, Exp_MTER, Exp_ALS]
+  valid_explainers: [Exp_LIMERS, Exp_EFM, Exp_MTER, Exp_ALS, Exp_TriRank]
 Metric_Exp_RA:
-  valid_explainers: [Exp_LIMERS, Exp_EFM, Exp_MTER, Exp_ALS]
+  valid_explainers: [Exp_LIMERS, Exp_EFM, Exp_MTER, Exp_ALS, Exp_TriRank]
 Metric_Exp_DIV:
-  valid_explainers: [Exp_LIMERS, Exp_EFM, Exp_MTER, Exp_ALS, Exp_PHI4MF, Exp_SU4EMF]
+  valid_explainers: [Exp_LIMERS, Exp_EFM, Exp_MTER, Exp_ALS, Exp_PHI4MF, Exp_SU4EMF, Exp_TriRank, Exp_NARRE]
 Metric_Exp_FPR:
-  valid_explainers: [Exp_LIMERS, Exp_EFM, Exp_MTER]
+  valid_explainers: [Exp_LIMERS, Exp_EFM, Exp_MTER, Exp_TriRank]
 Metric_Exp_PGF:
   valid_explainers: [Exp_ALS, Exp_PHI4MF, Exp_SU4EMF]
 Metric_Exp_MEP: # can be used to MF models withedge_weight_matrix

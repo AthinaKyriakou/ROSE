@@ -46,9 +46,9 @@ class Exp_ALS(Explainer):
             np.array(self.dataset.uir_tuple).T, columns=["user", "item", "rating"]
         )
         if user_id not in self.dataset.uid_map:
-            return []
+            return {}
         if item_id not in self.dataset.iid_map:
-            return []
+            return {}
         uir_df["user"] = uir_df["user"].astype(int)
         uir_df["item"] = uir_df["item"].astype(int)
         user_idx = self.dataset.uid_map[user_id]

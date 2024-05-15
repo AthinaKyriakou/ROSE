@@ -80,8 +80,6 @@ class Exp_NARRE(Explainer):
             all_item_attention = np.array(all_item_attention)
             all_item_review_ids = np.array(all_item_review_ids)
             all_item_attention = np.squeeze(all_item_attention, axis=-1)
-            print(all_item_attention.shape)
-            print(all_item_review_ids.shape)
             self.all_item_attention = all_item_attention
             self.all_item_review_ids = all_item_review_ids
             

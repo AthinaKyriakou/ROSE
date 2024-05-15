@@ -51,9 +51,9 @@ class Exp_EMF(Explainer):
         uir_df["user"] = uir_df["user"].astype(int)
         uir_df["item"] = uir_df["item"].astype(int)
         if user_id not in self.dataset.uid_map:
-            return []
+            return 0
         if item_id not in self.dataset.iid_map:
-            return []
+            return 0
         user_idx = self.dataset.uid_map[user_id]
         item_idx = self.dataset.iid_map[item_id]
         

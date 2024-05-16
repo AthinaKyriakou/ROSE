@@ -28,6 +28,11 @@ Explainer for Explainable Matrix Factorization(EMF)
 .. automodule:: cornac.explainer.exp_emf
     :members:
 
+Explainer for Personalised novel and explainable matrix factorisation(NEMF)
+---------------------------------------------------------------------------
+.. automodule:: cornac.explainer.exp_nemf
+    :members:
+
 Locally Interpretable Model-agnostic Explanations(LIMERS)
 ----------------------------------------------------------
 .. automodule:: cornac.explainer.exp_limers
@@ -46,4 +51,14 @@ Post-Hoc Explanation for Matrix Factorization(PHI4MF)
 Similar User Explanation for EMF(SU4EMF)
 ----------------------------------------
 .. automodule:: cornac.explainer.exp_su4emf
+    :members:
+
+Explainer for TriRank
+---------------------
+.. automodule:: cornac.explainer.exp_trirank
+    :members:
+
+Explainer for Neural Attentional Rating Regression with Review-level Explanations (NARRE)
+-----------------------------------------------------------------------------------------
+.. automodule:: cornac.explainer.exp_narre
     :members:

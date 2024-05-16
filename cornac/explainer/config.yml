@@ -13,7 +13,9 @@ Exp_PHI4MF:
 Exp_SU4EMF:
   valid_recommenders: [EMF, NEMF]
 Exp_EMF:
-  valid_recommenders: [EMF, NEMF]
+  valid_recommenders: [EMF]
+Exp_NEMF:
+  valid_recommenders: [NEMF]
 Exp_NARRE:
   valid_recommenders: [NARRE]
 Exp_TriRank:

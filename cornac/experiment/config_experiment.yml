@@ -10,7 +10,7 @@ Metric_Exp_FPR:
   valid_explainers: [Exp_LIMERS, Exp_EFM, Exp_MTER, Exp_TriRank]
 Metric_Exp_PGF:
   valid_explainers: [Exp_ALS, Exp_PHI4MF, Exp_SU4EMF]
-Metric_Exp_MEP: # can be used to MF models withedge_weight_matrix
-  valid_explainers: [Exp_PHI4MF, Exp_SU4EMF]
-Metric_Exp_EnDCG: # can be used to MF models withedge_weight_matrix
-  valid_explainers: [Exp_PHI4MF, Exp_SU4EMF]
+Metric_Exp_MEP: # can be used to MF models with edge_weight_matrix
+  valid_explainers: [Exp_PHI4MF, Exp_SU4EMF, Exp_EMF, Exp_NEMF]
+Metric_Exp_EnDCG: # can be used to MF models with edge_weight_matrix
+  valid_explainers: [Exp_PHI4MF, Exp_SU4EMF, Exp_EMF, Exp_NEMF]

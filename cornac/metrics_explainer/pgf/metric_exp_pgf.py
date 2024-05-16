@@ -40,7 +40,7 @@ class Metric_Exp_PGF(Metric_Exp):
 
         self.phi = phi
 
-    def compute(self, recommender, explainer, explanations, distribution=False):
+    def compute(self, recommender, explainer, explanations):
         """The main function to compute PGF
 
         Parameters

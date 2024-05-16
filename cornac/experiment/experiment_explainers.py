@@ -302,7 +302,7 @@ class Experiment_Explainers:
             exp["explanations"] = exp["explanations"].apply(
                 lambda x: [v[0] for v in x]
             )
-        elif current_exp.name in ["Exp_EMF", "Exp_SU4EMF"]:
+        elif current_exp.name in ["Exp_EMF", "Exp_SU4EMF", "Exp_NEMF"]:
             # already in right format
             pass
         else:

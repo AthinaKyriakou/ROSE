@@ -1,5 +1,5 @@
 from tqdm.auto import tqdm
-
+import pandas as pd
 
 class Explainer:
     def __init__(self, name, rec_model, dataset):
@@ -69,3 +69,36 @@ class Explainer:
         Explanation for this recommendation.
         """
         raise NotImplementedError("This method should be implemented by the subclass")
+
+
+    def explain_one_with_ref(self, user_id, item_id, ref_item_id, **kwargs):
+        """Provide explanation for one user, one item and another explanation for reference item. 
+        
+        Parameters
+        ----------
+        user_id: str
+            One user's id.
+        item_id: str
+            One item's id.
+        ref_item_id: str
+            One reference item's id.
+            
+        Returns
+        -------
+        explanation: dataframe
+            Explanation in columns [user_id, item_id, explanation, ref_item_id, ref_explanation]
+        """
+        
+        exp = self.explain_one_recommendation_to_user(user_id, item_id, **kwargs)
+        ref_exp = self.explain_one_recommendation_to_user(user_id, ref_item_id, **kwargs)
+        
+        explanation = {
+            "user_id": user_id,
+            "item_id": item_id,
+            "explanation": exp,
+            "ref_item_id": ref_item_id,
+            "ref_explanation": ref_exp
+        }
+        explanation = pd.DataFrame(explanation)
+
+        return explanation

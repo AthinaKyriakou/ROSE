@@ -150,11 +150,11 @@ class Metric_Exp_FPR(Metric_Exp):
             self.user_f = False if self.model.train_set.user_features.empty else True
 
         u_i_gt = None
-        if self.model.name == 'MTER':
+        if self.model.name in ['MTER', 'ComparERSub']:
             u_i_gt = self._create_ground_truth_sentiment()
-        elif self.model.name == 'EFM':
+        elif self.model.name in ['EFM', 'ComparERObj']:
             u_i_gt = self._creat_grount_truth_efm()
-        elif self.model.name in ['fm_regressor']:
+        elif self.model.name in ['FMRec']:
             u_i_gt = self._create_ground_truth_limer()
         else:
             raise ValueError("Model not supported.")
@@ -171,7 +171,7 @@ class Metric_Exp_FPR(Metric_Exp):
                 features_gt = set(row['explanations'].keys())
                 if len(features_gt) != 0:
                     features_pred = set(self.explainer.explain_one_recommendation_to_user(row['user_id'], row['item_id'], num_features=self.feature_k).keys())
-                    if self.model.name == 'fm_regressor':
+                    if self.model.name == 'FMRec':
                         features_pred = [x[:-4] if x[-2:] == '_f' else x for x in list(features_pred)]
                     p = 1.0*len(features_gt.intersection(features_pred)) / len(features_pred)
                     r = 1.0*len(features_gt.intersection(features_pred)) / len(features_gt)

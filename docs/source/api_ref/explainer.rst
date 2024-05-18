@@ -23,6 +23,16 @@ Explainer for Explicit Factor Model (EFM)
 .. automodule:: cornac.explainer.exp_efm
     :members:
 
+Explainers for Explainable Recommendation with Comparative Constraints on Product Aspects (ComparER)
+---------------------------------------------------------------------------------------------------
+.. automodule:: cornac.explainer.exp_comparer_obj
+    :members:
+.. automodule:: cornac.explainer.exp_comparer_obj_mod
+    :members:
+.. automodule:: cornac.explainer.exp_comparer_sub
+    :members:
+    
+
 Explainer for Explainable Matrix Factorization(EMF)
 ---------------------------------------------------
 .. automodule:: cornac.explainer.exp_emf

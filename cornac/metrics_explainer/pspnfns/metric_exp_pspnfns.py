@@ -78,7 +78,7 @@ class Metric_Exp_PSPNFNS(Metric_Exp):
                 if self.explainer.name == "Exp_LIMERS":
                     rank_scores_pn = self._reevaluate_limers(exp, user, pn=True)
                     rank_scores_ps = self._reevaluate_limers(exp, user, pn=False)
-                elif self.explainer.name in ["Exp_EFM", "Exp_MTER"]:
+                elif self.explainer.name in ["Exp_EFM", "Exp_MTER", "Exp_EFM_Mod", "Exp_ComparERObj", "Exp_ComparERSub"]:
                     rank_scores_pn = self._reevaluate_sentiment(exp, user, pn=True)
                     rank_scores_ps = self._reevaluate_sentiment(exp, user, pn=False)
                 else:
@@ -186,7 +186,7 @@ class Metric_Exp_PSPNFNS(Metric_Exp):
         model_copy = copy.deepcopy(self.model)
         features = exp
         indices = [self.model.train_set.sentiment.aspect_id_map[f] for f in features]
-        if self.model.name == "EFM":
+        if self.model.name in ["EFM", "ComparERObj"]:
             if pn:
                 self.model.V = np.delete(self.model.V, indices, axis=0)
             else:
@@ -196,7 +196,7 @@ class Metric_Exp_PSPNFNS(Metric_Exp):
             ].to_list()
             self.model.V = model_copy.V
             return rank_scores
-        elif self.model.name == "MTER":
+        elif self.model.name in ["MTER", "ComparERSub"]:
             if pn:
                 self.model.A = np.delete(self.model.A, indices, axis=0)
             else:

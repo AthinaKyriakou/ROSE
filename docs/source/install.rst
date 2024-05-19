@@ -1,6 +1,8 @@
 Installation
 ===================
-
+.. toctree::
+    :maxdepth: 2
+    :caption: Installation
 Install Python
 --------------
 Same to Cornac, ROSE supports most versions of Python 3. If you have not done so, go to the official `Python download page <https://www.python.org/downloads/>`_.

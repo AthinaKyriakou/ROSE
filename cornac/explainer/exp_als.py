@@ -88,6 +88,8 @@ class Exp_ALS(Explainer):
             W_u = np.linalg.pinv(W_u)
 
         temp = np.matmul(Y, W_u)
+        if item_idx >= len(Y):
+            return {}
         y_j = Y[item_idx]
         # sim_to_rec = np.matmul(temp, y_j.T)
         sim_to_rec = np.dot(temp, y_j)

@@ -66,7 +66,12 @@ class Explainer:
 
         Returns
         -------
-        Explanation for this recommendation.
+        explanation: dict
+            Explanation for this recommendation. 
+            
+        Note
+        ----
+        If Explanation is not exp-score pair in dict, the `experiment/experiment_explainers.py` should be update to handle the format.
         """
         raise NotImplementedError("This method should be implemented by the subclass")
 

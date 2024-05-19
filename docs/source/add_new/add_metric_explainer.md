@@ -1,4 +1,4 @@
-# Contributing an evaluation metric for explainer to ROSE
+# Add an evaluation metric for explainer
 
 This tutorial describes how to add an evaluation metric for explainer into ROSE. We assume that you have already forked the ROSE repository to your own account.
 

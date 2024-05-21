@@ -311,7 +311,6 @@ class FMRec(Recommender):
                 iid_map=dataset.iid_map,
                 uir_tuple=uir_tuples,
             )
-            ### TODO: check error when running fm_unittest -- "AttributeError: 'Dataset' object has no attribute 'total_users'" --yingying
 
             training_df, y_train, train_item_features, train_user_features = (
                 _prepare_data(dataset)

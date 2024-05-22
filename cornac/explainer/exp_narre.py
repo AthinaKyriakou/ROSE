@@ -46,6 +46,8 @@ class Exp_NARRE(Explainer):
         
         """
         
+        explanation = {}
+        
         if self.model is None:
             raise NotImplementedError("The model is None.")
             
@@ -85,11 +87,12 @@ class Exp_NARRE(Explainer):
             
         
         item_idx = self.dataset.iid_map[item_id]
+        if self.model.is_unknown_item(item_idx):
+            return explanation
         attention = self.all_item_attention[item_idx]
         review_ids = self.all_item_review_ids[item_idx]
         top_k = np.argsort(attention)[::-1][:feature_k]
         
-        explanation = {}
         for idx in top_k:
             # explanation.append((attention[idx], train_set.review_text.reviews[review_ids[idx]]))
             text = train_set.review_text.reviews[review_ids[idx]]

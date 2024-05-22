@@ -114,10 +114,14 @@ class Metric_Exp_MEP(Metric_Exp):
         cdef int num_threads = self.num_threads
         cdef int len_rec = len(recommendations)
         cdef int[:] MEP_u = np.zeros(self.U, dtype=np.int32)
-
+        cdef int len_u = self.E.shape[0]
+        cdef int len_i = self.E.shape[1]
+        
         for j in prange(len_rec, nogil=True, num_threads=num_threads):
             u = recommendations[j][0]
             i = recommendations[j][1]
+            if u >= len_u or i >= len_i:
+                continue
             if E[u, i] > 0:
                 count += 1
                 MEP_u[u] += 1

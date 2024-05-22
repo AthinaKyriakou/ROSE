@@ -49,6 +49,10 @@ class Exp_PHI4MF(Explainer):
         self.rec_k = rec_k
         if self.model is None:
             raise NotImplementedError("The model is None.")
+        if self.dataset is None:
+            raise NotImplementedError("The dataset is None.")   
+        if hasattr(self.dataset, "train_set"):
+            self.dataset = self.dataset.train_set
 
         self.rules = None
         self.item_idx_2_id = None
@@ -56,29 +60,33 @@ class Exp_PHI4MF(Explainer):
         
     def generate_rules(self):
         transactions = []
-        all_users = self.dataset.user_ids
-        for user in all_users:
-            item_ids = self.model.recommend(user, self.rec_k, remove_seen=False)
+        for user_id, user_idx in self.dataset.uid_map.items():
+            if self.model.is_unknown_user(user_idx):
+                continue
+            item_ids = self.model.recommend(user_id, self.rec_k, remove_seen=False)
             # item_idx = [self.dataset.iid_map[item] for item in item_ids]
             transactions.append(item_ids)
 
-        te = TransactionEncoder()
-        te_transactions = te.fit_transform(transactions)
-        te_transactions = pd.DataFrame(te_transactions, columns=te.columns_)
-        itemsets = apriori(
-            te_transactions,
-            min_support=self.min_supp,
-            use_colnames=True,
-            low_memory=False,
-        )
-        rules = association_rules(itemsets, metric="lift", min_threshold=self.min_lift)
-        rules = rules[rules["confidence"] > self.min_conf]
-        rules = rules[rules["consequents"].apply(lambda x: len(list(x)) == 1)]
-        rules["consequents"] = rules["consequents"].apply(lambda x: list(x)[0])
+        try :
+            te = TransactionEncoder()
+            te_transactions = te.fit_transform(transactions)
+            te_transactions = pd.DataFrame(te_transactions, columns=te.columns_)
+            itemsets = apriori(
+                te_transactions,
+                min_support=self.min_supp,
+                use_colnames=True,
+            )
+            rules = association_rules(itemsets, metric="lift", min_threshold=self.min_lift)
+            rules = rules[rules["confidence"] > self.min_conf]
+            rules = rules[rules["consequents"].apply(lambda x: len(list(x)) == 1)]
+            rules["consequents"] = rules["consequents"].apply(lambda x: list(x)[0])
         
-        self.rules = rules[["consequents", "antecedents", "confidence"]]
-        print("Association rules generated")
-        return rules
+            self.rules = rules[["consequents", "antecedents", "confidence"]]
+            print("Association rules generated")
+        except:
+            raise ValueError("Association rules generation failed")
+            
+        return self.rules
 
     def explain_one_recommendation_to_user(self, user_id, item_id, **kwargs):
         """Provide explanation for one user and one item
@@ -115,10 +123,15 @@ class Exp_PHI4MF(Explainer):
             print(f"User {user_id} not in dataset")
             return {}
         user_idx = self.dataset.uid_map[user_id]
+        if self.model.is_unknown_user(user_idx):
+            return {}
+        
         if item_id not in self.dataset.iid_map:
             print(f"Item {item_id} not in dataset")
             return {}
-        # item_idx = self.dataset.iid_map[item_id]
+        item_idx = self.dataset.iid_map[item_id]
+        if self.model.is_unknown_item(item_idx):
+            return {}
         
         user_items = set(self.uir_df[self.uir_df.user == user_idx]["item_id"])
         rules = self.rules[self.rules['consequents'] == item_id]

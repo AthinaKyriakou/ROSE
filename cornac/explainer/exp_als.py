@@ -53,6 +53,10 @@ class Exp_ALS(Explainer):
         uir_df["item"] = uir_df["item"].astype(int)
         user_idx = self.dataset.uid_map[user_id]
         item_idx = self.dataset.iid_map[item_id]
+        if self.model.is_unknown_user(user_idx):
+            return {}
+        if self.model.is_unknown_item(item_idx):
+            return {}
 
         users_by_item = uir_df[uir_df["item"] == item_idx]["user"]
         items_by_user = uir_df[uir_df["user"] == user_idx]["item"]

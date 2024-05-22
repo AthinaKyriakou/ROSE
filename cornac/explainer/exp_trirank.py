@@ -62,6 +62,11 @@ class Exp_TriRank(Explainer):
             return []
         if item_id not in self.dataset.iid_map:
             return []
+        if self.model.is_unknown_user(user_idx):
+            return []
+        if self.model.is_unknown_item(item_idx):
+            return []
+        
         user_idx = self.dataset.uid_map[user_id]
         item_idx = self.dataset.iid_map[item_id]
         

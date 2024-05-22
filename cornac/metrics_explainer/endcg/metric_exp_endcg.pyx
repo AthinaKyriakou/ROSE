@@ -122,12 +122,18 @@ class Metric_Exp_EnDCG(Metric_Exp):
         cdef int U = self.U
         cdef int N = self.N
         cdef double [:] E_DCG_u = np.zeros(U, dtype=np.float64)
+        cdef int len_u = self.E.shape[0]
+        cdef int len_i = self.E.shape[1]
 
 
         for j in prange(U, nogil=True, num_threads=num_threads):
             u = recommendations[j*N, 0]
+            if u >= len_u:
+                continue
             for k in range(N):
                 i = recommendations[j*N + k, 1]
+                if i >= len_i:
+                    continue
                 E_DCG_u[u] += E[u, i] / log2list_c[k]
             E_DCG_u[u] /= E_IDCG
             E_nDCG += E_DCG_u[u]

@@ -60,6 +60,11 @@ class Exp_SU4EMF(Explainer):
             return {}
         user_idx = self.dataset.uid_map[user_id]
         item_idx = self.dataset.iid_map[item_id]
+        if self.model.is_unknown_user(user_idx):
+            return {}
+        if self.model.is_unknown_item(item_idx):
+            return {}
+        
         item_all_user_rating = uir_df[uir_df["item"] == item_idx]
         sim_user_list = self.model.sim_users[user_idx]
         item_sim_user_rating = item_all_user_rating[

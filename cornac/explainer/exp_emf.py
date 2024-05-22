@@ -56,6 +56,11 @@ class Exp_EMF(Explainer):
             return 0
         user_idx = self.dataset.uid_map[user_id]
         item_idx = self.dataset.iid_map[item_id]
+        if self.model.is_unknown_user(user_idx):
+            return 0
+        if self.model.is_unknown_item(item_idx):
+            return 0
+        
         
         W = self.model.edge_weight_matrix
         explanation = W[user_idx, item_idx]

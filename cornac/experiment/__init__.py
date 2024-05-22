@@ -20,6 +20,7 @@ from .result import CVResult
 from .result import PSTResult
 from .result import CVExperimentResult
 from .visualization import Visualization
+from .experiment_explainers import Experiment_Explainers
 
 __all__ = [
     "Experiment",

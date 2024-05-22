@@ -15,44 +15,75 @@ python setup.py build_ext --inplace
 The Explainers_Experiment needs recommenders, explainers and metrics. Here is one example that you can run by executing `python example.py`.
   
 ``` python
-import pandas as pd
-
+from cornac.datasets import movielens
+from cornac.eval_methods import RatioSplit
+from cornac.experiment import Experiment_Explainers
 from cornac.models import EMF, NEMF, ALS
-from cornac.explainer import EMFExplainer, ALSExplainer
-from cornac.datasets.goodreads import prepare_data
-from cornac.experiment.experiment_explainers import Experiment_Explainers
-from cornac.metrics_explainer import MEP, EnDCG, PGF
+from cornac.explainer import Exp_ALS, Exp_SU4EMF
+from cornac.metrics_explainer import (
+    Metric_Exp_DIV as DIV,
+    Metric_Exp_PGF as PGF,
+    Metric_Exp_MEP as MEP,
+    Metric_Exp_EnDCG as EnDCG,
+)
 
-# dataset
-dataset_dense = prepare_data(data_name="goodreads_uir_1000",test_size=0, verbose=True, sample_size=1, dense=True)
+# Load MovieLens
+data = movielens.load_feedback(variant="100K")
 
-# recommender models
-emf = EMF(k=10, max_iter=500, learning_rate=0.001, lambda_reg=0.1, explain_reg=0.01, verbose=True, seed=6, num_threads=6, early_stop=True)
-nemf = NEMF(k=10, max_iter=500, learning_rate=0.001, lambda_reg=0.1, explain_reg=0.01, novel_reg=1, verbose=True, seed=6, num_threads=6, early_stop=True)
+# Define an evaluation method to split feedback into train and test sets
+ratio_split = RatioSplit(data=data, test_size=0.2, exclude_unknowns=False, verbose=True)
+
+# initialize recommenders and explainers
+emf = EMF(
+    k=10,
+    max_iter=500,
+    learning_rate=0.001,
+    lambda_reg=0.1,
+    explain_reg=0.01,
+    verbose=True,
+    seed=6,
+    num_threads=6,
+    early_stop=True,
+)
+nemf = NEMF(
+    k=10,
+    max_iter=500,
+    learning_rate=0.001,
+    lambda_reg=0.1,
+    explain_reg=0.01,
+    novel_reg=1,
+    verbose=True,
+    seed=6,
+    num_threads=6,
+    early_stop=True,
+)
 als = ALS(k=10, max_iter=500, lambda_reg=0.001, alpha=1, verbose=True, seed=6)
+als_exp = Exp_ALS(rec_model=als, dataset=ratio_split.train_set)
+emf_exp = Exp_SU4EMF(rec_model=emf, dataset=ratio_split.train_set)
+nemf_exp = Exp_SU4EMF(rec_model=nemf, dataset=ratio_split.train_set)
 
-# (recommender, explainer) pairs
-emf_emf = (emf, EMFExplainer(emf, dataset_dense.train_set))
-nemf_emf = (nemf, EMFExplainer(nemf, dataset_dense.train_set))
-als_als = (als, ALSExplainer(als, dataset_dense.train_set))
-
-# metrics
+# initialize metrics
+fdiv = DIV()
+pgf = PGF()
 mep = MEP()
 endcg = EnDCG()
-pgf = PGF(phi=10)
 
-# experiment
-experiment = Experiment_Explainers(eval_method=dataset_dense, 
-                                    models=[emf_emf, nemf_emf, als_als], 
-                                    metrics=[mep, endcg, pgf], 
-                                    rec_k=10, 
-                                    feature_k=10, 
-                                    eval_train=True, 
-                                    distribution=True)
+# initialize experiment
+models = [(emf, emf_exp), (als, als_exp), (nemf, nemf_exp)]
+metrics = [fdiv, pgf, mep, endcg]
+experiment = Experiment_Explainers(
+    eval_method=ratio_split,
+    models=models,
+    metrics=metrics,
+    distribution=False,
+    rec_k=10,
+    feature_k=10,
+    eval_train=True,
+)
 experiment.run()
 ```
 
-There are more demo for experiments in `demo/metrics_*_demo.ipynb`. Note that only valid (recommender, explainer) pairs can be processed by the pipeline. Furthermore, if one metric is not applicable for a (recommender, explainer) pair, a 'N/A' would be returned in the result. 
+There are more demo for experiments in `demo`. Note that only valid (recommender, explainer) pairs can be processed by the pipeline. Furthermore, if one metric is not applicable for a (recommender, explainer) pair, a 'N/A' would be returned in the result. 
 
 ## Cite
 

@@ -37,12 +37,12 @@ class Exp_LIMERS(Explainer):
     class_names: list, optional, default: np.array(["rec"])
         (LIME base) List of class names (only used for classification)
     feature_selection: string, optional, default: 'highest_weights'
-        (LIME base) How to select num_features. Options are:
-            - 'forward_selection': iteratively add features to the model. This is costly when num_features is high
+        (LIME base) How to select feature_k. Options are:
+            - 'forward_selection': iteratively add features to the model. This is costly when feature_k is high
             - 'highest_weights': selects the features that have the highest product of absolute weight * original data point when learning with all the features
             - 'lasso_path': chooses features based on the lasso regularization path
-            - 'none': uses all features, ignores num_features
-            - 'auto': uses forward_selection if num_features <= 6, and 'highest_weights' otherwise.
+            - 'none': uses all features, ignores feature_k
+            - 'auto': uses forward_selection if feature_k <= 6, and 'highest_weights' otherwise.
     random_state: int or numpy.RandomState, optional, default: None
         (LIME base) An integer or numpy.RandomState that will be used to
         generate random numbers. If None, the random state will be
@@ -91,7 +91,7 @@ class Exp_LIMERS(Explainer):
         return ["%.2f" % v for v in values]
 
     def explain_recommendations(
-        self, recommendations, num_features=10, feature_type="features", verbose=True
+        self, recommendations, feature_k=10, feature_type="features", verbose=True
     ):
         """Generate explanations for a list of recommendations
 
@@ -99,7 +99,7 @@ class Exp_LIMERS(Explainer):
         ----------
             recommendations: pandas.DataFrame, required
                 Dataframe of [user_id, item_id]
-            num_features: int, optional, default: 10
+            feature_k: int, optional, default: 10
                 Number of features to be included in the output
             feature_type: string, optional, default: "features"
                 If "features", extract features names as explanation only; if "item", extract item_id as explanation only
@@ -141,7 +141,7 @@ class Exp_LIMERS(Explainer):
                             self.explain_one_recommendation_to_user(
                                 row.user_id,
                                 row.item_id,
-                                num_features,
+                                feature_k,
                                 feature_type,
                                 verbose,
                             ),
@@ -157,7 +157,7 @@ class Exp_LIMERS(Explainer):
                         self.explain_one_recommendation_to_user(
                             row.user_id,
                             row.item_id,
-                            num_features,
+                            feature_k,
                             feature_type,
                             verbose,
                         ),
@@ -167,7 +167,7 @@ class Exp_LIMERS(Explainer):
         return explanations
 
     def explain_one_recommendation_to_user(
-        self, user_id, item_id, num_features=10, feature_type="features", verbose=True
+        self, user_id, item_id, feature_k=10, feature_type="features", verbose=True
     ):
         """Generate explanations for one recommendation
 
@@ -177,7 +177,7 @@ class Exp_LIMERS(Explainer):
                 id of user to be explained
             item_id: int, required
                 id of item to be explained
-            num_features: int, optional, default: 10
+            feature_k: int, optional, default: 10
                 Number of features to be included in the output
             feature_type: string, optional, default: "features"
                 If "features", extract features names as explanation only; if "item", extract item_id as explanation only
@@ -243,7 +243,7 @@ class Exp_LIMERS(Explainer):
         exp = self.explain_instance(
             user_idx,
             item_idx,
-            num_features=num_features,
+            feature_k=feature_k,
             neighborhood_entity="item",
             labels=[0],
         )
@@ -304,7 +304,7 @@ class Exp_LIMERS(Explainer):
         user_idx,
         item_idx,
         neighborhood_entity,
-        num_features=10,
+        feature_k=10,
         labels=(1,),
         distance_metric="cosine",
         model_regressor=None,
@@ -321,7 +321,7 @@ class Exp_LIMERS(Explainer):
             Rule for selecting samples. Options: "user", "item", or ??
         labels: list, optional, default: (1,)
             Only the first is used for regression task
-        num_features: int, optional, default: 10
+        feature_k: int, optional, default: 10
             Number of explained features to be displayed
         distance_metric: string, optional, default: "cosine"
             Used to calculate pairwise similarity
@@ -407,7 +407,7 @@ class Exp_LIMERS(Explainer):
                 yss,
                 distances,
                 label,
-                num_features,
+                feature_k,
                 model_regressor=model_regressor,
                 feature_selection=self.feature_selection,
             )

@@ -170,7 +170,7 @@ class Metric_Exp_FPR(Metric_Exp):
             for i, row in u_i_gt.iterrows():
                 features_gt = set(row['explanations'].keys())
                 if len(features_gt) != 0:
-                    features_pred = set(self.explainer.explain_one_recommendation_to_user(row['user_id'], row['item_id'], num_features=self.feature_k).keys())
+                    features_pred = set(self.explainer.explain_one_recommendation_to_user(row['user_id'], row['item_id'], feature_k=self.feature_k).keys())
                     if self.model.name == 'FMRec':
                         features_pred = [x[:-4] if x[-2:] == '_f' else x for x in list(features_pred)]
                     p = 1.0*len(features_gt.intersection(features_pred)) / len(features_pred)

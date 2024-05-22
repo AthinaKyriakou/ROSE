@@ -17,8 +17,9 @@ class SentimentAnalysis:
     
     Parameters
     ----------
-    input_path: string, required
+    input: string/dataframe, required
         csv/txt file path. Expected format: the first line in file should be the column names, at least include ['user_id', 'book_id', 'rating', 'review_text'], which are consistent with the usecols parameter.
+        or a Dataframe with columns' names specified by usecols
     sep: string, optional, default '\t'
         separator of the file, default is '\t'
     usecols: list, required
@@ -26,9 +27,9 @@ class SentimentAnalysis:
     min_frequency: int, optional, default 1
         drop users who have less than min_frequency reviews
     """
-    def __init__(self, input_path, sep='\t', usecols = ['user_id', 'book_id', 'rating', 'review_text'], min_frequency=1):
+    def __init__(self, input, sep='\t', usecols = ['user_id', 'book_id', 'rating', 'review_text'], min_frequency=1):
         
-        self.input_path = input_path
+        self.input = input
         self.sep = sep
         self.usecols = usecols
         self.min_frequency = min_frequency
@@ -196,19 +197,25 @@ class SentimentAnalysis:
         Returns:
             df: dataframe, ['user_id', 'item_id', 'rating, 'review_text']
         """
-        try:
-            with open(self.input_path, newline='') as csvfile:
-                reader = csv.reader(csvfile, delimiter=self.sep)
-                header = next(reader)
-                if len(header) > 1 and all(isinstance(col, str) for col in header):
-                    pass
-                else:
-                    print("File is not in right format")
-        except IOError:
-            print("File not found or could not be opened")
-        # read columns review_id and review_text from sample_df.csv
-        self.data = pd.read_csv(self.input_path, sep=self.sep, usecols=self.usecols)
+        if isinstance(self.input, pd.DataFrame) == True:
+            if self.input.columns.tolist() == self.usecols:
+                self.data = self.input
+            else:
+                raise ValueError("Columns are not consistent with usecols")
         
+        else:
+            try:
+                with open(self.input, newline='') as csvfile:
+                    reader = csv.reader(csvfile, delimiter=self.sep)
+                    header = next(reader)
+                    if len(header) > 1 and all(isinstance(col, str) for col in header):
+                        pass
+                    else:
+                        print("File is not in right format")
+                self.data = pd.read_csv(self.input, sep=self.sep, usecols=self.usecols)
+            except IOError:
+                print("File not found or could not be opened")
+
         return self.data
     
     def save_to_file(self, lexicon_path, rating_path):

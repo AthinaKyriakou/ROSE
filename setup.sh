@@ -1,23 +1,8 @@
-# Bash script for the needed installations
-
-pip install Cython==0.29.36 numpy==1.23.5 scipy mlxtend
 
 pip install -r requirements.txt
 
-# For test 
-pip install python-box pyyaml
-
-# For ALS 
-pip install implicit
-
-# For PHI Explainer
-pip install mlxtend
-
 # For fm_py
 pip install git+https://github.com/coreylynch/pyFM
-
-# For lime
-pip install lime
 
 # For Lexicon Construction (sentiment generation)
 pip install spacy

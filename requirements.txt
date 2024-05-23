@@ -10,7 +10,6 @@ contourpy==1.2.0
 cycler==0.12.1
 cymem==2.0.8
 Cython==0.29.36
-en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1-py3-none-any.whl
 fonttools==4.50.0
 idna==3.6
 imageio==2.34.0
@@ -37,7 +36,6 @@ powerlaw==1.5
 preshed==3.0.9
 pydantic==2.6.4
 pydantic_core==2.16.3
-pyfm==0.0.0
 pyparsing==3.1.2
 python-box==7.1.1
 python-dateutil==2.9.0.post0

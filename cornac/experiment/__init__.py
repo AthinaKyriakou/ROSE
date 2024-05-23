@@ -29,4 +29,6 @@ __all__ = [
     "CVResult",
     "PSTResult",
     "CVExperimentResult",
+    "Visualization",
+    "Experiment_Explainers"
 ]

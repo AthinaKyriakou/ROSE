@@ -2204,7 +2204,6 @@ static const char __pyx_k_ground_truth[] = "ground_truth";
 static const char __pyx_k_i_aspect_ids[] = "i_aspect_ids";
 static const char __pyx_k_intersection[] = "intersection";
 static const char __pyx_k_item_id_list[] = "item_id_list";
-static const char __pyx_k_num_features[] = "num_features";
 static const char __pyx_k_user_id_list[] = "user_id_list";
 static const char __pyx_k_aspect_id_map[] = "aspect_id_map";
 static const char __pyx_k_aspect_values[] = "aspect_values";
@@ -2360,7 +2359,6 @@ static PyObject *__pyx_n_s_name;
 static PyObject *__pyx_n_s_name_2;
 static PyObject *__pyx_n_s_nonzero;
 static PyObject *__pyx_n_s_np;
-static PyObject *__pyx_n_s_num_features;
 static PyObject *__pyx_n_s_numpy;
 static PyObject *__pyx_kp_s_numpy_core_multiarray_failed_to;
 static PyObject *__pyx_kp_s_numpy_core_umath_failed_to_impor;
@@ -7022,7 +7020,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Me
  *             for i, row in u_i_gt.iterrows():
  *                 features_gt = set(row['explanations'].keys())             # <<<<<<<<<<<<<<
  *                 if len(features_gt) != 0:
- *                     features_pred = set(self.explainer.explain_one_recommendation_to_user(row['user_id'], row['item_id'], num_features=self.feature_k).keys())
+ *                     features_pred = set(self.explainer.explain_one_recommendation_to_user(row['user_id'], row['item_id'], feature_k=self.feature_k).keys())
  */
             __pyx_t_8 = __Pyx_PyObject_Dict_GetItem(__pyx_v_row, __pyx_n_s_explanations); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 171, __pyx_L14_error)
             __Pyx_GOTREF(__pyx_t_8);
@@ -7054,7 +7052,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Me
  *             for i, row in u_i_gt.iterrows():
  *                 features_gt = set(row['explanations'].keys())
  *                 if len(features_gt) != 0:             # <<<<<<<<<<<<<<
- *                     features_pred = set(self.explainer.explain_one_recommendation_to_user(row['user_id'], row['item_id'], num_features=self.feature_k).keys())
+ *                     features_pred = set(self.explainer.explain_one_recommendation_to_user(row['user_id'], row['item_id'], feature_k=self.feature_k).keys())
  *                     if self.model.name == 'FMRec':
  */
             __pyx_t_16 = PySet_GET_SIZE(__pyx_v_features_gt); if (unlikely(__pyx_t_16 == ((Py_ssize_t)-1))) __PYX_ERR(0, 172, __pyx_L14_error)
@@ -7064,7 +7062,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Me
               /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":173
  *                 features_gt = set(row['explanations'].keys())
  *                 if len(features_gt) != 0:
- *                     features_pred = set(self.explainer.explain_one_recommendation_to_user(row['user_id'], row['item_id'], num_features=self.feature_k).keys())             # <<<<<<<<<<<<<<
+ *                     features_pred = set(self.explainer.explain_one_recommendation_to_user(row['user_id'], row['item_id'], feature_k=self.feature_k).keys())             # <<<<<<<<<<<<<<
  *                     if self.model.name == 'FMRec':
  *                         features_pred = [x[:-4] if x[-2:] == '_f' else x for x in list(features_pred)]
  */
@@ -7089,7 +7087,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Me
               __Pyx_GOTREF(__pyx_t_14);
               __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_feature_k); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 173, __pyx_L14_error)
               __Pyx_GOTREF(__pyx_t_4);
-              if (PyDict_SetItem(__pyx_t_14, __pyx_n_s_num_features, __pyx_t_4) < 0) __PYX_ERR(0, 173, __pyx_L14_error)
+              if (PyDict_SetItem(__pyx_t_14, __pyx_n_s_feature_k, __pyx_t_4) < 0) __PYX_ERR(0, 173, __pyx_L14_error)
               __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
               __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_8, __pyx_t_17, __pyx_t_14); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 173, __pyx_L14_error)
               __Pyx_GOTREF(__pyx_t_4);
@@ -7122,7 +7120,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Me
 
               /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":174
  *                 if len(features_gt) != 0:
- *                     features_pred = set(self.explainer.explain_one_recommendation_to_user(row['user_id'], row['item_id'], num_features=self.feature_k).keys())
+ *                     features_pred = set(self.explainer.explain_one_recommendation_to_user(row['user_id'], row['item_id'], feature_k=self.feature_k).keys())
  *                     if self.model.name == 'FMRec':             # <<<<<<<<<<<<<<
  *                         features_pred = [x[:-4] if x[-2:] == '_f' else x for x in list(features_pred)]
  *                     p = 1.0*len(features_gt.intersection(features_pred)) / len(features_pred)
@@ -7137,7 +7135,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Me
               if (__pyx_t_1) {
 
                 /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":175
- *                     features_pred = set(self.explainer.explain_one_recommendation_to_user(row['user_id'], row['item_id'], num_features=self.feature_k).keys())
+ *                     features_pred = set(self.explainer.explain_one_recommendation_to_user(row['user_id'], row['item_id'], feature_k=self.feature_k).keys())
  *                     if self.model.name == 'FMRec':
  *                         features_pred = [x[:-4] if x[-2:] == '_f' else x for x in list(features_pred)]             # <<<<<<<<<<<<<<
  *                     p = 1.0*len(features_gt.intersection(features_pred)) / len(features_pred)
@@ -7181,7 +7179,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Me
 
                 /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":174
  *                 if len(features_gt) != 0:
- *                     features_pred = set(self.explainer.explain_one_recommendation_to_user(row['user_id'], row['item_id'], num_features=self.feature_k).keys())
+ *                     features_pred = set(self.explainer.explain_one_recommendation_to_user(row['user_id'], row['item_id'], feature_k=self.feature_k).keys())
  *                     if self.model.name == 'FMRec':             # <<<<<<<<<<<<<<
  *                         features_pred = [x[:-4] if x[-2:] == '_f' else x for x in list(features_pred)]
  *                     p = 1.0*len(features_gt.intersection(features_pred)) / len(features_pred)
@@ -7352,7 +7350,7 @@ static PyObject *__pyx_pf_6cornac_17metrics_explainer_3fpr_14metric_exp_fpr_14Me
  *             for i, row in u_i_gt.iterrows():
  *                 features_gt = set(row['explanations'].keys())
  *                 if len(features_gt) != 0:             # <<<<<<<<<<<<<<
- *                     features_pred = set(self.explainer.explain_one_recommendation_to_user(row['user_id'], row['item_id'], num_features=self.feature_k).keys())
+ *                     features_pred = set(self.explainer.explain_one_recommendation_to_user(row['user_id'], row['item_id'], feature_k=self.feature_k).keys())
  *                     if self.model.name == 'FMRec':
  */
             }
@@ -9168,7 +9166,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_name_2, __pyx_k_name_2, sizeof(__pyx_k_name_2), 0, 0, 1, 1},
   {&__pyx_n_s_nonzero, __pyx_k_nonzero, sizeof(__pyx_k_nonzero), 0, 0, 1, 1},
   {&__pyx_n_s_np, __pyx_k_np, sizeof(__pyx_k_np), 0, 0, 1, 1},
-  {&__pyx_n_s_num_features, __pyx_k_num_features, sizeof(__pyx_k_num_features), 0, 0, 1, 1},
   {&__pyx_n_s_numpy, __pyx_k_numpy, sizeof(__pyx_k_numpy), 0, 0, 1, 1},
   {&__pyx_kp_s_numpy_core_multiarray_failed_to, __pyx_k_numpy_core_multiarray_failed_to, sizeof(__pyx_k_numpy_core_multiarray_failed_to), 0, 0, 1, 0},
   {&__pyx_kp_s_numpy_core_umath_failed_to_impor, __pyx_k_numpy_core_umath_failed_to_impor, sizeof(__pyx_k_numpy_core_umath_failed_to_impor), 0, 0, 1, 0},
@@ -9302,7 +9299,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__8);
 
   /* "cornac/metrics_explainer/fpr/metric_exp_fpr.pyx":175
- *                     features_pred = set(self.explainer.explain_one_recommendation_to_user(row['user_id'], row['item_id'], num_features=self.feature_k).keys())
+ *                     features_pred = set(self.explainer.explain_one_recommendation_to_user(row['user_id'], row['item_id'], feature_k=self.feature_k).keys())
  *                     if self.model.name == 'FMRec':
  *                         features_pred = [x[:-4] if x[-2:] == '_f' else x for x in list(features_pred)]             # <<<<<<<<<<<<<<
  *                     p = 1.0*len(features_gt.intersection(features_pred)) / len(features_pred)

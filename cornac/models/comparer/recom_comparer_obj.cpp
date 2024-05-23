@@ -1007,9 +1007,9 @@ static const char *__pyx_filename;
 
 static const char *__pyx_f[] = {
   "cornac/models/comparer/recom_comparer_obj.pyx",
-  "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd",
+  "__init__.pxd",
   "stringsource",
-  "rose_venv/lib/python3.9/site-packages/Cython/Includes/cpython/type.pxd",
+  "type.pxd",
 };
 /* BufferFormatStructs.proto */
 #define IS_UNSIGNED(type) (((type) -1) > 0)
@@ -1116,7 +1116,7 @@ typedef volatile __pyx_atomic_int_type __pyx_atomic_int;
 #endif
 
 
-/* "scipy/linalg/cython_blas.pxd":15
+/* "scipy/linalg/cython_blas.pxd":17
  * # The original libraries should be linked directly.
  * 
  * ctypedef float s             # <<<<<<<<<<<<<<
@@ -1125,7 +1125,7 @@ typedef volatile __pyx_atomic_int_type __pyx_atomic_int;
  */
 typedef float __pyx_t_5scipy_6linalg_11cython_blas_s;
 
-/* "scipy/linalg/cython_blas.pxd":16
+/* "scipy/linalg/cython_blas.pxd":18
  * 
  * ctypedef float s
  * ctypedef double d             # <<<<<<<<<<<<<<
@@ -1134,7 +1134,7 @@ typedef float __pyx_t_5scipy_6linalg_11cython_blas_s;
  */
 typedef double __pyx_t_5scipy_6linalg_11cython_blas_d;
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":689
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":689
  * # in Cython to enable them only on the right systems.
  * 
  * ctypedef npy_int8       int8_t             # <<<<<<<<<<<<<<
@@ -1143,7 +1143,7 @@ typedef double __pyx_t_5scipy_6linalg_11cython_blas_d;
  */
 typedef npy_int8 __pyx_t_5numpy_int8_t;
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":690
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":690
  * 
  * ctypedef npy_int8       int8_t
  * ctypedef npy_int16      int16_t             # <<<<<<<<<<<<<<
@@ -1152,7 +1152,7 @@ typedef npy_int8 __pyx_t_5numpy_int8_t;
  */
 typedef npy_int16 __pyx_t_5numpy_int16_t;
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":691
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":691
  * ctypedef npy_int8       int8_t
  * ctypedef npy_int16      int16_t
  * ctypedef npy_int32      int32_t             # <<<<<<<<<<<<<<
@@ -1161,7 +1161,7 @@ typedef npy_int16 __pyx_t_5numpy_int16_t;
  */
 typedef npy_int32 __pyx_t_5numpy_int32_t;
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":692
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":692
  * ctypedef npy_int16      int16_t
  * ctypedef npy_int32      int32_t
  * ctypedef npy_int64      int64_t             # <<<<<<<<<<<<<<
@@ -1170,7 +1170,7 @@ typedef npy_int32 __pyx_t_5numpy_int32_t;
  */
 typedef npy_int64 __pyx_t_5numpy_int64_t;
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":696
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":696
  * #ctypedef npy_int128     int128_t
  * 
  * ctypedef npy_uint8      uint8_t             # <<<<<<<<<<<<<<
@@ -1179,7 +1179,7 @@ typedef npy_int64 __pyx_t_5numpy_int64_t;
  */
 typedef npy_uint8 __pyx_t_5numpy_uint8_t;
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":697
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":697
  * 
  * ctypedef npy_uint8      uint8_t
  * ctypedef npy_uint16     uint16_t             # <<<<<<<<<<<<<<
@@ -1188,7 +1188,7 @@ typedef npy_uint8 __pyx_t_5numpy_uint8_t;
  */
 typedef npy_uint16 __pyx_t_5numpy_uint16_t;
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":698
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":698
  * ctypedef npy_uint8      uint8_t
  * ctypedef npy_uint16     uint16_t
  * ctypedef npy_uint32     uint32_t             # <<<<<<<<<<<<<<
@@ -1197,7 +1197,7 @@ typedef npy_uint16 __pyx_t_5numpy_uint16_t;
  */
 typedef npy_uint32 __pyx_t_5numpy_uint32_t;
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":699
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":699
  * ctypedef npy_uint16     uint16_t
  * ctypedef npy_uint32     uint32_t
  * ctypedef npy_uint64     uint64_t             # <<<<<<<<<<<<<<
@@ -1206,7 +1206,7 @@ typedef npy_uint32 __pyx_t_5numpy_uint32_t;
  */
 typedef npy_uint64 __pyx_t_5numpy_uint64_t;
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":703
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":703
  * #ctypedef npy_uint128    uint128_t
  * 
  * ctypedef npy_float32    float32_t             # <<<<<<<<<<<<<<
@@ -1215,7 +1215,7 @@ typedef npy_uint64 __pyx_t_5numpy_uint64_t;
  */
 typedef npy_float32 __pyx_t_5numpy_float32_t;
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":704
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":704
  * 
  * ctypedef npy_float32    float32_t
  * ctypedef npy_float64    float64_t             # <<<<<<<<<<<<<<
@@ -1224,7 +1224,7 @@ typedef npy_float32 __pyx_t_5numpy_float32_t;
  */
 typedef npy_float64 __pyx_t_5numpy_float64_t;
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":713
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":713
  * # The int types are mapped a bit surprising --
  * # numpy.int corresponds to 'l' and numpy.long to 'q'
  * ctypedef npy_long       int_t             # <<<<<<<<<<<<<<
@@ -1233,7 +1233,7 @@ typedef npy_float64 __pyx_t_5numpy_float64_t;
  */
 typedef npy_long __pyx_t_5numpy_int_t;
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":714
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":714
  * # numpy.int corresponds to 'l' and numpy.long to 'q'
  * ctypedef npy_long       int_t
  * ctypedef npy_longlong   long_t             # <<<<<<<<<<<<<<
@@ -1242,7 +1242,7 @@ typedef npy_long __pyx_t_5numpy_int_t;
  */
 typedef npy_longlong __pyx_t_5numpy_long_t;
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":715
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":715
  * ctypedef npy_long       int_t
  * ctypedef npy_longlong   long_t
  * ctypedef npy_longlong   longlong_t             # <<<<<<<<<<<<<<
@@ -1251,7 +1251,7 @@ typedef npy_longlong __pyx_t_5numpy_long_t;
  */
 typedef npy_longlong __pyx_t_5numpy_longlong_t;
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":717
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":717
  * ctypedef npy_longlong   longlong_t
  * 
  * ctypedef npy_ulong      uint_t             # <<<<<<<<<<<<<<
@@ -1260,7 +1260,7 @@ typedef npy_longlong __pyx_t_5numpy_longlong_t;
  */
 typedef npy_ulong __pyx_t_5numpy_uint_t;
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":718
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":718
  * 
  * ctypedef npy_ulong      uint_t
  * ctypedef npy_ulonglong  ulong_t             # <<<<<<<<<<<<<<
@@ -1269,7 +1269,7 @@ typedef npy_ulong __pyx_t_5numpy_uint_t;
  */
 typedef npy_ulonglong __pyx_t_5numpy_ulong_t;
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":719
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":719
  * ctypedef npy_ulong      uint_t
  * ctypedef npy_ulonglong  ulong_t
  * ctypedef npy_ulonglong  ulonglong_t             # <<<<<<<<<<<<<<
@@ -1278,7 +1278,7 @@ typedef npy_ulonglong __pyx_t_5numpy_ulong_t;
  */
 typedef npy_ulonglong __pyx_t_5numpy_ulonglong_t;
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":721
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":721
  * ctypedef npy_ulonglong  ulonglong_t
  * 
  * ctypedef npy_intp       intp_t             # <<<<<<<<<<<<<<
@@ -1287,7 +1287,7 @@ typedef npy_ulonglong __pyx_t_5numpy_ulonglong_t;
  */
 typedef npy_intp __pyx_t_5numpy_intp_t;
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":722
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":722
  * 
  * ctypedef npy_intp       intp_t
  * ctypedef npy_uintp      uintp_t             # <<<<<<<<<<<<<<
@@ -1296,7 +1296,7 @@ typedef npy_intp __pyx_t_5numpy_intp_t;
  */
 typedef npy_uintp __pyx_t_5numpy_uintp_t;
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":724
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":724
  * ctypedef npy_uintp      uintp_t
  * 
  * ctypedef npy_double     float_t             # <<<<<<<<<<<<<<
@@ -1305,7 +1305,7 @@ typedef npy_uintp __pyx_t_5numpy_uintp_t;
  */
 typedef npy_double __pyx_t_5numpy_float_t;
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":725
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":725
  * 
  * ctypedef npy_double     float_t
  * ctypedef npy_double     double_t             # <<<<<<<<<<<<<<
@@ -1314,7 +1314,7 @@ typedef npy_double __pyx_t_5numpy_float_t;
  */
 typedef npy_double __pyx_t_5numpy_double_t;
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":726
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":726
  * ctypedef npy_double     float_t
  * ctypedef npy_double     double_t
  * ctypedef npy_longdouble longdouble_t             # <<<<<<<<<<<<<<
@@ -1353,7 +1353,7 @@ struct __pyx_MemviewEnum_obj;
 struct __pyx_memoryview_obj;
 struct __pyx_memoryviewslice_obj;
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":728
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":728
  * ctypedef npy_longdouble longdouble_t
  * 
  * ctypedef npy_cfloat      cfloat_t             # <<<<<<<<<<<<<<
@@ -1362,7 +1362,7 @@ struct __pyx_memoryviewslice_obj;
  */
 typedef npy_cfloat __pyx_t_5numpy_cfloat_t;
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":729
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":729
  * 
  * ctypedef npy_cfloat      cfloat_t
  * ctypedef npy_cdouble     cdouble_t             # <<<<<<<<<<<<<<
@@ -1371,7 +1371,7 @@ typedef npy_cfloat __pyx_t_5numpy_cfloat_t;
  */
 typedef npy_cdouble __pyx_t_5numpy_cdouble_t;
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":730
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":730
  * ctypedef npy_cfloat      cfloat_t
  * ctypedef npy_cdouble     cdouble_t
  * ctypedef npy_clongdouble clongdouble_t             # <<<<<<<<<<<<<<
@@ -1380,7 +1380,7 @@ typedef npy_cdouble __pyx_t_5numpy_cdouble_t;
  */
 typedef npy_clongdouble __pyx_t_5numpy_clongdouble_t;
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":732
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":732
  * ctypedef npy_clongdouble clongdouble_t
  * 
  * ctypedef npy_cdouble     complex_t             # <<<<<<<<<<<<<<
@@ -2048,6 +2048,9 @@ static PyObject* __Pyx_PyInt_SubtractCObj(PyObject *op1, PyObject *op2, long int
     (inplace ? PyNumber_InPlaceSubtract(op1, op2) : PyNumber_Subtract(op1, op2))
 #endif
 
+/* PyIntCompare.proto */
+static CYTHON_INLINE PyObject* __Pyx_PyInt_NeObjC(PyObject *op1, PyObject *op2, long intval, long inplace);
+
 /* SliceObject.proto */
 #define __Pyx_PyObject_DelSlice(obj, cstart, cstop, py_start, py_stop, py_slice, has_cstart, has_cstop, wraparound)\
     __Pyx_PyObject_SetSlice(obj, (PyObject*)NULL, cstart, cstop, py_start, py_stop, py_slice, has_cstart, has_cstop, wraparound)
@@ -2694,7 +2697,6 @@ static PyObject *__pyx_builtin_TypeError;
 static PyObject *__pyx_builtin_range;
 static PyObject *__pyx_builtin_print;
 static PyObject *__pyx_builtin_sum;
-static PyObject *__pyx_builtin_max;
 static PyObject *__pyx_builtin_ImportError;
 static PyObject *__pyx_builtin_MemoryError;
 static PyObject *__pyx_builtin_enumerate;
@@ -2742,7 +2744,7 @@ static const char __pyx_k_get[] = "get";
 static const char __pyx_k_idx[] = "idx";
 static const char __pyx_k_iid[] = "iid";
 static const char __pyx_k_int[] = "int";
-static const char __pyx_k_max[] = "max";
+static const char __pyx_k_max[] = "), max(";
 static const char __pyx_k_min[] = ", min(";
 static const char __pyx_k_new[] = "__new__";
 static const char __pyx_k_obj[] = "obj";
@@ -2770,7 +2772,6 @@ static const char __pyx_k_mean[] = "mean";
 static const char __pyx_k_mode[] = "mode";
 static const char __pyx_k_name[] = "name";
 static const char __pyx_k_ndim[] = "ndim";
-static const char __pyx_k_ones[] = "ones";
 static const char __pyx_k_pack[] = "pack";
 static const char __pyx_k_rank[] = "rank";
 static const char __pyx_k_seed[] = "seed";
@@ -2794,7 +2795,7 @@ static const char __pyx_k_flags[] = "flags";
 static const char __pyx_k_float[] = "float";
 static const char __pyx_k_int32[] = "int32";
 static const char __pyx_k_items[] = "items";
-static const char __pyx_k_max_2[] = "), max(";
+static const char __pyx_k_max_2[] = "max";
 static const char __pyx_k_min_2[] = "min";
 static const char __pyx_k_numpy[] = "numpy";
 static const char __pyx_k_print[] = "print";
@@ -2880,6 +2881,7 @@ static const char __pyx_k_pyx_type[] = "__pyx_type";
 static const char __pyx_k_qualname[] = "__qualname__";
 static const char __pyx_k_setstate[] = "__setstate__";
 static const char __pyx_k_uir_iter[] = "uir_iter";
+static const char __pyx_k_user_idx[] = "user_idx";
 static const char __pyx_k_DOM_MODEL[] = "DOM_MODEL";
 static const char __pyx_k_TypeError[] = "TypeError";
 static const char __pyx_k_correct_2[] = "correct";
@@ -2887,7 +2889,6 @@ static const char __pyx_k_cpu_count[] = "cpu_count";
 static const char __pyx_k_enumerate[] = "enumerate";
 static const char __pyx_k_exception[] = "exception";
 static const char __pyx_k_float_int[] = "float|int";
-static const char __pyx_k_item_rank[] = "item_rank";
 static const char __pyx_k_itertools[] = "itertools";
 static const char __pyx_k_metaclass[] = "__metaclass__";
 static const char __pyx_k_num_items[] = "num_items";
@@ -2896,6 +2897,7 @@ static const char __pyx_k_pair_freq[] = "pair_freq";
 static const char __pyx_k_pyx_state[] = "__pyx_state";
 static const char __pyx_k_reduce_ex[] = "__reduce_ex__";
 static const char __pyx_k_sentiment[] = "sentiment";
+static const char __pyx_k_top_k_idx[] = "top_k_idx";
 static const char __pyx_k_train_set[] = "train_set";
 static const char __pyx_k_trainable[] = "trainable";
 static const char __pyx_k_IndexError[] = "IndexError";
@@ -2942,13 +2944,16 @@ static const char __pyx_k_H1_numerator[] = "H1_numerator";
 static const char __pyx_k_H2_numerator[] = "H2_numerator";
 static const char __pyx_k_U1_numerator[] = "U1_numerator";
 static const char __pyx_k_U2_numerator[] = "U2_numerator";
+static const char __pyx_k_argpartition[] = "argpartition";
 static const char __pyx_k_combinations[] = "combinations";
 static const char __pyx_k_double_short[] = "double|short";
 static const char __pyx_k_item_aspects[] = "item_aspects";
+static const char __pyx_k_item_indices[] = "item_indices";
 static const char __pyx_k_most_cared_X[] = "most_cared_X_";
 static const char __pyx_k_most_cared_Y[] = "most_cared_Y_";
 static const char __pyx_k_pyx_checksum[] = "__pyx_checksum";
 static const char __pyx_k_random_state[] = "random_state";
+static const char __pyx_k_ranked_items[] = "ranked_items";
 static const char __pyx_k_rating_scale[] = "rating_scale";
 static const char __pyx_k_scipy_sparse[] = "scipy.sparse";
 static const char __pyx_k_stringsource[] = "stringsource";
@@ -2960,7 +2965,6 @@ static const char __pyx_k_A_user_counts[] = "A_user_counts";
 static const char __pyx_k_V_denominator[] = "V_denominator";
 static const char __pyx_k_X_user_counts[] = "X_user_counts";
 static const char __pyx_k_Y_item_counts[] = "Y_item_counts";
-static const char __pyx_k_assume_unique[] = "assume_unique";
 static const char __pyx_k_avg_sentiment[] = "avg_sentiment";
 static const char __pyx_k_init_params_2[] = "_init_params";
 static const char __pyx_k_later_indices[] = "later_indices";
@@ -2989,6 +2993,7 @@ static const char __pyx_k_Enumerate_index[] = "Enumerate index";
 static const char __pyx_k_View_MemoryView[] = "View.MemoryView";
 static const char __pyx_k_X_aspect_counts[] = "X_aspect_counts";
 static const char __pyx_k_Y_aspect_counts[] = "Y_aspect_counts";
+static const char __pyx_k_all_item_scores[] = "all_item_scores";
 static const char __pyx_k_allocate_buffer[] = "allocate_buffer";
 static const char __pyx_k_aspect_bpr_loss[] = ", aspect bpr loss: ";
 static const char __pyx_k_dtype_is_object[] = "dtype_is_object";
@@ -2998,6 +3003,7 @@ static const char __pyx_k_is_unknown_item[] = "is_unknown_item";
 static const char __pyx_k_is_unknown_user[] = "is_unknown_user";
 static const char __pyx_k_min_common_freq[] = "min_common_freq";
 static const char __pyx_k_multiprocessing[] = "multiprocessing";
+static const char __pyx_k_partitioned_idx[] = "partitioned_idx";
 static const char __pyx_k_pyx_PickleError[] = "__pyx_PickleError";
 static const char __pyx_k_setstate_cython[] = "__setstate_cython__";
 static const char __pyx_k_total_sentiment[] = "total_sentiment";
@@ -3006,6 +3012,7 @@ static const char __pyx_k_attention_scores[] = "attention_scores";
 static const char __pyx_k_chrono_user_data[] = "chrono_user_data";
 static const char __pyx_k_comparable_pairs[] = ", # comparable pairs ";
 static const char __pyx_k_earlier_item_idx[] = "earlier_item_idx";
+static const char __pyx_k_sorted_top_k_idx[] = "sorted_top_k_idx";
 static const char __pyx_k_utils_init_utils[] = "utils.init_utils";
 static const char __pyx_k_ComparERObj_score[] = "ComparERObj.score";
 static const char __pyx_k_aspect_bpr_loss_2[] = "aspect_bpr_loss";
@@ -3210,10 +3217,12 @@ static PyObject *__pyx_n_s__50;
 static PyObject *__pyx_kp_u__6;
 static PyObject *__pyx_kp_u__7;
 static PyObject *__pyx_n_s_aid;
+static PyObject *__pyx_n_s_all_item_scores;
 static PyObject *__pyx_n_s_allocate_buffer;
 static PyObject *__pyx_n_s_alpha;
 static PyObject *__pyx_n_s_append;
 static PyObject *__pyx_n_s_arange;
+static PyObject *__pyx_n_s_argpartition;
 static PyObject *__pyx_n_s_args;
 static PyObject *__pyx_n_s_argsort;
 static PyObject *__pyx_n_s_asarray;
@@ -3221,7 +3230,6 @@ static PyObject *__pyx_kp_u_aspect_bpr_loss;
 static PyObject *__pyx_n_s_aspect_bpr_loss_2;
 static PyObject *__pyx_n_s_aspect_idx;
 static PyObject *__pyx_n_s_aspect_indices;
-static PyObject *__pyx_n_s_assume_unique;
 static PyObject *__pyx_n_s_astype;
 static PyObject *__pyx_n_s_attention_scores;
 static PyObject *__pyx_kp_u_avg;
@@ -3324,7 +3332,7 @@ static PyObject *__pyx_n_s_item_aspect_count;
 static PyObject *__pyx_n_s_item_aspects;
 static PyObject *__pyx_n_s_item_id;
 static PyObject *__pyx_n_s_item_ids;
-static PyObject *__pyx_n_s_item_rank;
+static PyObject *__pyx_n_s_item_indices;
 static PyObject *__pyx_n_s_item_score;
 static PyObject *__pyx_n_s_item_scores;
 static PyObject *__pyx_n_s_item_sentiment;
@@ -3356,8 +3364,8 @@ static PyObject *__pyx_n_s_main;
 static PyObject *__pyx_n_s_map_aspect_id;
 static PyObject *__pyx_n_s_map_iid;
 static PyObject *__pyx_n_s_map_uid;
-static PyObject *__pyx_n_s_max;
-static PyObject *__pyx_kp_u_max_2;
+static PyObject *__pyx_kp_u_max;
+static PyObject *__pyx_n_s_max_2;
 static PyObject *__pyx_n_s_max_iter;
 static PyObject *__pyx_n_s_max_pair_freq;
 static PyObject *__pyx_n_s_mean;
@@ -3397,10 +3405,10 @@ static PyObject *__pyx_n_s_numpy;
 static PyObject *__pyx_kp_u_numpy_core_multiarray_failed_to;
 static PyObject *__pyx_kp_u_numpy_core_umath_failed_to_impor;
 static PyObject *__pyx_n_s_obj;
-static PyObject *__pyx_n_s_ones;
 static PyObject *__pyx_n_s_pack;
 static PyObject *__pyx_n_s_pair_counts;
 static PyObject *__pyx_n_s_pair_freq;
+static PyObject *__pyx_n_s_partitioned_idx;
 static PyObject *__pyx_n_s_pickle;
 static PyObject *__pyx_n_s_prediction;
 static PyObject *__pyx_n_s_prepare;
@@ -3418,6 +3426,7 @@ static PyObject *__pyx_n_s_qualname;
 static PyObject *__pyx_n_s_random_state;
 static PyObject *__pyx_n_s_range;
 static PyObject *__pyx_n_s_rank;
+static PyObject *__pyx_n_s_ranked_items;
 static PyObject *__pyx_n_s_rating;
 static PyObject *__pyx_n_s_rating_matrix;
 static PyObject *__pyx_n_s_rating_scale;
@@ -3445,6 +3454,7 @@ static PyObject *__pyx_n_s_shape;
 static PyObject *__pyx_n_s_short;
 static PyObject *__pyx_n_s_signatures;
 static PyObject *__pyx_n_s_size;
+static PyObject *__pyx_n_s_sorted_top_k_idx;
 static PyObject *__pyx_n_s_sp;
 static PyObject *__pyx_n_s_split;
 static PyObject *__pyx_n_s_sqrt;
@@ -3465,6 +3475,7 @@ static PyObject *__pyx_n_s_t_count;
 static PyObject *__pyx_n_s_test;
 static PyObject *__pyx_n_s_time;
 static PyObject *__pyx_n_s_tocsc;
+static PyObject *__pyx_n_s_top_k_idx;
 static PyObject *__pyx_n_s_total_sentiment;
 static PyObject *__pyx_n_s_total_sentiment_by_aspect;
 static PyObject *__pyx_n_s_tqdm;
@@ -3485,6 +3496,7 @@ static PyObject *__pyx_n_s_use_item_pair_popularity;
 static PyObject *__pyx_n_s_user_aspect_count;
 static PyObject *__pyx_n_s_user_aspects;
 static PyObject *__pyx_n_s_user_id;
+static PyObject *__pyx_n_s_user_idx;
 static PyObject *__pyx_n_s_user_sentiment;
 static PyObject *__pyx_n_s_utils;
 static PyObject *__pyx_n_s_utils_common;
@@ -3523,7 +3535,7 @@ static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
 static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11ComparERObj_26_compute_quality_score(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_sentiment); /* proto */
 static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11ComparERObj_28monitor_value(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
 static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11ComparERObj_30score(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_user_id, PyObject *__pyx_v_item_id); /* proto */
-static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11ComparERObj_32rank(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_user_id, PyObject *__pyx_v_item_ids); /* proto */
+static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11ComparERObj_32rank(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_user_idx, PyObject *__pyx_v_item_indices, PyObject *__pyx_v_k); /* proto */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array___cinit__(struct __pyx_array_obj *__pyx_v_self, PyObject *__pyx_v_shape, Py_ssize_t __pyx_v_itemsize, PyObject *__pyx_v_format, PyObject *__pyx_v_mode, int __pyx_v_allocate_buffer); /* proto */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array_2__getbuffer__(struct __pyx_array_obj *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
 static void __pyx_array___pyx_pf_15View_dot_MemoryView_5array_4__dealloc__(struct __pyx_array_obj *__pyx_v_self); /* proto */
@@ -9846,7 +9858,7 @@ static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
                                   goto __pyx_L31;
                                   __pyx_L31:;
                                   #ifdef _OPENMP
-                                  #pragma omp critical(__pyx_parallel_lastprivates30)
+                                  #pragma omp critical(__pyx_parallel_lastprivates18)
                                   #endif /* _OPENMP */
                                   {
                                       __pyx_parallel_temp0 = __pyx_v_aspect_bpr_loss;
@@ -10546,7 +10558,7 @@ static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
                                   goto __pyx_L65;
                                   __pyx_L65:;
                                   #ifdef _OPENMP
-                                  #pragma omp critical(__pyx_parallel_lastprivates31)
+                                  #pragma omp critical(__pyx_parallel_lastprivates19)
                                   #endif /* _OPENMP */
                                   {
                                       __pyx_parallel_temp0 = __pyx_v_i;
@@ -10772,7 +10784,7 @@ static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
                                   goto __pyx_L75;
                                   __pyx_L75:;
                                   #ifdef _OPENMP
-                                  #pragma omp critical(__pyx_parallel_lastprivates32)
+                                  #pragma omp critical(__pyx_parallel_lastprivates20)
                                   #endif /* _OPENMP */
                                   {
                                       __pyx_parallel_temp0 = __pyx_v_i;
@@ -10998,7 +11010,7 @@ static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
                                   goto __pyx_L85;
                                   __pyx_L85:;
                                   #ifdef _OPENMP
-                                  #pragma omp critical(__pyx_parallel_lastprivates33)
+                                  #pragma omp critical(__pyx_parallel_lastprivates21)
                                   #endif /* _OPENMP */
                                   {
                                       __pyx_parallel_temp0 = __pyx_v_i;
@@ -13460,7 +13472,7 @@ static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
                                   goto __pyx_L31;
                                   __pyx_L31:;
                                   #ifdef _OPENMP
-                                  #pragma omp critical(__pyx_parallel_lastprivates34)
+                                  #pragma omp critical(__pyx_parallel_lastprivates22)
                                   #endif /* _OPENMP */
                                   {
                                       __pyx_parallel_temp0 = __pyx_v_aspect_bpr_loss;
@@ -14160,7 +14172,7 @@ static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
                                   goto __pyx_L65;
                                   __pyx_L65:;
                                   #ifdef _OPENMP
-                                  #pragma omp critical(__pyx_parallel_lastprivates35)
+                                  #pragma omp critical(__pyx_parallel_lastprivates23)
                                   #endif /* _OPENMP */
                                   {
                                       __pyx_parallel_temp0 = __pyx_v_i;
@@ -14386,7 +14398,7 @@ static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
                                   goto __pyx_L75;
                                   __pyx_L75:;
                                   #ifdef _OPENMP
-                                  #pragma omp critical(__pyx_parallel_lastprivates36)
+                                  #pragma omp critical(__pyx_parallel_lastprivates24)
                                   #endif /* _OPENMP */
                                   {
                                       __pyx_parallel_temp0 = __pyx_v_i;
@@ -14612,7 +14624,7 @@ static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
                                   goto __pyx_L85;
                                   __pyx_L85:;
                                   #ifdef _OPENMP
-                                  #pragma omp critical(__pyx_parallel_lastprivates37)
+                                  #pragma omp critical(__pyx_parallel_lastprivates25)
                                   #endif /* _OPENMP */
                                   {
                                       __pyx_parallel_temp0 = __pyx_v_i;
@@ -17074,7 +17086,7 @@ static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
                                   goto __pyx_L31;
                                   __pyx_L31:;
                                   #ifdef _OPENMP
-                                  #pragma omp critical(__pyx_parallel_lastprivates38)
+                                  #pragma omp critical(__pyx_parallel_lastprivates26)
                                   #endif /* _OPENMP */
                                   {
                                       __pyx_parallel_temp0 = __pyx_v_aspect_bpr_loss;
@@ -17774,7 +17786,7 @@ static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
                                   goto __pyx_L65;
                                   __pyx_L65:;
                                   #ifdef _OPENMP
-                                  #pragma omp critical(__pyx_parallel_lastprivates39)
+                                  #pragma omp critical(__pyx_parallel_lastprivates27)
                                   #endif /* _OPENMP */
                                   {
                                       __pyx_parallel_temp0 = __pyx_v_i;
@@ -18000,7 +18012,7 @@ static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
                                   goto __pyx_L75;
                                   __pyx_L75:;
                                   #ifdef _OPENMP
-                                  #pragma omp critical(__pyx_parallel_lastprivates40)
+                                  #pragma omp critical(__pyx_parallel_lastprivates28)
                                   #endif /* _OPENMP */
                                   {
                                       __pyx_parallel_temp0 = __pyx_v_i;
@@ -18226,7 +18238,7 @@ static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
                                   goto __pyx_L85;
                                   __pyx_L85:;
                                   #ifdef _OPENMP
-                                  #pragma omp critical(__pyx_parallel_lastprivates41)
+                                  #pragma omp critical(__pyx_parallel_lastprivates29)
                                   #endif /* _OPENMP */
                                   {
                                       __pyx_parallel_temp0 = __pyx_v_i;
@@ -20687,7 +20699,7 @@ static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
                                   goto __pyx_L31;
                                   __pyx_L31:;
                                   #ifdef _OPENMP
-                                  #pragma omp critical(__pyx_parallel_lastprivates42)
+                                  #pragma omp critical(__pyx_parallel_lastprivates30)
                                   #endif /* _OPENMP */
                                   {
                                       __pyx_parallel_temp0 = __pyx_v_aspect_bpr_loss;
@@ -21387,7 +21399,7 @@ static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
                                   goto __pyx_L65;
                                   __pyx_L65:;
                                   #ifdef _OPENMP
-                                  #pragma omp critical(__pyx_parallel_lastprivates43)
+                                  #pragma omp critical(__pyx_parallel_lastprivates31)
                                   #endif /* _OPENMP */
                                   {
                                       __pyx_parallel_temp0 = __pyx_v_i;
@@ -21613,7 +21625,7 @@ static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
                                   goto __pyx_L75;
                                   __pyx_L75:;
                                   #ifdef _OPENMP
-                                  #pragma omp critical(__pyx_parallel_lastprivates44)
+                                  #pragma omp critical(__pyx_parallel_lastprivates32)
                                   #endif /* _OPENMP */
                                   {
                                       __pyx_parallel_temp0 = __pyx_v_i;
@@ -21839,7 +21851,7 @@ static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
                                   goto __pyx_L85;
                                   __pyx_L85:;
                                   #ifdef _OPENMP
-                                  #pragma omp critical(__pyx_parallel_lastprivates45)
+                                  #pragma omp critical(__pyx_parallel_lastprivates33)
                                   #endif /* _OPENMP */
                                   {
                                       __pyx_parallel_temp0 = __pyx_v_i;
@@ -24300,7 +24312,7 @@ static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
                                   goto __pyx_L31;
                                   __pyx_L31:;
                                   #ifdef _OPENMP
-                                  #pragma omp critical(__pyx_parallel_lastprivates46)
+                                  #pragma omp critical(__pyx_parallel_lastprivates34)
                                   #endif /* _OPENMP */
                                   {
                                       __pyx_parallel_temp0 = __pyx_v_aspect_bpr_loss;
@@ -25000,7 +25012,7 @@ static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
                                   goto __pyx_L65;
                                   __pyx_L65:;
                                   #ifdef _OPENMP
-                                  #pragma omp critical(__pyx_parallel_lastprivates47)
+                                  #pragma omp critical(__pyx_parallel_lastprivates35)
                                   #endif /* _OPENMP */
                                   {
                                       __pyx_parallel_temp0 = __pyx_v_i;
@@ -25226,7 +25238,7 @@ static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
                                   goto __pyx_L75;
                                   __pyx_L75:;
                                   #ifdef _OPENMP
-                                  #pragma omp critical(__pyx_parallel_lastprivates48)
+                                  #pragma omp critical(__pyx_parallel_lastprivates36)
                                   #endif /* _OPENMP */
                                   {
                                       __pyx_parallel_temp0 = __pyx_v_i;
@@ -25452,7 +25464,7 @@ static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
                                   goto __pyx_L85;
                                   __pyx_L85:;
                                   #ifdef _OPENMP
-                                  #pragma omp critical(__pyx_parallel_lastprivates49)
+                                  #pragma omp critical(__pyx_parallel_lastprivates37)
                                   #endif /* _OPENMP */
                                   {
                                       __pyx_parallel_temp0 = __pyx_v_i;
@@ -27913,7 +27925,7 @@ static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
                                   goto __pyx_L31;
                                   __pyx_L31:;
                                   #ifdef _OPENMP
-                                  #pragma omp critical(__pyx_parallel_lastprivates50)
+                                  #pragma omp critical(__pyx_parallel_lastprivates38)
                                   #endif /* _OPENMP */
                                   {
                                       __pyx_parallel_temp0 = __pyx_v_aspect_bpr_loss;
@@ -28613,7 +28625,7 @@ static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
                                   goto __pyx_L65;
                                   __pyx_L65:;
                                   #ifdef _OPENMP
-                                  #pragma omp critical(__pyx_parallel_lastprivates51)
+                                  #pragma omp critical(__pyx_parallel_lastprivates39)
                                   #endif /* _OPENMP */
                                   {
                                       __pyx_parallel_temp0 = __pyx_v_i;
@@ -28839,7 +28851,7 @@ static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
                                   goto __pyx_L75;
                                   __pyx_L75:;
                                   #ifdef _OPENMP
-                                  #pragma omp critical(__pyx_parallel_lastprivates52)
+                                  #pragma omp critical(__pyx_parallel_lastprivates40)
                                   #endif /* _OPENMP */
                                   {
                                       __pyx_parallel_temp0 = __pyx_v_i;
@@ -29065,7 +29077,7 @@ static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
                                   goto __pyx_L85;
                                   __pyx_L85:;
                                   #ifdef _OPENMP
-                                  #pragma omp critical(__pyx_parallel_lastprivates53)
+                                  #pragma omp critical(__pyx_parallel_lastprivates41)
                                   #endif /* _OPENMP */
                                   {
                                       __pyx_parallel_temp0 = __pyx_v_i;
@@ -36106,10 +36118,10 @@ static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
     __Pyx_GIVEREF(__pyx_t_6);
     PyTuple_SET_ITEM(__pyx_t_3, 5, __pyx_t_6);
     __pyx_t_6 = 0;
-    __Pyx_INCREF(__pyx_kp_u_max_2);
+    __Pyx_INCREF(__pyx_kp_u_max);
     __pyx_t_4 += 7;
-    __Pyx_GIVEREF(__pyx_kp_u_max_2);
-    PyTuple_SET_ITEM(__pyx_t_3, 6, __pyx_kp_u_max_2);
+    __Pyx_GIVEREF(__pyx_kp_u_max);
+    PyTuple_SET_ITEM(__pyx_t_3, 6, __pyx_kp_u_max);
 
     /* "cornac/models/comparer/recom_comparer_obj.pyx":523
  *                 pair_freq[pair_freq>=self.min_pair_freq].shape[0],
@@ -36118,7 +36130,7 @@ static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
  *                 pair_freq.mean()))
  *             print('# earlier-later pairs: %d, # unique earlier-later pairs: %d, not dominated pairs %d, # comparable pairs %d' % (
  */
-    __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_v_pair_freq, __pyx_n_s_max); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 523, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_v_pair_freq, __pyx_n_s_max_2); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 523, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
     __pyx_t_2 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_8))) {
@@ -40115,7 +40127,7 @@ static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
  *             item_score = self.U2[item_id, :].dot(self.U1[user_id, :]) + self.H2[item_id, :].dot(self.H1[user_id, :])
  *             return item_score             # <<<<<<<<<<<<<<
  * 
- *     def rank(self, user_id, item_ids=None):
+ *     def rank(self, user_idx, item_indices=None, k=-1):
  */
     __Pyx_XDECREF(__pyx_r);
     __Pyx_INCREF(__pyx_v_item_score);
@@ -40152,19 +40164,20 @@ static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
 /* "cornac/models/comparer/recom_comparer_obj.pyx":666
  *             return item_score
  * 
- *     def rank(self, user_id, item_ids=None):             # <<<<<<<<<<<<<<
+ *     def rank(self, user_idx, item_indices=None, k=-1):             # <<<<<<<<<<<<<<
  *         """Rank all test items for a given user.
  * 
  */
 
 /* Python wrapper */
 static PyObject *__pyx_pw_6cornac_6models_8comparer_18recom_comparer_obj_11ComparERObj_33rank(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6cornac_6models_8comparer_18recom_comparer_obj_11ComparERObj_32rank[] = "Rank all test items for a given user.\n\n        Parameters\n        ----------\n        user_id: int, required\n            The index of the user for whom to perform item raking.\n\n        item_ids: 1d array, optional, default: None\n            A list of candidate item indices to be ranked by the user.\n            If `None`, list of ranked known item indices and their scores will be returned\n\n        Returns\n        -------\n        Tuple of `item_rank`, and `item_scores`. The order of values\n        in item_scores are corresponding to the order of their ids in item_ids\n\n        ";
+static char __pyx_doc_6cornac_6models_8comparer_18recom_comparer_obj_11ComparERObj_32rank[] = "Rank all test items for a given user.\n\n        Parameters\n        ----------\n        user_idx: int, required\n            The index of the user for whom to perform item raking.\n\n        item_indices: 1d array, optional, default: None\n            A list of candidate item indices to be ranked by the user.\n            If `None`, list of ranked known item indices and their scores will be returned\n\n        k: int, required\n            Cut-off length for recommendations, k=-1 will return ranked list of all items.\n            This is more important for ANN to know the limit to avoid exhaustive ranking.\n\n        Returns\n        -------\n        (ranked_items, item_scores): tuple\n            `ranked_items` contains item indices being ranked by their scores.\n            `item_scores` contains scores of items corresponding to index in `item_indices` input.\n\n        ";
 static PyMethodDef __pyx_mdef_6cornac_6models_8comparer_18recom_comparer_obj_11ComparERObj_33rank = {"rank", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6cornac_6models_8comparer_18recom_comparer_obj_11ComparERObj_33rank, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6cornac_6models_8comparer_18recom_comparer_obj_11ComparERObj_32rank};
 static PyObject *__pyx_pw_6cornac_6models_8comparer_18recom_comparer_obj_11ComparERObj_33rank(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
-  PyObject *__pyx_v_user_id = 0;
-  PyObject *__pyx_v_item_ids = 0;
+  PyObject *__pyx_v_user_idx = 0;
+  PyObject *__pyx_v_item_indices = 0;
+  PyObject *__pyx_v_k = 0;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -40172,13 +40185,16 @@ static PyObject *__pyx_pw_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("rank (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_self,&__pyx_n_s_user_id,&__pyx_n_s_item_ids,0};
-    PyObject* values[3] = {0,0,0};
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_self,&__pyx_n_s_user_idx,&__pyx_n_s_item_indices,&__pyx_n_s_k,0};
+    PyObject* values[4] = {0,0,0,0};
     values[2] = ((PyObject *)((PyObject *)Py_None));
+    values[3] = ((PyObject *)((PyObject *)__pyx_int_neg_1));
     if (unlikely(__pyx_kwds)) {
       Py_ssize_t kw_args;
       const Py_ssize_t pos_args = PyTuple_GET_SIZE(__pyx_args);
       switch (pos_args) {
+        case  4: values[3] = PyTuple_GET_ITEM(__pyx_args, 3);
+        CYTHON_FALLTHROUGH;
         case  3: values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
         CYTHON_FALLTHROUGH;
         case  2: values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
@@ -40195,15 +40211,21 @@ static PyObject *__pyx_pw_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
-        if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_user_id)) != 0)) kw_args--;
+        if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_user_idx)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("rank", 0, 2, 3, 1); __PYX_ERR(0, 666, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("rank", 0, 2, 4, 1); __PYX_ERR(0, 666, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (kw_args > 0) {
-          PyObject* value = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_item_ids);
+          PyObject* value = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_item_indices);
           if (value) { values[2] = value; kw_args--; }
+        }
+        CYTHON_FALLTHROUGH;
+        case  3:
+        if (kw_args > 0) {
+          PyObject* value = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_k);
+          if (value) { values[3] = value; kw_args--; }
         }
       }
       if (unlikely(kw_args > 0)) {
@@ -40211,6 +40233,8 @@ static PyObject *__pyx_pw_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
+        case  4: values[3] = PyTuple_GET_ITEM(__pyx_args, 3);
+        CYTHON_FALLTHROUGH;
         case  3: values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
         CYTHON_FALLTHROUGH;
         case  2: values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
@@ -40220,33 +40244,37 @@ static PyObject *__pyx_pw_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
       }
     }
     __pyx_v_self = values[0];
-    __pyx_v_user_id = values[1];
-    __pyx_v_item_ids = values[2];
+    __pyx_v_user_idx = values[1];
+    __pyx_v_item_indices = values[2];
+    __pyx_v_k = values[3];
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("rank", 0, 2, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 666, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("rank", 0, 2, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 666, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("cornac.models.comparer.recom_comparer_obj.ComparERObj.rank", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11ComparERObj_32rank(__pyx_self, __pyx_v_self, __pyx_v_user_id, __pyx_v_item_ids);
+  __pyx_r = __pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11ComparERObj_32rank(__pyx_self, __pyx_v_self, __pyx_v_user_idx, __pyx_v_item_indices, __pyx_v_k);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11ComparERObj_32rank(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_user_id, PyObject *__pyx_v_item_ids) {
+static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11ComparERObj_32rank(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_user_idx, PyObject *__pyx_v_item_indices, PyObject *__pyx_v_k) {
   PyObject *__pyx_v_X_ = NULL;
   PyObject *__pyx_v_most_cared_aspects_indices = NULL;
   PyObject *__pyx_v_most_cared_X_ = NULL;
   PyObject *__pyx_v_most_cared_Y_ = NULL;
   PyObject *__pyx_v_explicit_scores = NULL;
+  PyObject *__pyx_v_all_item_scores = NULL;
   PyObject *__pyx_v_item_scores = NULL;
-  PyObject *__pyx_v_item_rank = NULL;
-  PyObject *__pyx_v_num_items = NULL;
+  PyObject *__pyx_v_partitioned_idx = NULL;
+  PyObject *__pyx_v_top_k_idx = NULL;
+  PyObject *__pyx_v_sorted_top_k_idx = NULL;
+  PyObject *__pyx_v_ranked_items = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -40260,34 +40288,35 @@ static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("rank", 0);
+  __Pyx_INCREF(__pyx_v_item_indices);
 
-  /* "cornac/models/comparer/recom_comparer_obj.pyx":684
+  /* "cornac/models/comparer/recom_comparer_obj.pyx":689
  * 
  *         """
- *         X_ = self.U1[user_id, :].dot(self.V.T)             # <<<<<<<<<<<<<<
+ *         X_ = self.U1[user_idx, :].dot(self.V.T)             # <<<<<<<<<<<<<<
  *         most_cared_aspects_indices = (-X_).argsort()[:self.num_most_cared_aspects]
  *         most_cared_X_ = X_[most_cared_aspects_indices]
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_U1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 684, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_U1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 689, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 684, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 689, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_INCREF(__pyx_v_user_id);
-  __Pyx_GIVEREF(__pyx_v_user_id);
-  PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_user_id);
+  __Pyx_INCREF(__pyx_v_user_idx);
+  __Pyx_GIVEREF(__pyx_v_user_idx);
+  PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_user_idx);
   __Pyx_INCREF(__pyx_slice__9);
   __Pyx_GIVEREF(__pyx_slice__9);
   PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_slice__9);
-  __pyx_t_4 = __Pyx_PyObject_GetItem(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 684, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetItem(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 689, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_dot); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 684, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_dot); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 689, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_V); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 684, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_V); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 689, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_T); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 684, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_T); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 689, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_t_4 = NULL;
@@ -40303,22 +40332,22 @@ static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_4, __pyx_t_2) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 684, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 689, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_v_X_ = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "cornac/models/comparer/recom_comparer_obj.pyx":685
+  /* "cornac/models/comparer/recom_comparer_obj.pyx":690
  *         """
- *         X_ = self.U1[user_id, :].dot(self.V.T)
+ *         X_ = self.U1[user_idx, :].dot(self.V.T)
  *         most_cared_aspects_indices = (-X_).argsort()[:self.num_most_cared_aspects]             # <<<<<<<<<<<<<<
  *         most_cared_X_ = X_[most_cared_aspects_indices]
  *         most_cared_Y_ = self.U2.dot(self.V[most_cared_aspects_indices, :].T)
  */
-  __pyx_t_3 = PyNumber_Negative(__pyx_v_X_); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 685, __pyx_L1_error)
+  __pyx_t_3 = PyNumber_Negative(__pyx_v_X_); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 690, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_argsort); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 685, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_argsort); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 690, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -40333,45 +40362,45 @@ static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 685, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 690, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_num_most_cared_aspects); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 685, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_num_most_cared_aspects); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 690, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetSlice(__pyx_t_1, 0, 0, NULL, &__pyx_t_2, NULL, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 685, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetSlice(__pyx_t_1, 0, 0, NULL, &__pyx_t_2, NULL, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 690, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_most_cared_aspects_indices = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "cornac/models/comparer/recom_comparer_obj.pyx":686
- *         X_ = self.U1[user_id, :].dot(self.V.T)
+  /* "cornac/models/comparer/recom_comparer_obj.pyx":691
+ *         X_ = self.U1[user_idx, :].dot(self.V.T)
  *         most_cared_aspects_indices = (-X_).argsort()[:self.num_most_cared_aspects]
  *         most_cared_X_ = X_[most_cared_aspects_indices]             # <<<<<<<<<<<<<<
  *         most_cared_Y_ = self.U2.dot(self.V[most_cared_aspects_indices, :].T)
  *         explicit_scores = most_cared_X_.dot(most_cared_Y_.T) / (self.num_most_cared_aspects * self.rating_scale)
  */
-  __pyx_t_3 = __Pyx_PyObject_GetItem(__pyx_v_X_, __pyx_v_most_cared_aspects_indices); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 686, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetItem(__pyx_v_X_, __pyx_v_most_cared_aspects_indices); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 691, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_v_most_cared_X_ = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "cornac/models/comparer/recom_comparer_obj.pyx":687
+  /* "cornac/models/comparer/recom_comparer_obj.pyx":692
  *         most_cared_aspects_indices = (-X_).argsort()[:self.num_most_cared_aspects]
  *         most_cared_X_ = X_[most_cared_aspects_indices]
  *         most_cared_Y_ = self.U2.dot(self.V[most_cared_aspects_indices, :].T)             # <<<<<<<<<<<<<<
  *         explicit_scores = most_cared_X_.dot(most_cared_Y_.T) / (self.num_most_cared_aspects * self.rating_scale)
- *         item_scores = self.alpha * explicit_scores + (1 - self.alpha) * self.score(user_id)
+ *         all_item_scores = self.alpha * explicit_scores + (1 - self.alpha) * self.score(user_idx)
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_U2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 687, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_U2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 692, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_dot); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 687, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_dot); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 692, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_V); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 687, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_V); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 692, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 687, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 692, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_INCREF(__pyx_v_most_cared_aspects_indices);
   __Pyx_GIVEREF(__pyx_v_most_cared_aspects_indices);
@@ -40379,11 +40408,11 @@ static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
   __Pyx_INCREF(__pyx_slice__9);
   __Pyx_GIVEREF(__pyx_slice__9);
   PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_slice__9);
-  __pyx_t_5 = __Pyx_PyObject_GetItem(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 687, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetItem(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 692, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_T); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 687, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_T); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 692, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_t_5 = NULL;
@@ -40399,22 +40428,22 @@ static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
   __pyx_t_3 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_1, __pyx_t_5, __pyx_t_4) : __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 687, __pyx_L1_error)
+  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 692, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_most_cared_Y_ = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "cornac/models/comparer/recom_comparer_obj.pyx":688
+  /* "cornac/models/comparer/recom_comparer_obj.pyx":693
  *         most_cared_X_ = X_[most_cared_aspects_indices]
  *         most_cared_Y_ = self.U2.dot(self.V[most_cared_aspects_indices, :].T)
  *         explicit_scores = most_cared_X_.dot(most_cared_Y_.T) / (self.num_most_cared_aspects * self.rating_scale)             # <<<<<<<<<<<<<<
- *         item_scores = self.alpha * explicit_scores + (1 - self.alpha) * self.score(user_id)
+ *         all_item_scores = self.alpha * explicit_scores + (1 - self.alpha) * self.score(user_idx)
  * 
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_most_cared_X_, __pyx_n_s_dot); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 688, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_most_cared_X_, __pyx_n_s_dot); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 693, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_most_cared_Y_, __pyx_n_s_T); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 688, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_most_cared_Y_, __pyx_n_s_T); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 693, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
@@ -40429,42 +40458,42 @@ static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
   __pyx_t_3 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_1, __pyx_t_5, __pyx_t_4) : __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 688, __pyx_L1_error)
+  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 693, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_num_most_cared_aspects); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 688, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_num_most_cared_aspects); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 693, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_rating_scale); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 688, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_rating_scale); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 693, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = PyNumber_Multiply(__pyx_t_1, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 688, __pyx_L1_error)
+  __pyx_t_5 = PyNumber_Multiply(__pyx_t_1, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 693, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyNumber_Divide(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 688, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyNumber_Divide(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 693, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_v_explicit_scores = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "cornac/models/comparer/recom_comparer_obj.pyx":689
+  /* "cornac/models/comparer/recom_comparer_obj.pyx":694
  *         most_cared_Y_ = self.U2.dot(self.V[most_cared_aspects_indices, :].T)
  *         explicit_scores = most_cared_X_.dot(most_cared_Y_.T) / (self.num_most_cared_aspects * self.rating_scale)
- *         item_scores = self.alpha * explicit_scores + (1 - self.alpha) * self.score(user_id)             # <<<<<<<<<<<<<<
+ *         all_item_scores = self.alpha * explicit_scores + (1 - self.alpha) * self.score(user_idx)             # <<<<<<<<<<<<<<
  * 
- *         if item_ids is None:
+ *         # rank items based on their scores
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_alpha); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 689, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_alpha); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 694, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = PyNumber_Multiply(__pyx_t_4, __pyx_v_explicit_scores); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 689, __pyx_L1_error)
+  __pyx_t_5 = PyNumber_Multiply(__pyx_t_4, __pyx_v_explicit_scores); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 694, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_alpha); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 689, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_alpha); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 694, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = __Pyx_PyInt_SubtractCObj(__pyx_int_1, __pyx_t_4, 1, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 689, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_SubtractCObj(__pyx_int_1, __pyx_t_4, 1, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 694, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_score); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 689, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_score); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 694, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
@@ -40476,264 +40505,323 @@ static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
       __Pyx_DECREF_SET(__pyx_t_1, function);
     }
   }
-  __pyx_t_4 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_1, __pyx_t_2, __pyx_v_user_id) : __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_v_user_id);
+  __pyx_t_4 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_1, __pyx_t_2, __pyx_v_user_idx) : __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_v_user_idx);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 689, __pyx_L1_error)
+  if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 694, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyNumber_Multiply(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 689, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Multiply(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 694, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PyNumber_Add(__pyx_t_5, __pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 689, __pyx_L1_error)
+  __pyx_t_4 = PyNumber_Add(__pyx_t_5, __pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 694, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_item_scores = __pyx_t_4;
+  __pyx_v_all_item_scores = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "cornac/models/comparer/recom_comparer_obj.pyx":691
- *         item_scores = self.alpha * explicit_scores + (1 - self.alpha) * self.score(user_id)
- * 
- *         if item_ids is None:             # <<<<<<<<<<<<<<
- *             item_scores = item_scores
- *             item_rank = item_scores.argsort()[::-1]
+  /* "cornac/models/comparer/recom_comparer_obj.pyx":699
+ *         item_indices = (
+ *             np.arange(self.num_items)
+ *             if item_indices is None             # <<<<<<<<<<<<<<
+ *             else np.asarray(item_indices)
+ *         )
  */
-  __pyx_t_6 = (__pyx_v_item_ids == Py_None);
-  __pyx_t_7 = (__pyx_t_6 != 0);
-  if (__pyx_t_7) {
+  __pyx_t_6 = (__pyx_v_item_indices == Py_None);
+  if ((__pyx_t_6 != 0)) {
 
-    /* "cornac/models/comparer/recom_comparer_obj.pyx":692
- * 
- *         if item_ids is None:
- *             item_scores = item_scores             # <<<<<<<<<<<<<<
- *             item_rank = item_scores.argsort()[::-1]
- *         else:
+    /* "cornac/models/comparer/recom_comparer_obj.pyx":698
+ *         # rank items based on their scores
+ *         item_indices = (
+ *             np.arange(self.num_items)             # <<<<<<<<<<<<<<
+ *             if item_indices is None
+ *             else np.asarray(item_indices)
  */
-    __Pyx_INCREF(__pyx_v_item_scores);
-    __Pyx_DECREF_SET(__pyx_v_item_scores, __pyx_v_item_scores);
-
-    /* "cornac/models/comparer/recom_comparer_obj.pyx":693
- *         if item_ids is None:
- *             item_scores = item_scores
- *             item_rank = item_scores.argsort()[::-1]             # <<<<<<<<<<<<<<
- *         else:
- *             num_items = max(self.num_items, max(item_ids) + 1)
- */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_item_scores, __pyx_n_s_argsort); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 693, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_5 = NULL;
-    if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
-      __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_1);
-      if (likely(__pyx_t_5)) {
-        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
-        __Pyx_INCREF(__pyx_t_5);
-        __Pyx_INCREF(function);
-        __Pyx_DECREF_SET(__pyx_t_1, function);
-      }
-    }
-    __pyx_t_4 = (__pyx_t_5) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_5) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
-    __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 693, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_4);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_t_4, __pyx_slice__10); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 693, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_v_item_rank = __pyx_t_1;
-    __pyx_t_1 = 0;
-
-    /* "cornac/models/comparer/recom_comparer_obj.pyx":691
- *         item_scores = self.alpha * explicit_scores + (1 - self.alpha) * self.score(user_id)
- * 
- *         if item_ids is None:             # <<<<<<<<<<<<<<
- *             item_scores = item_scores
- *             item_rank = item_scores.argsort()[::-1]
- */
-    goto __pyx_L3;
-  }
-
-  /* "cornac/models/comparer/recom_comparer_obj.pyx":695
- *             item_rank = item_scores.argsort()[::-1]
- *         else:
- *             num_items = max(self.num_items, max(item_ids) + 1)             # <<<<<<<<<<<<<<
- *             item_scores = np.ones(num_items) * np.min(item_scores)
- *             item_scores[:self.num_items] = item_scores
- */
-  /*else*/ {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_max, __pyx_v_item_ids); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 695, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_4 = __Pyx_PyInt_AddObjC(__pyx_t_1, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 695, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_4);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_num_items); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 695, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = PyObject_RichCompare(__pyx_t_4, __pyx_t_1, Py_GT); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 695, __pyx_L1_error)
-    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 695, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (__pyx_t_7) {
-      __Pyx_INCREF(__pyx_t_4);
-      __pyx_t_5 = __pyx_t_4;
-    } else {
-      __Pyx_INCREF(__pyx_t_1);
-      __pyx_t_5 = __pyx_t_1;
-    }
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = __pyx_t_5;
-    __Pyx_INCREF(__pyx_t_4);
-    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_v_num_items = __pyx_t_4;
-    __pyx_t_4 = 0;
-
-    /* "cornac/models/comparer/recom_comparer_obj.pyx":696
- *         else:
- *             num_items = max(self.num_items, max(item_ids) + 1)
- *             item_scores = np.ones(num_items) * np.min(item_scores)             # <<<<<<<<<<<<<<
- *             item_scores[:self.num_items] = item_scores
- *             item_rank = item_scores.argsort()[::-1]
- */
-    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 696, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 698, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_ones); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 696, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = NULL;
-    if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_1))) {
-      __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_1);
-      if (likely(__pyx_t_5)) {
-        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
-        __Pyx_INCREF(__pyx_t_5);
-        __Pyx_INCREF(function);
-        __Pyx_DECREF_SET(__pyx_t_1, function);
-      }
-    }
-    __pyx_t_4 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_1, __pyx_t_5, __pyx_v_num_items) : __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_v_num_items);
-    __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 696, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_4);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 696, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_min_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 696, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_arange); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 698, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = NULL;
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_num_items); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 698, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_5);
+    __pyx_t_2 = NULL;
     if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
-      __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_3);
-      if (likely(__pyx_t_5)) {
+      __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_3);
+      if (likely(__pyx_t_2)) {
         PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
-        __Pyx_INCREF(__pyx_t_5);
+        __Pyx_INCREF(__pyx_t_2);
         __Pyx_INCREF(function);
         __Pyx_DECREF_SET(__pyx_t_3, function);
       }
     }
-    __pyx_t_1 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_5, __pyx_v_item_scores) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_item_scores);
-    __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 696, __pyx_L1_error)
+    __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_2, __pyx_t_5) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_5);
+    __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 698, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = PyNumber_Multiply(__pyx_t_4, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 696, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_3);
-    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __Pyx_DECREF_SET(__pyx_v_item_scores, __pyx_t_3);
-    __pyx_t_3 = 0;
-
-    /* "cornac/models/comparer/recom_comparer_obj.pyx":697
- *             num_items = max(self.num_items, max(item_ids) + 1)
- *             item_scores = np.ones(num_items) * np.min(item_scores)
- *             item_scores[:self.num_items] = item_scores             # <<<<<<<<<<<<<<
- *             item_rank = item_scores.argsort()[::-1]
- *             item_rank = intersects(item_rank, item_ids, assume_unique=True)
- */
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_num_items); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 697, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_3);
-    if (__Pyx_PyObject_SetSlice(__pyx_v_item_scores, __pyx_v_item_scores, 0, 0, NULL, &__pyx_t_3, NULL, 0, 0, 1) < 0) __PYX_ERR(0, 697, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-
-    /* "cornac/models/comparer/recom_comparer_obj.pyx":698
- *             item_scores = np.ones(num_items) * np.min(item_scores)
- *             item_scores[:self.num_items] = item_scores
- *             item_rank = item_scores.argsort()[::-1]             # <<<<<<<<<<<<<<
- *             item_rank = intersects(item_rank, item_ids, assume_unique=True)
- *             item_scores = item_scores[item_ids]
- */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_item_scores, __pyx_n_s_argsort); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 698, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_4 = NULL;
-    if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
-      __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_1);
-      if (likely(__pyx_t_4)) {
-        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
-        __Pyx_INCREF(__pyx_t_4);
-        __Pyx_INCREF(function);
-        __Pyx_DECREF_SET(__pyx_t_1, function);
-      }
-    }
-    __pyx_t_3 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
-    __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 698, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_3);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_t_3, __pyx_slice__10); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 698, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_v_item_rank = __pyx_t_1;
+    __pyx_t_4 = __pyx_t_1;
     __pyx_t_1 = 0;
-
-    /* "cornac/models/comparer/recom_comparer_obj.pyx":699
- *             item_scores[:self.num_items] = item_scores
- *             item_rank = item_scores.argsort()[::-1]
- *             item_rank = intersects(item_rank, item_ids, assume_unique=True)             # <<<<<<<<<<<<<<
- *             item_scores = item_scores[item_ids]
- *         return item_rank, item_scores
- */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_intersects); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 699, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 699, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_3);
-    __Pyx_INCREF(__pyx_v_item_rank);
-    __Pyx_GIVEREF(__pyx_v_item_rank);
-    PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_item_rank);
-    __Pyx_INCREF(__pyx_v_item_ids);
-    __Pyx_GIVEREF(__pyx_v_item_ids);
-    PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_v_item_ids);
-    __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 699, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_4);
-    if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_assume_unique, Py_True) < 0) __PYX_ERR(0, 699, __pyx_L1_error)
-    __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 699, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_5);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __Pyx_DECREF_SET(__pyx_v_item_rank, __pyx_t_5);
-    __pyx_t_5 = 0;
+  } else {
 
     /* "cornac/models/comparer/recom_comparer_obj.pyx":700
- *             item_rank = item_scores.argsort()[::-1]
- *             item_rank = intersects(item_rank, item_ids, assume_unique=True)
- *             item_scores = item_scores[item_ids]             # <<<<<<<<<<<<<<
- *         return item_rank, item_scores
+ *             np.arange(self.num_items)
+ *             if item_indices is None
+ *             else np.asarray(item_indices)             # <<<<<<<<<<<<<<
+ *         )
+ *         item_scores = all_item_scores[item_indices]
  */
-    __pyx_t_5 = __Pyx_PyObject_GetItem(__pyx_v_item_scores, __pyx_v_item_ids); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 700, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 700, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_asarray); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 700, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __Pyx_DECREF_SET(__pyx_v_item_scores, __pyx_t_5);
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __pyx_t_3 = NULL;
+    if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_5))) {
+      __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_5);
+      if (likely(__pyx_t_3)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_5);
+        __Pyx_INCREF(__pyx_t_3);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_5, function);
+      }
+    }
+    __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_5, __pyx_t_3, __pyx_v_item_indices) : __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_v_item_indices);
+    __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 700, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    __pyx_t_4 = __pyx_t_1;
+    __pyx_t_1 = 0;
+  }
+  __Pyx_DECREF_SET(__pyx_v_item_indices, __pyx_t_4);
+  __pyx_t_4 = 0;
+
+  /* "cornac/models/comparer/recom_comparer_obj.pyx":702
+ *             else np.asarray(item_indices)
+ *         )
+ *         item_scores = all_item_scores[item_indices]             # <<<<<<<<<<<<<<
+ * 
+ *         if k != -1:  # O(n + k log k), faster for small k which is usually the case
+ */
+  __pyx_t_4 = __Pyx_PyObject_GetItem(__pyx_v_all_item_scores, __pyx_v_item_indices); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 702, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_v_item_scores = __pyx_t_4;
+  __pyx_t_4 = 0;
+
+  /* "cornac/models/comparer/recom_comparer_obj.pyx":704
+ *         item_scores = all_item_scores[item_indices]
+ * 
+ *         if k != -1:  # O(n + k log k), faster for small k which is usually the case             # <<<<<<<<<<<<<<
+ *             partitioned_idx = np.argpartition(item_scores, -k)
+ *             top_k_idx = partitioned_idx[-k:]
+ */
+  __pyx_t_4 = __Pyx_PyInt_NeObjC(__pyx_v_k, __pyx_int_neg_1, -1L, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 704, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 704, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  if (__pyx_t_6) {
+
+    /* "cornac/models/comparer/recom_comparer_obj.pyx":705
+ * 
+ *         if k != -1:  # O(n + k log k), faster for small k which is usually the case
+ *             partitioned_idx = np.argpartition(item_scores, -k)             # <<<<<<<<<<<<<<
+ *             top_k_idx = partitioned_idx[-k:]
+ *             sorted_top_k_idx = top_k_idx[np.argsort(item_scores[top_k_idx])]
+ */
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 705, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_argpartition); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 705, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_5);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = PyNumber_Negative(__pyx_v_k); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 705, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_3 = NULL;
+    __pyx_t_7 = 0;
+    if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_5))) {
+      __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_5);
+      if (likely(__pyx_t_3)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_5);
+        __Pyx_INCREF(__pyx_t_3);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_5, function);
+        __pyx_t_7 = 1;
+      }
+    }
+    #if CYTHON_FAST_PYCALL
+    if (PyFunction_Check(__pyx_t_5)) {
+      PyObject *__pyx_temp[3] = {__pyx_t_3, __pyx_v_item_scores, __pyx_t_1};
+      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 705, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __Pyx_GOTREF(__pyx_t_4);
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    } else
+    #endif
+    #if CYTHON_FAST_PYCCALL
+    if (__Pyx_PyFastCFunction_Check(__pyx_t_5)) {
+      PyObject *__pyx_temp[3] = {__pyx_t_3, __pyx_v_item_scores, __pyx_t_1};
+      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 705, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __Pyx_GOTREF(__pyx_t_4);
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    } else
+    #endif
+    {
+      __pyx_t_2 = PyTuple_New(2+__pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 705, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      if (__pyx_t_3) {
+        __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_3); __pyx_t_3 = NULL;
+      }
+      __Pyx_INCREF(__pyx_v_item_scores);
+      __Pyx_GIVEREF(__pyx_v_item_scores);
+      PyTuple_SET_ITEM(__pyx_t_2, 0+__pyx_t_7, __pyx_v_item_scores);
+      __Pyx_GIVEREF(__pyx_t_1);
+      PyTuple_SET_ITEM(__pyx_t_2, 1+__pyx_t_7, __pyx_t_1);
+      __pyx_t_1 = 0;
+      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_2, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 705, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_4);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    }
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    __pyx_v_partitioned_idx = __pyx_t_4;
+    __pyx_t_4 = 0;
+
+    /* "cornac/models/comparer/recom_comparer_obj.pyx":706
+ *         if k != -1:  # O(n + k log k), faster for small k which is usually the case
+ *             partitioned_idx = np.argpartition(item_scores, -k)
+ *             top_k_idx = partitioned_idx[-k:]             # <<<<<<<<<<<<<<
+ *             sorted_top_k_idx = top_k_idx[np.argsort(item_scores[top_k_idx])]
+ *             partitioned_idx[-k:] = sorted_top_k_idx
+ */
+    __pyx_t_4 = PyNumber_Negative(__pyx_v_k); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 706, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_4);
+    __pyx_t_5 = __Pyx_PyObject_GetSlice(__pyx_v_partitioned_idx, 0, 0, &__pyx_t_4, NULL, NULL, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 706, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_5);
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    __pyx_v_top_k_idx = __pyx_t_5;
+    __pyx_t_5 = 0;
+
+    /* "cornac/models/comparer/recom_comparer_obj.pyx":707
+ *             partitioned_idx = np.argpartition(item_scores, -k)
+ *             top_k_idx = partitioned_idx[-k:]
+ *             sorted_top_k_idx = top_k_idx[np.argsort(item_scores[top_k_idx])]             # <<<<<<<<<<<<<<
+ *             partitioned_idx[-k:] = sorted_top_k_idx
+ *             ranked_items = item_indices[partitioned_idx[::-1]]
+ */
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 707, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_4);
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_argsort); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 707, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    __pyx_t_4 = __Pyx_PyObject_GetItem(__pyx_v_item_scores, __pyx_v_top_k_idx); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 707, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_4);
+    __pyx_t_1 = NULL;
+    if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
+      __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_2);
+      if (likely(__pyx_t_1)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+        __Pyx_INCREF(__pyx_t_1);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_2, function);
+      }
+    }
+    __pyx_t_5 = (__pyx_t_1) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_1, __pyx_t_4) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_4);
+    __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 707, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_5);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_top_k_idx, __pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 707, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    __pyx_v_sorted_top_k_idx = __pyx_t_2;
+    __pyx_t_2 = 0;
+
+    /* "cornac/models/comparer/recom_comparer_obj.pyx":708
+ *             top_k_idx = partitioned_idx[-k:]
+ *             sorted_top_k_idx = top_k_idx[np.argsort(item_scores[top_k_idx])]
+ *             partitioned_idx[-k:] = sorted_top_k_idx             # <<<<<<<<<<<<<<
+ *             ranked_items = item_indices[partitioned_idx[::-1]]
+ *         else:  # O(n log n)
+ */
+    __pyx_t_2 = PyNumber_Negative(__pyx_v_k); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 708, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    if (__Pyx_PyObject_SetSlice(__pyx_v_partitioned_idx, __pyx_v_sorted_top_k_idx, 0, 0, &__pyx_t_2, NULL, NULL, 0, 0, 1) < 0) __PYX_ERR(0, 708, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+
+    /* "cornac/models/comparer/recom_comparer_obj.pyx":709
+ *             sorted_top_k_idx = top_k_idx[np.argsort(item_scores[top_k_idx])]
+ *             partitioned_idx[-k:] = sorted_top_k_idx
+ *             ranked_items = item_indices[partitioned_idx[::-1]]             # <<<<<<<<<<<<<<
+ *         else:  # O(n log n)
+ *             ranked_items = item_indices[item_scores.argsort()[::-1]]
+ */
+    __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_partitioned_idx, __pyx_slice__10); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 709, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_5 = __Pyx_PyObject_GetItem(__pyx_v_item_indices, __pyx_t_2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 709, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_5);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __pyx_v_ranked_items = __pyx_t_5;
+    __pyx_t_5 = 0;
+
+    /* "cornac/models/comparer/recom_comparer_obj.pyx":704
+ *         item_scores = all_item_scores[item_indices]
+ * 
+ *         if k != -1:  # O(n + k log k), faster for small k which is usually the case             # <<<<<<<<<<<<<<
+ *             partitioned_idx = np.argpartition(item_scores, -k)
+ *             top_k_idx = partitioned_idx[-k:]
+ */
+    goto __pyx_L3;
+  }
+
+  /* "cornac/models/comparer/recom_comparer_obj.pyx":711
+ *             ranked_items = item_indices[partitioned_idx[::-1]]
+ *         else:  # O(n log n)
+ *             ranked_items = item_indices[item_scores.argsort()[::-1]]             # <<<<<<<<<<<<<<
+ * 
+ *         return ranked_items, item_scores
+ */
+  /*else*/ {
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_item_scores, __pyx_n_s_argsort); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 711, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_4 = NULL;
+    if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
+      __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_2);
+      if (likely(__pyx_t_4)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+        __Pyx_INCREF(__pyx_t_4);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_2, function);
+      }
+    }
+    __pyx_t_5 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
+    __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
+    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 711, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_5);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_t_5, __pyx_slice__10); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 711, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    __pyx_t_5 = __Pyx_PyObject_GetItem(__pyx_v_item_indices, __pyx_t_2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 711, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_5);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __pyx_v_ranked_items = __pyx_t_5;
     __pyx_t_5 = 0;
   }
   __pyx_L3:;
 
-  /* "cornac/models/comparer/recom_comparer_obj.pyx":701
- *             item_rank = intersects(item_rank, item_ids, assume_unique=True)
- *             item_scores = item_scores[item_ids]
- *         return item_rank, item_scores             # <<<<<<<<<<<<<<
+  /* "cornac/models/comparer/recom_comparer_obj.pyx":713
+ *             ranked_items = item_indices[item_scores.argsort()[::-1]]
+ * 
+ *         return ranked_items, item_scores             # <<<<<<<<<<<<<<
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 701, __pyx_L1_error)
+  __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 713, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __Pyx_INCREF(__pyx_v_item_rank);
-  __Pyx_GIVEREF(__pyx_v_item_rank);
-  PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_v_item_rank);
+  __Pyx_INCREF(__pyx_v_ranked_items);
+  __Pyx_GIVEREF(__pyx_v_ranked_items);
+  PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_v_ranked_items);
   __Pyx_INCREF(__pyx_v_item_scores);
   __Pyx_GIVEREF(__pyx_v_item_scores);
   PyTuple_SET_ITEM(__pyx_t_5, 1, __pyx_v_item_scores);
@@ -40744,7 +40832,7 @@ static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
   /* "cornac/models/comparer/recom_comparer_obj.pyx":666
  *             return item_score
  * 
- *     def rank(self, user_id, item_ids=None):             # <<<<<<<<<<<<<<
+ *     def rank(self, user_idx, item_indices=None, k=-1):             # <<<<<<<<<<<<<<
  *         """Rank all test items for a given user.
  * 
  */
@@ -40764,15 +40852,19 @@ static PyObject *__pyx_pf_6cornac_6models_8comparer_18recom_comparer_obj_11Compa
   __Pyx_XDECREF(__pyx_v_most_cared_X_);
   __Pyx_XDECREF(__pyx_v_most_cared_Y_);
   __Pyx_XDECREF(__pyx_v_explicit_scores);
+  __Pyx_XDECREF(__pyx_v_all_item_scores);
   __Pyx_XDECREF(__pyx_v_item_scores);
-  __Pyx_XDECREF(__pyx_v_item_rank);
-  __Pyx_XDECREF(__pyx_v_num_items);
+  __Pyx_XDECREF(__pyx_v_partitioned_idx);
+  __Pyx_XDECREF(__pyx_v_top_k_idx);
+  __Pyx_XDECREF(__pyx_v_sorted_top_k_idx);
+  __Pyx_XDECREF(__pyx_v_ranked_items);
+  __Pyx_XDECREF(__pyx_v_item_indices);
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":734
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":734
  * ctypedef npy_cdouble     complex_t
  * 
  * cdef inline object PyArray_MultiIterNew1(a):             # <<<<<<<<<<<<<<
@@ -40789,7 +40881,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew1", 0);
 
-  /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":735
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":735
  * 
  * cdef inline object PyArray_MultiIterNew1(a):
  *     return PyArray_MultiIterNew(1, <void*>a)             # <<<<<<<<<<<<<<
@@ -40803,7 +40895,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":734
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":734
  * ctypedef npy_cdouble     complex_t
  * 
  * cdef inline object PyArray_MultiIterNew1(a):             # <<<<<<<<<<<<<<
@@ -40822,7 +40914,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   return __pyx_r;
 }
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":737
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":737
  *     return PyArray_MultiIterNew(1, <void*>a)
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):             # <<<<<<<<<<<<<<
@@ -40839,7 +40931,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew2", 0);
 
-  /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":738
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":738
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)             # <<<<<<<<<<<<<<
@@ -40853,7 +40945,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":737
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":737
  *     return PyArray_MultiIterNew(1, <void*>a)
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):             # <<<<<<<<<<<<<<
@@ -40872,7 +40964,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   return __pyx_r;
 }
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":740
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":740
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):             # <<<<<<<<<<<<<<
@@ -40889,7 +40981,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew3", 0);
 
-  /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":741
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":741
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)             # <<<<<<<<<<<<<<
@@ -40903,7 +40995,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":740
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":740
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):             # <<<<<<<<<<<<<<
@@ -40922,7 +41014,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   return __pyx_r;
 }
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":743
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":743
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):             # <<<<<<<<<<<<<<
@@ -40939,7 +41031,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew4", 0);
 
-  /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":744
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":744
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)             # <<<<<<<<<<<<<<
@@ -40953,7 +41045,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":743
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":743
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):             # <<<<<<<<<<<<<<
@@ -40972,7 +41064,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   return __pyx_r;
 }
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":746
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":746
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):             # <<<<<<<<<<<<<<
@@ -40989,7 +41081,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew5", 0);
 
-  /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":747
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":747
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)             # <<<<<<<<<<<<<<
@@ -41003,7 +41095,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":746
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":746
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):             # <<<<<<<<<<<<<<
@@ -41022,7 +41114,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   return __pyx_r;
 }
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":749
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":749
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):             # <<<<<<<<<<<<<<
@@ -41036,7 +41128,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("PyDataType_SHAPE", 0);
 
-  /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":750
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":750
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):
  *     if PyDataType_HASSUBARRAY(d):             # <<<<<<<<<<<<<<
@@ -41046,7 +41138,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
   __pyx_t_1 = (PyDataType_HASSUBARRAY(__pyx_v_d) != 0);
   if (__pyx_t_1) {
 
-    /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":751
+    /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":751
  * cdef inline tuple PyDataType_SHAPE(dtype d):
  *     if PyDataType_HASSUBARRAY(d):
  *         return <tuple>d.subarray.shape             # <<<<<<<<<<<<<<
@@ -41058,7 +41150,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
     __pyx_r = ((PyObject*)__pyx_v_d->subarray->shape);
     goto __pyx_L0;
 
-    /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":750
+    /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":750
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):
  *     if PyDataType_HASSUBARRAY(d):             # <<<<<<<<<<<<<<
@@ -41067,7 +41159,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
  */
   }
 
-  /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":753
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":753
  *         return <tuple>d.subarray.shape
  *     else:
  *         return ()             # <<<<<<<<<<<<<<
@@ -41081,7 +41173,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
     goto __pyx_L0;
   }
 
-  /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":749
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":749
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):             # <<<<<<<<<<<<<<
@@ -41096,7 +41188,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
   return __pyx_r;
 }
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":928
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":928
  *     int _import_umath() except -1
  * 
  * cdef inline void set_array_base(ndarray arr, object base):             # <<<<<<<<<<<<<<
@@ -41108,7 +41200,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("set_array_base", 0);
 
-  /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":929
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":929
  * 
  * cdef inline void set_array_base(ndarray arr, object base):
  *     Py_INCREF(base) # important to do this before stealing the reference below!             # <<<<<<<<<<<<<<
@@ -41117,7 +41209,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
   Py_INCREF(__pyx_v_base);
 
-  /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":930
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":930
  * cdef inline void set_array_base(ndarray arr, object base):
  *     Py_INCREF(base) # important to do this before stealing the reference below!
  *     PyArray_SetBaseObject(arr, base)             # <<<<<<<<<<<<<<
@@ -41126,7 +41218,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
   (void)(PyArray_SetBaseObject(__pyx_v_arr, __pyx_v_base));
 
-  /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":928
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":928
  *     int _import_umath() except -1
  * 
  * cdef inline void set_array_base(ndarray arr, object base):             # <<<<<<<<<<<<<<
@@ -41138,7 +41230,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   __Pyx_RefNannyFinishContext();
 }
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":932
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":932
  *     PyArray_SetBaseObject(arr, base)
  * 
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
@@ -41153,7 +41245,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("get_array_base", 0);
 
-  /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":933
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":933
  * 
  * cdef inline object get_array_base(ndarray arr):
  *     base = PyArray_BASE(arr)             # <<<<<<<<<<<<<<
@@ -41162,7 +41254,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
  */
   __pyx_v_base = PyArray_BASE(__pyx_v_arr);
 
-  /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":934
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":934
  * cdef inline object get_array_base(ndarray arr):
  *     base = PyArray_BASE(arr)
  *     if base is NULL:             # <<<<<<<<<<<<<<
@@ -41172,7 +41264,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   __pyx_t_1 = ((__pyx_v_base == NULL) != 0);
   if (__pyx_t_1) {
 
-    /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":935
+    /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":935
  *     base = PyArray_BASE(arr)
  *     if base is NULL:
  *         return None             # <<<<<<<<<<<<<<
@@ -41183,7 +41275,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
     __pyx_r = Py_None; __Pyx_INCREF(Py_None);
     goto __pyx_L0;
 
-    /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":934
+    /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":934
  * cdef inline object get_array_base(ndarray arr):
  *     base = PyArray_BASE(arr)
  *     if base is NULL:             # <<<<<<<<<<<<<<
@@ -41192,7 +41284,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
  */
   }
 
-  /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":936
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":936
  *     if base is NULL:
  *         return None
  *     return <object>base             # <<<<<<<<<<<<<<
@@ -41204,7 +41296,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   __pyx_r = ((PyObject *)__pyx_v_base);
   goto __pyx_L0;
 
-  /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":932
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":932
  *     PyArray_SetBaseObject(arr, base)
  * 
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
@@ -41219,7 +41311,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   return __pyx_r;
 }
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":940
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":940
  * # Versions of the import_* functions which are more suitable for
  * # Cython code.
  * cdef inline int import_array() except -1:             # <<<<<<<<<<<<<<
@@ -41243,7 +41335,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("import_array", 0);
 
-  /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":941
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":941
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -41259,7 +41351,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":942
+      /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":942
  * cdef inline int import_array() except -1:
  *     try:
  *         __pyx_import_array()             # <<<<<<<<<<<<<<
@@ -41268,7 +41360,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
  */
       __pyx_t_4 = _import_array(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(1, 942, __pyx_L3_error)
 
-      /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":941
+      /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":941
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -41282,7 +41374,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     goto __pyx_L8_try_end;
     __pyx_L3_error:;
 
-    /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":943
+    /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":943
  *     try:
  *         __pyx_import_array()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -41297,7 +41389,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_7);
 
-      /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":944
+      /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":944
  *         __pyx_import_array()
  *     except Exception:
  *         raise ImportError("numpy.core.multiarray failed to import")             # <<<<<<<<<<<<<<
@@ -41313,7 +41405,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":941
+    /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":941
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -41328,7 +41420,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     __pyx_L8_try_end:;
   }
 
-  /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":940
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":940
  * # Versions of the import_* functions which are more suitable for
  * # Cython code.
  * cdef inline int import_array() except -1:             # <<<<<<<<<<<<<<
@@ -41351,7 +41443,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
   return __pyx_r;
 }
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":946
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":946
  *         raise ImportError("numpy.core.multiarray failed to import")
  * 
  * cdef inline int import_umath() except -1:             # <<<<<<<<<<<<<<
@@ -41375,7 +41467,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("import_umath", 0);
 
-  /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":947
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":947
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -41391,7 +41483,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":948
+      /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":948
  * cdef inline int import_umath() except -1:
  *     try:
  *         _import_umath()             # <<<<<<<<<<<<<<
@@ -41400,7 +41492,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
  */
       __pyx_t_4 = _import_umath(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(1, 948, __pyx_L3_error)
 
-      /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":947
+      /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":947
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -41414,7 +41506,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     goto __pyx_L8_try_end;
     __pyx_L3_error:;
 
-    /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":949
+    /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":949
  *     try:
  *         _import_umath()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -41429,7 +41521,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_7);
 
-      /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":950
+      /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":950
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -41445,7 +41537,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":947
+    /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":947
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -41460,7 +41552,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     __pyx_L8_try_end:;
   }
 
-  /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":946
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":946
  *         raise ImportError("numpy.core.multiarray failed to import")
  * 
  * cdef inline int import_umath() except -1:             # <<<<<<<<<<<<<<
@@ -41483,7 +41575,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
   return __pyx_r;
 }
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":952
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":952
  *         raise ImportError("numpy.core.umath failed to import")
  * 
  * cdef inline int import_ufunc() except -1:             # <<<<<<<<<<<<<<
@@ -41507,7 +41599,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("import_ufunc", 0);
 
-  /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":953
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":953
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -41523,7 +41615,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":954
+      /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":954
  * cdef inline int import_ufunc() except -1:
  *     try:
  *         _import_umath()             # <<<<<<<<<<<<<<
@@ -41532,7 +41624,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
  */
       __pyx_t_4 = _import_umath(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(1, 954, __pyx_L3_error)
 
-      /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":953
+      /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":953
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -41546,7 +41638,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     goto __pyx_L8_try_end;
     __pyx_L3_error:;
 
-    /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":955
+    /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":955
  *     try:
  *         _import_umath()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -41561,7 +41653,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_7);
 
-      /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":956
+      /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":956
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -41577,7 +41669,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":953
+    /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":953
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -41592,7 +41684,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     __pyx_L8_try_end:;
   }
 
-  /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":952
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":952
  *         raise ImportError("numpy.core.umath failed to import")
  * 
  * cdef inline int import_ufunc() except -1:             # <<<<<<<<<<<<<<
@@ -41615,7 +41707,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
   return __pyx_r;
 }
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":966
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":966
  * 
  * 
  * cdef inline bint is_timedelta64_object(object obj):             # <<<<<<<<<<<<<<
@@ -41628,7 +41720,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_timedelta64_object(PyObject *__pyx_v_
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("is_timedelta64_object", 0);
 
-  /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":978
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":978
  *     bool
  *     """
  *     return PyObject_TypeCheck(obj, &PyTimedeltaArrType_Type)             # <<<<<<<<<<<<<<
@@ -41638,7 +41730,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_timedelta64_object(PyObject *__pyx_v_
   __pyx_r = PyObject_TypeCheck(__pyx_v_obj, (&PyTimedeltaArrType_Type));
   goto __pyx_L0;
 
-  /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":966
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":966
  * 
  * 
  * cdef inline bint is_timedelta64_object(object obj):             # <<<<<<<<<<<<<<
@@ -41652,7 +41744,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_timedelta64_object(PyObject *__pyx_v_
   return __pyx_r;
 }
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":981
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":981
  * 
  * 
  * cdef inline bint is_datetime64_object(object obj):             # <<<<<<<<<<<<<<
@@ -41665,7 +41757,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_o
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("is_datetime64_object", 0);
 
-  /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":993
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":993
  *     bool
  *     """
  *     return PyObject_TypeCheck(obj, &PyDatetimeArrType_Type)             # <<<<<<<<<<<<<<
@@ -41675,7 +41767,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_o
   __pyx_r = PyObject_TypeCheck(__pyx_v_obj, (&PyDatetimeArrType_Type));
   goto __pyx_L0;
 
-  /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":981
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":981
  * 
  * 
  * cdef inline bint is_datetime64_object(object obj):             # <<<<<<<<<<<<<<
@@ -41689,7 +41781,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_o
   return __pyx_r;
 }
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":996
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":996
  * 
  * 
  * cdef inline npy_datetime get_datetime64_value(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -41700,7 +41792,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_o
 static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *__pyx_v_obj) {
   npy_datetime __pyx_r;
 
-  /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":1003
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":1003
  *     also needed.  That can be found using `get_datetime64_unit`.
  *     """
  *     return (<PyDatetimeScalarObject*>obj).obval             # <<<<<<<<<<<<<<
@@ -41710,7 +41802,7 @@ static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *
   __pyx_r = ((PyDatetimeScalarObject *)__pyx_v_obj)->obval;
   goto __pyx_L0;
 
-  /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":996
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":996
  * 
  * 
  * cdef inline npy_datetime get_datetime64_value(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -41723,7 +41815,7 @@ static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *
   return __pyx_r;
 }
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":1006
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":1006
  * 
  * 
  * cdef inline npy_timedelta get_timedelta64_value(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -41734,7 +41826,7 @@ static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *
 static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject *__pyx_v_obj) {
   npy_timedelta __pyx_r;
 
-  /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":1010
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":1010
  *     returns the int64 value underlying scalar numpy timedelta64 object
  *     """
  *     return (<PyTimedeltaScalarObject*>obj).obval             # <<<<<<<<<<<<<<
@@ -41744,7 +41836,7 @@ static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject
   __pyx_r = ((PyTimedeltaScalarObject *)__pyx_v_obj)->obval;
   goto __pyx_L0;
 
-  /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":1006
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":1006
  * 
  * 
  * cdef inline npy_timedelta get_timedelta64_value(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -41757,7 +41849,7 @@ static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject
   return __pyx_r;
 }
 
-/* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":1013
+/* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":1013
  * 
  * 
  * cdef inline NPY_DATETIMEUNIT get_datetime64_unit(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -41768,7 +41860,7 @@ static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject
 static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObject *__pyx_v_obj) {
   NPY_DATETIMEUNIT __pyx_r;
 
-  /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":1017
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":1017
  *     returns the unit part of the dtype for a numpy datetime64 object.
  *     """
  *     return <NPY_DATETIMEUNIT>(<PyDatetimeScalarObject*>obj).obmeta.base             # <<<<<<<<<<<<<<
@@ -41776,7 +41868,7 @@ static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObjec
   __pyx_r = ((NPY_DATETIMEUNIT)((PyDatetimeScalarObject *)__pyx_v_obj)->obmeta.base);
   goto __pyx_L0;
 
-  /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":1013
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":1013
  * 
  * 
  * cdef inline NPY_DATETIMEUNIT get_datetime64_unit(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -55719,10 +55811,12 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_u__6, __pyx_k__6, sizeof(__pyx_k__6), 0, 1, 0, 0},
   {&__pyx_kp_u__7, __pyx_k__7, sizeof(__pyx_k__7), 0, 1, 0, 0},
   {&__pyx_n_s_aid, __pyx_k_aid, sizeof(__pyx_k_aid), 0, 0, 1, 1},
+  {&__pyx_n_s_all_item_scores, __pyx_k_all_item_scores, sizeof(__pyx_k_all_item_scores), 0, 0, 1, 1},
   {&__pyx_n_s_allocate_buffer, __pyx_k_allocate_buffer, sizeof(__pyx_k_allocate_buffer), 0, 0, 1, 1},
   {&__pyx_n_s_alpha, __pyx_k_alpha, sizeof(__pyx_k_alpha), 0, 0, 1, 1},
   {&__pyx_n_s_append, __pyx_k_append, sizeof(__pyx_k_append), 0, 0, 1, 1},
   {&__pyx_n_s_arange, __pyx_k_arange, sizeof(__pyx_k_arange), 0, 0, 1, 1},
+  {&__pyx_n_s_argpartition, __pyx_k_argpartition, sizeof(__pyx_k_argpartition), 0, 0, 1, 1},
   {&__pyx_n_s_args, __pyx_k_args, sizeof(__pyx_k_args), 0, 0, 1, 1},
   {&__pyx_n_s_argsort, __pyx_k_argsort, sizeof(__pyx_k_argsort), 0, 0, 1, 1},
   {&__pyx_n_s_asarray, __pyx_k_asarray, sizeof(__pyx_k_asarray), 0, 0, 1, 1},
@@ -55730,7 +55824,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_aspect_bpr_loss_2, __pyx_k_aspect_bpr_loss_2, sizeof(__pyx_k_aspect_bpr_loss_2), 0, 0, 1, 1},
   {&__pyx_n_s_aspect_idx, __pyx_k_aspect_idx, sizeof(__pyx_k_aspect_idx), 0, 0, 1, 1},
   {&__pyx_n_s_aspect_indices, __pyx_k_aspect_indices, sizeof(__pyx_k_aspect_indices), 0, 0, 1, 1},
-  {&__pyx_n_s_assume_unique, __pyx_k_assume_unique, sizeof(__pyx_k_assume_unique), 0, 0, 1, 1},
   {&__pyx_n_s_astype, __pyx_k_astype, sizeof(__pyx_k_astype), 0, 0, 1, 1},
   {&__pyx_n_s_attention_scores, __pyx_k_attention_scores, sizeof(__pyx_k_attention_scores), 0, 0, 1, 1},
   {&__pyx_kp_u_avg, __pyx_k_avg, sizeof(__pyx_k_avg), 0, 1, 0, 0},
@@ -55833,7 +55926,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_item_aspects, __pyx_k_item_aspects, sizeof(__pyx_k_item_aspects), 0, 0, 1, 1},
   {&__pyx_n_s_item_id, __pyx_k_item_id, sizeof(__pyx_k_item_id), 0, 0, 1, 1},
   {&__pyx_n_s_item_ids, __pyx_k_item_ids, sizeof(__pyx_k_item_ids), 0, 0, 1, 1},
-  {&__pyx_n_s_item_rank, __pyx_k_item_rank, sizeof(__pyx_k_item_rank), 0, 0, 1, 1},
+  {&__pyx_n_s_item_indices, __pyx_k_item_indices, sizeof(__pyx_k_item_indices), 0, 0, 1, 1},
   {&__pyx_n_s_item_score, __pyx_k_item_score, sizeof(__pyx_k_item_score), 0, 0, 1, 1},
   {&__pyx_n_s_item_scores, __pyx_k_item_scores, sizeof(__pyx_k_item_scores), 0, 0, 1, 1},
   {&__pyx_n_s_item_sentiment, __pyx_k_item_sentiment, sizeof(__pyx_k_item_sentiment), 0, 0, 1, 1},
@@ -55865,8 +55958,8 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_map_aspect_id, __pyx_k_map_aspect_id, sizeof(__pyx_k_map_aspect_id), 0, 0, 1, 1},
   {&__pyx_n_s_map_iid, __pyx_k_map_iid, sizeof(__pyx_k_map_iid), 0, 0, 1, 1},
   {&__pyx_n_s_map_uid, __pyx_k_map_uid, sizeof(__pyx_k_map_uid), 0, 0, 1, 1},
-  {&__pyx_n_s_max, __pyx_k_max, sizeof(__pyx_k_max), 0, 0, 1, 1},
-  {&__pyx_kp_u_max_2, __pyx_k_max_2, sizeof(__pyx_k_max_2), 0, 1, 0, 0},
+  {&__pyx_kp_u_max, __pyx_k_max, sizeof(__pyx_k_max), 0, 1, 0, 0},
+  {&__pyx_n_s_max_2, __pyx_k_max_2, sizeof(__pyx_k_max_2), 0, 0, 1, 1},
   {&__pyx_n_s_max_iter, __pyx_k_max_iter, sizeof(__pyx_k_max_iter), 0, 0, 1, 1},
   {&__pyx_n_s_max_pair_freq, __pyx_k_max_pair_freq, sizeof(__pyx_k_max_pair_freq), 0, 0, 1, 1},
   {&__pyx_n_s_mean, __pyx_k_mean, sizeof(__pyx_k_mean), 0, 0, 1, 1},
@@ -55906,10 +55999,10 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_u_numpy_core_multiarray_failed_to, __pyx_k_numpy_core_multiarray_failed_to, sizeof(__pyx_k_numpy_core_multiarray_failed_to), 0, 1, 0, 0},
   {&__pyx_kp_u_numpy_core_umath_failed_to_impor, __pyx_k_numpy_core_umath_failed_to_impor, sizeof(__pyx_k_numpy_core_umath_failed_to_impor), 0, 1, 0, 0},
   {&__pyx_n_s_obj, __pyx_k_obj, sizeof(__pyx_k_obj), 0, 0, 1, 1},
-  {&__pyx_n_s_ones, __pyx_k_ones, sizeof(__pyx_k_ones), 0, 0, 1, 1},
   {&__pyx_n_s_pack, __pyx_k_pack, sizeof(__pyx_k_pack), 0, 0, 1, 1},
   {&__pyx_n_s_pair_counts, __pyx_k_pair_counts, sizeof(__pyx_k_pair_counts), 0, 0, 1, 1},
   {&__pyx_n_s_pair_freq, __pyx_k_pair_freq, sizeof(__pyx_k_pair_freq), 0, 0, 1, 1},
+  {&__pyx_n_s_partitioned_idx, __pyx_k_partitioned_idx, sizeof(__pyx_k_partitioned_idx), 0, 0, 1, 1},
   {&__pyx_n_s_pickle, __pyx_k_pickle, sizeof(__pyx_k_pickle), 0, 0, 1, 1},
   {&__pyx_n_s_prediction, __pyx_k_prediction, sizeof(__pyx_k_prediction), 0, 0, 1, 1},
   {&__pyx_n_s_prepare, __pyx_k_prepare, sizeof(__pyx_k_prepare), 0, 0, 1, 1},
@@ -55927,6 +56020,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_random_state, __pyx_k_random_state, sizeof(__pyx_k_random_state), 0, 0, 1, 1},
   {&__pyx_n_s_range, __pyx_k_range, sizeof(__pyx_k_range), 0, 0, 1, 1},
   {&__pyx_n_s_rank, __pyx_k_rank, sizeof(__pyx_k_rank), 0, 0, 1, 1},
+  {&__pyx_n_s_ranked_items, __pyx_k_ranked_items, sizeof(__pyx_k_ranked_items), 0, 0, 1, 1},
   {&__pyx_n_s_rating, __pyx_k_rating, sizeof(__pyx_k_rating), 0, 0, 1, 1},
   {&__pyx_n_s_rating_matrix, __pyx_k_rating_matrix, sizeof(__pyx_k_rating_matrix), 0, 0, 1, 1},
   {&__pyx_n_s_rating_scale, __pyx_k_rating_scale, sizeof(__pyx_k_rating_scale), 0, 0, 1, 1},
@@ -55954,6 +56048,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_short, __pyx_k_short, sizeof(__pyx_k_short), 0, 0, 1, 1},
   {&__pyx_n_s_signatures, __pyx_k_signatures, sizeof(__pyx_k_signatures), 0, 0, 1, 1},
   {&__pyx_n_s_size, __pyx_k_size, sizeof(__pyx_k_size), 0, 0, 1, 1},
+  {&__pyx_n_s_sorted_top_k_idx, __pyx_k_sorted_top_k_idx, sizeof(__pyx_k_sorted_top_k_idx), 0, 0, 1, 1},
   {&__pyx_n_s_sp, __pyx_k_sp, sizeof(__pyx_k_sp), 0, 0, 1, 1},
   {&__pyx_n_s_split, __pyx_k_split, sizeof(__pyx_k_split), 0, 0, 1, 1},
   {&__pyx_n_s_sqrt, __pyx_k_sqrt, sizeof(__pyx_k_sqrt), 0, 0, 1, 1},
@@ -55974,6 +56069,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_test, __pyx_k_test, sizeof(__pyx_k_test), 0, 0, 1, 1},
   {&__pyx_n_s_time, __pyx_k_time, sizeof(__pyx_k_time), 0, 0, 1, 1},
   {&__pyx_n_s_tocsc, __pyx_k_tocsc, sizeof(__pyx_k_tocsc), 0, 0, 1, 1},
+  {&__pyx_n_s_top_k_idx, __pyx_k_top_k_idx, sizeof(__pyx_k_top_k_idx), 0, 0, 1, 1},
   {&__pyx_n_s_total_sentiment, __pyx_k_total_sentiment, sizeof(__pyx_k_total_sentiment), 0, 0, 1, 1},
   {&__pyx_n_s_total_sentiment_by_aspect, __pyx_k_total_sentiment_by_aspect, sizeof(__pyx_k_total_sentiment_by_aspect), 0, 0, 1, 1},
   {&__pyx_n_s_tqdm, __pyx_k_tqdm, sizeof(__pyx_k_tqdm), 0, 0, 1, 1},
@@ -55994,6 +56090,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_user_aspect_count, __pyx_k_user_aspect_count, sizeof(__pyx_k_user_aspect_count), 0, 0, 1, 1},
   {&__pyx_n_s_user_aspects, __pyx_k_user_aspects, sizeof(__pyx_k_user_aspects), 0, 0, 1, 1},
   {&__pyx_n_s_user_id, __pyx_k_user_id, sizeof(__pyx_k_user_id), 0, 0, 1, 1},
+  {&__pyx_n_s_user_idx, __pyx_k_user_idx, sizeof(__pyx_k_user_idx), 0, 0, 1, 1},
   {&__pyx_n_s_user_sentiment, __pyx_k_user_sentiment, sizeof(__pyx_k_user_sentiment), 0, 0, 1, 1},
   {&__pyx_n_s_utils, __pyx_k_utils, sizeof(__pyx_k_utils), 0, 0, 1, 1},
   {&__pyx_n_s_utils_common, __pyx_k_utils_common, sizeof(__pyx_k_utils_common), 0, 0, 1, 1},
@@ -56012,7 +56109,6 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
   __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 262, __pyx_L1_error)
   __pyx_builtin_print = __Pyx_GetBuiltinName(__pyx_n_s_print); if (!__pyx_builtin_print) __PYX_ERR(0, 421, __pyx_L1_error)
   __pyx_builtin_sum = __Pyx_GetBuiltinName(__pyx_n_s_sum); if (!__pyx_builtin_sum) __PYX_ERR(0, 526, __pyx_L1_error)
-  __pyx_builtin_max = __Pyx_GetBuiltinName(__pyx_n_s_max); if (!__pyx_builtin_max) __PYX_ERR(0, 695, __pyx_L1_error)
   __pyx_builtin_ImportError = __Pyx_GetBuiltinName(__pyx_n_s_ImportError); if (!__pyx_builtin_ImportError) __PYX_ERR(1, 944, __pyx_L1_error)
   __pyx_builtin_MemoryError = __Pyx_GetBuiltinName(__pyx_n_s_MemoryError); if (!__pyx_builtin_MemoryError) __PYX_ERR(2, 149, __pyx_L1_error)
   __pyx_builtin_enumerate = __Pyx_GetBuiltinName(__pyx_n_s_enumerate); if (!__pyx_builtin_enumerate) __PYX_ERR(2, 152, __pyx_L1_error)
@@ -56075,18 +56171,18 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__9);
   __Pyx_GIVEREF(__pyx_slice__9);
 
-  /* "cornac/models/comparer/recom_comparer_obj.pyx":693
- *         if item_ids is None:
- *             item_scores = item_scores
- *             item_rank = item_scores.argsort()[::-1]             # <<<<<<<<<<<<<<
- *         else:
- *             num_items = max(self.num_items, max(item_ids) + 1)
+  /* "cornac/models/comparer/recom_comparer_obj.pyx":709
+ *             sorted_top_k_idx = top_k_idx[np.argsort(item_scores[top_k_idx])]
+ *             partitioned_idx[-k:] = sorted_top_k_idx
+ *             ranked_items = item_indices[partitioned_idx[::-1]]             # <<<<<<<<<<<<<<
+ *         else:  # O(n log n)
+ *             ranked_items = item_indices[item_scores.argsort()[::-1]]
  */
-  __pyx_slice__10 = PySlice_New(Py_None, Py_None, __pyx_int_neg_1); if (unlikely(!__pyx_slice__10)) __PYX_ERR(0, 693, __pyx_L1_error)
+  __pyx_slice__10 = PySlice_New(Py_None, Py_None, __pyx_int_neg_1); if (unlikely(!__pyx_slice__10)) __PYX_ERR(0, 709, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_slice__10);
   __Pyx_GIVEREF(__pyx_slice__10);
 
-  /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":944
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":944
  *         __pyx_import_array()
  *     except Exception:
  *         raise ImportError("numpy.core.multiarray failed to import")             # <<<<<<<<<<<<<<
@@ -56097,7 +56193,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__11);
   __Pyx_GIVEREF(__pyx_tuple__11);
 
-  /* "rose_venv/lib/python3.9/site-packages/numpy/__init__.pxd":950
+  /* "../../../miniconda3/envs/cornac/lib/python3.11/site-packages/numpy/__init__.pxd":950
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -56496,15 +56592,15 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "cornac/models/comparer/recom_comparer_obj.pyx":666
  *             return item_score
  * 
- *     def rank(self, user_id, item_ids=None):             # <<<<<<<<<<<<<<
+ *     def rank(self, user_idx, item_indices=None, k=-1):             # <<<<<<<<<<<<<<
  *         """Rank all test items for a given user.
  * 
  */
-  __pyx_tuple__68 = PyTuple_Pack(11, __pyx_n_s_self, __pyx_n_s_user_id, __pyx_n_s_item_ids, __pyx_n_s_X_2, __pyx_n_s_most_cared_aspects_indices, __pyx_n_s_most_cared_X, __pyx_n_s_most_cared_Y, __pyx_n_s_explicit_scores, __pyx_n_s_item_scores, __pyx_n_s_item_rank, __pyx_n_s_num_items); if (unlikely(!__pyx_tuple__68)) __PYX_ERR(0, 666, __pyx_L1_error)
+  __pyx_tuple__68 = PyTuple_Pack(15, __pyx_n_s_self, __pyx_n_s_user_idx, __pyx_n_s_item_indices, __pyx_n_s_k, __pyx_n_s_X_2, __pyx_n_s_most_cared_aspects_indices, __pyx_n_s_most_cared_X, __pyx_n_s_most_cared_Y, __pyx_n_s_explicit_scores, __pyx_n_s_all_item_scores, __pyx_n_s_item_scores, __pyx_n_s_partitioned_idx, __pyx_n_s_top_k_idx, __pyx_n_s_sorted_top_k_idx, __pyx_n_s_ranked_items); if (unlikely(!__pyx_tuple__68)) __PYX_ERR(0, 666, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__68);
   __Pyx_GIVEREF(__pyx_tuple__68);
-  __pyx_codeobj__69 = (PyObject*)__Pyx_PyCode_New(3, 0, 11, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__68, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cornac_models_comparer_recom_com_2, __pyx_n_s_rank, 666, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__69)) __PYX_ERR(0, 666, __pyx_L1_error)
-  __pyx_tuple__70 = PyTuple_Pack(1, ((PyObject *)Py_None)); if (unlikely(!__pyx_tuple__70)) __PYX_ERR(0, 666, __pyx_L1_error)
+  __pyx_codeobj__69 = (PyObject*)__Pyx_PyCode_New(4, 0, 15, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__68, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cornac_models_comparer_recom_com_2, __pyx_n_s_rank, 666, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__69)) __PYX_ERR(0, 666, __pyx_L1_error)
+  __pyx_tuple__70 = PyTuple_Pack(2, ((PyObject *)Py_None), ((PyObject *)__pyx_int_neg_1)); if (unlikely(!__pyx_tuple__70)) __PYX_ERR(0, 666, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__70);
   __Pyx_GIVEREF(__pyx_tuple__70);
 
@@ -57461,7 +57557,7 @@ if (!__Pyx_RefNanny) {
   /* "cornac/models/comparer/recom_comparer_obj.pyx":666
  *             return item_score
  * 
- *     def rank(self, user_id, item_ids=None):             # <<<<<<<<<<<<<<
+ *     def rank(self, user_idx, item_indices=None, k=-1):             # <<<<<<<<<<<<<<
  *         """Rank all test items for a given user.
  * 
  */
@@ -60788,6 +60884,73 @@ static PyObject* __Pyx_PyInt_SubtractCObj(PyObject *op1, PyObject *op2, CYTHON_U
     return (inplace ? PyNumber_InPlaceSubtract : PyNumber_Subtract)(op1, op2);
 }
 #endif
+
+/* PyIntCompare */
+  static CYTHON_INLINE PyObject* __Pyx_PyInt_NeObjC(PyObject *op1, PyObject *op2, CYTHON_UNUSED long intval, CYTHON_UNUSED long inplace) {
+    if (op1 == op2) {
+        Py_RETURN_FALSE;
+    }
+    #if PY_MAJOR_VERSION < 3
+    if (likely(PyInt_CheckExact(op1))) {
+        const long b = intval;
+        long a = PyInt_AS_LONG(op1);
+        if (a != b) Py_RETURN_TRUE; else Py_RETURN_FALSE;
+    }
+    #endif
+    #if CYTHON_USE_PYLONG_INTERNALS
+    if (likely(PyLong_CheckExact(op1))) {
+        int unequal;
+        unsigned long uintval;
+        Py_ssize_t size = Py_SIZE(op1);
+        const digit* digits = ((PyLongObject*)op1)->ob_digit;
+        if (intval == 0) {
+            if (size != 0) Py_RETURN_TRUE; else Py_RETURN_FALSE;
+        } else if (intval < 0) {
+            if (size >= 0)
+                Py_RETURN_TRUE;
+            intval = -intval;
+            size = -size;
+        } else {
+            if (size <= 0)
+                Py_RETURN_TRUE;
+        }
+        uintval = (unsigned long) intval;
+#if PyLong_SHIFT * 4 < SIZEOF_LONG*8
+        if (uintval >> (PyLong_SHIFT * 4)) {
+            unequal = (size != 5) || (digits[0] != (uintval & (unsigned long) PyLong_MASK))
+                 | (digits[1] != ((uintval >> (1 * PyLong_SHIFT)) & (unsigned long) PyLong_MASK)) | (digits[2] != ((uintval >> (2 * PyLong_SHIFT)) & (unsigned long) PyLong_MASK)) | (digits[3] != ((uintval >> (3 * PyLong_SHIFT)) & (unsigned long) PyLong_MASK)) | (digits[4] != ((uintval >> (4 * PyLong_SHIFT)) & (unsigned long) PyLong_MASK));
+        } else
+#endif
+#if PyLong_SHIFT * 3 < SIZEOF_LONG*8
+        if (uintval >> (PyLong_SHIFT * 3)) {
+            unequal = (size != 4) || (digits[0] != (uintval & (unsigned long) PyLong_MASK))
+                 | (digits[1] != ((uintval >> (1 * PyLong_SHIFT)) & (unsigned long) PyLong_MASK)) | (digits[2] != ((uintval >> (2 * PyLong_SHIFT)) & (unsigned long) PyLong_MASK)) | (digits[3] != ((uintval >> (3 * PyLong_SHIFT)) & (unsigned long) PyLong_MASK));
+        } else
+#endif
+#if PyLong_SHIFT * 2 < SIZEOF_LONG*8
+        if (uintval >> (PyLong_SHIFT * 2)) {
+            unequal = (size != 3) || (digits[0] != (uintval & (unsigned long) PyLong_MASK))
+                 | (digits[1] != ((uintval >> (1 * PyLong_SHIFT)) & (unsigned long) PyLong_MASK)) | (digits[2] != ((uintval >> (2 * PyLong_SHIFT)) & (unsigned long) PyLong_MASK));
+        } else
+#endif
+#if PyLong_SHIFT * 1 < SIZEOF_LONG*8
+        if (uintval >> (PyLong_SHIFT * 1)) {
+            unequal = (size != 2) || (digits[0] != (uintval & (unsigned long) PyLong_MASK))
+                 | (digits[1] != ((uintval >> (1 * PyLong_SHIFT)) & (unsigned long) PyLong_MASK));
+        } else
+#endif
+            unequal = (size != 1) || (((unsigned long) digits[0]) != (uintval & (unsigned long) PyLong_MASK));
+        if (unequal != 0) Py_RETURN_TRUE; else Py_RETURN_FALSE;
+    }
+    #endif
+    if (PyFloat_CheckExact(op1)) {
+        const long b = intval;
+        double a = PyFloat_AS_DOUBLE(op1);
+        if ((double)a != (double)b) Py_RETURN_TRUE; else Py_RETURN_FALSE;
+    }
+    return (
+        PyObject_RichCompare(op1, op2, Py_NE));
+}
 
 /* SliceObject */
   static CYTHON_INLINE int __Pyx_PyObject_SetSlice(PyObject* obj, PyObject* value,

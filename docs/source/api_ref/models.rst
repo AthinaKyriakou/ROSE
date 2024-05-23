@@ -28,7 +28,7 @@ Novel and Explainable Matrix Factorisation (NEMF)
 .. automodule:: cornac.models.nemf.recom_nemf
    :members:
 
-Factoriazation Machine Recommender Algorithm (FM_py)
+Factoriazation Machine Recommender Algorithm (FMRec)
 -----------------------------------------------------
 .. automodule:: cornac.models.fm_py.recom_fm_py
    :members:

@@ -62,13 +62,14 @@ class Exp_TriRank(Explainer):
             return []
         if item_id not in self.dataset.iid_map:
             return []
+        user_idx = self.dataset.uid_map[user_id]
+        item_idx = self.dataset.iid_map[item_id]
+        
         if self.model.is_unknown_user(user_idx):
             return []
         if self.model.is_unknown_item(item_idx):
             return []
         
-        user_idx = self.dataset.uid_map[user_id]
-        item_idx = self.dataset.iid_map[item_id]
         
         item_aspect = self.model.X.getrow(item_idx).toarray().flatten()
         top_k_item_aspect = np.argsort(item_aspect)[-feature_k:] 

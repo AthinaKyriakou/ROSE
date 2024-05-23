@@ -436,6 +436,10 @@ class Exp_LIMERS(Explainer):
         samples = list()
         samples.append({"user_id": str(user_idx), "item_id": str(item_idx)})
         if entity == "user":
+            if len(self.user_freq.index.tolist()) < num_samples:
+                raise ValueError(
+                    f"You want to choice {num_samples} user samples, but you only have {len(self.user_freq.index.tolist())} users."
+                )
             sample_users = np.random.choice(
                 self.user_freq.index.tolist(),
                 num_samples - 1,
@@ -446,6 +450,10 @@ class Exp_LIMERS(Explainer):
                 samples.append({"user_id": str(u), "item_id": str(item_idx)})
 
         elif entity == "item":
+            if len(self.item_freq.index.tolist()) < num_samples:
+                raise ValueError(
+                    f"You want to choice {num_samples} item samples, but you only have {len(self.item_freq.index.tolist())} items."
+                )
             sample_items = np.random.choice(
                 self.item_freq.index.tolist(),
                 num_samples - 1,
@@ -455,6 +463,10 @@ class Exp_LIMERS(Explainer):
             for i in sample_items:
                 samples.append({"user_id": str(user_idx), "item_id": str(i)})
         else:
+            if self.n_rows < num_samples:
+                raise ValueError(
+                    f"You want to choice {num_samples} samples, but you only have {self.n_rows} ratings."
+                )
             sample_rows = np.random.choice(
                 range(self.n_rows), num_samples - 1, replace=False
             )

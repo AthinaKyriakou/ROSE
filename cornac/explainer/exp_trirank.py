@@ -42,7 +42,8 @@ class Exp_TriRank(Explainer):
 
         Returns
         -------
-        explanations: float
+        explanations: list
+            List of tuples (aspect, item_aspect_score, user_interest) for the user and item pair.
         
         """
         if self.model is None:

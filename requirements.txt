@@ -7,11 +7,9 @@ click==8.1.7
 cloudpathlib==0.16.0
 confection==0.1.4
 contourpy==1.2.0
-cornac==2.0.0
 cycler==0.12.1
 cymem==2.0.8
 Cython==0.29.36
-en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1-py3-none-any.whl
 fonttools==4.50.0
 idna==3.6
 imageio==2.34.0
@@ -38,7 +36,6 @@ powerlaw==1.5
 preshed==3.0.9
 pydantic==2.6.4
 pydantic_core==2.16.3
-pyfm==0.0.0
 pyparsing==3.1.2
 python-box==7.1.1
 python-dateutil==2.9.0.post0
@@ -66,3 +63,5 @@ urllib3==2.2.1
 wasabi==1.1.2
 weasel==0.3.4
 zipp==3.18.1
+seaborn==0.13.2
+tensorflow==2.16.1

@@ -1,4 +1,4 @@
-# Add an evaluation metric for explainer
+# Add a new evaluation metric for explainer to ROSE
 
 This tutorial describes how to add an evaluation metric for explainer into ROSE. We assume that you have already forked the ROSE repository to your own account.
 
@@ -69,11 +69,13 @@ Uptatae`./cornac/experiment/config_experiment.yml` for explainer-metric pair
 
 
 
+### 5. Rebuilding the project
 
-### 5. Adding unit tests
-
-All tests are grouped into the ``tests`` folder, in the root of the repository. And there is a file `test_config.yml` contains some basic parameters for recommenders.
-
+Run in a terminal:
+```
+python setup.py install
+python setup.py build_ext --inplace
+```
 
 ## Using Cython and C/C++ (optional)
 

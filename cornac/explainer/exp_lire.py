@@ -11,10 +11,9 @@ from sklearn import linear_model
 from sklearn.cluster import KMeans
 from scipy.sparse import csr_matrix
 
-from cornac.explainer import Explainer
+from .explainer import Explainer
 
-
-class LIRE(Explainer):
+class Exp_LIRE(Explainer):
     """
     LIRE: Local and Interpretable Recommendations Explanations
 
@@ -38,7 +37,7 @@ class LIRE(Explainer):
         self.dataset=dataset
         self.name=name
 
-        # paremeters for explanations
+        # parameters for explanations
         self.pert_ratio = pert_ratio
         self.num_features = num_features
 

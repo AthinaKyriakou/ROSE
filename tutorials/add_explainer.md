@@ -1,10 +1,23 @@
 # Contributing an explainer to ROSE
 
-This tutorial describes how to integrate an explanation method i.e. explainer into ROSE. We assume that you have already forked the ROSE repository to your own account.
+This tutorial describes how to integrate a new explainer into ROSE. We assume that you have already forked the ROSE repository to your own working space.
+
+In short, adding a new explainer to ROSE involves the following steps:
+- Creating new file
+    - [x] ./cornac/explainer/name_explainer.py
+- Implementing function
+     - [x] Explainer.explain_one_recommendation_to_user()
+- Updating existing files
+     - [x] ./cornac/models/\_\_init__.py
+     - [x] ./cornac/explainer/config.yml
+     - [x] ./cornac/experiment/config_experiment.yml
+- Rebuilding the project
+
+We provide a step-by-step example on how to integrate the explainer PHI4MF.
 
 ## Directory & file structure
 
-For convenience assume that the explainer of interest is PHI4MF. A new explainer can be added as one python file like follows:
+A new explainer can be added as one python file like follows:
 ```
 ROSE    
 │
@@ -17,7 +30,7 @@ ROSE
 ```
 Note that you only need to add the `phi4mf_explainer.py` file as the rest of the structure is already in place.
 
-## Creating a new explainer in 3 steps
+## Creating a new explainer in 4 steps
 
 ### 1. Extending the Explainer class
 
@@ -60,30 +73,25 @@ Update `./cornac/explainer/__init__.py` by adding the following line:
 from .exp_phi4mf import Exp_PHI4MF
 ```
 
-### 3. Add your explainer into config file for experiment
-Uptatae `./cornac/explainer/config.yml` for recommender-explainer pair
+### 3. Adding your explainer into config file for experiment
 
-Uptatae`./cornac/experiment/config_experiment.yml` for explainer-metric pair
+Update `./cornac/explainer/config.yml` for recommender-explainer pair
+
+Update`./cornac/experiment/config_experiment.yml` for explainer-metric pair
 
 
-## Summary
+### 4. Rebuilding the project
 
-In short, add a new explainer to ROSE involves,
-
-- Creating new file
-    - [x] ./cornac/explainer/name_explainer.py
-- Implementing function
-     - [x] Explainer.explain_one_recommendation_to_user()
-- Updating existing files
-     - [x] ./cornac/models/\_\_init__.py
-     - [x] ./cornac/explainer/config.yml
-     - [x] ./cornac/experiment/config_experiment.yml
-
+Run in a terminal:
+```
+python setup.py install
+python setup.py build_ext --inplace
+```
 
 ## Using Cython and C/C++ (optional)
 
 If you are interested in using [Cython](https://cython.org/) to implement the algorithmic part of your model,  you will need to declare your Cython extension inside  `./setup.py`.
 
-## Add in document (optional)
+## Adding in the documentation (optional)
 
 If you want to add it into the docs, you can add it into `docs/source/api_ref/explainer.rst`

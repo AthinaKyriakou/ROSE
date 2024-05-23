@@ -13,3 +13,4 @@ from .exp_nemf import Exp_NEMF
 from .exp_comparer_sub import Exp_ComparERSub
 from .exp_comparer_obj_mod import Exp_ComparERObj_Mod
 from .exp_comparer_obj import Exp_ComparERObj
+from .exp_lire import Exp_LIRE

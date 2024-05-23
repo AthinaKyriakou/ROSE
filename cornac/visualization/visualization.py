@@ -17,7 +17,7 @@ class Visualization(object):
         self.save_dir = "." if save_dir is None else save_dir
         self.target_k_name = None
                 
-    def visualize_experiemnt_result(self, EE_list, kind = "bar", rotate_x = 90):
+    def visualize_experiment_result(self, EE_list, kind = "bar", rotate_x = 90):
         """Visualize the result of the runing experiment
 
         Parameters

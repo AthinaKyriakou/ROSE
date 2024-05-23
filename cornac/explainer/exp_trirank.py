@@ -39,6 +39,8 @@ class Exp_TriRank(Explainer):
             One item's id.
         feature_k: int, optional, default:10
             Number of features in explanations created by explainer.
+        rank_by: str, optional, default:"item"
+            Rank by item or user. Options: "item", "user".
 
         Returns
         -------
@@ -53,7 +55,8 @@ class Exp_TriRank(Explainer):
             raise AttributeError("The explainer does not support this recommender.")
         
         feature_k = kwargs.get("feature_k", 10)
-
+        rank_by = kwargs.get("rank_by", "item")
+        
         uir_df = pd.DataFrame(
             np.array(self.dataset.uir_tuple).T, columns=["user", "item", "rating"]
         )
@@ -71,15 +74,25 @@ class Exp_TriRank(Explainer):
         if self.model.is_unknown_item(item_idx):
             return []
         
-        
-        item_aspect = self.model.X.getrow(item_idx).toarray().flatten()
-        top_k_item_aspect = np.argsort(item_aspect)[-feature_k:] 
-
         explanation = []
-        for aspect in top_k_item_aspect:
-            user_interest = self.model.Y.getrow(user_idx).toarray().flatten()[aspect]
-            item_aspect_score = item_aspect[aspect]
-            aspect_text = self.id_to_aspect[aspect]
-            explanation.append((aspect_text, item_aspect_score, user_interest))
+        if rank_by == "item":
+            item_aspect = self.model.X.getrow(item_idx).toarray().flatten()
+            top_k_item_aspect = np.argsort(item_aspect)[-feature_k:] 
 
+            for aspect in top_k_item_aspect:
+                user_interest = self.model.Y.getrow(user_idx).toarray().flatten()[aspect]
+                item_aspect_score = item_aspect[aspect]
+                aspect_text = self.id_to_aspect[aspect]
+                explanation.append((aspect_text, item_aspect_score, user_interest))
+                
+        elif rank_by == "user":
+            user_interest = self.model.Y.getrow(user_idx).toarray().flatten()
+            top_k_user_interest = np.argsort(user_interest)[-feature_k:]
+            
+            for aspect in top_k_user_interest:
+                item_aspect_score = self.model.X.getrow(item_idx).toarray().flatten()[aspect]
+                user_interest = user_interest[aspect]
+                aspect_text = self.id_to_aspect[aspect]
+                explanation.append((aspect_text, item_aspect_score, user_interest))
+        
         return explanation

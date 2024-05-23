@@ -41,8 +41,8 @@ class Exp_NARRE(Explainer):
 
         Returns
         -------
-        explanations: list
-            List of tuples (attention score, review text) for the item.
+        explanations: dict
+            dictionary with review text as key and attention score as value.
         
         """
         

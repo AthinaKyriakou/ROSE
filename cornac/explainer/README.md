@@ -71,7 +71,7 @@
   </tr>
     <tr>
     <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/cornac/explainer/exp_lire.py">Exp_LIRE</a></td>
-    <td><a href="https://doi.org/10.1016/j.is.2022.102021">Preference-based and local post-hoc explanations for recommender systems.</a></td>
+    <td><a href="https://doi.org/10.1016/j.is.2022.102021">Preference-based and local post-hoc explanations for recommender systems</a></td>
     <td>Posc-Hoc</td>
     <td><a href="">example</a></td>
   </tr>
@@ -105,15 +105,15 @@
   </tr>
   </tr>
     <tr>
-    <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/cornac/explainer/exp_su4emf.py">Exp_PRINCE</a></td>
+    <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/cornac/explainer/exp_prince.py">Exp_PRINCE</a></td>
     <td><a href="https://doi.org/10.1145/3336191.3371824">PRINCE: Provider-side Interpretability with Counterfactual Explanations in Recommender Systems</a></td>
     <td>Posc-Hoc</td>
-    <td><a href="">example</a></td>
+    <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/cornac/examples/exp_prince.py">example</a></td>
   </tr>
   </tr>
     <tr>
     <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/cornac/explainer/exp_su4emf.py">Exp_SU4EMF</a></td>
-    <td><a href="https://doi.org/abs/10.1145/2872518.2889405">Explainable Matrix Factorization for Collaborative Filtering</a></td>
+    <td><a href="https://doi.org/10.1145/2872518.2889405">Explainable Matrix Factorization for Collaborative Filtering</a></td>
     <td>Model-Based</td>
     <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/examples/exp_su4emf.py">example</a></td>
   </tr>

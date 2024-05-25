@@ -15,3 +15,4 @@ from .exp_comparer_obj_mod import Exp_ComparERObj_Mod
 from .exp_comparer_obj import Exp_ComparERObj
 from .exp_lire import Exp_LIRE
 from .exp_counter import Exp_Counter
+from .exp_prince import Exp_PRINCE

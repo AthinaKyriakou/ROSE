@@ -9,34 +9,34 @@
   </tr>
   <tr>
     <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/cornac/explainer/exp_als.py">Exp_ALS</a></td>
-    <td><a href="">Collaborative Filtering for Implicit Feedback Datasets</a></td>
+    <td><a href="https://ieeexplore.ieee.org/document/4781121">Collaborative Filtering for Implicit Feedback Datasets</a></td>
     <td>Model-Based</td>
     <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/cornac/examples/exp_als.py">example</a></td>
   </tr>
     <tr>
     <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/cornac/explainer/exp_comparer_obj_mod.py">Exp_ComparERObj_Mod</a></td>
-    <td><a href="">Explainable Recommendation with Comparative Constraints on Product Aspects</a></td>
+    <td><a href="https://doi.org/10.1145/3437963.3441754">Explainable Recommendation with Comparative Constraints on Product Aspects</a></td>
     <td>Model-Based</td>
     <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/examples/exp_comparer_obj_mod.py">example</a></td>
   </tr>
   </tr>
     <tr>
     <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/cornac/explainer/exp_comparer_obj.py">Exp_ComparERObj</a></td>
-    <td><a href="">Explainable Recommendation with Comparative Constraints on Product Aspects</a></td>
+    <td><a href="https://doi.org/10.1145/3437963.3441754">Explainable Recommendation with Comparative Constraints on Product Aspects</a></td>
     <td>Model-Based</td>
     <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/examples/exp_comparer_obj.py">example</a></td>
   </tr>
   </tr>
     <tr>
     <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/cornac/explainer/exp_comparer_sub.py">Exp_ComparERSub</a></td>
-    <td><a href="">Explainable Recommendation with Comparative Constraints on Product Aspects</a></td>
+    <td><a href="https://doi.org/10.1145/3437963.3441754">Explainable Recommendation with Comparative Constraints on Product Aspects</a></td>
     <td>Model-Based</td>
     <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/examples/exp_comparer_sub.py">example</a></td>
   </tr>
   </tr>
     <tr>
     <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/cornac/explainer/exp_counter.py">Exp_Counter</a></td>
-    <td><a href="">Counterfactual Explainable Recommendation</a></td>
+    <td><a href="https://doi.org/10.1145/3459637.3482420">Counterfactual Explainable Recommendation</a></td>
     <td>Posc-Hoc</td>
     <td><a href="">example</a></td>
   </tr>
@@ -57,7 +57,7 @@
   </tr>
     <tr>
     <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/cornac/explainer/exp_emf.py">Exp_EMF</a></td>
-    <td><a href="">Explainable Matrix Factorization for Collaborative Filtering</a></td>
+    <td><a href="https://doi.org/10.1145/2872518.2889405">Explainable Matrix Factorization for Collaborative Filtering</a></td>
     <td>Model-Based</td>
     <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/examples/exp_emf.py">example</a></td>
   </tr>
@@ -71,7 +71,7 @@
   </tr>
     <tr>
     <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/cornac/explainer/exp_lire.py">Exp_LIRE</a></td>
-    <td><a href="">Preference-based and local post-hoc explanations for recommender systems.</a></td>
+    <td><a href="https://doi.org/10.1016/j.is.2022.102021">Preference-based and local post-hoc explanations for recommender systems.</a></td>
     <td>Posc-Hoc</td>
     <td><a href="">example</a></td>
   </tr>
@@ -85,21 +85,21 @@
   </tr>
     <tr>
     <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/cornac/explainer/exp_narre.py">Exp_NARRE</a></td>
-    <td><a href="">Neural attentional rating regression with review-level explanations</a></td>
+    <td><a href="https://doi.org/10.1145/3178876.3186070">Neural attentional rating regression with review-level explanations</a></td>
     <td>Model-Based</td>
     <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/examples/exp_narre.py">example</a></td>
   </tr>
   </tr>
     <tr>
     <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/cornac/explainer/exp_nemf.py">Exp_NEMF</a></td>
-    <td><a href="">Explainer for Personalised novel and explainable matrix factorisation</a></td>
+    <td><a href="https://arxiv.org/abs/1907.11000">Explainer for Personalised novel and explainable matrix factorisation</a></td>
     <td>Model-Based</td>
     <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/examples/exp_nemf.py">example</a></td>
   </tr>
   </tr>
     <tr>
     <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/cornac/explainer/exp_phi4mf.py">Exp_PHI4MF</a></td>
-    <td><a href="">Post Hoc Interpretability of Latent Factor Models for Recommendation Systems</a></td>
+    <td><a href="https://doi.org/10.1145/3219819.3220072">Post Hoc Interpretability of Latent Factor Models for Recommendation Systems</a></td>
     <td>Posc-Hoc</td>
     <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/examples/exp_phi4mf.py">example</a></td>
   </tr>
@@ -113,7 +113,7 @@
   </tr>
     <tr>
     <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/cornac/explainer/exp_su4emf.py">Exp_SU4EMF</a></td>
-    <td><a href="">Explainable Matrix Factorization for Collaborative Filtering</a></td>
+    <td><a href="https://doi.org/abs/10.1145/2872518.2889405">Explainable Matrix Factorization for Collaborative Filtering</a></td>
     <td>Model-Based</td>
     <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/examples/exp_su4emf.py">example</a></td>
   </tr>

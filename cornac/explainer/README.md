@@ -11,27 +11,27 @@
     <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/cornac/explainer/exp_als.py">Exp_ALS</a></td>
     <td><a href="">Collaborative Filtering for Implicit Feedback Datasets</a></td>
     <td>Model-Based</td>
-    <td><a href="">example</a></td>
+    <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/cornac/examples/exp_als.py">example</a></td>
   </tr>
     <tr>
     <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/cornac/explainer/exp_comparer_obj_mod.py">Exp_ComparERObj_Mod</a></td>
     <td><a href="">Explainable Recommendation with Comparative Constraints on Product Aspects</a></td>
     <td>Model-Based</td>
-    <td><a href="">example</a></td>
+    <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/examples/exp_comparer_obj_mod.py">example</a></td>
   </tr>
   </tr>
     <tr>
     <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/cornac/explainer/exp_comparer_obj.py">Exp_ComparERObj</a></td>
     <td><a href="">Explainable Recommendation with Comparative Constraints on Product Aspects</a></td>
     <td>Model-Based</td>
-    <td><a href="">example</a></td>
+    <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/examples/exp_comparer_obj.py">example</a></td>
   </tr>
   </tr>
     <tr>
     <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/cornac/explainer/exp_comparer_sub.py">Exp_ComparERSub</a></td>
     <td><a href="">Explainable Recommendation with Comparative Constraints on Product Aspects</a></td>
     <td>Model-Based</td>
-    <td><a href="">example</a></td>
+    <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/examples/exp_comparer_sub.py">example</a></td>
   </tr>
   </tr>
     <tr>
@@ -59,7 +59,7 @@
     <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/cornac/explainer/exp_emf.py">Exp_EMF</a></td>
     <td><a href="">Explainable Matrix Factorization for Collaborative Filtering</a></td>
     <td>Model-Based</td>
-    <td><a href="">example</a></td>
+    <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/examples/exp_emf.py">example</a></td>
   </tr>
   </tr>
     <tr>
@@ -87,21 +87,21 @@
     <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/cornac/explainer/exp_narre.py">Exp_NARRE</a></td>
     <td><a href="">Neural attentional rating regression with review-level explanations</a></td>
     <td>Model-Based</td>
-    <td><a href="">example</a></td>
+    <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/examples/exp_narre.py">example</a></td>
   </tr>
   </tr>
     <tr>
     <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/cornac/explainer/exp_nemf.py">Exp_NEMF</a></td>
     <td><a href="">Explainer for Personalised novel and explainable matrix factorisation</a></td>
     <td>Model-Based</td>
-    <td><a href="">example</a></td>
+    <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/examples/exp_nemf.py">example</a></td>
   </tr>
   </tr>
     <tr>
     <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/cornac/explainer/exp_phi4mf.py">Exp_PHI4MF</a></td>
     <td><a href="">Post Hoc Interpretability of Latent Factor Models for Recommendation Systems</a></td>
     <td>Posc-Hoc</td>
-    <td><a href="">example</a></td>
+    <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/examples/exp_phi4mf.py">example</a></td>
   </tr>
   </tr>
     <tr>
@@ -115,13 +115,13 @@
     <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/cornac/explainer/exp_su4emf.py">Exp_SU4EMF</a></td>
     <td><a href="">Explainable Matrix Factorization for Collaborative Filtering</a></td>
     <td>Model-Based</td>
-    <td><a href="">example</a></td>
+    <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/examples/exp_su4emf.py">example</a></td>
   </tr>
   </tr>
     <tr>
     <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/cornac/explainer/exp_trirank.py">Exp_TriRank</a></td>
     <td><a href="https://doi.org/10.1145/2806416.2806504">TriRank: Review-aware Explainable Recommendation by Modeling Aspects</a></td>
     <td>Model-Based</td>
-    <td><a href="">example</a></td>
+    <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/examples/exp_trirank.py">example</a></td>
   </tr>
 </table>

@@ -51,27 +51,26 @@ class Exp_Counter(Explainer):
             raise ValueError("The model cannot be None.")
         
     def _train(self):
-        counter = CounterTrainer(self.model, self.dataset, self.user_id, self.item_id, self.alpha, self.gamma, self.rec_k)
-        optimizer = SGD(counter.parameters(), lr=self.lr)
-        counter.train()
-        best_delta = counter.delta.detach().numpy().flatten()
+        self.counter = CounterTrainer(self.model, self.dataset, self.user_id, self.item_id, self.alpha, self.gamma, self.rec_k)
+        optimizer = SGD(self.counter.parameters(), lr=self.lr)
+        self.counter.train()
+        best_delta = self.counter.delta.detach().numpy().flatten()
         min_loss = float("inf")
         is_valid_delta = False
         for epoch in range(self.max_iter):
             optimizer.zero_grad()
-            score = counter()
-            is_valid, loss = counter.loss(score)
+            score = self.counter()
+            is_valid_delta, loss = self.counter.loss(score)
             loss.backward()
             optimizer.step()
             if loss.item() < min_loss:
                 min_loss = loss.item()
-                best_delta = counter.delta.detach().numpy().flatten()
-                is_valid_delta = is_valid
+                best_delta = self.counter.delta.detach().numpy().flatten()
             
             if self.verbose:
-                print(f"Epoch: {epoch}, Loss: {loss.item()}")
-            # earlystop when find valid delta
-            if is_valid_delta:
+                print(f"Epoch: {epoch}, Loss: {loss.item()}, valid: {is_valid_delta}")
+            # earlystop when find valid delta and at least run 5 epoches
+            if is_valid_delta and epoch > 5:
                 break
 
         return is_valid_delta, best_delta
@@ -81,22 +80,32 @@ class Exp_Counter(Explainer):
         self.feature_k = kwargs.get("feature_k", 3)
         self.user_id = self.dataset.uid_map[user_id]
         self.item_id = self.dataset.iid_map[item_id]
-        is_valid_delta, best_delta = self._train()
+        _, best_delta = self._train()
         explanation = {}
-        
-        top_k_features_ids = np.argsort(best_delta)[:self.feature_k]
+        if self.model.name == "EFM":
+            top_k_features_ids = np.argsort(best_delta)[:self.feature_k]
+        elif self.model.name == "MTER":
+            # first get the indices of the delta, the length of delta is equal to the number of aspects of the items, not all aspects. 
+            top_k_delta_indices = np.argsort(best_delta)[:self.feature_k]
+            # then get the indices, the position in YI since the YI in MTER is not sorted as the idx
+            position_ids = np.where(self.counter.mask)[0][top_k_delta_indices]
+            item_aspect_opinion = list(self.counter.item_aspect_opinion.keys())
+            top_k_features_ids = [item_aspect_opinion[pos][1] for pos in position_ids]
+        else:
+            raise NotImplementedError(f"Counter Explainer for {self.rec_model.name} has not been implemented yet.")
+
         id_aspect_map = {v: k for k, v in self.dataset.sentiment.aspect_id_map.items()}
         
-        for i in top_k_features_ids:
-            feature_name = id_aspect_map[i]
-            explanation[feature_name] = best_delta[i]
+        for idx, fid in enumerate(top_k_features_ids):
+            feature_name = id_aspect_map[fid]
+            explanation[feature_name] = best_delta[idx]
     
         return explanation
         
         
 
 class CounterTrainer(torch.nn.Module):
-    def __init__(self, rec_model, dataset, user_id, item_id, alpha=0.2, gamma=1.0, lamda=50, rec_k=10, verbose=False):
+    def __init__(self, rec_model, dataset, user_id, item_id, alpha=0.9, gamma=0.5, lamda=100, rec_k=10, verbose=False):
         super(CounterTrainer, self).__init__()
         self.rec_model = rec_model
         self.dataset = dataset
@@ -107,15 +116,33 @@ class CounterTrainer(torch.nn.Module):
         self.item_id = item_id
         self.rec_k = rec_k
         if self.rec_model.name == "EFM":
-            _, _, self.initial_Y = self.rec_model._build_matrices(self.dataset)
+            _, X, self.initial_Y = self.rec_model._build_matrices(self.dataset)
+            # mark the features that user are interested in
+            # self.row_start = X.indptr[self.user_id]
+            # self.row_end = X.indptr[self.user_id + 1]
+            # row_indices = X.indices[self.row_start:self.row_end]
+            # # the trainable parameter to purmutate the target features
+            # delta = np.random.uniform(-3, 0, len(row_indices)).reshape(1, -1)
+            delta = np.random.uniform(-1, 0, self.initial_Y.shape[1]).reshape(1, -1)
+            # mask the delta to zero if the data in Y is zero
+            delta[self.initial_Y[self.item_id].toarray() == 0] = 0
         elif self.rec_model.name == "MTER":
-            (_, _, _, _, item_aspect_opinion) = self.rec_model._build_data(self.dataset)
-            raise NotImplementedError(f"{self.name} for {self.rec_model.name} has not been implemented yet.")
-        init_delta = np.random.uniform(-1, 0, self.initial_Y.shape[1]).reshape(1, -1)
-        # self.delta = torch.nn.Parameter(torch.FloatTensor(np.random.uniform(-1, 0, self.initial_Y.shape[1]).reshape(1, -1)))
-        # mask the delta to zero if the data in Y is zero
-        init_delta[self.initial_Y[self.item_id].toarray() == 0] = 0
-        self.delta = torch.nn.Parameter(torch.FloatTensor(init_delta))
+            (_, _, _, _, self.item_aspect_opinion) = self.rec_model._build_data(self.dataset)
+            self.initial_Y = np.array([])
+            delta = np.array([])
+            self.mask= np.array([])
+            for tuple, score in self.item_aspect_opinion.items():
+                self.initial_Y = np.append(self.initial_Y, score)
+                if tuple[0] != self.user_id:
+                    self.mask = np.append(self.mask, False)
+                else:
+                    self.mask = np.append(self.mask, True)
+                    delta = np.append(delta, np.random.uniform(-3, 0))
+                
+        else:
+            raise NotImplementedError(f"Counter Explainer for {self.rec_model.name} has not been implemented yet.")
+        
+        self.delta = torch.nn.Parameter(torch.FloatTensor(delta))
         
         self._set_benchmark_score()
         
@@ -126,7 +153,14 @@ class CounterTrainer(torch.nn.Module):
     def forward(self):
         # self._refit_model()
         Y = self.initial_Y.copy()
-        Y[self.item_id] += self.delta.detach().numpy().reshape((1, -1))
+        if self.rec_model.name == 'EFM':
+            # Y.data[self.row_start:self.row_end] += self.delta.detach().numpy().flatten()
+            Y[self.item_id] += self.delta.detach().numpy().reshape((1, -1))
+        elif self.rec_model.name =='MTER':
+            Y = Y[np.where(self.mask)]+self.delta.detach().numpy()
+        else:
+            raise NotImplementedError(f"Counter Explainer{self.rec_model.name} has not been implemented yet.")
+
         self.rec_model.fit(self.dataset, delta_Y=Y)
         score = self.rec_model.score(self.user_id, self.item_id)
         

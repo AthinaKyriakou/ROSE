@@ -301,7 +301,7 @@ class MTER(Recommender):
     def _compute_quality_score(self, sentiment):
         return 1 + (self.rating_scale - 1) / (1 + np.exp(-sentiment))
 
-    def fit(self, train_set, val_set=None):
+    def fit(self, train_set, val_set=None, delta_Y=None):
         """Fit the model to observations.
 
         Parameters
@@ -311,6 +311,9 @@ class MTER(Recommender):
 
         val_set: :obj:`cornac.data.Dataset`, optional, default: None
             User-Item preference data for model selection purposes (e.g., early stopping).
+
+        delta_Y: np.array, optional, default: None
+            Specially for Exp_Counter, modified the item_aspect_attention_score Y with delta.
 
         Returns
         -------
@@ -352,6 +355,8 @@ class MTER(Recommender):
             YI_iids.append(iid)
             YI_aids.append(aid)
             YI_oids.append(oid)
+
+        YI = delta_Y if delta_Y is not None else YI
 
         X = np.array(X, dtype=np.float32)
         X_uids = np.array(X_uids, dtype=np.int32)

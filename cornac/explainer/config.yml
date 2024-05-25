@@ -4,6 +4,8 @@ Exp_EFM_Mod:
   valid_recommenders: [EFM]
 Exp_EFM:
   valid_recommenders: [EFM]
+Exp_Counter:
+  valid_recommenders: [EFM, MTER]
 Exp_ComparERObj_Mod:
   valid_recommenders: [ComparERObj]
 Exp_ComparERObj:

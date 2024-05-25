@@ -184,7 +184,7 @@ class EFM(Recommender):
         if self.H2 is None:
             self.H2 = uniform((n_items, n_lfactors), high=high, random_state=rng)
 
-    def fit(self, train_set, val_set=None):
+    def fit(self, train_set, val_set=None, delta_Y = None):
         """Fit the model to observations.
 
         Parameters
@@ -194,6 +194,9 @@ class EFM(Recommender):
 
         val_set: :obj:`cornac.data.Dataset`, optional, default: None
             User-Item preference data for model selection purposes (e.g., early stopping).
+
+        delta_Y: np.array, optional, default: None
+            Specially for Exp_Counter, modified the item_aspect_attention_score Y with delta.
 
         Returns
         -------
@@ -205,6 +208,7 @@ class EFM(Recommender):
 
         if self.trainable:
             A, X, Y = self._build_matrices(train_set)
+            Y = delta_Y if delta_Y is not None else Y
             A_user_counts = np.ediff1d(A.indptr)
             A_item_counts = np.ediff1d(A.tocsc().indptr)
             A_uids = np.repeat(np.arange(train_set.num_users), A_user_counts).astype(A.indices.dtype)

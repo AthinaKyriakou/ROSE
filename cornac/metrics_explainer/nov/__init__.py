@@ -1,1 +1,0 @@
-from .novelty import NOV

@@ -1,1 +1,0 @@
-from .chain_length import C_LEN

@@ -76,6 +76,22 @@ class Exp_Counter(Explainer):
         return is_valid_delta, best_delta
 
     def explain_one_recommendation_to_user(self, user_id, item_id, **kwargs):
+        """Generate explanation for one user-item pair. Get permutated features that effect/decrease the recommendation score the most so that it drops out of the top-k recommendation list.
+
+        Parameters
+        ----------
+        user_id: str
+            One user's id.
+        item_id: str
+            One item's id.
+        feature_k: int, optional, default:3
+            Number of features in explanations created by explainer.
+
+        Returns
+        -------
+        explanation: dict
+            Explanations as {aspect: score, aspect: score, ...}
+        """
         
         self.feature_k = kwargs.get("feature_k", 3)
         self.user_id = self.dataset.uid_map[user_id]

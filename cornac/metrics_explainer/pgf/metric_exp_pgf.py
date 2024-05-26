@@ -127,6 +127,17 @@ class Metric_Exp_PGF(Metric_Exp):
                 item_ids.extend(list(explanation))
             item_idxs = [self.dataset.iid_map[item_id] for item_id in item_ids]
             return item_idxs
+        
+        elif self.explainer.name == "Exp_LIRE":
+            user_id = self.idx2uid[user_idx]
+            explanations = self.explanations[self.explanations[:, 0] == user_id][:, 2]
+            # explanations is a dict with item_id as key
+            item_ids = []
+            for explanation in explanations:
+                item_ids.extend(list(explanation))
+            item_idxs = [self.dataset.iid_map[item_id] for item_id in item_ids]
+            return item_idxs
+        raise ValueError("The explainer model is not supported.")
 
     def _compute_PGF(self):
         """
@@ -150,7 +161,7 @@ class Metric_Exp_PGF(Metric_Exp):
                 self.gaps[user_idx] = diff
             return sum_pgf / self.dataset.num_users
 
-        elif self.explainer.name in ["Exp_PHI4MF", "Exp_ALS"]:
+        elif self.explainer.name in ["Exp_PHI4MF", "Exp_ALS", "Exp_LIRE"]:
             sum_pgf = 0
             for user_idx in tqdm.tqdm(range(self.dataset.num_users)):
                 top_elements = self._get_top_elements(user_idx)

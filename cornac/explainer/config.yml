@@ -30,3 +30,5 @@ Exp_TriRank:
   valid_recommenders: [TriRank]
 Exp_PRINCE:
   valid_recommenders: [C2PF, PCRL, MCF]
+Exp_LIRE:
+  valid_recommenders: [MF, EMF, NEMF, LRPPM]

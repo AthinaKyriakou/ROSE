@@ -1,24 +1,33 @@
 import torch
 import scipy
-import umap
+# import umap
+import umap.umap_ as umap
 
-import pandas as pd
 import numpy as np
 
 from tqdm import tqdm
 from torch import optim, nn
 from sklearn import linear_model
 from sklearn.cluster import KMeans
-from scipy.sparse import csr_matrix
-
 from .explainer import Explainer
 
 class Exp_LIRE(Explainer):
     """
     LIRE: Local and Interpretable Recommendations Explanations
+    
+    Parameters
+    ----------
+    rec_model: object
+        A recommender model object that has been trained on the dataset.
+    dataset: object
+        A dataset object that has been used to train the recommender model.
+    name: str, optional, default: "Exp_LIRE"
+        Name of the explainer.
+    verbose: bool, optional, default: False
+        If True, print running logs.
 
-    Reference:
-    ------------
+    References
+    ----------
     Brunot, L., Canovas, N., Chanson, A., Labroche, N., & Verdeaux, W. (2022).
     Preference-based and local post-hoc explanations for recommender systems.
     Information Systems, 108, 102021.
@@ -28,19 +37,10 @@ class Exp_LIRE(Explainer):
             self,
             rec_model, 
             dataset,
-            name="LIRE",
-            num_features=10,
-            pert_ratio=0.5,
-            verbose=False,
+            name="Exp_LIRE",
+            verbose=False
     ):
-        self.rec_model=rec_model
-        self.dataset=dataset
-        self.name=name
-
-        # parameters for explanations
-        self.pert_ratio = pert_ratio
-        self.num_features = num_features
-
+        super().__init__(name=name, rec_model=rec_model, dataset=dataset)
         self.u_factors = None
         self.i_factors_T = None
         self.sigma = None
@@ -48,12 +48,11 @@ class Exp_LIRE(Explainer):
         self.global_variance = None
         self.user_item_matrix = None
 
+        self.setup = False
         self.verbose = verbose
 
-        self.setup = False
 
-
-    def set_up_explainer(
+    def _set_up_explainer(
             self,
             n_clusters=75,
             n_components=3,
@@ -72,12 +71,11 @@ class Exp_LIRE(Explainer):
             min_dist: minimum distance between points in UMAP
         """
 
-        self.u_factors = self.rec_model.U_svd if self.rec_model.U_svd is not None else self.rec_model.u_factors
-        self.i_factors_T = self.rec_model.Vt_svd if self.rec_model.Vt_svd is not None else self.rec_model.i_factors.T
-        self.sigma = self.rec_model.Sigma_svd 
-        self.user_means = self.rec_model.user_means
-        self.user_item_matrix = self.rec_model.user_item_matrix
+        self.u_factors = self.model.u_factors
+        self.i_factors_T = self.model.i_factors.T
+        self.user_item_matrix = self.model.train_set.matrix
         self.global_variance = self.user_item_matrix.data.var()
+        self.user_means = _get_user_means(self.user_item_matrix)
 
         if self.verbose:
             print("Running UMAP")
@@ -99,75 +97,56 @@ class Exp_LIRE(Explainer):
             print("Setup complete")
         self.setup = True
 
-
-    def explain_recommendations(
-            self,
-            recommendations,
-            num_features,
-            verbose=True,
-    ):
-        """
-        Generate explanations for a list of recommendations
-        Args:
-            recommendations: df of [user_id, item_id]
-            num_features: number of features used in the explanation
-
-        Return: df of [user_id, item_id, explanations, local_prediction, black_box_prediction]
-        """
-        explanations = []
-        self.recommendations = recommendations
-        
-        if not self.setup:
-            self.set_up_explainer()
-
-        total = recommendations.shape[0]
-
-        with tqdm(total=total, disable=not verbose, desc="Computing explanations: ") as pbar:
-            for i, row in self.recommendations.iterrows():
-                explanations.append(
-                    self.explain_one_recommendation_to_user(
-                        row.user_id,
-                        row.item_id,
-                        num_features=num_features,
-                        pert_ratio=self.pert_ratio,
-                        train_set_size=1000,
-                        verbose=self.verbose
-                    )
-                )
-                pbar.update(1)
-        # Concatenate the explanations        
-        explanations = pd.concat(explanations, ignore_index=True)
-
-        return explanations
-
-
     def explain_one_recommendation_to_user(
             self,
             user_id,
             item_id,
-            num_features,
-            pert_ratio,
-            train_set_size=1000,
-            verbose=True
+            **kwargs
     ):
         """
-        Provide explanations for one instance of (user_id, item_id)
+        Provide explanations for one instance of (user_id, item_id), explain by top features and their coefficients.
 
-        Args:
-            user_id: id of user to be explained
-            item_id: id of item to be explained
-            num_features: num of features to be included in the output
+        Parameters
+        ----------
+        user_id: str
+            One user's id.
+        item_id: str
+            One item's id.
+        feature_k: int, optional, default:10
+            Number of features in explanations created by explainer.
+        pert_ratio: float, optional, default: 0.5
+            Ratio of perturbed users to real neighbors in the training set.
+        train_set_size: int, optional, default: 1000
+            Size of the training set for the local surrogate model.
+    
 
-        Return: df of [user_id, item_id, explanations, local_prediction, black_box_prediction]
-                with a single row
+        Returns
+        -------
+        explanation: dict
+            Explanations as a dictionary as {item_id: coefficient}
 
         """
         if not self.setup:
-            self.set_up_explainer()
+            self._set_up_explainer()
+            
+        num_features = kwargs.get("feature_k", 10)
+        pert_ratio = kwargs.get("pert_ratio", 0.5)
+        train_set_size = kwargs.get("train_set_size", 1000)
 
+        explanation = {}
+        if user_id not in self.dataset.uid_map:
+            print(f"User {user_id} not in dataset")
+            return {}
+        if item_id not in self.dataset.iid_map:
+            print(f"Item {item_id} not in dataset")
+            return {}
         # Map the user_id and item_id to the corresponding matrix ids
-        user_matrix_id = self.dataset.uid_map[user_id]
-        item_matrix_id = self.dataset.iid_map[item_id]
+        user_matrix_idx = self.dataset.uid_map[user_id]
+        item_matrix_idx = self.dataset.iid_map[item_id]
+        if self.model.is_unknown_user(user_matrix_idx):
+            return {}
+        if self.model.is_unknown_item(item_matrix_idx):
+            return {}
 
         # 1. Generate a train set for local surrogate model
         X_train = np.zeros((train_set_size, self.i_factors_T.shape[1]))
@@ -181,48 +160,49 @@ class Exp_LIRE(Explainer):
         # Neighbors by perturbation
         if pert_nb > 0:
             # generate perturbed users based on gaussian noise and store in X_train
-            X_train[0:pert_nb, :] = perturbations_gaussian(
-                self.user_item_matrix[user_matrix_id],
+            X_train[0:pert_nb, :] = _perturbations_gaussian(
+                self.user_item_matrix[user_matrix_idx],
                 self.global_variance,
                 pert_nb
             )
-            X_train[0:pert_nb, item_id] = 0
+            X_train[0:pert_nb, item_matrix_idx] = 0
+            
             # isolate the perturbed users
             users = X_train[range(pert_nb)]
             # Make the predictions for those
-            OOS_predictions = OOS_pred_slice(
+            OOS_predictions = _OOS_pred_slice(
                 users,
                 self.u_factors,
                 self.i_factors_T,
-                self.user_means[user_id],
-            ).detach().numpy()[:, item_matrix_id]
+                self.user_means[user_matrix_idx],
+            ).detach().numpy()[:, item_matrix_idx]
             # store the predictions in the train data
             y_train[range(pert_nb)] = OOS_predictions
 
         # Neighbors from the same cluster
         if cluster_nb > 0:
             # generate neighbors training set part
-            cluster_index = self.cluster_labels[user_matrix_id]
+            cluster_index = self.cluster_labels[user_matrix_idx]
             # retrieve the cluster index of user "user_id"
             neighbors_index = np.where(self.cluster_labels == cluster_index)[0]
             # remove the user_id itself from the neighbors
-            neighbors_index = neighbors_index[neighbors_index != user_matrix_id]
+            neighbors_index = neighbors_index[neighbors_index != user_matrix_idx]
             if(len(neighbors_index)>1):
                 neighbors_index = np.random.choice(neighbors_index, cluster_nb)
                 X_train[pert_nb:train_set_size, :] = self.user_item_matrix.toarray()[neighbors_index, :]
-                X_train[pert_nb:train_set_size, item_id] = 0
+                X_train[pert_nb:train_set_size, item_matrix_idx] = 0
 
                 neighbor_pred = []
                 for neighbor in neighbors_index:
                     # Make the predictions for those
-                    neighbor_pred.append(self.rec_model.score(neighbor, item_id))
+                    neighbor_pred.append(self.model.score(neighbor, item_matrix_idx))
                 y_train[pert_nb:train_set_size] = neighbor_pred
 
-        X_user_id = self.user_item_matrix.toarray()[user_matrix_id].copy()
-        X_user_id[item_id] = 0
+        X_user_id = self.user_item_matrix.toarray()[user_matrix_idx].copy()
+        X_user_id[item_matrix_idx] = 0
 
         # Check the real black box prediction for the user_id, item_id
-        real_pred = self.rec_model.score(user_id, item_id)
+        # real_pred = self.model.score(user_matrix_id, item_matrix_id)
 
         # Run a LARS linear regression on the train set to generate the most
         # parcimonious explanation
@@ -230,34 +210,32 @@ class Exp_LIRE(Explainer):
         reg.fit(X_train, y_train)
         coef = reg.coef_
         # Predict the value with the surrogate
-        pred = reg.predict(X_user_id.reshape(1, -1))
+        # pred = reg.predict(X_user_id.reshape(1, -1))
 
         # movie ids in the dataset
-        movielens_ids = list(self.dataset.iid_map.keys())
+        # movielens_ids = list(self.dataset.iid_map.keys())
         # mapped movie ids in the matrix
-        matrix_ids = list(self.dataset.iid_map.values())
+        # matrix_ids = list(self.dataset.iid_map.values())
 
         # get coefficients and corresponding movie ids
         top_features_matrix_ids = np.argsort(np.abs(coef))[::-1][:num_features]
-        top_features_movielens_ids = [
-            movielens_ids[matrix_ids.index(i)] for i in top_features_matrix_ids
-        ]
-        top_features_coef = coef[top_features_matrix_ids]
+        # top_features_movielens_ids = [
+        #     movielens_ids[matrix_ids.index(i)] for i in top_features_matrix_ids
+        # ]
+        # top_features_coef = coef[top_features_matrix_ids]
 
-        # build explanation dataframe
-        return pd.DataFrame({
-            'user_id': [user_id],
-            'item_id': [item_id],
-            'explanations': [list(zip(top_features_movielens_ids, top_features_coef))],
-            'local_prediction': [pred[0]],
-            'black_box_prediction': [real_pred]
-        })
+        for i in top_features_matrix_ids:
+            feature_id = self.dataset.item_ids[i]
+            explanation[feature_id] = coef[i]
+        
+        return explanation
+        
 
 """
 LIRE utils, not part of the class.
 """
 
-def perturbations_gaussian(original_user, global_variance, fake_users: int, proba=0.1):
+def _perturbations_gaussian(original_user, global_variance, fake_users: int, proba=0.1):
     """
     Function that does the gaussian perturbation and therefore yield perturbated points 
     that is supposedly close to the instance to explain
@@ -277,7 +255,7 @@ def perturbations_gaussian(original_user, global_variance, fake_users: int, prob
     return np.clip(users, 0., 5.)
 
 
-def OOS_pred_slice(users, u_factors, i_factors_T, user_means, epochs=120, init_vec=None):
+def _OOS_pred_slice(users, u_factors, i_factors_T, user_means, epochs=120, init_vec=None):
     """
     Function that does the out of sample prediction for a slice of the user matrix
 
@@ -324,3 +302,18 @@ def OOS_pred_slice(users, u_factors, i_factors_T, user_means, epochs=120, init_v
         opt.zero_grad()
 
     return ((torch.matmul(torch.matmul(unew, u_factors), i_factors_T) + user_means.unsqueeze(1)) * (users == 0.) + users).detach().clamp(0., 5.)
+
+
+def _get_user_means(user_item_matrix):
+    """
+    Function that computes the mean of the users
+    """
+    user_means = [None] * user_item_matrix.shape[0]
+    for line, col in user_item_matrix.todok().keys():
+        if user_means[line] is None:
+            user = user_item_matrix[line].toarray()
+            user[user == 0.] = np.nan
+            user_means[line] = np.nanmean(user)
+    user_means = np.array(user_means)
+    user_means = user_means.reshape(user_item_matrix.shape[0],1)
+    return user_means

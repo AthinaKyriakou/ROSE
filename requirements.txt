@@ -60,10 +60,10 @@ tqdm==4.66.2
 typer==0.9.4
 typing_extensions==4.10.0
 tzdata==2024.1
-umap==0.1.1
 urllib3==2.2.1
 wasabi==1.1.2
 weasel==0.3.4
 zipp==3.18.1
 seaborn==0.13.2
 tensorflow==2.16.1
+umap-learn==0.5

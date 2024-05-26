@@ -23,7 +23,9 @@ Quick Links
 
    `Cornac <https://cornac.readthedocs.io/en/v2.0.0/>`_
 
-   `Tutorials <https://github.com/AthinaKyriakou/ROSE/tree/main/tutorials>`_
+   `Example for Explainers <https://github.com/AthinaKyriakou/ROSE/tree/main/cornac/explainer#readme>`_
+
+   `Some Demos <https://github.com/AthinaKyriakou/ROSE/tree/main/demo>`_
 
 Fisrt time here? Check out the installation guide: :doc:`install` 
 

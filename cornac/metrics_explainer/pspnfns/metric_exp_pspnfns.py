@@ -78,7 +78,7 @@ class Metric_Exp_PSPNFNS(Metric_Exp):
                 if self.explainer.name == "Exp_LIMERS":
                     rank_scores_pn = self._reevaluate_limers(exp, user, pn=True)
                     rank_scores_ps = self._reevaluate_limers(exp, user, pn=False)
-                elif self.explainer.name in ["Exp_EFM", "Exp_MTER", "Exp_EFM_Mod", "Exp_ComparERObj", "Exp_ComparERSub"]:
+                elif self.explainer.name in ["Exp_EFM", "Exp_MTER", "Exp_EFM_Mod", "Exp_Counter", "Exp_ComparERObj", "Exp_ComparERSub"]:
                     rank_scores_pn = self._reevaluate_sentiment(exp, user, pn=True)
                     rank_scores_ps = self._reevaluate_sentiment(exp, user, pn=False)
                 else:

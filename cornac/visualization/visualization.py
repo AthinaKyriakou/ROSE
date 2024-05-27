@@ -252,45 +252,72 @@ class Visualization(object):
             plot_title += f"for item {item_id} "
 
         filtered_df = df[filter_condition]
-
+        is_there_coeff = True
         if not filtered_df.empty:
             agg_count = {}
             agg_coeff = {}
             size = len(filtered_df)
-            for i, (_, _, exp, _) in filtered_df.iterrows():
+            for exp in filtered_df["explanations"]:
                 for feat, coeff in exp.items():
                     if feat in agg_count.keys():
                         agg_count[feat] += 1
-                        agg_coeff[feat] += coeff
+                        # if coeff is number
+                        try:
+                            agg_coeff[feat] += coeff
+                        except:
+                            is_there_coeff = False    
                     else:
                         agg_count[feat] = 1
-                        agg_coeff[feat] = coeff
-
-            agg_coeff = {feat: coeff/size for feat, coeff in agg_coeff.items()}
-            top_k = min(top_k, len(agg_count.keys()))
-            x_count = list(agg_count.keys())[:top_k]
-            y_count = list(agg_count.values())[:top_k]
-            x_coeff = list(agg_coeff.keys())[:top_k]
-            y_coeff = list(agg_coeff.values())[:top_k]
-            user_id = user_id[:6] + "..." if user_id else None
-            fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(20, 10))
-            if type=="line":
-                axes[0].plot(x_count, y_count)
-                axes[1].plot(x_coeff, y_coeff)
-            elif type=="scatter":
-                axes[0].scatter(x_count, y_count)
-                axes[1].scatter(x_coeff, y_coeff)    
-            elif type=="bar":   
-                axes[0].bar(x_count, y_count)
-                axes[1].bar(x_coeff, y_coeff)     
+                        try:
+                            agg_coeff[feat] = coeff
+                        except:
+                            is_there_coeff = False
+            
+            if is_there_coeff:
+                agg_coeff = {feat: coeff/size for feat, coeff in agg_coeff.items()}
+                top_k = min(top_k, len(agg_count.keys()))
+                x_count = list(agg_count.keys())[:top_k]
+                y_count = list(agg_count.values())[:top_k]
+                x_coeff = list(agg_coeff.keys())[:top_k]
+                y_coeff = list(agg_coeff.values())[:top_k]
+                user_id = user_id[:6] + "..." if user_id else None
+                fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(20, 10))
+                if type=="line":
+                    axes[0].plot(x_count, y_count)
+                    axes[1].plot(x_coeff, y_coeff)
+                elif type=="scatter":
+                    axes[0].scatter(x_count, y_count)
+                    axes[1].scatter(x_coeff, y_coeff)    
+                elif type=="bar":   
+                    axes[0].bar(x_count, y_count)
+                    axes[1].bar(x_coeff, y_coeff)     
+                else:
+                    raise ValueError("Does not support plot type other than line, scatter and bar.")
+                axes[0].set_title(f"Top {top_k} Explanatory Features (by count) \n {plot_title}")
+                axes[0].set_xticklabels(x_count, rotation=45)
+                axes[1].set_title(f"Top {top_k} Explanatory Features (weighted coefficient) \n {plot_title}")
+                axes[1].set_xticklabels(x_coeff, rotation=45)
+                if save_plot:
+                    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S-%f")
+                    fig_name = os.path.join(self.save_dir, f"{timestamp}_agg_feature_importance")
+                    fig.savefig(fig_name)
             else:
-                raise ValueError("Does not support plot type other than line, scatter and bar.")
-            axes[0].set_title(f"Top {top_k} Explanatory Features (by count) \n {plot_title}")
-            axes[0].set_xticklabels(x_count, rotation=45)
-            axes[1].set_title(f"Top {top_k} Explanatory Features (weighted coefficient) \n {plot_title}")
-            axes[1].set_xticklabels(x_coeff, rotation=45)
-            if save_plot:
-                timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S-%f")
-                fig_name = os.path.join(self.save_dir, f"{timestamp}_agg_feature_importance")
-                fig.savefig(fig_name)
+                top_k = min(top_k, len(agg_count.keys()))
+                x = list(agg_count.keys())[:top_k]
+                y = list(agg_count.values())[:top_k]
+                fig, axe = plt.subplots(nrows=1, ncols=1, figsize=(8, 8))
+                if type=="line":
+                    axe.plot(x,y)
+                elif type=="scatter":
+                    axe.scatter(x,y)
+                elif type=="bar":
+                    axe.bar(x,y)
+                else:
+                    raise ValueError("Does not support other plot type.")
+                axe.set_title(f"Top {top_k} Explanatory Features \n {plot_title}")
+                axe.set_xticklabels(x, rotation=45)
+                if save_plot:
+                    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S-%f")
+                    fig_name = os.path.join(self.save_dir, f"{timestamp}_agg_feature_importance")
+                    fig.savefig(fig_name)
         return filtered_df

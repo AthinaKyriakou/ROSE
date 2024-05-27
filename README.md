@@ -1,4 +1,6 @@
-# RecOmmender Systems Explainers
+# ROSE: Towards Framework for Recommender Systems' Explainability
+
+## Quick Links
 
 ## Installation
 ROSE support `Python >= 3.9`. We highly recommend using a Python virtual environment to install the packages as some of them (particularly Cython and Sklearn) are only compatible in certain versions. Create a virtual environment within the project's repository (i.e., in /ROSE/). Within the project's repository and with the virtual environment activated run in a terminal:
@@ -83,13 +85,15 @@ experiment = Experiment_Explainers(
 experiment.run()
 ```
 
+## Resources
 There are more demo for experiments in `demo`. Note that only valid (recommender, explainer) pairs can be processed by the pipeline. Furthermore, if one metric is not applicable for a (recommender, explainer) pair, a 'N/A' would be returned in the result. 
+
+## Contributing
 
 ## Cite
 
 ## The Team
 
 ## License
-ROSE has an MIT License. All data and code in this project can only be used for academic purposes.
 
 ## Acknowledgments

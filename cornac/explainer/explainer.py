@@ -104,6 +104,7 @@ class Explainer:
             "ref_item_id": ref_item_id,
             "ref_explanation": ref_exp
         }
-        explanation = pd.DataFrame(explanation)
+
+        explanation = pd.DataFrame(columns=["user_id", "item_id", "explanation", "ref_item_id", "ref_explanation"], data=[explanation])
 
         return explanation

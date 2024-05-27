@@ -1,4 +1,4 @@
-# ADD a new explainer to ROSE
+# Add a new explainer to ROSE
 
 This tutorial describes how to integrate a new explainer into ROSE. We assume that you have already forked the ROSE repository to your own working space.
 

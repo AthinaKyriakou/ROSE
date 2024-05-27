@@ -66,7 +66,7 @@
     <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/cornac/explainer/exp_limers.py">Exp_LIMERS</a></td>
     <td><a href="https://doi.org/10.1145/3297280.3297443">Towards explaining recommendations through local surrogate models</a></td>
     <td>Posc-Hoc</td>
-    <td><a href="">example</a></td>
+    <td><a href="https://github.com/AthinaKyriakou/ROSE/blob/main/examples/exp_limers.py">example</a></td>
   </tr>
   </tr>
     <tr>

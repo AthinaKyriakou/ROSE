@@ -1,4 +1,4 @@
-# All expliners
+# Overview of the implemented Explainers
 
 <table>
   <tr>

@@ -27,7 +27,7 @@ Quick Links
 
    `Some Demos <https://github.com/AthinaKyriakou/ROSE/tree/main/demo>`_
 
-Fisrt time here? Check out the installation guide: :doc:`install` 
+First time here? Check out our installation guide: :doc:`install` 
 
 And all API reference can be found here: :doc:`api_ref/index`
 

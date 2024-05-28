@@ -1,20 +1,21 @@
-# ROSE: Towards Framework for Recommender Systems' Explainability
+# ROSE: Towards A Framework for Recommender Systems' Explainability
 
-## Quick Links
+To facilitate the usage of explainability approaches for recommender systems, systematize their benchmarking, and enforce reproducibility we propose ROSE, a unified open-source framework to generate explanations and evaluate explainable recommender systems and suitable post-hoc explanation approaches
+![ROSE Main Interaction Workflow](/rose_pipeline.png)
 
 ## Installation
-ROSE support `Python >= 3.9`. We highly recommend using a Python virtual environment to install the packages as some of them (particularly Cython and Sklearn) are only compatible in certain versions. Create a virtual environment within the project's repository (i.e., in /ROSE/). Within the project's repository and with the virtual environment activated run in a terminal:
+ROSE supports `Python >= 3.9`. We highly recommend using a Python virtual environment to install the packages as some of them (particularly Cython and Sklearn) are only compatible in certain versions. Create a virtual environment within the project's repository (i.e., in /ROSE/). Within the project's repository and with the virtual environment activated run in a terminal:
 ``` sh
 bash setup.sh
 ```
-And then build the project.
+And then build the project:
 ```sh
 python setup.py install
 python setup.py build_ext --inplace
 ```
 
 ## Quick Start
-The Explainers_Experiment needs recommenders, explainers and metrics. Here is one example that you can run by executing `python example.py`.
+The Explainers_Experiment needs recommenders, explainers and metrics. Here is one example that you can run by executing `python example.py`:
   
 ``` python
 from cornac.datasets import movielens
@@ -86,14 +87,15 @@ experiment.run()
 ```
 
 ## Resources
-There are more demo for experiments in `demo`. Note that only valid (recommender, explainer) pairs can be processed by the pipeline. Furthermore, if one metric is not applicable for a (recommender, explainer) pair, a 'N/A' would be returned in the result. 
-
-## Contributing
+* Tutorials on adding a new explainability method `tutorials/add_explainer.py` and metric `tutorials/add_metric_explainer.py`
+* Demos on creating a lexicon, running explainability experiment and generating visualizations `demo/`
+* Code examples on how to generate explanations based on all the integrated explainable recommendation algorithms and post-hoc methods `examples/`.
 
 ## Cite
+TBA
 
 ## The Team
+This code base would not have been possible without the work of amazing contributors, listed here in alphabetical order: Athina Kyriakou, Nan Li, Yingying Liu, Konstantina Timoleon, Kathrin Wardatzky, Krzysztof Wroblewski, and Yiqin Zhang.
 
 ## License
-
-## Acknowledgments
+[Apache 2.0](LICENSE)

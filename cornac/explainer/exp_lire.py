@@ -1,7 +1,7 @@
 import torch
 import scipy
-# import umap
-import umap.umap_ as umap
+import umap
+# import umap.umap_ as umap
 
 import numpy as np
 
